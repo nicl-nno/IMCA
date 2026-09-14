@@ -1,0 +1,1665 @@
+{
+  "role": "Historical graph top-5, not a new evaluation",
+  "ids": {
+    "lookup_class_by_name-000": [
+      "fastapi `fastapi.params`/Query#"
+    ],
+    "lookup_class_by_name-001": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+    ],
+    "lookup_class_by_name-002": [],
+    "lookup_class_by_name-003": [
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#"
+    ],
+    "lookup_class_by_name-004": [],
+    "lookup_class_by_name-005": [
+      "fastapi `fastapi.openapi.models`/Discriminator#"
+    ],
+    "lookup_class_by_name-006": [
+      "fastapi `fastapi.datastructures`/UploadFile#"
+    ],
+    "lookup_class_by_name-007": [
+      "fastapi `fastapi.dependencies.utils`/SolvedDependency#"
+    ],
+    "lookup_class_by_name-008": [
+      "fastapi `fastapi.responses`/UJSONResponse#"
+    ],
+    "lookup_class_by_name-009": [
+      "fastapi `fastapi.responses`/ORJSONResponse#"
+    ],
+    "lookup_class_by_name-010": [
+      "fastapi `fastapi.params`/Cookie#"
+    ],
+    "lookup_class_by_name-011": [],
+    "lookup_class_by_name-012": [
+      "fastapi `fastapi.params`/ParamTypes#"
+    ],
+    "lookup_class_by_name-013": [
+      "fastapi `fastapi.security.http`/HTTPAuthorizationCredentials#"
+    ],
+    "lookup_class_by_name-014": [
+      "fastapi `fastapi.exceptions`/WebSocketRequestValidationError#"
+    ],
+    "lookup_class_by_name-015": [
+      "fastapi `fastapi.openapi.models`/Contact#"
+    ],
+    "lookup_class_by_name-016": [],
+    "lookup_class_by_name-017": [
+      "fastapi `fastapi.openapi.models`/ParameterBase#"
+    ],
+    "lookup_class_by_name-018": [
+      "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#"
+    ],
+    "lookup_class_by_name-019": [
+      "fastapi `fastapi.security.http`/HTTPDigest#"
+    ],
+    "lookup_class_by_name-020": [
+      "fastapi `fastapi.openapi.models`/OAuthFlowClientCredentials#"
+    ],
+    "lookup_class_by_name-021": [
+      "fastapi `fastapi.openapi.models`/Encoding#"
+    ],
+    "lookup_class_by_name-022": [
+      "fastapi `fastapi.params`/Header#"
+    ],
+    "lookup_class_by_name-023": [
+      "fastapi `fastapi.params`/File#"
+    ],
+    "lookup_class_by_name-024": [
+      "fastapi `fastapi.applications`/FastAPI#"
+    ],
+    "lookup_class_by_name-025": [
+      "fastapi `fastapi.openapi.models`/OAuthFlows#"
+    ],
+    "lookup_class_by_name-026": [
+      "fastapi `fastapi.openapi.models`/SecurityBase#",
+      "fastapi `fastapi.security.base`/SecurityBase#"
+    ],
+    "lookup_class_by_name-027": [
+      "fastapi `fastapi.openapi.models`/Parameter#"
+    ],
+    "lookup_class_by_name-028": [
+      "fastapi `fastapi.openapi.models`/HTTPBase#",
+      "fastapi `fastapi.security.http`/HTTPBase#"
+    ],
+    "lookup_class_by_name-029": [
+      "fastapi `fastapi.openapi.models`/Components#"
+    ],
+    "lookup_class_by_name-030": [
+      "fastapi `fastapi.params`/Param#"
+    ],
+    "lookup_class_by_name-031": [
+      "fastapi `fastapi.security.api_key`/APIKeyHeader#"
+    ],
+    "lookup_method_on_type-000": [
+      "fastapi `fastapi.params`/Query#__init__()."
+    ],
+    "lookup_method_on_type-001": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#__init__()."
+    ],
+    "lookup_method_on_type-002": [],
+    "lookup_method_on_type-003": [
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#__init__()."
+    ],
+    "lookup_method_on_type-004": [
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#__call__()."
+    ],
+    "lookup_method_on_type-005": [
+      "fastapi `fastapi.datastructures`/UploadFile#seek()."
+    ],
+    "lookup_method_on_type-006": [
+      "fastapi `fastapi.datastructures`/UploadFile#close()."
+    ],
+    "lookup_method_on_type-007": [
+      "fastapi `fastapi.datastructures`/UploadFile#_validate()."
+    ],
+    "lookup_method_on_type-008": [
+      "fastapi `fastapi.datastructures`/UploadFile#read()."
+    ],
+    "lookup_method_on_type-009": [
+      "fastapi `fastapi.datastructures`/UploadFile#write()."
+    ],
+    "lookup_method_on_type-010": [
+      "fastapi `fastapi.datastructures`/UploadFile#__get_pydantic_core_schema__()."
+    ],
+    "lookup_method_on_type-011": [
+      "fastapi `fastapi.datastructures`/UploadFile#__get_pydantic_json_schema__()."
+    ],
+    "lookup_method_on_type-012": [
+      "fastapi `fastapi.responses`/UJSONResponse#render()."
+    ],
+    "lookup_method_on_type-013": [
+      "fastapi `fastapi.responses`/ORJSONResponse#render()."
+    ],
+    "lookup_method_on_type-014": [
+      "fastapi `fastapi.params`/Cookie#__init__()."
+    ],
+    "lookup_method_on_type-015": [],
+    "lookup_method_on_type-016": [],
+    "lookup_method_on_type-017": [
+      "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#__call__()."
+    ],
+    "lookup_method_on_type-018": [
+      "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#__init__()."
+    ],
+    "lookup_method_on_type-019": [
+      "fastapi `fastapi.security.http`/HTTPDigest#__init__()."
+    ],
+    "lookup_method_on_type-020": [
+      "fastapi `fastapi.security.http`/HTTPDigest#__call__()."
+    ],
+    "lookup_method_on_type-021": [
+      "fastapi `fastapi.params`/Header#__init__()."
+    ],
+    "lookup_method_on_type-022": [
+      "fastapi `fastapi.params`/File#__init__()."
+    ],
+    "lookup_method_on_type-023": [
+      "fastapi `fastapi.applications`/FastAPI#options()."
+    ],
+    "lookup_method_on_type-024": [
+      "fastapi `fastapi.applications`/FastAPI#trace()."
+    ],
+    "lookup_method_on_type-025": [
+      "fastapi `fastapi.applications`/FastAPI#middleware()."
+    ],
+    "lookup_method_on_type-026": [
+      "fastapi `fastapi.applications`/FastAPI#get()."
+    ],
+    "lookup_method_on_type-027": [
+      "fastapi `fastapi.applications`/FastAPI#redoc_html()."
+    ],
+    "lookup_method_on_type-028": [
+      "fastapi `fastapi.applications`/FastAPI#exception_handler()."
+    ],
+    "lookup_method_on_type-029": [
+      "fastapi `fastapi.applications`/FastAPI#head()."
+    ],
+    "lookup_method_on_type-030": [
+      "fastapi `fastapi.applications`/FastAPI#setup()."
+    ],
+    "lookup_method_on_type-031": [
+      "fastapi `fastapi.applications`/FastAPI#patch()."
+    ],
+    "signature_recall-000": [
+      "fastapi `fastapi.applications`/FastAPI#options()."
+    ],
+    "signature_recall-001": [],
+    "signature_recall-002": [
+      "fastapi `fastapi.routing`/APIRouter#on_event()."
+    ],
+    "signature_recall-003": [],
+    "signature_recall-004": [],
+    "signature_recall-005": [
+      "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+    ],
+    "signature_recall-006": [
+      "fastapi `fastapi.routing`/APIRouter#get()."
+    ],
+    "signature_recall-007": [
+      "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields()."
+    ],
+    "signature_recall-008": [
+      "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params()."
+    ],
+    "signature_recall-009": [],
+    "signature_recall-010": [
+      "fastapi `fastapi.exceptions`/ResponseValidationError#__init__()."
+    ],
+    "signature_recall-011": [],
+    "signature_recall-012": [
+      "fastapi `fastapi.openapi.utils`/generate_operation_summary()."
+    ],
+    "signature_recall-013": [
+      "fastapi `fastapi.concurrency`/contextmanager_in_threadpool()."
+    ],
+    "signature_recall-014": [
+      "fastapi `fastapi.applications`/FastAPI#trace()."
+    ],
+    "signature_recall-015": [
+      "fastapi `fastapi.routing`/APIRoute#get_route_handler()."
+    ],
+    "signature_recall-016": [
+      "fastapi `fastapi.routing`/serialize_response()."
+    ],
+    "signature_recall-017": [],
+    "signature_recall-018": [
+      "fastapi `fastapi.routing`/APIRouter#include_router()."
+    ],
+    "signature_recall-019": [
+      "fastapi `fastapi.exception_handlers`/http_exception_handler()."
+    ],
+    "signature_recall-020": [
+      "fastapi `fastapi.openapi.models`/EmailStr#__get_pydantic_core_schema__()."
+    ],
+    "signature_recall-021": [
+      "fastapi `fastapi.params`/Path#__init__()."
+    ],
+    "signature_recall-022": [
+      "fastapi `fastapi.routing`/_merge_lifespan_context()."
+    ],
+    "signature_recall-023": [
+      "fastapi `fastapi.dependencies.utils`/get_typed_return_annotation()."
+    ],
+    "signature_recall-024": [],
+    "signature_recall-025": [
+      "fastapi `fastapi.param_functions`/Header()."
+    ],
+    "signature_recall-026": [
+      "fastapi `fastapi.routing`/APIRouter#route()."
+    ],
+    "signature_recall-027": [
+      "fastapi `fastapi.params`/Header#__init__()."
+    ],
+    "signature_recall-028": [
+      "fastapi `fastapi.routing`/APIWebSocketRoute#matches()."
+    ],
+    "signature_recall-029": [
+      "fastapi `fastapi.applications`/FastAPI#middleware()."
+    ],
+    "signature_recall-030": [],
+    "signature_recall-031": [
+      "fastapi `fastapi.dependencies.utils`/solve_dependencies()."
+    ],
+    "import_path_resolution-000": [
+      "fastapi `fastapi.params`/Query#"
+    ],
+    "import_path_resolution-001": [
+      "fastapi `fastapi.applications`/FastAPI#options()."
+    ],
+    "import_path_resolution-002": [],
+    "import_path_resolution-003": [
+      "fastapi `fastapi.routing`/APIRouter#on_event()."
+    ],
+    "import_path_resolution-004": [],
+    "import_path_resolution-005": [],
+    "import_path_resolution-006": [
+      "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+    ],
+    "import_path_resolution-007": [
+      "fastapi `fastapi.routing`/APIRouter#get()."
+    ],
+    "import_path_resolution-008": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+    ],
+    "import_path_resolution-009": [
+      "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields()."
+    ],
+    "import_path_resolution-010": [
+      "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params()."
+    ],
+    "import_path_resolution-011": [],
+    "import_path_resolution-012": [],
+    "import_path_resolution-013": [
+      "fastapi `fastapi.exceptions`/ResponseValidationError#__init__()."
+    ],
+    "import_path_resolution-014": [],
+    "import_path_resolution-015": [
+      "fastapi `fastapi.openapi.utils`/generate_operation_summary()."
+    ],
+    "import_path_resolution-016": [
+      "fastapi `fastapi.concurrency`/contextmanager_in_threadpool()."
+    ],
+    "import_path_resolution-017": [
+      "fastapi `fastapi.applications`/FastAPI#trace()."
+    ],
+    "import_path_resolution-018": [
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#"
+    ],
+    "import_path_resolution-019": [
+      "fastapi `fastapi.routing`/APIRoute#get_route_handler()."
+    ],
+    "import_path_resolution-020": [
+      "fastapi `fastapi.routing`/serialize_response()."
+    ],
+    "import_path_resolution-021": [],
+    "import_path_resolution-022": [
+      "fastapi `fastapi.routing`/APIRouter#include_router()."
+    ],
+    "import_path_resolution-023": [],
+    "import_path_resolution-024": [
+      "fastapi `fastapi.exception_handlers`/http_exception_handler()."
+    ],
+    "import_path_resolution-025": [
+      "fastapi `fastapi.openapi.models`/EmailStr#__get_pydantic_core_schema__()."
+    ],
+    "import_path_resolution-026": [
+      "fastapi `fastapi.params`/Path#__init__()."
+    ],
+    "import_path_resolution-027": [
+      "fastapi `fastapi.routing`/_merge_lifespan_context()."
+    ],
+    "import_path_resolution-028": [
+      "fastapi `fastapi.dependencies.utils`/get_typed_return_annotation()."
+    ],
+    "import_path_resolution-029": [],
+    "import_path_resolution-030": [
+      "fastapi `fastapi.param_functions`/Header()."
+    ],
+    "import_path_resolution-031": [
+      "fastapi `fastapi.openapi.models`/Discriminator#"
+    ],
+    "cross_module_sibling-001": [
+      "file:__init__.py",
+      "fastapi fastapi/__version__."
+    ],
+    "cross_module_sibling-002": [
+      "file:__main__.py"
+    ],
+    "cross_module_sibling-003": [
+      "fastapi `fastapi.applications`/FastAPI#get().",
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#put().",
+      "fastapi `fastapi.applications`/FastAPI#decorator().",
+      "fastapi `fastapi.applications`/FastAPI#post()."
+    ],
+    "cross_module_sibling-004": [
+      "fastapi `fastapi.background`/BackgroundTasks#",
+      "fastapi `fastapi.background`/BackgroundTasks#add_task().",
+      "fastapi `fastapi.background`/P.",
+      "file:background.py"
+    ],
+    "cross_module_sibling-005": [
+      "fastapi `fastapi.cli`/main().",
+      "file:cli.py"
+    ],
+    "cross_module_sibling-006": [
+      "fastapi `fastapi.concurrency`/contextmanager_in_threadpool().",
+      "fastapi `fastapi.concurrency`/_T.",
+      "file:concurrency.py"
+    ],
+    "cross_module_sibling-007": [
+      "fastapi `fastapi.datastructures`/UploadFile#",
+      "file:datastructures.py",
+      "fastapi `fastapi.datastructures`/Default().",
+      "fastapi `fastapi.datastructures`/DefaultPlaceholder#",
+      "fastapi `fastapi.datastructures`/UploadFile#seek()."
+    ],
+    "cross_module_sibling-008": [
+      "fastapi `fastapi.encoders`/jsonable_encoder().",
+      "file:encoders.py",
+      "fastapi `fastapi.encoders`/generate_encoders_by_class_tuples().",
+      "fastapi `fastapi.encoders`/isoformat().",
+      "fastapi `fastapi.encoders`/decimal_encoder()."
+    ],
+    "cross_module_sibling-009": [
+      "file:exception_handlers.py",
+      "fastapi `fastapi.exception_handlers`/websocket_request_validation_exception_handler().",
+      "fastapi `fastapi.exception_handlers`/request_validation_exception_handler().",
+      "fastapi `fastapi.exception_handlers`/http_exception_handler()."
+    ],
+    "cross_module_sibling-010": [
+      "fastapi `fastapi.exceptions`/HTTPException#",
+      "fastapi `fastapi.exceptions`/RequestValidationError#",
+      "fastapi `fastapi.exceptions`/ValidationException#",
+      "fastapi `fastapi.exceptions`/FastAPIError#",
+      "file:exceptions.py"
+    ],
+    "cross_module_sibling-011": [
+      "fastapi `fastapi.logger`/logger.",
+      "file:logger.py"
+    ],
+    "cross_module_sibling-012": [
+      "fastapi `fastapi.param_functions`/Form().",
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query()."
+    ],
+    "cross_module_sibling-013": [
+      "fastapi `fastapi.params`/Form#__init__().",
+      "fastapi `fastapi.params`/Path#__init__().",
+      "fastapi `fastapi.params`/Header#__init__().",
+      "fastapi `fastapi.params`/ParamTypes#",
+      "fastapi `fastapi.params`/File#__init__()."
+    ],
+    "cross_module_sibling-014": [
+      "file:requests.py"
+    ],
+    "cross_module_sibling-015": [
+      "fastapi `fastapi.responses`/UJSONResponse#",
+      "fastapi `fastapi.responses`/UJSONResponse#render().",
+      "fastapi `fastapi.responses`/ORJSONResponse#",
+      "file:responses.py",
+      "fastapi `fastapi.responses`/ORJSONResponse#render()."
+    ],
+    "cross_module_sibling-016": [
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.routing`/APIRouter#decorator().",
+      "fastapi `fastapi.routing`/APIRouter#put().",
+      "fastapi `fastapi.routing`/APIRouter#post().",
+      "fastapi `fastapi.routing`/APIRoute#__init__()."
+    ],
+    "cross_module_sibling-017": [
+      "fastapi `fastapi.utils`/generate_operation_id_for_path().(name)",
+      "fastapi `fastapi.utils`/generate_operation_id_for_path().(method)",
+      "fastapi `fastapi.openapi.models`/PathItem#summary.",
+      "fastapi `fastapi.openapi.models`/PathItem#put.",
+      "fastapi `fastapi.openapi.models`/PathItem#get."
+    ],
+    "cross_module_sibling-018": [
+      "file:staticfiles.py"
+    ],
+    "cross_module_sibling-019": [
+      "file:templating.py"
+    ],
+    "cross_module_sibling-020": [
+      "file:testclient.py"
+    ],
+    "cross_module_sibling-021": [
+      "fastapi `fastapi.types`/DecoratedCallable.",
+      "file:types.py",
+      "fastapi `fastapi.types`/IncEx.",
+      "fastapi `fastapi.types`/UnionType.",
+      "fastapi `fastapi.types`/ModelNameMap."
+    ],
+    "cross_module_sibling-022": [
+      "fastapi `fastapi.utils`/generate_unique_id().",
+      "fastapi `fastapi.utils`/create_model_field().",
+      "file:utils.py",
+      "fastapi `fastapi.utils`/create_cloned_field().",
+      "fastapi `fastapi.utils`/generate_operation_id_for_path()."
+    ],
+    "cross_module_sibling-023": [
+      "file:websockets.py"
+    ],
+    "cross_module_sibling-024": [
+      "fastapi `fastapi._compat`/__init__:",
+      "fastapi `fastapi.openapi.utils`/__init__:",
+      "fastapi `fastapi.dependencies.models`/__init__:",
+      "fastapi `fastapi.params`/__init__:",
+      "fastapi `fastapi.openapi.models`/__init__:"
+    ],
+    "cross_module_sibling-025": [
+      "fastapi `fastapi._compat`/sequence_types.",
+      "fastapi `fastapi._compat`/get_compat_model_name_map().(fields)",
+      "fastapi `fastapi._compat`/__init__:",
+      "fastapi `fastapi._compat`/ModelField#serialize().",
+      "fastapi `fastapi._compat`/get_compat_model_name_map()."
+    ],
+    "cross_module_sibling-026": [
+      "fastapi `fastapi._compat`/PYDANTIC_V2.",
+      "fastapi `fastapi.params`/Path#__init__().(le)",
+      "fastapi `fastapi._compat`/PYDANTIC_VERSION_MINOR_TUPLE.",
+      "fastapi `fastapi._compat`/sequence_types.",
+      "fastapi `fastapi.params`/Path#__init__().(lt)"
+    ],
+    "cross_module_sibling-027": [
+      "file:dependencies/__init__.py"
+    ],
+    "cross_module_sibling-028": [
+      "fastapi `fastapi.dependencies.models`/Dependant#",
+      "file:dependencies/models.py",
+      "fastapi `fastapi.dependencies.models`/SecurityRequirement#",
+      "fastapi `fastapi.dependencies.models`/Dependant#path_params.",
+      "fastapi `fastapi.dependencies.models`/Dependant#body_params."
+    ],
+    "cross_module_sibling-029": [
+      "fastapi `fastapi.dependencies.utils`/analyze_param().",
+      "file:dependencies/utils.py",
+      "fastapi `fastapi.dependencies.utils`/solve_dependencies().",
+      "fastapi `fastapi.dependencies.utils`/get_dependant().",
+      "fastapi `fastapi.dependencies.utils`/get_sub_dependant()."
+    ],
+    "cross_module_sibling-030": [
+      "file:middleware/__init__.py"
+    ],
+    "cross_module_sibling-031": [
+      "fastapi `fastapi.applications`/FastAPI#__init__().(middleware)",
+      "fastapi `fastapi.middleware`/__init__:",
+      "fastapi `fastapi.middleware.cors`/__init__:",
+      "fastapi `fastapi.middleware.httpsredirect`/__init__:",
+      "fastapi `fastapi.dependencies.utils`/solve_generator().(stack)"
+    ],
+    "callers_of_symbol-000": [
+      "fastapi `fastapi.routing`/APIRouter#decorator().",
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.routing`/APIRouter#put().",
+      "fastapi `fastapi.routing`/APIRouter#post()."
+    ],
+    "callers_of_symbol-001": [
+      "file:openapi/models.py",
+      "fastapi `fastapi.openapi.models`/BaseModelWithConfig#",
+      "fastapi `fastapi.openapi.models`/Example#",
+      "fastapi `fastapi.openapi.models`/Schema#",
+      "fastapi `fastapi.openapi.models`/Operation#"
+    ],
+    "callers_of_symbol-002": [
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.applications`/FastAPI#get()."
+    ],
+    "callers_of_symbol-003": [
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+      "fastapi `fastapi.routing`/APIRouter#put()."
+    ],
+    "callers_of_symbol-004": [
+      "file:params.py",
+      "fastapi `fastapi.params`/__init__:",
+      "fastapi `fastapi._compat`/PYDANTIC_V2.",
+      "fastapi `fastapi.openapi.models`/__init__:",
+      "file:_compat.py"
+    ],
+    "callers_of_symbol-005": [
+      "fastapi `fastapi._compat`/ModelField#__hash__().(self)",
+      "fastapi `fastapi._compat`/ModelField#__hash__().",
+      "fastapi `fastapi._compat`/get_model_fields().(model)",
+      "fastapi `fastapi._compat`/ModelField#",
+      "fastapi `fastapi._compat`/get_model_fields()."
+    ],
+    "callers_of_symbol-006": [
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#get().",
+      "fastapi `fastapi.applications`/FastAPI#decorator().",
+      "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+      "fastapi `fastapi.applications`/FastAPI#put()."
+    ],
+    "callers_of_symbol-007": [
+      "file:dependencies/utils.py",
+      "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+      "fastapi `fastapi.dependencies.utils`/analyze_param().",
+      "fastapi `fastapi.dependencies.utils`/solve_dependencies().",
+      "fastapi `fastapi.dependencies.utils`/get_sub_dependant()."
+    ],
+    "callers_of_symbol-008": [
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.applications`/FastAPI#get().",
+      "fastapi `fastapi.routing`/APIRouter#put()."
+    ],
+    "callers_of_symbol-009": [
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.applications`/FastAPI#get().",
+      "fastapi `fastapi.routing`/APIRouter#put()."
+    ],
+    "callers_of_symbol-010": [
+      "file:openapi/models.py",
+      "fastapi `fastapi.openapi.models`/Schema#",
+      "fastapi `fastapi.openapi.models`/Info#",
+      "fastapi `fastapi.openapi.models`/ParameterBase#",
+      "fastapi `fastapi.openapi.models`/Operation#"
+    ],
+    "callers_of_symbol-011": [
+      "fastapi `fastapi.params`/Path#__init__().",
+      "fastapi `fastapi.params`/Header#__init__().",
+      "file:params.py",
+      "fastapi `fastapi.params`/ParamTypes#",
+      "fastapi `fastapi.params`/Query#__init__()."
+    ],
+    "callers_of_symbol-012": [
+      "fastapi `fastapi.exceptions`/HTTPException#",
+      "fastapi `fastapi.exceptions`/ValidationException#",
+      "fastapi `fastapi.exceptions`/RequestValidationError#",
+      "fastapi `fastapi.exceptions`/FastAPIError#",
+      "fastapi `fastapi.exceptions`/WebSocketRequestValidationError#"
+    ],
+    "callers_of_symbol-013": [
+      "fastapi `fastapi._compat`/ErrorWrapper#",
+      "fastapi `fastapi._compat`/Validator.",
+      "fastapi `fastapi._compat`/Undefined.",
+      "fastapi `fastapi._compat`/is_bytes_or_nonable_bytes_annotation().(annotation)",
+      "fastapi `fastapi._compat`/UndefinedType."
+    ],
+    "callers_of_symbol-014": [
+      "fastapi `fastapi.param_functions`/Form().",
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query()."
+    ],
+    "callers_of_symbol-015": [
+      "file:security/http.py",
+      "fastapi `fastapi.security.http`/HTTPBase#__init__().",
+      "fastapi `fastapi.security.http`/HTTPBasic#__call__().",
+      "fastapi `fastapi.security.http`/HTTPBase#__call__().",
+      "fastapi `fastapi.security.http`/HTTPBasic#__init__()."
+    ],
+    "callers_of_symbol-016": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestFormStrict#__init__().",
+      "file:security/oauth2.py",
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#__init__().",
+      "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#__init__().",
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordBearer#__init__()."
+    ],
+    "callers_of_symbol-017": [
+      "file:_compat.py",
+      "fastapi `fastapi._compat`/__init__:",
+      "fastapi `fastapi._compat`/_regenerate_error_with_loc().(errors)",
+      "file:params.py",
+      "fastapi `fastapi._compat`/with_info_plain_validator_function().(serialization)"
+    ],
+    "callees_of_symbol-000": [
+      "fastapi `fastapi.datastructures`/Default().",
+      "fastapi `fastapi.utils`/is_body_allowed_for_status_code().",
+      "fastapi `fastapi.utils`/create_model_field().",
+      "fastapi `fastapi.routing`/APIRoute#get_route_handler().",
+      "fastapi `fastapi.utils`/create_cloned_field()."
+    ],
+    "callees_of_symbol-001": [
+      "fastapi `fastapi.exceptions`/RequestValidationError#",
+      "fastapi `fastapi._compat`/_normalize_errors().",
+      "fastapi `fastapi.exceptions`/FastAPIError#",
+      "fastapi `fastapi.routing`/serialize_response().",
+      "fastapi `fastapi.routing`/run_endpoint_function()."
+    ],
+    "callees_of_symbol-002": [
+      "fastapi `fastapi.utils`/deep_dict_update().",
+      "fastapi `fastapi._compat`/get_schema_from_model_field().",
+      "fastapi `fastapi.utils`/is_body_allowed_for_status_code().",
+      "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+      "fastapi `fastapi.dependencies.utils`/get_flat_params()."
+    ],
+    "callees_of_symbol-003": [
+      "fastapi `fastapi._compat`/is_scalar_field().",
+      "fastapi `fastapi._compat`/get_annotation_from_field_info().",
+      "fastapi `fastapi._compat`/is_scalar_sequence_field().",
+      "fastapi `fastapi._compat`/copy_field_info().",
+      "fastapi `fastapi._compat`/field_annotation_is_scalar()."
+    ],
+    "callees_of_symbol-004": [
+      "fastapi `fastapi.dependencies.utils`/request_params_to_args().",
+      "fastapi `fastapi.background`/BackgroundTasks#",
+      "fastapi `fastapi.dependencies.utils`/get_dependant().",
+      "fastapi `fastapi.dependencies.utils`/is_coroutine_callable().",
+      "fastapi `fastapi.dependencies.utils`/is_async_gen_callable()."
+    ],
+    "callees_of_symbol-005": [
+      "fastapi `fastapi.utils`/get_path_param_names().",
+      "fastapi `fastapi.dependencies.models`/Dependant#",
+      "fastapi `fastapi.dependencies.utils`/get_param_sub_dependant().",
+      "fastapi `fastapi.dependencies.utils`/get_typed_signature().",
+      "fastapi `fastapi.dependencies.utils`/add_non_field_param_to_dependency()."
+    ],
+    "callees_of_symbol-006": [
+      "fastapi `fastapi.datastructures`/Default().",
+      "fastapi `fastapi.utils`/get_value_or_default().",
+      "fastapi `fastapi.exceptions`/FastAPIError#",
+      "fastapi `fastapi.routing`/_merge_lifespan_context().",
+      "fastapi `fastapi.routing`/APIRouter#add_api_route()."
+    ],
+    "callees_of_symbol-007": [
+      "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params().",
+      "fastapi `fastapi.encoders`/jsonable_encoder().",
+      "fastapi `fastapi._compat`/get_schema_from_model_field().",
+      "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+      "fastapi `fastapi._compat`/ModelField#"
+    ],
+    "callees_of_symbol-008": [
+      "fastapi `fastapi.routing`/get_websocket_app().",
+      "fastapi `fastapi.dependencies.utils`/get_parameterless_sub_dependant().",
+      "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+      "fastapi `fastapi.dependencies.utils`/get_dependant().",
+      "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields()."
+    ],
+    "callees_of_symbol-009": [
+      "fastapi `fastapi._compat`/is_bytes_field().",
+      "fastapi `fastapi._compat`/is_bytes_sequence_field().",
+      "fastapi `fastapi._compat`/serialize_sequence_value().",
+      "fastapi `fastapi._compat`/value_is_sequence().",
+      "fastapi `fastapi.dependencies.utils`/_get_multidict_value()."
+    ],
+    "callees_of_symbol-010": [
+      "fastapi `fastapi.openapi.utils`/get_openapi_path().",
+      "fastapi `fastapi._compat`/get_compat_model_name_map().",
+      "fastapi `fastapi._compat`/get_definitions().",
+      "fastapi `fastapi.encoders`/jsonable_encoder().",
+      "fastapi `fastapi.openapi.utils`/get_fields_from_routes()."
+    ],
+    "callees_of_symbol-011": [
+      "fastapi `fastapi.dependencies.utils`/_validate_value_with_model_field().",
+      "fastapi `fastapi._compat`/get_missing_field_error().",
+      "fastapi `fastapi._compat`/get_cached_model_fields().",
+      "fastapi `fastapi.dependencies.utils`/_extract_form_body().",
+      "fastapi `fastapi._compat`/ModelField#"
+    ],
+    "callees_of_symbol-012": [
+      "fastapi `fastapi.datastructures`/Default().",
+      "fastapi `fastapi.routing`/APIRouter#",
+      "fastapi `fastapi.exception_handlers`/http_exception_handler().",
+      "fastapi `fastapi.exception_handlers`/request_validation_exception_handler().",
+      "fastapi `fastapi.exception_handlers`/websocket_request_validation_exception_handler()."
+    ],
+    "callees_of_symbol-013": [
+      "fastapi `fastapi.dependencies.utils`/_validate_value_with_model_field().",
+      "fastapi `fastapi.dependencies.utils`/_get_multidict_value().",
+      "fastapi `fastapi._compat`/get_cached_model_fields().",
+      "fastapi `fastapi._compat`/ModelField#",
+      "fastapi `fastapi.params`/Param#"
+    ],
+    "callees_of_symbol-014": [
+      "fastapi `fastapi.encoders`/jsonable_encoder().",
+      "fastapi `fastapi._compat`/_normalize_errors().",
+      "fastapi `fastapi.exceptions`/ResponseValidationError#",
+      "fastapi `fastapi.routing`/_prepare_response_content().",
+      "fastapi `fastapi._compat`/ModelField#"
+    ],
+    "callees_of_symbol-015": [
+      "fastapi `fastapi._compat`/is_sequence_field().",
+      "fastapi `fastapi._compat`/ModelField#",
+      "fastapi `fastapi._compat`/ModelField#alias().",
+      "fastapi `fastapi._compat`/ModelField#required().",
+      "fastapi `fastapi._compat`/ModelField#default()."
+    ],
+    "callees_of_symbol-016": [
+      "fastapi `fastapi._compat`/get_schema_from_model_field().",
+      "fastapi `fastapi._compat`/_get_model_config().",
+      "fastapi `fastapi._compat`/get_schema_from_model_field().(field)",
+      "fastapi `fastapi._compat`/_get_model_config().(model)",
+      "fastapi `fastapi._compat`/get_schema_from_model_field().(model_name_map)"
+    ],
+    "callees_of_symbol-017": [
+      "fastapi `fastapi.applications`/FastAPI#openapi().",
+      "fastapi `fastapi.applications`/FastAPI#swagger_ui_html().",
+      "fastapi `fastapi.applications`/FastAPI#swagger_ui_redirect().",
+      "fastapi `fastapi.applications`/FastAPI#redoc_html()."
+    ],
+    "override_detection-000": [
+      "fastapi `fastapi.openapi.models`/ParameterBase#",
+      "fastapi `fastapi.openapi.models`/Info#",
+      "fastapi `fastapi.openapi.models`/Contact#",
+      "fastapi `fastapi.openapi.models`/SecurityBase#",
+      "fastapi `fastapi.openapi.models`/License#"
+    ],
+    "override_detection-001": [
+      "fastapi `fastapi.openapi.models`/APIKey#",
+      "fastapi `fastapi.openapi.models`/HTTPBase#",
+      "fastapi `fastapi.openapi.models`/OAuth2#",
+      "fastapi `fastapi.openapi.models`/OpenIdConnect#"
+    ],
+    "override_detection-002": [
+      "fastapi `fastapi.params`/Path#",
+      "fastapi `fastapi.params`/Query#",
+      "fastapi `fastapi.params`/Header#",
+      "fastapi `fastapi.params`/Cookie#"
+    ],
+    "override_detection-003": [
+      "fastapi `fastapi.openapi.models`/OAuthFlowImplicit#",
+      "fastapi `fastapi.openapi.models`/OAuthFlowPassword#",
+      "fastapi `fastapi.openapi.models`/OAuthFlowClientCredentials#",
+      "fastapi `fastapi.openapi.models`/OAuthFlowAuthorizationCode#"
+    ],
+    "override_detection-004": [
+      "fastapi `fastapi.security.api_key`/APIKeyBase#",
+      "fastapi `fastapi.security.http`/HTTPBase#",
+      "fastapi `fastapi.security.oauth2`/OAuth2#",
+      "fastapi `fastapi.security.open_id_connect_url`/OpenIdConnect#"
+    ],
+    "override_detection-005": [
+      "fastapi `fastapi.security.http`/HTTPBasic#",
+      "fastapi `fastapi.security.http`/HTTPBearer#",
+      "fastapi `fastapi.security.http`/HTTPDigest#"
+    ],
+    "override_detection-006": [
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#",
+      "fastapi `fastapi.security.api_key`/APIKeyHeader#",
+      "fastapi `fastapi.security.api_key`/APIKeyCookie#"
+    ],
+    "override_detection-007": [
+      "fastapi `fastapi.exceptions`/RequestValidationError#",
+      "fastapi `fastapi.exceptions`/WebSocketRequestValidationError#",
+      "fastapi `fastapi.exceptions`/ResponseValidationError#"
+    ],
+    "override_detection-008": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordBearer#",
+      "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#"
+    ],
+    "override_detection-009": [
+      "fastapi `fastapi.exceptions`/FastAPIError#",
+      "fastapi `fastapi.exceptions`/ResponseValidationError#",
+      "fastapi `fastapi.exceptions`/RequestValidationError#__init__().(self)",
+      "fastapi `fastapi.exceptions`/RequestValidationError#__init__().(errors)",
+      "fastapi `fastapi.exceptions`/RequestValidationError#__init__()."
+    ],
+    "override_detection-010": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestFormStrict#"
+    ],
+    "override_detection-011": [
+      "fastapi `fastapi.openapi.models`/Parameter#"
+    ],
+    "override_detection-012": [
+      "fastapi `fastapi.params`/Form#"
+    ],
+    "override_detection-013": [
+      "fastapi `fastapi.params`/File#"
+    ],
+    "override_detection-014": [
+      "fastapi `fastapi.openapi.models`/HTTPBearer#"
+    ],
+    "override_detection-015": [
+      "fastapi `fastapi.security.http`/HTTPBase#__call__().(self)",
+      "fastapi `fastapi.security.http`/HTTPBase#__call__().",
+      "fastapi `fastapi.openapi.models`/HTTPBase#type_.",
+      "fastapi `fastapi.openapi.models`/HTTPBase#",
+      "fastapi `fastapi.security.http`/HTTPBasic#__call__().(self)"
+    ],
+    "override_detection-016": [
+      "fastapi `fastapi.params`/Security#"
+    ],
+    "multi_hop_impact-000": [
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "file:routing.py",
+      "fastapi `fastapi.routing`/APIRouter#decorator().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.routing`/APIRouter#put()."
+    ],
+    "multi_hop_impact-001": [
+      "file:openapi/models.py",
+      "fastapi `fastapi.openapi.models`/BaseModelWithConfig#",
+      "fastapi `fastapi.openapi.models`/Example#",
+      "fastapi `fastapi.openapi.models`/Schema#",
+      "fastapi `fastapi.openapi.models`/Operation#"
+    ],
+    "multi_hop_impact-002": [
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.applications`/FastAPI#get()."
+    ],
+    "multi_hop_impact-003": [
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+      "fastapi `fastapi.routing`/APIRouter#put()."
+    ],
+    "multi_hop_impact-004": [
+      "file:utils.py",
+      "fastapi `fastapi.dependencies.models`/__init__:",
+      "fastapi `fastapi.openapi.models`/__init__:",
+      "fastapi `fastapi._compat`/__init__:",
+      "fastapi `fastapi._compat`/PYDANTIC_V2."
+    ],
+    "multi_hop_impact-005": [
+      "fastapi `fastapi._compat`/ModelField#__hash__().",
+      "fastapi `fastapi._compat`/ModelField#__hash__().(self)",
+      "fastapi `fastapi._compat`/get_schema_from_model_field().(field)",
+      "fastapi `fastapi._compat`/ModelField#",
+      "fastapi `fastapi._compat`/get_model_fields().(model)"
+    ],
+    "multi_hop_impact-006": [
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#decorator().",
+      "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+      "file:applications.py",
+      "fastapi `fastapi.applications`/FastAPI#get()."
+    ],
+    "multi_hop_impact-007": [
+      "file:dependencies/utils.py",
+      "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+      "fastapi `fastapi.dependencies.utils`/analyze_param().",
+      "fastapi `fastapi.dependencies.utils`/get_sub_dependant().",
+      "fastapi `fastapi.dependencies.utils`/solve_dependencies()."
+    ],
+    "multi_hop_impact-008": [
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.applications`/FastAPI#get()."
+    ],
+    "multi_hop_impact-009": [
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.applications`/FastAPI#get().",
+      "fastapi `fastapi.routing`/APIRouter#put()."
+    ],
+    "multi_hop_impact-010": [
+      "file:openapi/models.py",
+      "fastapi `fastapi.openapi.models`/Schema#",
+      "fastapi `fastapi.openapi.models`/Info#",
+      "fastapi `fastapi.openapi.models`/ParameterBase#",
+      "fastapi `fastapi.openapi.models`/Operation#"
+    ],
+    "multi_hop_impact-011": [
+      "fastapi `fastapi.params`/Path#__init__().",
+      "fastapi `fastapi.params`/Header#__init__().",
+      "file:params.py",
+      "fastapi `fastapi.params`/Query#__init__().",
+      "fastapi `fastapi.params`/Form#__init__()."
+    ],
+    "multi_hop_impact-012": [
+      "fastapi `fastapi.exceptions`/HTTPException#",
+      "fastapi `fastapi.exceptions`/ValidationException#",
+      "fastapi `fastapi.exceptions`/RequestValidationError#",
+      "fastapi `fastapi.exceptions`/FastAPIError#",
+      "fastapi `fastapi.exceptions`/HTTPException#__init__()."
+    ],
+    "multi_hop_impact-013": [
+      "fastapi `fastapi._compat`/Validator.",
+      "fastapi `fastapi._compat`/Undefined.",
+      "fastapi `fastapi._compat`/evaluate_forwardref.",
+      "fastapi `fastapi._compat`/UndefinedType.",
+      "fastapi `fastapi.dependencies.utils`/add_non_field_param_to_dependency().(param_name)"
+    ],
+    "multi_hop_impact-014": [
+      "fastapi `fastapi.param_functions`/Form().",
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.params`/Path#__init__().",
+      "fastapi `fastapi.param_functions`/File()."
+    ],
+    "multi_hop_impact-015": [
+      "file:security/http.py",
+      "fastapi `fastapi.security.http`/HTTPBase#__init__().",
+      "fastapi `fastapi.security.http`/HTTPBasic#__call__().",
+      "fastapi `fastapi.security.http`/HTTPBase#__call__().",
+      "fastapi `fastapi.security.http`/HTTPBasic#__init__()."
+    ],
+    "multi_hop_impact-016": [
+      "file:security/oauth2.py",
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestFormStrict#__init__().",
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#__init__().",
+      "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#__init__().",
+      "fastapi `fastapi.security.oauth2`/OAuth2#"
+    ],
+    "multi_hop_impact-017": [
+      "fastapi `fastapi._compat`/__init__:",
+      "fastapi `fastapi._compat`/sequence_types.",
+      "fastapi `fastapi.dependencies.models`/__init__:",
+      "file:_compat.py",
+      "fastapi `fastapi._compat`/Undefined."
+    ],
+    "exception_type_discovery-000": [
+      "fastapi `fastapi.exceptions`/WebSocketRequestValidationError#"
+    ],
+    "exception_type_discovery-001": [
+      "fastapi `fastapi.exceptions`/WebSocketException#"
+    ],
+    "exception_type_discovery-002": [],
+    "exception_type_discovery-003": [
+      "fastapi `fastapi.exceptions`/FastAPIError#"
+    ],
+    "exception_type_discovery-004": [
+      "fastapi `fastapi.exceptions`/RequestValidationError#"
+    ],
+    "exception_type_discovery-005": [
+      "fastapi `fastapi.exceptions`/ResponseValidationError#"
+    ],
+    "exception_type_discovery-006": [],
+    "exception_type_discovery-007": [
+      "fastapi `fastapi.exceptions`/ValidationException#"
+    ],
+    "exception_type_discovery-008": [
+      "fastapi `fastapi.exceptions`/HTTPException#"
+    ],
+    "class_field_invariants-000": [
+      "fastapi `fastapi.params`/Query#__init__().",
+      "fastapi `fastapi.params`/Query#in_."
+    ],
+    "class_field_invariants-001": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#__init__()."
+    ],
+    "class_field_invariants-002": [
+      "fastapi `fastapi.applications`/FastAPI#put().(responses)",
+      "fastapi `fastapi.responses`/ORJSONResponse#render().(content)",
+      "fastapi `fastapi.responses`/ORJSONResponse#render().(self)",
+      "fastapi `fastapi.responses`/ORJSONResponse#render().",
+      "fastapi `fastapi.applications`/FastAPI#options().(responses)"
+    ],
+    "class_field_invariants-003": [
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#__init__().",
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#__call__()."
+    ],
+    "class_field_invariants-006": [
+      "fastapi `fastapi.datastructures`/UploadFile#write().",
+      "fastapi `fastapi.datastructures`/UploadFile#read().",
+      "fastapi `fastapi.datastructures`/UploadFile#seek().",
+      "fastapi `fastapi.datastructures`/UploadFile#close().",
+      "fastapi `fastapi.datastructures`/UploadFile#__get_validators__()."
+    ],
+    "class_field_invariants-008": [
+      "fastapi `fastapi.responses`/UJSONResponse#render()."
+    ],
+    "class_field_invariants-009": [
+      "fastapi `fastapi.responses`/ORJSONResponse#render()."
+    ],
+    "class_field_invariants-010": [
+      "fastapi `fastapi.params`/Cookie#__init__().",
+      "fastapi `fastapi.params`/Cookie#in_."
+    ],
+    "class_field_invariants-014": [
+      "fastapi `fastapi.exceptions`/WebSocketRequestValidationError#",
+      "fastapi `fastapi.exceptions`/RequestValidationError#",
+      "fastapi `fastapi.exceptions`/RequestValidationError#__init__().(self)",
+      "fastapi `fastapi.exception_handlers`/websocket_request_validation_exception_handler().(websocket)",
+      "fastapi `fastapi.exceptions`/RequestValidationError#__init__()."
+    ],
+    "class_field_invariants-016": [
+      "fastapi `fastapi.openapi.models`/ServerVariable#",
+      "fastapi `fastapi.openapi.models`/Server#",
+      "fastapi `fastapi.openapi.models`/ServerVariable#description.",
+      "fastapi `fastapi.openapi.models`/Server#url.",
+      "fastapi `fastapi.openapi.models`/Operation#servers."
+    ],
+    "methods_of_class-000": [
+      "fastapi `fastapi.params`/Query#__init__().",
+      "fastapi `fastapi.params`/Query#in_."
+    ],
+    "methods_of_class-001": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#__init__()."
+    ],
+    "methods_of_class-002": [
+      "fastapi `fastapi.applications`/FastAPI#delete().(responses)",
+      "fastapi `fastapi.applications`/FastAPI#put().(responses)",
+      "fastapi `fastapi.applications`/FastAPI#patch().(responses)",
+      "fastapi `fastapi.utils`/generate_operation_id_for_path().(method)",
+      "fastapi `fastapi.applications`/FastAPI#options().(responses)"
+    ],
+    "methods_of_class-003": [
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#__init__().",
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#__call__()."
+    ],
+    "methods_of_class-006": [
+      "fastapi `fastapi.datastructures`/UploadFile#write().",
+      "fastapi `fastapi.datastructures`/UploadFile#read().",
+      "fastapi `fastapi.datastructures`/UploadFile#seek().",
+      "fastapi `fastapi.datastructures`/UploadFile#close().",
+      "fastapi `fastapi.datastructures`/UploadFile#__get_validators__()."
+    ],
+    "methods_of_class-008": [
+      "fastapi `fastapi.responses`/UJSONResponse#render()."
+    ],
+    "methods_of_class-009": [
+      "fastapi `fastapi.responses`/ORJSONResponse#render()."
+    ],
+    "methods_of_class-010": [
+      "fastapi `fastapi.params`/Cookie#__init__().",
+      "fastapi `fastapi.params`/Cookie#in_."
+    ],
+    "call_site_enumeration-000": [
+      "fastapi `fastapi.routing`/APIRouter#decorator().",
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.routing`/APIRouter#put().",
+      "fastapi `fastapi.routing`/APIRouter#post()."
+    ],
+    "call_site_enumeration-001": [
+      "file:openapi/models.py",
+      "fastapi `fastapi.openapi.models`/BaseModelWithConfig#",
+      "fastapi `fastapi.openapi.models`/Example#",
+      "fastapi `fastapi.openapi.models`/Schema#",
+      "fastapi `fastapi.openapi.models`/Operation#"
+    ],
+    "call_site_enumeration-002": [
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.applications`/FastAPI#get()."
+    ],
+    "call_site_enumeration-003": [
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+      "fastapi `fastapi.routing`/APIRouter#put()."
+    ],
+    "call_site_enumeration-004": [
+      "file:params.py",
+      "fastapi `fastapi.params`/__init__:",
+      "fastapi `fastapi._compat`/PYDANTIC_V2.",
+      "fastapi `fastapi.openapi.models`/__init__:",
+      "file:_compat.py"
+    ],
+    "call_site_enumeration-005": [
+      "fastapi `fastapi._compat`/ModelField#__hash__().(self)",
+      "fastapi `fastapi._compat`/ModelField#__hash__().",
+      "fastapi `fastapi._compat`/get_model_fields().(model)",
+      "fastapi `fastapi._compat`/ModelField#",
+      "fastapi `fastapi._compat`/get_model_fields()."
+    ],
+    "call_site_enumeration-006": [
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#get().",
+      "fastapi `fastapi.applications`/FastAPI#decorator().",
+      "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+      "fastapi `fastapi.applications`/FastAPI#put()."
+    ],
+    "call_site_enumeration-007": [
+      "file:dependencies/utils.py",
+      "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+      "fastapi `fastapi.dependencies.utils`/analyze_param().",
+      "fastapi `fastapi.dependencies.utils`/solve_dependencies().",
+      "fastapi `fastapi.dependencies.utils`/get_sub_dependant()."
+    ],
+    "call_site_enumeration-008": [
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.applications`/FastAPI#get().",
+      "fastapi `fastapi.routing`/APIRouter#put()."
+    ],
+    "call_site_enumeration-009": [
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "fastapi `fastapi.routing`/APIRouter#get().",
+      "fastapi `fastapi.applications`/FastAPI#get().",
+      "fastapi `fastapi.routing`/APIRouter#put()."
+    ],
+    "call_site_enumeration-010": [
+      "file:openapi/models.py",
+      "fastapi `fastapi.openapi.models`/Schema#",
+      "fastapi `fastapi.openapi.models`/Info#",
+      "fastapi `fastapi.openapi.models`/ParameterBase#",
+      "fastapi `fastapi.openapi.models`/Operation#"
+    ],
+    "trait_implementors-000": [
+      "fastapi `fastapi.openapi.models`/ParameterBase#",
+      "fastapi `fastapi.openapi.models`/Info#",
+      "fastapi `fastapi.openapi.models`/Contact#",
+      "fastapi `fastapi.openapi.models`/SecurityBase#",
+      "fastapi `fastapi.openapi.models`/License#"
+    ],
+    "trait_implementors-001": [
+      "fastapi `fastapi.openapi.models`/APIKey#",
+      "fastapi `fastapi.openapi.models`/HTTPBase#",
+      "fastapi `fastapi.openapi.models`/OAuth2#",
+      "fastapi `fastapi.openapi.models`/OpenIdConnect#"
+    ],
+    "trait_implementors-002": [
+      "fastapi `fastapi.params`/Path#",
+      "fastapi `fastapi.params`/Query#",
+      "fastapi `fastapi.params`/Header#",
+      "fastapi `fastapi.params`/Cookie#"
+    ],
+    "trait_implementors-003": [
+      "fastapi `fastapi.openapi.models`/OAuthFlowImplicit#",
+      "fastapi `fastapi.openapi.models`/OAuthFlowPassword#",
+      "fastapi `fastapi.openapi.models`/OAuthFlowClientCredentials#",
+      "fastapi `fastapi.openapi.models`/OAuthFlowAuthorizationCode#"
+    ],
+    "trait_implementors-004": [
+      "fastapi `fastapi.security.api_key`/APIKeyBase#",
+      "fastapi `fastapi.security.http`/HTTPBase#",
+      "fastapi `fastapi.security.oauth2`/OAuth2#",
+      "fastapi `fastapi.security.open_id_connect_url`/OpenIdConnect#"
+    ],
+    "trait_implementors-005": [
+      "fastapi `fastapi.security.http`/HTTPBasic#",
+      "fastapi `fastapi.security.http`/HTTPBearer#",
+      "fastapi `fastapi.security.http`/HTTPDigest#"
+    ],
+    "trait_implementors-006": [
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#",
+      "fastapi `fastapi.security.api_key`/APIKeyHeader#",
+      "fastapi `fastapi.security.api_key`/APIKeyCookie#"
+    ],
+    "trait_implementors-007": [
+      "fastapi `fastapi.exceptions`/RequestValidationError#",
+      "fastapi `fastapi.exceptions`/WebSocketRequestValidationError#",
+      "fastapi `fastapi.exceptions`/ResponseValidationError#"
+    ],
+    "trait_implementors-008": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordBearer#",
+      "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#"
+    ],
+    "trait_implementors-009": [
+      "fastapi `fastapi.exceptions`/FastAPIError#",
+      "fastapi `fastapi.exceptions`/ResponseValidationError#",
+      "fastapi `fastapi.exceptions`/RequestValidationError#__init__().(self)",
+      "fastapi `fastapi.exceptions`/RequestValidationError#__init__().(errors)",
+      "fastapi `fastapi.exceptions`/RequestValidationError#__init__()."
+    ],
+    "trait_implementors-010": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestFormStrict#"
+    ],
+    "cross_module_callers-000": [
+      "fastapi `fastapi.param_functions`/Query().",
+      "fastapi `fastapi.dependencies.utils`/analyze_param()."
+    ],
+    "cross_module_callers-001": [
+      "fastapi `fastapi.applications`/FastAPI#on_event()."
+    ],
+    "cross_module_callers-002": [
+      "file:applications.py",
+      "fastapi `fastapi.applications`/FastAPI#swagger_ui_redirect()."
+    ],
+    "cross_module_callers-003": [
+      "fastapi `fastapi.applications`/FastAPI#get()."
+    ],
+    "cross_module_callers-004": [
+      "fastapi `fastapi.routing`/APIRoute#__init__().",
+      "file:routing.py",
+      "fastapi `fastapi.routing`/APIWebSocketRoute#__init__()."
+    ],
+    "cross_module_callers-005": [
+      "file:openapi/utils.py",
+      "fastapi `fastapi.dependencies.utils`/get_flat_params().",
+      "fastapi `fastapi.openapi.utils`/_get_openapi_operation_parameters()."
+    ],
+    "cross_module_callers-006": [
+      "fastapi `fastapi._compat`/get_definitions().",
+      "fastapi `fastapi._compat`/get_definitions().(fields)",
+      "fastapi `fastapi._compat`/get_model_definitions().",
+      "fastapi `fastapi._compat`/get_definitions().(separate_input_output_schemas)",
+      "fastapi `fastapi._compat`/get_definitions().(schema_generator)"
+    ],
+    "cross_module_callers-007": [
+      "fastapi `fastapi._compat`/ModelField#serialize().",
+      "fastapi `fastapi._compat`/ModelField#serialize().(self)",
+      "fastapi `fastapi._compat`/serialize_sequence_value().",
+      "fastapi `fastapi._compat`/serialize_sequence_value().(field)",
+      "fastapi `fastapi._compat`/serialize_sequence_value().(value)"
+    ],
+    "cross_module_callers-008": [
+      "file:dependencies/utils.py",
+      "fastapi `fastapi.dependencies.utils`/solve_generator()."
+    ],
+    "cross_module_callers-009": [
+      "fastapi `fastapi.applications`/FastAPI#include_router()."
+    ],
+    "cross_module_callers-010": [
+      "fastapi `fastapi.routing`/run_endpoint_function().(values)",
+      "fastapi `fastapi.applications`/FastAPI#add_api_websocket_route().(endpoint)",
+      "fastapi `fastapi.routing`/run_endpoint_function().",
+      "fastapi `fastapi.dependencies.utils`/get_dependant().(call)",
+      "fastapi `fastapi.routing`/APIWebSocketRoute#__init__().(endpoint)"
+    ],
+    "dead_export_detection-000": [
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query().",
+      "fastapi `fastapi.param_functions`/Cookie()."
+    ],
+    "dead_export_detection-001": [
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query().",
+      "fastapi `fastapi.param_functions`/Cookie()."
+    ],
+    "dead_export_detection-002": [
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query().",
+      "fastapi `fastapi.param_functions`/Cookie()."
+    ],
+    "dead_export_detection-003": [
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query().",
+      "fastapi `fastapi.param_functions`/Cookie()."
+    ],
+    "dead_export_detection-004": [
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query().",
+      "fastapi `fastapi.param_functions`/Cookie()."
+    ],
+    "dead_export_detection-005": [
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query().",
+      "fastapi `fastapi.param_functions`/Cookie()."
+    ],
+    "dead_export_detection-006": [
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query().",
+      "fastapi `fastapi.param_functions`/Cookie()."
+    ],
+    "dead_export_detection-007": [
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query().",
+      "fastapi `fastapi.param_functions`/Cookie()."
+    ],
+    "dead_export_detection-008": [
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query().",
+      "fastapi `fastapi.param_functions`/Cookie()."
+    ],
+    "dead_export_detection-009": [
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query().",
+      "fastapi `fastapi.param_functions`/Cookie()."
+    ],
+    "dead_export_detection-010": [
+      "fastapi `fastapi.param_functions`/Body().",
+      "fastapi `fastapi.param_functions`/Header().",
+      "fastapi `fastapi.param_functions`/File().",
+      "fastapi `fastapi.param_functions`/Query().",
+      "fastapi `fastapi.param_functions`/Cookie()."
+    ],
+    "existing_tests_in_file-000": [
+      "file:testclient.py"
+    ],
+    "nearest_feature_template-000": [
+      "fastapi `fastapi.params`/Query#"
+    ],
+    "nearest_feature_template-001": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+    ],
+    "nearest_feature_template-002": [],
+    "nearest_feature_template-003": [
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#"
+    ],
+    "nearest_feature_template-004": [],
+    "nearest_feature_template-005": [
+      "fastapi `fastapi.openapi.models`/Discriminator#"
+    ],
+    "nearest_feature_template-006": [
+      "fastapi `fastapi.datastructures`/UploadFile#"
+    ],
+    "nearest_feature_template-007": [
+      "fastapi `fastapi.dependencies.utils`/SolvedDependency#"
+    ],
+    "nearest_feature_template-008": [
+      "fastapi `fastapi.responses`/UJSONResponse#"
+    ],
+    "nearest_feature_template-009": [
+      "fastapi `fastapi.responses`/ORJSONResponse#"
+    ],
+    "nearest_feature_template-010": [
+      "fastapi `fastapi.params`/Cookie#"
+    ],
+    "plugin_extension_point-000": [
+      "fastapi `fastapi.openapi.models`/ParameterBase#",
+      "fastapi `fastapi.openapi.models`/Info#",
+      "fastapi `fastapi.openapi.models`/Contact#",
+      "fastapi `fastapi.openapi.models`/SecurityBase#",
+      "fastapi `fastapi.openapi.models`/License#"
+    ],
+    "plugin_extension_point-001": [
+      "fastapi `fastapi.openapi.models`/APIKey#",
+      "fastapi `fastapi.openapi.models`/HTTPBase#",
+      "fastapi `fastapi.openapi.models`/OAuth2#",
+      "fastapi `fastapi.openapi.models`/OpenIdConnect#"
+    ],
+    "plugin_extension_point-002": [
+      "fastapi `fastapi.params`/Path#",
+      "fastapi `fastapi.params`/Query#",
+      "fastapi `fastapi.params`/Header#",
+      "fastapi `fastapi.params`/Cookie#"
+    ],
+    "plugin_extension_point-003": [
+      "fastapi `fastapi.openapi.models`/OAuthFlowImplicit#",
+      "fastapi `fastapi.openapi.models`/OAuthFlowPassword#",
+      "fastapi `fastapi.openapi.models`/OAuthFlowClientCredentials#",
+      "fastapi `fastapi.openapi.models`/OAuthFlowAuthorizationCode#"
+    ],
+    "plugin_extension_point-004": [
+      "fastapi `fastapi.security.api_key`/APIKeyBase#",
+      "fastapi `fastapi.security.http`/HTTPBase#",
+      "fastapi `fastapi.security.oauth2`/OAuth2#",
+      "fastapi `fastapi.security.open_id_connect_url`/OpenIdConnect#"
+    ],
+    "plugin_extension_point-005": [
+      "fastapi `fastapi.security.http`/HTTPBasic#",
+      "fastapi `fastapi.security.http`/HTTPBearer#",
+      "fastapi `fastapi.security.http`/HTTPDigest#"
+    ],
+    "plugin_extension_point-006": [
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#",
+      "fastapi `fastapi.security.api_key`/APIKeyHeader#",
+      "fastapi `fastapi.security.api_key`/APIKeyCookie#"
+    ],
+    "plugin_extension_point-007": [
+      "fastapi `fastapi.exceptions`/RequestValidationError#",
+      "fastapi `fastapi.exceptions`/WebSocketRequestValidationError#",
+      "fastapi `fastapi.exceptions`/ResponseValidationError#"
+    ],
+    "plugin_extension_point-008": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordBearer#",
+      "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#"
+    ],
+    "plugin_extension_point-009": [
+      "fastapi `fastapi.exceptions`/FastAPIError#",
+      "fastapi `fastapi.exceptions`/ResponseValidationError#",
+      "fastapi `fastapi.exceptions`/RequestValidationError#__init__().(self)",
+      "fastapi `fastapi.exceptions`/RequestValidationError#__init__().(errors)",
+      "fastapi `fastapi.exceptions`/RequestValidationError#__init__()."
+    ],
+    "plugin_extension_point-010": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestFormStrict#"
+    ],
+    "schema_partner_file-000": [
+      "fastapi `fastapi.dependencies.models`/Dependant#",
+      "file:dependencies/models.py",
+      "fastapi `fastapi.dependencies.models`/SecurityRequirement#",
+      "fastapi `fastapi.dependencies.models`/Dependant#path_params.",
+      "fastapi `fastapi.dependencies.models`/Dependant#body_params."
+    ],
+    "schema_partner_file-001": [
+      "file:openapi/models.py",
+      "fastapi `fastapi.openapi.models`/Schema#",
+      "fastapi `fastapi.openapi.models`/BaseModelWithConfig#",
+      "fastapi `fastapi.openapi.models`/Operation#",
+      "fastapi `fastapi.openapi.models`/Example#"
+    ],
+    "public_api_surface-000": [
+      "fastapi `fastapi.params`/Query#"
+    ],
+    "public_api_surface-001": [
+      "fastapi `fastapi.applications`/FastAPI#options()."
+    ],
+    "public_api_surface-002": [
+      "fastapi `fastapi.routing`/APIRouter#on_event()."
+    ],
+    "public_api_surface-003": [],
+    "public_api_surface-004": [
+      "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+    ],
+    "public_api_surface-005": [
+      "fastapi `fastapi.routing`/APIRouter#get()."
+    ],
+    "public_api_surface-006": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+    ],
+    "public_api_surface-007": [],
+    "public_api_surface-008": [
+      "fastapi `fastapi.exceptions`/ResponseValidationError#__init__()."
+    ],
+    "public_api_surface-009": [],
+    "public_api_surface-010": [
+      "fastapi `fastapi.openapi.utils`/generate_operation_summary()."
+    ],
+    "exact_symbol_exists-000": [
+      "fastapi `fastapi.params`/Query#"
+    ],
+    "exact_symbol_exists-001": [
+      "fastapi `fastapi.applications`/FastAPI#options()."
+    ],
+    "exact_symbol_exists-002": [],
+    "exact_symbol_exists-003": [
+      "fastapi `fastapi.routing`/APIRouter#on_event()."
+    ],
+    "exact_symbol_exists-004": [],
+    "exact_symbol_exists-005": [],
+    "exact_symbol_exists-006": [
+      "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+    ],
+    "exact_symbol_exists-007": [
+      "fastapi `fastapi.routing`/APIRouter#get()."
+    ],
+    "exact_symbol_absent-000": [],
+    "exact_symbol_absent-001": [],
+    "exact_symbol_absent-002": [],
+    "exact_symbol_absent-003": [],
+    "exact_symbol_absent-004": [],
+    "exact_symbol_absent-005": [],
+    "exact_symbol_absent-006": [],
+    "exact_symbol_absent-007": [],
+    "fake_type_absent-000": [],
+    "fake_type_absent-001": [],
+    "fake_type_absent-002": [],
+    "fake_type_absent-003": [],
+    "fake_type_absent-004": [],
+    "fake_type_absent-005": [],
+    "fake_type_absent-006": [],
+    "fake_type_absent-007": [],
+    "typo_detection-000": [],
+    "typo_detection-001": [],
+    "typo_detection-002": [],
+    "typo_detection-003": [],
+    "typo_detection-004": [],
+    "typo_detection-005": [],
+    "typo_detection-006": [],
+    "typo_detection-007": [],
+    "signature_arity_check-000": [
+      "fastapi `fastapi.applications`/FastAPI#options()."
+    ],
+    "signature_arity_check-001": [],
+    "signature_arity_check-002": [
+      "fastapi `fastapi.routing`/APIRouter#on_event()."
+    ],
+    "signature_arity_check-003": [],
+    "signature_arity_check-004": [],
+    "signature_arity_check-005": [
+      "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+    ],
+    "signature_arity_check-006": [
+      "fastapi `fastapi.routing`/APIRouter#get()."
+    ],
+    "signature_arity_check-007": [
+      "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields()."
+    ],
+    "naming_convention_query-000": [
+      "fastapi `fastapi.params`/Query#"
+    ],
+    "naming_convention_query-001": [
+      "fastapi `fastapi.applications`/FastAPI#options()."
+    ],
+    "naming_convention_query-002": [],
+    "naming_convention_query-003": [
+      "fastapi `fastapi.routing`/APIRouter#on_event()."
+    ],
+    "naming_convention_query-004": [],
+    "naming_convention_query-005": [],
+    "naming_convention_query-006": [
+      "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+    ],
+    "naming_convention_query-007": [
+      "fastapi `fastapi.routing`/APIRouter#get()."
+    ],
+    "disambiguate_by_type-000": [
+      "fastapi `fastapi.params`/Query#__init__()."
+    ],
+    "disambiguate_by_type-001": [
+      "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#__init__()."
+    ],
+    "disambiguate_by_type-002": [],
+    "disambiguate_by_type-003": [
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#__init__()."
+    ],
+    "disambiguate_by_type-004": [
+      "fastapi `fastapi.security.api_key`/APIKeyQuery#__call__()."
+    ],
+    "disambiguate_by_type-005": [
+      "fastapi `fastapi.datastructures`/UploadFile#seek()."
+    ],
+    "disambiguate_by_type-006": [
+      "fastapi `fastapi.datastructures`/UploadFile#close()."
+    ],
+    "disambiguate_by_type-007": [
+      "fastapi `fastapi.datastructures`/UploadFile#_validate()."
+    ],
+    "disambiguate_by_module-000": [
+      "fastapi `fastapi.params`/Query#"
+    ],
+    "disambiguate_by_module-001": [
+      "fastapi `fastapi.applications`/FastAPI#options()."
+    ],
+    "disambiguate_by_module-002": [],
+    "disambiguate_by_module-003": [
+      "fastapi `fastapi.routing`/APIRouter#on_event()."
+    ],
+    "disambiguate_by_module-004": [],
+    "disambiguate_by_module-005": [],
+    "disambiguate_by_module-006": [
+      "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+    ],
+    "disambiguate_by_module-007": [
+      "fastapi `fastapi.routing`/APIRouter#get()."
+    ],
+    "scope_restricted_lookup-001": [
+      "file:__init__.py",
+      "fastapi fastapi/__version__."
+    ],
+    "scope_restricted_lookup-002": [
+      "file:__main__.py"
+    ],
+    "scope_restricted_lookup-003": [
+      "fastapi `fastapi.applications`/FastAPI#get().",
+      "fastapi `fastapi.applications`/FastAPI#__init__().",
+      "fastapi `fastapi.applications`/FastAPI#put().",
+      "fastapi `fastapi.applications`/FastAPI#decorator().",
+      "fastapi `fastapi.applications`/FastAPI#post()."
+    ],
+    "scope_restricted_lookup-004": [
+      "fastapi `fastapi.background`/BackgroundTasks#",
+      "fastapi `fastapi.background`/BackgroundTasks#add_task().",
+      "fastapi `fastapi.background`/P.",
+      "file:background.py"
+    ],
+    "scope_restricted_lookup-005": [
+      "fastapi `fastapi.cli`/main().",
+      "file:cli.py"
+    ],
+    "scope_restricted_lookup-006": [
+      "fastapi `fastapi.concurrency`/contextmanager_in_threadpool().",
+      "fastapi `fastapi.concurrency`/_T.",
+      "file:concurrency.py"
+    ],
+    "scope_restricted_lookup-007": [
+      "fastapi `fastapi.datastructures`/UploadFile#",
+      "file:datastructures.py",
+      "fastapi `fastapi.datastructures`/Default().",
+      "fastapi `fastapi.datastructures`/DefaultPlaceholder#",
+      "fastapi `fastapi.datastructures`/UploadFile#seek()."
+    ],
+    "fuzzy_match_ranking-000": [],
+    "fuzzy_match_ranking-001": [],
+    "fuzzy_match_ranking-002": [],
+    "fuzzy_match_ranking-003": [],
+    "fuzzy_match_ranking-004": [],
+    "fuzzy_match_ranking-005": [],
+    "fuzzy_match_ranking-006": [],
+    "fuzzy_match_ranking-007": [],
+    "exception_raisers-000": [
+      "fastapi `fastapi.exceptions`/WebSocketRequestValidationError#"
+    ],
+    "exception_raisers-001": [
+      "fastapi `fastapi.exceptions`/WebSocketException#"
+    ],
+    "exception_raisers-002": [],
+    "exception_raisers-003": [
+      "fastapi `fastapi.exceptions`/FastAPIError#"
+    ],
+    "exception_raisers-004": [
+      "fastapi `fastapi.exceptions`/RequestValidationError#"
+    ],
+    "exception_raisers-005": [
+      "fastapi `fastapi.exceptions`/ResponseValidationError#"
+    ],
+    "exception_raisers-006": [],
+    "exception_raisers-007": [
+      "fastapi `fastapi.exceptions`/ValidationException#"
+    ],
+    "exception_raisers-008": [
+      "fastapi `fastapi.exceptions`/HTTPException#"
+    ]
+  }
+}

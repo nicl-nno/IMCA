@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Inspectable Memory — лаборатория памяти кодового агента</title>
+    <meta
+      name="description"
+      content="Проверяемый поиск по коду: источники связей, ошибки отбора, противоречия и история фактов."
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <span class="eyebrow">CODE MEMORY LAB / LOCAL DEMO</span>
+        <h1>Inspectable Memory<span class="dot">.</span></h1>
+      </div>
+      <div class="header-note">
+        От результата — к свидетельству<br /><span id="verification"
+          >Проверка артефактов…</span
+        >
+      </div>
+    </header>
+    <nav aria-label="Режим демонстрации">
+      <button id="retrieval-tab" class="active" aria-pressed="true">
+        01 · Поиск и причины ошибок</button
+      ><button id="temporal-tab" aria-pressed="false">
+        02 · Противоречия и время
+      </button>
+    </nav>
+    <div id="error" role="alert" hidden></div>
+    <main>
+      <section id="retrieval-view">
+        <div class="toolbar">
+          <label>Пример LongMemCode<select id="case"></select></label
+          ><label
+            >Тип связи<select id="relation">
+              <option value="references">Ссылки · исходный профиль</option>
+              <option value="calls">Только вызовы · вмешательство</option>
+            </select></label
+          ><button id="replay" class="primary">Повторить поиск ↗</button
+          ><button class="export">Экспорт JSON ↓</button>
+        </div>
+        <p class="notice">
+          Ранжирование зафиксированных кандидатов выполняется заново. Ответ
+          Luna — сохранённый эксперимент, не новый вызов модели. Эталоны
+          доступны только после поиска.
+        </p>
+        <div id="query" class="query"></div>
+        <div id="signals" class="signals"></div>
+        <div id="metrics" class="metrics"></div>
+        <div class="workspace">
+          <section class="panel">
+            <div class="panel-heading">
+              <h2>Путь кандидата</h2>
+              <span id="route-name"></span>
+            </div>
+            <div id="candidates"></div>
+          </section>
+          <section class="panel evidence-panel">
+            <div class="panel-heading">
+              <h2>Проверка по исходникам</h2>
+              <span>SCIP + AST</span>
+            </div>
+            <div id="evidence"></div>
+          </section>
+        </div>
+        <div class="workspace bottom">
+          <section class="panel">
+            <h2>Где потерялись эталонные фрагменты?</h2>
+            <p class="muted">
+              Диагностика этапа потери, не догадка о намерениях модели.
+            </p>
+            <div id="diagnosis"></div>
+          </section>
+          <section class="panel">
+            <h2>После отбора Luna</h2>
+            <div id="reader"></div>
+          </section>
+        </div>
+      </section>
+      <section id="temporal-view" hidden>
+        <div class="toolbar">
+          <label
+            >Исходный фрагмент бенчмарка<select
+              id="temporal-case"
+            ></select></label
+          ><label
+            >Правила памяти<select id="mode">
+              <option value="combined">Время + противоречия</option>
+              <option value="baseline">Без правил · контроль</option>
+              <option value="temporal">Только актуальность</option>
+              <option value="conflict">Противоречия без времени</option>
+            </select></label
+          ><button id="recall" class="primary">Запросить память ↗</button
+          ><button class="export">Экспорт JSON ↓</button>
+        </div>
+        <p class="notice synthetic">
+          Контролируемое расширение: исходный параметр взят из LongMemCode,
+          изменение и хронология созданы для демонстрации. Это не реальные
+          коммиты и не официальный временной бенчмарк.
+        </p>
+        <div class="timeline panel">
+          <div>
+            <h2>Два времени — два разных вопроса</h2>
+            <p class="muted">
+              В какой версии верен факт? Какие сведения уже поступили в память?
+            </p>
+          </div>
+          <label
+            >Версия, о которой спрашиваем<select id="valid-at">
+              <option value="0">V0 · до изменения</option>
+              <option value="1" selected>V1 · после изменения</option>
+              <option value="2">V2 · поздний снимок</option>
+            </select></label
+          ><label
+            >Что было известно<select id="known-at">
+              <option value="0">K0 · только исходный факт</option>
+              <option value="1" selected>
+                K1 · новая запись, замена не подтверждена
+              </option>
+              <option value="2">K2 · замена подтверждена</option>
+            </select></label
+          >
+        </div>
+        <div id="temporal-metrics" class="metrics"></div>
+        <div class="workspace">
+          <section class="panel">
+            <h2>Журнал утверждений</h2>
+            <div id="facts"></div>
+          </section>
+          <section class="panel">
+            <h2>Проверка совместимости</h2>
+            <div id="conflicts"></div>
+            <h2>Исходный фрагмент</h2>
+            <div id="temporal-source"></div>
+          </section>
+        </div>
+      </section>
+      <section class="panel history">
+        <div class="panel-heading">
+          <h2>История запусков</h2>
+          <span>Новый запуск не переписывает предыдущий</span>
+        </div>
+        <div id="history">
+          <p class="muted">Запуски появятся после первого запроса.</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      Исследовательский прототип · Локальная обработка · Не раскрывает
+      внутренние рассуждения LLM · <span id="fixture-hash"></span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "inspectable-agent-memory-artifact",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "uv run --frozen python -m compileall -q python experiments",
+    "tests": "uv run --frozen python -m pytest -q",
+    "project:scip": "bun experiments/export_scip_structure.ts"
+  },
+  "devDependencies": {
+    "@bufbuild/protobuf": "2.14.1",
+    "@scip-code/scip": "0.9.0"
+  }
+}
