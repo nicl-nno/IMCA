@@ -10,6 +10,8 @@ It needs no API key, model download, database service, plugin, or session hook.
 Code-graph reconstruction additionally uses NumPy. The LoCoMo experiment is
 fully model-free, including indexing and answering.
 
+![Live Inspectable Memory walkthrough](demo/live/inspectable-memory-demo.gif)
+
 ## Start the demo
 
 Python 3.11–3.13 is supported; 3.13 was used for release verification.
