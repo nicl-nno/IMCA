@@ -20,7 +20,7 @@ def test_live_save_conflict_replace_time_travel_and_restart(tmp_path):
     assert first["answer_status"] == "supported"
     second = lab.step({"room": room, "step": 2})
     assert second["answer_status"] == "conflict"
-    old_payload = next(f for f in second["facts"] if f["value"] == "30 s")
+    old_payload = next(f for f in second["facts"] if f["value"] == "payments-eu-west")
     third = lab.step({"room": room, "step": 3})
     assert third["answer_status"] == "supported" and len(third["selected_ids"]) == 1
     assert len(third["facts"]) == 2 and len(third["events"]) == 3
@@ -58,7 +58,7 @@ def test_live_scope_unknown_dates_negation_and_invalid_write():
         "room": a,
         "entity": ENTITY,
         "predicate": "default",
-        "value": "60 s",
+        "value": "payments-eu-central",
         "source": "visitor-note",
         "excerpt": "Demo assertion",
         "environment": "staging",
@@ -68,7 +68,14 @@ def test_live_scope_unknown_dates_negation_and_invalid_write():
     unknown = lab.save({**request, "environment": "production", "valid_from": None})
     assert unknown["answer_status"] == "supported"
     assert any(f["status"] == "unknown_validity" for f in unknown["facts"])
-    negative = lab.save({**request, "environment": "production", "value": "30 s", "negated": True})
+    negative = lab.save(
+        {
+            **request,
+            "environment": "production",
+            "value": "payments-eu-west",
+            "negated": True,
+        }
+    )
     assert negative["answer_status"] == "conflict"
     count = len(negative["facts"])
     with pytest.raises(ValueError):

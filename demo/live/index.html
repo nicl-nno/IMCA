@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Inspectable Memory · Живая лаборатория</title>
+    <title>Inspectable Memory · Инцидент checkout</title>
     <meta
       name="description"
-      content="Добавьте факт, обнаружьте противоречие и проследите, как меняется память агента во времени."
+      content="Разберите production-инцидент, найдите противоречие в памяти и безопасно выберите актуальную инструкцию."
     />
     <link rel="stylesheet" href="/live.css" />
     <script src="/live.js" defer></script>
@@ -27,14 +27,14 @@
     <main>
       <div class="heading">
         <div>
-          <p class="eyebrow">01 / INTERACTIVE MEMORY LAB</p>
-          <h1>Не просто вспомнить.<br /><span>Понять, почему.</span></h1>
+          <p class="eyebrow">01 / PRODUCTION INCIDENT · CHECKOUT DOWN</p>
+          <h1>Checkout не работает.<br /><span>Где его перезапустить?</span></h1>
           <p class="intro">
-            Добавляйте утверждения, исследуйте противоречия и возвращайтесь<br
+            Дежурный просит агента назвать production-кластер. Два источника<br
               class="desktop"
             />
-            к тому, что агент знал раньше. Каждое решение — со следом
-            доказательств.
+            памяти расходятся — ошибочный рестарт продлит простой. Проследите,
+            как память блокирует догадку и обосновывает безопасный ответ.
           </p>
         </div>
         <div class="session-tools">
@@ -48,32 +48,32 @@
         <aside>
           <section class="card scenario">
             <div class="section-label">
-              ПОПРОБУЙТЕ САМИ <span>~ 2 мин</span>
+              РАЗБЕРИТЕ ИНЦИДЕНТ <span>~ 45 сек</span>
             </div>
-            <h2>Два агента.<br />Один таймаут.</h2>
+            <h2>Два источника.<br />Один production.</h2>
             <p>
-              Сервис изменился. Но знает ли память, что старое значение уже не
-              действует?
+              Checkout перенесли между кластерами, но runbook не обновили.
+              Как не перезапустить пустой старый кластер?
             </p>
             <button class="step" data-step="1">
               <span class="step-number">1</span
               ><span
-                ><strong>Запомнить исходный факт</strong
-                ><small>Config agent · 30 секунд с V0</small></span
+                ><strong>Прочитать старый runbook</strong
+                ><small>payments-eu-west · действует с V0</small></span
               ><span class="step-mark">↗</span>
             </button>
             <button class="step" data-step="2">
               <span class="step-number">2</span
               ><span
-                ><strong>Добавить другую версию</strong
-                ><small>Release agent · 60 секунд с V1</small></span
+                ><strong>Найти запись о миграции</strong
+                ><small>payments-eu-central · с V1</small></span
               ><span class="step-mark">↗</span>
             </button>
             <button class="step" data-step="3">
               <span class="step-number">3</span
               ><span
-                ><strong>Подтвердить замену</strong
-                ><small>Закрыть старый интервал в V1</small></span
+                ><strong>Подтвердить миграцию</strong
+                ><small>Runbook устарел начиная с V1</small></span
               ><span class="step-mark">↗</span>
             </button>
             <div class="scenario-note">
@@ -90,7 +90,7 @@
                 <label
                   >Объект<input
                     name="entity"
-                    value="checkout.timeout"
+                    value="checkout.production_cluster"
                     required
                     maxlength="160"
                 /></label>
@@ -108,7 +108,7 @@
                   ><label
                     >Значение<input
                       name="value"
-                      value="90 s"
+                      value="payments-test"
                       required
                       maxlength="500"
                   /></label>
@@ -154,7 +154,7 @@
                     required
                     maxlength="1500"
                   >
-В этой версии наблюдается другое значение таймаута.</textarea
+В этой версии checkout обслуживает другой кластер.</textarea
                   >
                 </label>
                 <label class="check"
@@ -181,7 +181,7 @@
               <label
                 >Объект<input
                   id="query-entity"
-                  value="checkout.timeout"
+                  value="checkout.production_cluster"
                   maxlength="160" /></label
               ><label
                 >Свойство<select id="query-predicate">

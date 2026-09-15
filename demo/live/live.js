@@ -81,15 +81,15 @@ function render() {
     : "До поступления первого утверждения";
   const stages = [
     state.facts.some(
-      (f) => f.evidence.source === "scenario://checkout/config-v0",
+      (f) => f.evidence.source === "scenario://checkout/runbook-v0",
     ),
     state.facts.some(
-      (f) => f.evidence.source === "scenario://checkout/release-v1",
+      (f) => f.evidence.source === "scenario://checkout/migration-v1",
     ),
     state.replacements.some(
       (e) =>
         state.facts.find((f) => f.id === e.old_id)?.evidence.source ===
-        "scenario://checkout/config-v0",
+        "scenario://checkout/runbook-v0",
     ),
   ];
   document.querySelectorAll("[data-step]").forEach((b, i) => {
@@ -144,11 +144,11 @@ function renderAnswer() {
   const excluded = state.facts.length - selected.length;
   let title, body;
   if (state.answer_status === "conflict") {
-    title = "Нельзя выбрать одно значение";
-    body = `<p>Память поддерживает несовместимые утверждения. Новизна записи сама по себе не делает её верной.</p><div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" / ")}</div><p>Уточните источник или подтвердите временную замену. Автоматического «последний победил» нет.</p>`;
+    title = "Стоп: не перезапускайте вслепую";
+    body = `<p>Память нашла две действующие инструкции для одного production-сервиса.</p><div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" / ")}</div><p>Нужно проверить миграцию. Новая запись не побеждает автоматически только потому, что она новее.</p>`;
   } else if (state.answer_status === "supported") {
-    title = "Поддерживается памятью";
-    body = `<div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" · ")}</div><p>Для ${escape(state.query.entity)}, ${escape(state.query.environment)}, в версии V${state.at}. Это вывод из записанных утверждений, не независимая проверка их истинности.</p>`;
+    title = "Безопасный target для рестарта";
+    body = `<div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" · ")}</div><p>Для checkout в ${escape(state.query.environment)}, версия мира V${state.at}. Ответ опирается на показанные источники и подтверждённую миграцию.</p>`;
   } else {
     title = "Недостаточно оснований";
     body =

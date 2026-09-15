@@ -12,7 +12,7 @@ from datetime import UTC, datetime, timedelta
 
 from inspectable_memory import Fact, Scope, digest, utc
 
-ENTITY = "checkout.timeout"
+ENTITY = "checkout.production_cluster"
 PREDICATES = {"default", "signature", "exists", "parameter_exists", "calls"}
 
 
@@ -177,8 +177,8 @@ class LiveLab:
             "at": 1,
         }
         old, new = (
-            demo.get("scenario://checkout/config-v0"),
-            demo.get("scenario://checkout/release-v1"),
+            demo.get("scenario://checkout/runbook-v0"),
+            demo.get("scenario://checkout/migration-v1"),
         )
         step = request.get("step")
         if type(step) is not int or step not in (1, 2, 3):
@@ -187,11 +187,14 @@ class LiveLab:
             return self.save(
                 {
                     **common,
-                    "value": "30 s",
+                    "value": "payments-eu-west",
                     "valid_from": 0,
-                    "source": "scenario://checkout/config-v0",
-                    "agent": "Config agent",
-                    "excerpt": "Authored example: checkout timeout = 30 s from version V0.",
+                    "source": "scenario://checkout/runbook-v0",
+                    "agent": "On-call runbook",
+                    "excerpt": (
+                        "Incident procedure V0: restart checkout workers in "
+                        "payments-eu-west."
+                    ),
                 }
             )
         if step >= 2 and not old:
@@ -200,13 +203,13 @@ class LiveLab:
             return self.save(
                 {
                     **common,
-                    "value": "60 s",
+                    "value": "payments-eu-central",
                     "valid_from": 1,
-                    "source": "scenario://checkout/release-v1",
-                    "agent": "Release agent",
+                    "source": "scenario://checkout/migration-v1",
+                    "agent": "Migration record",
                     "excerpt": (
-                        "Authored example: checkout timeout = 60 s from V1. "
-                        "The old value has not yet been retired."
+                        "Release V1 moved checkout workers to payments-eu-central. "
+                        "The old runbook has not yet been retired."
                     ),
                 }
             )

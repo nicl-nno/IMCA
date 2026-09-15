@@ -26,10 +26,11 @@ Open **http://127.0.0.1:8765**. The server binds to loopback only. Its writable
 journal is `.inspectable/demo.sqlite`; it does not modify the bundled fixture.
 Use `--port` and `--database` to run an isolated instance.
 
-The landing page is now a **live memory laboratory**. Start with an empty
-workspace, record two conflicting assertions and explicitly confirm a temporal
-replacement. The graph, answer and provenance inspector are computed from real
-SQLite writes, not precomputed responses. Two sliders independently control
+The landing page is a **live production-incident walkthrough**. Checkout is
+down, while an old runbook and a migration record point to different clusters.
+Inspect the conflict and explicitly confirm the temporal replacement before the
+system recommends a restart target. The graph, answer and provenance inspector
+are computed from real SQLite writes, not precomputed responses. Two sliders independently control
 valid snapshot and knowledge cutoff. Custom assertions, explicit negation,
 environment isolation, historical recall and JSON trace export are supported.
 Each workspace persists under its URL; creating another does not delete it.
