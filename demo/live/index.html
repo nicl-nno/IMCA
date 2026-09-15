@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Inspectable Memory · Инцидент checkout</title>
+    <title>Inspectable Memory · Миграция Pydantic v2</title>
     <meta
       name="description"
-      content="Разберите production-инцидент, найдите противоречие в памяти и безопасно выберите актуальную инструкцию."
+      content="Исправьте падение CI после обновления Pydantic: память покажет конфликт между API v1 и v2 и объяснит выбранный патч."
     />
     <link rel="stylesheet" href="/live.css" />
     <script src="/live.js" defer></script>
@@ -27,14 +27,14 @@
     <main>
       <div class="heading">
         <div>
-          <p class="eyebrow">01 / PRODUCTION INCIDENT · CHECKOUT DOWN</p>
-          <h1>Checkout не работает.<br /><span>Где его перезапустить?</span></h1>
+          <p class="eyebrow">01 / FAILED BUILD · PYDANTIC V2 MIGRATION</p>
+          <h1>CI упал после обновления.<br /><span>Чем заменить orm_mode?</span></h1>
           <p class="intro">
-            Дежурный просит агента назвать production-кластер. Два источника<br
+            Code agent чинит сериализацию SQLAlchemy-модели в Pydantic v2.<br
               class="desktop"
             />
-            памяти расходятся — ошибочный рестарт продлит простой. Проследите,
-            как память блокирует догадку и обосновывает безопасный ответ.
+            Старый код и migration guide противоречат друг другу. Память должна
+            выбрать патч для текущей версии и показать, почему он актуален.
           </p>
         </div>
         <div class="session-tools">
@@ -50,30 +50,30 @@
             <div class="section-label">
               РАЗБЕРИТЕ ИНЦИДЕНТ <span>~ 45 сек</span>
             </div>
-            <h2>Два источника.<br />Один production.</h2>
+            <h2>Один класс.<br />Две версии API.</h2>
             <p>
-              Checkout перенесли между кластерами, но runbook не обновили.
-              Как не перезапустить пустой старый кластер?
+              `model_validate(db_user)` падает после upgrade. В памяти остался
+              рабочий совет для Pydantic v1.
             </p>
             <button class="step" data-step="1">
               <span class="step-number">1</span
               ><span
-                ><strong>Прочитать старый runbook</strong
-                ><small>payments-eu-west · действует с V0</small></span
+                ><strong>Найти старый код модели</strong
+                ><small>orm_mode = True · Pydantic v1</small></span
               ><span class="step-mark">↗</span>
             </button>
             <button class="step" data-step="2">
               <span class="step-number">2</span
               ><span
-                ><strong>Найти запись о миграции</strong
-                ><small>payments-eu-central · с V1</small></span
+                ><strong>Добавить migration guide</strong
+                ><small>from_attributes = True · v2</small></span
               ><span class="step-mark">↗</span>
             </button>
             <button class="step" data-step="3">
               <span class="step-number">3</span
               ><span
-                ><strong>Подтвердить миграцию</strong
-                ><small>Runbook устарел начиная с V1</small></span
+                ><strong>Зафиксировать upgrade</strong
+                ><small>Инструкция v1 устарела начиная с V2</small></span
               ><span class="step-mark">↗</span>
             </button>
             <div class="scenario-note">
@@ -90,7 +90,7 @@
                 <label
                   >Объект<input
                     name="entity"
-                    value="checkout.production_cluster"
+                    value="UserOut.orm_serialization"
                     required
                     maxlength="160"
                 /></label>
@@ -108,7 +108,7 @@
                   ><label
                     >Значение<input
                       name="value"
-                      value="payments-test"
+                      value="custom_adapter = True"
                       required
                       maxlength="500"
                   /></label>
@@ -120,7 +120,7 @@
                       type="number"
                       min="0"
                       max="100"
-                      value="1" /></label
+                      value="2" /></label
                   ><label
                     >До версии, не включая<input
                       name="valid_to"
@@ -154,7 +154,7 @@
                     required
                     maxlength="1500"
                   >
-В этой версии checkout обслуживает другой кластер.</textarea
+В этой версии библиотека требует другой способ чтения ORM-атрибутов.</textarea
                   >
                 </label>
                 <label class="check"
@@ -181,7 +181,7 @@
               <label
                 >Объект<input
                   id="query-entity"
-                  value="checkout.production_cluster"
+                  value="UserOut.orm_serialization"
                   maxlength="160" /></label
               ><label
                 >Свойство<select id="query-predicate">
@@ -202,8 +202,8 @@
               <div>
                 <label for="valid-at"
                   >Какая версия мира?
-                  <strong id="valid-label">V1</strong></label
-                ><input id="valid-at" type="range" min="0" max="3" value="1" />
+                  <strong id="valid-label">V2</strong></label
+                ><input id="valid-at" type="range" min="0" max="3" value="2" />
                 <p>Когда действует утверждение</p>
               </div>
               <div>

@@ -12,7 +12,7 @@ from datetime import UTC, datetime, timedelta
 
 from inspectable_memory import Fact, Scope, digest, utc
 
-ENTITY = "checkout.production_cluster"
+ENTITY = "UserOut.orm_serialization"
 PREDICATES = {"default", "signature", "exists", "parameter_exists", "calls"}
 
 
@@ -174,11 +174,11 @@ class LiveLab:
             "entity": ENTITY,
             "predicate": "default",
             "environment": "production",
-            "at": 1,
+            "at": 2,
         }
         old, new = (
-            demo.get("scenario://checkout/runbook-v0"),
-            demo.get("scenario://checkout/migration-v1"),
+            demo.get("scenario://pydantic/v1-model"),
+            demo.get("scenario://pydantic/v2-migration"),
         )
         step = request.get("step")
         if type(step) is not int or step not in (1, 2, 3):
@@ -187,13 +187,13 @@ class LiveLab:
             return self.save(
                 {
                     **common,
-                    "value": "payments-eu-west",
-                    "valid_from": 0,
-                    "source": "scenario://checkout/runbook-v0",
-                    "agent": "On-call runbook",
+                    "value": "orm_mode = True",
+                    "valid_from": 1,
+                    "source": "scenario://pydantic/v1-model",
+                    "agent": "models.py · v1",
                     "excerpt": (
-                        "Incident procedure V0: restart checkout workers in "
-                        "payments-eu-west."
+                        "UserOut uses class Config with orm_mode = True to read "
+                        "attributes from ORM objects under Pydantic v1."
                     ),
                 }
             )
@@ -203,13 +203,13 @@ class LiveLab:
             return self.save(
                 {
                     **common,
-                    "value": "payments-eu-central",
-                    "valid_from": 1,
-                    "source": "scenario://checkout/migration-v1",
-                    "agent": "Migration record",
+                    "value": "from_attributes = True",
+                    "valid_from": 2,
+                    "source": "scenario://pydantic/v2-migration",
+                    "agent": "Pydantic v2 guide",
                     "excerpt": (
-                        "Release V1 moved checkout workers to payments-eu-central. "
-                        "The old runbook has not yet been retired."
+                        "Pydantic v2 renamed orm_mode to from_attributes. Configure "
+                        "model_config before calling model_validate(db_user)."
                     ),
                 }
             )
@@ -218,7 +218,7 @@ class LiveLab:
                 raise ValueError("add the second assertion first")
             if not any(e["old_id"] == old["id"] and e["new_id"] == new["id"] for e in replacements):
                 return self.replace(
-                    {**common, "old_id": old["id"], "new_id": new["id"], "effective": 1}
+                    {**common, "old_id": old["id"], "new_id": new["id"], "effective": 2}
                 )
         return self.snapshot(common)
 
@@ -226,7 +226,7 @@ class LiveLab:
         room = request.get("room")
         created = self.room(room)
         facts, events, replacements = self.journal(room)
-        at = position(request.get("at", 1), "at")
+        at = position(request.get("at", 2), "at")
         known = request.get("known")
         known = len(events) if known is None else known
         if type(known) is not int or not 0 <= known <= len(events):

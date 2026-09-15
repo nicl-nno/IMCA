@@ -81,15 +81,15 @@ function render() {
     : "До поступления первого утверждения";
   const stages = [
     state.facts.some(
-      (f) => f.evidence.source === "scenario://checkout/runbook-v0",
+      (f) => f.evidence.source === "scenario://pydantic/v1-model",
     ),
     state.facts.some(
-      (f) => f.evidence.source === "scenario://checkout/migration-v1",
+      (f) => f.evidence.source === "scenario://pydantic/v2-migration",
     ),
     state.replacements.some(
       (e) =>
         state.facts.find((f) => f.id === e.old_id)?.evidence.source ===
-        "scenario://checkout/runbook-v0",
+        "scenario://pydantic/v1-model",
     ),
   ];
   document.querySelectorAll("[data-step]").forEach((b, i) => {
@@ -144,11 +144,11 @@ function renderAnswer() {
   const excluded = state.facts.length - selected.length;
   let title, body;
   if (state.answer_status === "conflict") {
-    title = "Стоп: не перезапускайте вслепую";
-    body = `<p>Память нашла две действующие инструкции для одного production-сервиса.</p><div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" / ")}</div><p>Нужно проверить миграцию. Новая запись не побеждает автоматически только потому, что она новее.</p>`;
+    title = "Стоп: патч зависит от версии";
+    body = `<p>Память нашла две несовместимые настройки одного класса.</p><div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" / ")}</div><p>Нужно подтвердить upgrade зависимости. Новая запись не побеждает автоматически только потому, что она новее.</p>`;
   } else if (state.answer_status === "supported") {
-    title = "Безопасный target для рестарта";
-    body = `<div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" · ")}</div><p>Для checkout в ${escape(state.query.environment)}, версия мира V${state.at}. Ответ опирается на показанные источники и подтверждённую миграцию.</p>`;
+    title = "Патч для текущей зависимости";
+    body = `<div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" · ")}</div><p>Для UserOut в ${escape(state.query.environment)}, версия API V${state.at}. Ответ опирается на показанные исходный код, migration guide и подтверждённый upgrade.</p>`;
   } else {
     title = "Недостаточно оснований";
     body =

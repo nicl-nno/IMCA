@@ -575,6 +575,7 @@ h2 {
   font-size: 29px;
   color: var(--teal);
   margin: 12px 0;
+  overflow-wrap: anywhere;
 }
 .answer p,
 .inspector > p {
