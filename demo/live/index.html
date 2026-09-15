@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Inspectable Memory · Миграция Pydantic v2</title>
+    <title>Inspectable Memory · Safety gate для опасного PR</title>
     <meta
       name="description"
-      content="Исправьте падение CI после обновления Pydantic: память покажет конфликт между API v1 и v2 и объяснит выбранный патч."
+      content="Проверьте опасную миграцию базы: интерпретируемая память обнаружит, что production снова читает удаляемую колонку."
     />
     <link rel="stylesheet" href="/live.css" />
     <script src="/live.js" defer></script>
@@ -27,14 +27,14 @@
     <main>
       <div class="heading">
         <div>
-          <p class="eyebrow">01 / FAILED BUILD · PYDANTIC V2 MIGRATION</p>
-          <h1>CI упал после обновления.<br /><span>Чем заменить orm_mode?</span></h1>
+          <p class="eyebrow">01 / CODE REVIEW · DESTRUCTIVE MIGRATION</p>
+          <h1>Агент хочет удалить колонку.<br /><span>Можно мержить PR?</span></h1>
           <p class="intro">
-            Code agent чинит сериализацию SQLAlchemy-модели в Pydantic v2.<br
+            Cleanup ticket разрешает DROP, но после аварийного rollback<br
               class="desktop"
             />
-            Старый код и migration guide противоречат друг другу. Память должна
-            выбрать патч для текущей версии и показать, почему он актуален.
+            production снова читает колонку. Память должна остановить опасный
+            merge и показать всю цепочку доказательств.
           </p>
         </div>
         <div class="session-tools">
@@ -44,36 +44,48 @@
         </div>
       </div>
       <div id="error" role="alert" hidden></div>
+      <section id="pr-gate" class="card pr-gate review" aria-live="polite">
+        <div class="pr-summary">
+          <span class="pr-number">PR #1842 · ALEMBIC MIGRATION</span>
+          <strong>Remove obsolete legacy auth token</strong>
+          <code>op.drop_column("users", "legacy_token")</code>
+        </div>
+        <div class="gate-result">
+          <span>INTERPRETABLE MEMORY GATE</span>
+          <strong id="gate-status">ПРОВЕРКА НУЖНА</strong>
+          <p id="gate-reason">Нет оснований разрешить необратимую миграцию.</p>
+        </div>
+      </section>
       <div class="layout">
         <aside>
           <section class="card scenario">
             <div class="section-label">
               РАЗБЕРИТЕ ИНЦИДЕНТ <span>~ 45 сек</span>
             </div>
-            <h2>Один класс.<br />Две версии API.</h2>
+            <h2>Один DROP.<br />Две версии мира.</h2>
             <p>
-              `model_validate(db_user)` падает после upgrade. В памяти остался
-              рабочий совет для Pydantic v1.
+              Если удалить колонку после rollback, legacy login начнёт падать
+              уже в production.
             </p>
             <button class="step" data-step="1">
               <span class="step-number">1</span
               ><span
-                ><strong>Найти старый код модели</strong
-                ><small>orm_mode = True · Pydantic v1</small></span
+                ><strong>Прочитать cleanup ticket</strong
+                ><small>DROP COLUMN · безопасно с V41</small></span
               ><span class="step-mark">↗</span>
             </button>
             <button class="step" data-step="2">
               <span class="step-number">2</span
               ><span
-                ><strong>Добавить migration guide</strong
-                ><small>from_attributes = True · v2</small></span
+                ><strong>Подключить runtime trace</strong
+                ><small>KEEP COLUMN · rollback с V42</small></span
               ><span class="step-mark">↗</span>
             </button>
             <button class="step" data-step="3">
               <span class="step-number">3</span
               ><span
-                ><strong>Зафиксировать upgrade</strong
-                ><small>Инструкция v1 устарела начиная с V2</small></span
+                ><strong>Подтвердить rollback</strong
+                ><small>Cleanup ticket устарел с V42</small></span
               ><span class="step-mark">↗</span>
             </button>
             <div class="scenario-note">
@@ -90,7 +102,7 @@
                 <label
                   >Объект<input
                     name="entity"
-                    value="UserOut.orm_serialization"
+                    value="users.legacy_token"
                     required
                     maxlength="160"
                 /></label>
@@ -108,7 +120,7 @@
                   ><label
                     >Значение<input
                       name="value"
-                      value="custom_adapter = True"
+                      value="RENAME COLUMN"
                       required
                       maxlength="500"
                   /></label>
@@ -120,7 +132,7 @@
                       type="number"
                       min="0"
                       max="100"
-                      value="2" /></label
+                      value="42" /></label
                   ><label
                     >До версии, не включая<input
                       name="valid_to"
@@ -154,7 +166,7 @@
                     required
                     maxlength="1500"
                   >
-В этой версии библиотека требует другой способ чтения ORM-атрибутов.</textarea
+Production-наблюдение требует другого действия с колонкой.</textarea
                   >
                 </label>
                 <label class="check"
@@ -181,7 +193,7 @@
               <label
                 >Объект<input
                   id="query-entity"
-                  value="UserOut.orm_serialization"
+                  value="users.legacy_token"
                   maxlength="160" /></label
               ><label
                 >Свойство<select id="query-predicate">
@@ -202,8 +214,8 @@
               <div>
                 <label for="valid-at"
                   >Какая версия мира?
-                  <strong id="valid-label">V2</strong></label
-                ><input id="valid-at" type="range" min="0" max="3" value="2" />
+                  <strong id="valid-label">V42</strong></label
+                ><input id="valid-at" type="range" min="0" max="100" value="42" />
                 <p>Когда действует утверждение</p>
               </div>
               <div>

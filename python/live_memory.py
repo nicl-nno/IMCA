@@ -12,7 +12,7 @@ from datetime import UTC, datetime, timedelta
 
 from inspectable_memory import Fact, Scope, digest, utc
 
-ENTITY = "UserOut.orm_serialization"
+ENTITY = "users.legacy_token"
 PREDICATES = {"default", "signature", "exists", "parameter_exists", "calls"}
 
 
@@ -174,11 +174,11 @@ class LiveLab:
             "entity": ENTITY,
             "predicate": "default",
             "environment": "production",
-            "at": 2,
+            "at": 42,
         }
         old, new = (
-            demo.get("scenario://pydantic/v1-model"),
-            demo.get("scenario://pydantic/v2-migration"),
+            demo.get("scenario://db/cleanup-ticket-1842"),
+            demo.get("scenario://runtime/auth-compat-trace"),
         )
         step = request.get("step")
         if type(step) is not int or step not in (1, 2, 3):
@@ -187,13 +187,13 @@ class LiveLab:
             return self.save(
                 {
                     **common,
-                    "value": "orm_mode = True",
-                    "valid_from": 1,
-                    "source": "scenario://pydantic/v1-model",
-                    "agent": "models.py · v1",
+                    "value": "DROP COLUMN",
+                    "valid_from": 41,
+                    "source": "scenario://db/cleanup-ticket-1842",
+                    "agent": "Cleanup ticket #1842",
                     "excerpt": (
-                        "UserOut uses class Config with orm_mode = True to read "
-                        "attributes from ORM objects under Pydantic v1."
+                        "After the V41 migration no service reads users.legacy_token. "
+                        "The column is approved for removal."
                     ),
                 }
             )
@@ -203,13 +203,13 @@ class LiveLab:
             return self.save(
                 {
                     **common,
-                    "value": "from_attributes = True",
-                    "valid_from": 2,
-                    "source": "scenario://pydantic/v2-migration",
-                    "agent": "Pydantic v2 guide",
+                    "value": "KEEP COLUMN",
+                    "valid_from": 42,
+                    "source": "scenario://runtime/auth-compat-trace",
+                    "agent": "Production trace · 14:07",
                     "excerpt": (
-                        "Pydantic v2 renamed orm_mode to from_attributes. Configure "
-                        "model_config before calling model_validate(db_user)."
+                        "Emergency rollback V42 restored auth-compat. Production trace "
+                        "shows SELECT users.legacy_token on every legacy login."
                     ),
                 }
             )
@@ -218,7 +218,7 @@ class LiveLab:
                 raise ValueError("add the second assertion first")
             if not any(e["old_id"] == old["id"] and e["new_id"] == new["id"] for e in replacements):
                 return self.replace(
-                    {**common, "old_id": old["id"], "new_id": new["id"], "effective": 2}
+                    {**common, "old_id": old["id"], "new_id": new["id"], "effective": 42}
                 )
         return self.snapshot(common)
 
@@ -226,7 +226,7 @@ class LiveLab:
         room = request.get("room")
         created = self.room(room)
         facts, events, replacements = self.journal(room)
-        at = position(request.get("at", 2), "at")
+        at = position(request.get("at", 42), "at")
         known = request.get("known")
         known = len(events) if known is None else known
         if type(known) is not int or not 0 <= known <= len(events):

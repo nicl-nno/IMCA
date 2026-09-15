@@ -26,20 +26,20 @@ Open **http://127.0.0.1:8765**. The server binds to loopback only. Its writable
 journal is `.inspectable/demo.sqlite`; it does not modify the bundled fixture.
 Use `--port` and `--database` to run an isolated instance.
 
-The landing page is a **live code-migration walkthrough**. CI fails after a
-Pydantic v2 upgrade, while old project code and the migration guide recommend
-different ORM settings. Inspect the conflict and explicitly confirm the version
-transition before the system recommends the current patch. The graph, answer
-and provenance inspector
-are computed from real SQLite writes, not precomputed responses. Two sliders
+The landing page is a **live safety gate for a destructive code change**. A code
+agent proposes `DROP COLUMN users.legacy_token` from an approved cleanup ticket,
+but a later production trace shows that an emergency rollback restored an active
+reader. Inspect the conflict and explicitly confirm the rollback before the
+system blocks the merge. The graph, answer and provenance inspector are
+computed from real SQLite writes, not precomputed responses. Two sliders
 independently control valid snapshot and knowledge cutoff. Custom assertions,
 explicit negation,
 environment isolation, historical recall and JSON trace export are supported.
 Each workspace persists under its URL; creating another does not delete it.
 
-The guided Pydantic migration example is authored. Agent names label sources;
-no actual LLM agent or free-text extraction runs. The interface explains selection rules
-and source evidence, not model reasoning. Visit `/replay` for the unchanged
+The guided database-migration example is authored. Agent names label sources;
+no actual LLM agent or free-text extraction runs. The interface explains
+selection rules and source evidence, not model reasoning. Visit `/replay` for the unchanged
 LongMemCode and controlled source-derived temporal examples. The LoCoMo companion
 remains an offline experiment, not a separate implemented UI panel.
 

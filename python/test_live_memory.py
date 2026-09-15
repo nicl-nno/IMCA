@@ -20,15 +20,15 @@ def test_live_save_conflict_replace_time_travel_and_restart(tmp_path):
     assert first["answer_status"] == "supported"
     second = lab.step({"room": room, "step": 2})
     assert second["answer_status"] == "conflict"
-    old_payload = next(f for f in second["facts"] if f["value"] == "orm_mode = True")
+    old_payload = next(f for f in second["facts"] if f["value"] == "DROP COLUMN")
     third = lab.step({"room": room, "step": 3})
     assert third["answer_status"] == "supported" and len(third["selected_ids"]) == 1
     assert len(third["facts"]) == 2 and len(third["events"]) == 3
     assert any(p["diagnosis"] == "version_change" for p in third["pairs"])
     assert lab.snapshot({"room": room, "known": 2})["answer_status"] == "conflict"
-    before = lab.snapshot({"room": room, "at": 1})
+    before = lab.snapshot({"room": room, "at": 41})
     assert before["selected_ids"] == [old_payload["id"]]
-    assert lab.snapshot({"room": room, "at": 1})["cache_hit"]
+    assert lab.snapshot({"room": room, "at": 41})["cache_hit"]
     assert lab.snapshot({"room": room, "known": 0})["selected_ids"] == []
     # Re-running the guided action does not add another assertion/event.
     assert len(lab.step({"room": room, "step": 3})["events"]) == 3
@@ -58,7 +58,7 @@ def test_live_scope_unknown_dates_negation_and_invalid_write():
         "room": a,
         "entity": ENTITY,
         "predicate": "default",
-        "value": "from_attributes = True",
+        "value": "KEEP COLUMN",
         "source": "visitor-note",
         "excerpt": "Demo assertion",
         "environment": "staging",
@@ -72,7 +72,7 @@ def test_live_scope_unknown_dates_negation_and_invalid_write():
         {
             **request,
             "environment": "production",
-            "value": "orm_mode = True",
+            "value": "DROP COLUMN",
             "negated": True,
         }
     )

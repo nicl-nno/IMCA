@@ -22,45 +22,43 @@ def run(url, output, executable=None):
         page.on("pageerror", lambda error: errors.append(str(error)))
         page.goto(url)
         expect(page.locator("#answer")).to_contain_text("Недостаточно оснований")
-        page.get_by_role("button", name="1 Найти старый код модели", exact=False).click()
-        expect(page.locator("#answer")).to_contain_text("orm_mode = True")
-        page.get_by_role("button", name="2 Добавить migration guide", exact=False).click()
-        expect(page.locator("#answer")).to_contain_text("Стоп: патч зависит от версии")
-        page.locator(".fact-node").filter(has_text="from_attributes = True").click()
+        page.get_by_role("button", name="1 Прочитать cleanup ticket", exact=False).click()
+        expect(page.locator("#answer")).to_contain_text("DROP COLUMN")
+        page.get_by_role("button", name="2 Подключить runtime trace", exact=False).click()
+        expect(page.locator("#answer")).to_contain_text("миграцию нельзя мержить")
+        expect(page.locator("#gate-status")).to_have_text("MERGE BLOCKED")
+        page.locator(".fact-node").filter(has_text="KEEP COLUMN").click()
         expect(page.locator("#inspector")).to_contain_text(
-            "scenario://pydantic/v2-migration"
+            "scenario://runtime/auth-compat-trace"
         )
         page.screenshot(path=str(output / "live-conflict.png"), full_page=True)
-        page.get_by_role("button", name="3 Зафиксировать upgrade", exact=False).click()
-        expect(page.locator("#answer")).to_contain_text("Патч для текущей зависимости")
-        expect(page.locator("#answer .answer-value")).to_have_text(
-            "from_attributes = True"
-        )
+        page.get_by_role("button", name="3 Подтвердить rollback", exact=False).click()
+        expect(page.locator("#answer")).to_contain_text("Колонку удалять нельзя")
+        expect(page.locator("#answer .answer-value")).to_have_text("KEEP COLUMN")
         page.screenshot(path=str(output / "live-resolved.png"), full_page=True)
         page.locator("#known-at").focus()
         page.locator("#known-at").press("ArrowLeft")
-        expect(page.locator("#answer")).to_contain_text("Стоп: патч зависит от версии")
-        page.locator("#valid-at").focus()
-        page.locator("#valid-at").press("Home")
-        expect(page.locator("#answer .answer-value")).to_have_text("orm_mode = True")
+        expect(page.locator("#answer")).to_contain_text("миграцию нельзя мержить")
+        page.locator("#valid-at").fill("41")
+        expect(page.locator("#answer .answer-value")).to_have_text("DROP COLUMN")
         page.reload()
         expect(page.locator("#answer .answer-value")).to_have_text(
-            "from_attributes = True"
+            "KEEP COLUMN"
         )
         page.get_by_text("＋ Добавить утверждение", exact=True).click()
         form = page.locator("#fact-form")
         form.locator('[name="environment"]').fill("staging")
         form.locator('[name="excerpt"]').fill('<script>alert("not executable")</script>')
         form.get_by_role("button", name="Записать в память", exact=True).click()
-        expect(page.locator("#answer .answer-value")).to_have_text("custom_adapter = True")
-        page.locator(".fact-node").filter(has_text="custom_adapter = True").click()
+        expect(page.locator("#answer .answer-value")).to_have_text("RENAME COLUMN")
+        page.locator(".fact-node").filter(has_text="RENAME COLUMN").click()
         expect(page.locator("#inspector .evidence")).to_have_text(
             '<script>alert("not executable")</script>'
         )
         page.locator("#query-environment").fill("production")
         page.get_by_role("button", name="Спросить", exact=False).click()
         expect(page.locator("#answer .answer-value")).to_have_text(
-            "from_attributes = True"
+            "KEEP COLUMN"
         )
         with page.expect_download() as download:
             page.get_by_role("button", name="Экспорт объяснения", exact=False).click()

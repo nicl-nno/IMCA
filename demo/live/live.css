@@ -189,6 +189,72 @@ h1 span {
   border-radius: var(--radius);
   padding: 22px;
 }
+.pr-gate {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
+  gap: 24px;
+  align-items: stretch;
+  padding: 16px 18px;
+  margin-bottom: 22px;
+  border-left: 5px solid var(--amber);
+  transition: border-color 0.2s, background 0.2s;
+}
+.pr-summary,
+.gate-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+}
+.pr-number,
+.gate-result > span {
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  color: var(--muted);
+  font-weight: 650;
+}
+.pr-summary > strong {
+  font-size: 14px;
+}
+.pr-summary code {
+  width: fit-content;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: #f6f1ef;
+  color: #9b3d36;
+  font-size: 12px;
+}
+.gate-result {
+  border-left: 1px solid var(--line);
+  padding-left: 22px;
+}
+.gate-result strong {
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  color: var(--amber);
+}
+.gate-result p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+.pr-gate.blocked {
+  border-left-color: var(--red);
+  background: #fffaf8;
+}
+.pr-gate.blocked .gate-result strong {
+  color: var(--red);
+}
+.pr-gate.historical {
+  border-left-color: var(--teal);
+  background: #f8fcf8;
+}
+.pr-gate.historical .gate-result strong {
+  color: var(--teal);
+}
 .section-label {
   display: flex;
   justify-content: space-between;
@@ -776,6 +842,15 @@ summary:focus-visible {
   }
   .layout {
     grid-template-columns: 1fr;
+  }
+  .pr-gate {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .gate-result {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding: 12px 0 0;
   }
   .scenario h2 br {
     display: none;

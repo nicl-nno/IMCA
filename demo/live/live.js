@@ -81,25 +81,53 @@ function render() {
     : "До поступления первого утверждения";
   const stages = [
     state.facts.some(
-      (f) => f.evidence.source === "scenario://pydantic/v1-model",
+      (f) => f.evidence.source === "scenario://db/cleanup-ticket-1842",
     ),
     state.facts.some(
-      (f) => f.evidence.source === "scenario://pydantic/v2-migration",
+      (f) => f.evidence.source === "scenario://runtime/auth-compat-trace",
     ),
     state.replacements.some(
       (e) =>
         state.facts.find((f) => f.id === e.old_id)?.evidence.source ===
-        "scenario://pydantic/v1-model",
+        "scenario://db/cleanup-ticket-1842",
     ),
   ];
   document.querySelectorAll("[data-step]").forEach((b, i) => {
     b.classList.toggle("done", stages[i]);
     b.querySelector(".step-mark").textContent = stages[i] ? "✓" : "↗";
   });
+  renderGate();
   renderGraph();
   renderAnswer();
   renderInspector();
   renderEvents();
+}
+function renderGate() {
+  const gate = $("pr-gate");
+  const selected = state.facts.filter((f) => f.selected);
+  const action = selected.length === 1 ? selected[0].value : null;
+  let style = "review";
+  let status = "ПРОВЕРКА НУЖНА";
+  let reason = "Нет оснований разрешить необратимую миграцию.";
+  if (state.answer_status === "conflict") {
+    style = "blocked";
+    status = "MERGE BLOCKED";
+    reason = "Cleanup ticket и production trace требуют противоположных действий.";
+  } else if (action === "KEEP COLUMN") {
+    style = "blocked";
+    status = "MERGE BLOCKED";
+    reason = "После rollback сервис auth-compat снова читает legacy_token.";
+  } else if (action === "DROP COLUMN" && state.at < 42) {
+    style = "historical";
+    status = `SAFE IN V${state.at}`;
+    reason = "Cleanup ticket явно фиксирует отсутствие читателей до rollback.";
+  } else if (action === "DROP COLUMN") {
+    status = "DROP ПОДДЕРЖАН ОДНИМ ФАКТОМ";
+    reason = "Нужна проверка runtime-состояния перед merge.";
+  }
+  gate.className = `card pr-gate ${style}`;
+  $("gate-status").textContent = status;
+  $("gate-reason").textContent = reason;
 }
 function renderGraph() {
   $("graph-count").textContent =
@@ -144,11 +172,13 @@ function renderAnswer() {
   const excluded = state.facts.length - selected.length;
   let title, body;
   if (state.answer_status === "conflict") {
-    title = "Стоп: патч зависит от версии";
-    body = `<p>Память нашла две несовместимые настройки одного класса.</p><div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" / ")}</div><p>Нужно подтвердить upgrade зависимости. Новая запись не побеждает автоматически только потому, что она новее.</p>`;
+    title = "Опасную миграцию нельзя мержить";
+    body = `<p>Память нашла два несовместимых действия над одной колонкой.</p><div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" / ")}</div><p>Проверьте rollback. Runtime trace не побеждает автоматически только потому, что он новее.</p>`;
   } else if (state.answer_status === "supported") {
-    title = "Патч для текущей зависимости";
-    body = `<div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" · ")}</div><p>Для UserOut в ${escape(state.query.environment)}, версия API V${state.at}. Ответ опирается на показанные исходный код, migration guide и подтверждённый upgrade.</p>`;
+    title = selected.some((f) => f.value === "KEEP COLUMN")
+      ? "Колонку удалять нельзя"
+      : "Удаление поддерживается памятью";
+    body = `<div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" · ")}</div><p>Для users.legacy_token в ${escape(state.query.environment)}, версия мира V${state.at}. Ответ опирается на показанные ticket, runtime trace и подтверждённый rollback.</p>`;
   } else {
     title = "Недостаточно оснований";
     body =
