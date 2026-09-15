@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inspectable Memory · Живая лаборатория</title>
+    <meta
+      name="description"
+      content="Добавьте факт, обнаружьте противоречие и проследите, как меняется память агента во времени."
+    />
+    <link rel="stylesheet" href="/live.css" />
+    <script src="/live.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/live"
+        ><span class="logo">im</span>Inspectable Memory<span class="lab-tag"
+          >RESEARCH LAB</span
+        ></a
+      >
+      <nav aria-label="Разделы">
+        <a class="active" href="/live">Живая память</a
+        ><a href="/replay">Бенчмарк и разбор ошибок ↗</a>
+      </nav>
+      <span class="local"><i></i> Локально · без LLM</span>
+    </header>
+    <main>
+      <div class="heading">
+        <div>
+          <p class="eyebrow">01 / INTERACTIVE MEMORY LAB</p>
+          <h1>Не просто вспомнить.<br /><span>Понять, почему.</span></h1>
+          <p class="intro">
+            Добавляйте утверждения, исследуйте противоречия и возвращайтесь<br
+              class="desktop"
+            />
+            к тому, что агент знал раньше. Каждое решение — со следом
+            доказательств.
+          </p>
+        </div>
+        <div class="session-tools">
+          <span id="workspace-id">Подключение к журналу…</span
+          ><button id="new-room" class="subtle">＋ Новая сессия</button
+          ><button id="export" class="subtle">↓ Экспорт объяснения</button>
+        </div>
+      </div>
+      <div id="error" role="alert" hidden></div>
+      <div class="layout">
+        <aside>
+          <section class="card scenario">
+            <div class="section-label">
+              ПОПРОБУЙТЕ САМИ <span>~ 2 мин</span>
+            </div>
+            <h2>Два агента.<br />Один таймаут.</h2>
+            <p>
+              Сервис изменился. Но знает ли память, что старое значение уже не
+              действует?
+            </p>
+            <button class="step" data-step="1">
+              <span class="step-number">1</span
+              ><span
+                ><strong>Запомнить исходный факт</strong
+                ><small>Config agent · 30 секунд с V0</small></span
+              ><span class="step-mark">↗</span>
+            </button>
+            <button class="step" data-step="2">
+              <span class="step-number">2</span
+              ><span
+                ><strong>Добавить другую версию</strong
+                ><small>Release agent · 60 секунд с V1</small></span
+              ><span class="step-mark">↗</span>
+            </button>
+            <button class="step" data-step="3">
+              <span class="step-number">3</span
+              ><span
+                ><strong>Подтвердить замену</strong
+                ><small>Закрыть старый интервал в V1</small></span
+              ><span class="step-mark">↗</span>
+            </button>
+            <div class="scenario-note">
+              Учебный сценарий, не результат бенчмарка. Кнопки действительно
+              записывают факты в SQLite; «агенты» здесь — обозначения
+              источников.
+            </div>
+          </section>
+          <section class="card custom">
+            <div class="section-label">СВОЙ ЭКСПЕРИМЕНТ</div>
+            <details>
+              <summary>＋ Добавить утверждение</summary>
+              <form id="fact-form">
+                <label
+                  >Объект<input
+                    name="entity"
+                    value="checkout.timeout"
+                    required
+                    maxlength="160"
+                /></label>
+                <div class="form-row">
+                  <label
+                    >Свойство<select name="predicate">
+                      <option value="default">Значение</option>
+                      <option value="signature">Сигнатура</option>
+                      <option value="exists">Существует</option>
+                      <option value="parameter_exists">
+                        Параметр существует
+                      </option>
+                      <option value="calls">Вызывает (несколько связей)</option>
+                    </select></label
+                  ><label
+                    >Значение<input
+                      name="value"
+                      value="90 s"
+                      required
+                      maxlength="500"
+                  /></label>
+                </div>
+                <div class="form-row">
+                  <label
+                    >Начиная с версии<input
+                      name="valid_from"
+                      type="number"
+                      min="0"
+                      max="100"
+                      value="1" /></label
+                  ><label
+                    >До версии, не включая<input
+                      name="valid_to"
+                      type="number"
+                      min="0"
+                      max="100"
+                      placeholder="Без ограничения"
+                  /></label>
+                </div>
+                <label
+                  >Окружение<input
+                    name="environment"
+                    value="production"
+                    required
+                    maxlength="40" /></label
+                ><label
+                  >Кто сообщил<input
+                    name="agent"
+                    value="Visitor agent"
+                    required
+                    maxlength="80" /></label
+                ><label
+                  >Источник<input
+                    name="source"
+                    value="note://manual-observation"
+                    required
+                    maxlength="300" /></label
+                ><label
+                  >Свидетельство<textarea
+                    name="excerpt"
+                    required
+                    maxlength="1500"
+                  >
+В этой версии наблюдается другое значение таймаута.</textarea
+                  >
+                </label>
+                <label class="check"
+                  ><input name="negated" type="checkbox" /> Явное отрицание
+                  этого значения</label
+                >
+                <p class="hint">
+                  Пустая начальная версия означает неизвестную актуальность.
+                  Текст не интерпретируется моделью; значения вводятся как
+                  строки.
+                </p>
+                <button class="primary" type="submit">Записать в память</button>
+              </form>
+            </details>
+          </section>
+        </aside>
+        <div class="workbench">
+          <section class="card question">
+            <div class="section-label">
+              ЗАПРОС К ПАМЯТИ
+              <span>Структурированный · без догадок модели</span>
+            </div>
+            <div class="query-row">
+              <label
+                >Объект<input
+                  id="query-entity"
+                  value="checkout.timeout"
+                  maxlength="160" /></label
+              ><label
+                >Свойство<select id="query-predicate">
+                  <option value="default">Значение</option>
+                  <option value="signature">Сигнатура</option>
+                  <option value="exists">Существует</option>
+                  <option value="parameter_exists">Параметр существует</option>
+                  <option value="calls">Вызывает</option>
+                </select></label
+              ><label
+                >Окружение<input
+                  id="query-environment"
+                  value="production"
+                  maxlength="40" /></label
+              ><button id="ask" class="primary">Спросить ↗</button>
+            </div>
+            <div class="coordinates">
+              <div>
+                <label for="valid-at"
+                  >Какая версия мира?
+                  <strong id="valid-label">V1</strong></label
+                ><input id="valid-at" type="range" min="0" max="3" value="1" />
+                <p>Когда действует утверждение</p>
+              </div>
+              <div>
+                <label for="known-at"
+                  >Что уже было известно?
+                  <strong id="known-label">K0</strong></label
+                ><input id="known-at" type="range" min="0" max="0" value="0" />
+                <p id="known-caption">Память ещё пуста</p>
+              </div>
+            </div>
+          </section>
+          <section class="card graph-card">
+            <div class="graph-heading">
+              <div>
+                <div class="section-label">КАРТА ПАМЯТИ</div>
+                <h2>От источника — к ответу</h2>
+              </div>
+              <div class="legend">
+                <span><i class="green"></i> выбрано</span
+                ><span><i class="red"></i> конфликт</span
+                ><span><i class="gray"></i> исключено</span>
+              </div>
+            </div>
+            <div
+              id="graph"
+              class="graph"
+              aria-label="Граф источников, утверждений и решения"
+            ></div>
+            <div class="graph-footer">
+              <span id="graph-count">0 утверждений · 0 связей замены</span
+              ><span>Нажмите на факт, чтобы открыть его основание</span>
+            </div>
+          </section>
+          <div class="bottom-grid">
+            <section
+              id="answer"
+              class="card answer"
+              aria-live="polite"
+            ></section>
+            <section id="inspector" class="card inspector">
+              <div class="section-label">ИНСПЕКТОР ФАКТА</div>
+              <h2>Выберите узел на карте</h2>
+              <p>
+                Здесь появятся источник, интервал действия и точная причина
+                включения или исключения.
+              </p>
+            </section>
+          </div>
+          <section class="card history-card">
+            <div class="graph-heading">
+              <div>
+                <div class="section-label">НЕИЗМЕНЯЕМЫЙ ЖУРНАЛ</div>
+                <h2>История поступления знаний</h2>
+              </div>
+              <span class="history-hint">Факты не удаляются при замене</span>
+            </div>
+            <div id="events"></div>
+          </section>
+        </div>
+      </div>
+      <footer>
+        <span>Inspectable Memory · Research prototype</span
+        ><span
+          >Объяснение правил и источников, не внутренние рассуждения LLM</span
+        ><a href="https://github.com/nicl-nno/aaai2026_demo_agentic_memory_code"
+          >Код и воспроизведение ↗</a
+        >
+      </footer>
+    </main>
+  </body>
+</html>

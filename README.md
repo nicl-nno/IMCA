@@ -24,12 +24,24 @@ Open **http://127.0.0.1:8765**. The server binds to loopback only. Its writable
 journal is `.inspectable/demo.sqlite`; it does not modify the bundled fixture.
 Use `--port` and `--database` to run an isolated instance.
 
-Try a callers-of-symbol case: inspect witnesses, switch references to calls,
-disable a ranking signal, and compare saved runs. In the temporal panel, vary
-the snapshot and knowledge cutoff to see conflicts, replacement, historical
-recall, and cache reuse. Temporal changes are explicitly authored examples,
-not actual historical benchmark commits. The LoCoMo companion is an offline
-experiment, not a separate implemented UI panel.
+The landing page is now a **live memory laboratory**. Start with an empty
+workspace, record two conflicting assertions and explicitly confirm a temporal
+replacement. The graph, answer and provenance inspector are computed from real
+SQLite writes, not precomputed responses. Two sliders independently control
+valid snapshot and knowledge cutoff. Custom assertions, explicit negation,
+environment isolation, historical recall and JSON trace export are supported.
+Each workspace persists under its URL; creating another does not delete it.
+
+The guided checkout example is authored. Agent names label sources; no actual
+LLM agent or free-text extraction runs. The interface explains selection rules
+and source evidence, not model reasoning. Visit `/replay` for the unchanged
+LongMemCode and controlled source-derived temporal examples. The LoCoMo companion
+remains an offline experiment, not a separate implemented UI panel.
+
+See [the two-minute demo script](docs/live-demo.md). The live service is
+**loopback-only, single-user research software**, not an authenticated public
+multi-user deployment. The URL workspace ID is a convenience, not an access
+control mechanism. Do not expose the port directly to the Internet.
 
 ## Install evaluation dependencies and test
 

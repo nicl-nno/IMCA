@@ -12,6 +12,7 @@ from urllib.parse import parse_qs, urlparse
 
 from code_metrics import score_expected
 from inspectable_memory import Fact, InspectableMemory, Scope, digest
+from live_memory import LiveLab
 from retrieval_inspection import diagnose_stages, replay
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,6 +63,7 @@ class DemoService:
         self.temporal = {c["id"]: c for c in self.fixture["temporal_cases"]}
         self.memory = InspectableMemory(database)
         seed_temporal(self.memory, list(self.temporal.values()))
+        self.live = LiveLab(self.memory)
 
     def retrieval(self, request: dict) -> dict:
         case = self.cases[request["case_id"]]
@@ -164,7 +166,11 @@ def make_handler(service: DemoService):
                 except ValueError:
                     return self.send_data({"error": "run integrity check failed"}, 409)
             paths = {
-                "/": ("index.html", "text/html; charset=utf-8"),
+                "/": ("../live/index.html", "text/html; charset=utf-8"),
+                "/live": ("../live/index.html", "text/html; charset=utf-8"),
+                "/replay": ("index.html", "text/html; charset=utf-8"),
+                "/live.js": ("../live/live.js", "text/javascript; charset=utf-8"),
+                "/live.css": ("../live/live.css", "text/css; charset=utf-8"),
                 "/app.js": ("app.js", "text/javascript; charset=utf-8"),
                 "/style.css": ("style.css", "text/css; charset=utf-8"),
             }
@@ -194,7 +200,16 @@ def make_handler(service: DemoService):
                 request = json.loads(body)
                 if not isinstance(request, dict):
                     raise ValueError("request must be an object")
-                if self.path == "/api/replay":
+                live_actions = {
+                    "/api/live/create": lambda _: service.live.create(),
+                    "/api/live/save": service.live.save,
+                    "/api/live/replace": service.live.replace,
+                    "/api/live/step": service.live.step,
+                    "/api/live/snapshot": service.live.snapshot,
+                }
+                if self.path in live_actions:
+                    result = live_actions[self.path](request)
+                elif self.path == "/api/replay":
                     result = service.retrieval(request)
                 elif self.path == "/api/temporal":
                     result = service.temporal_recall(request)
