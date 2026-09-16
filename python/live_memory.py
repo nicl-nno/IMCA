@@ -12,7 +12,7 @@ from datetime import UTC, datetime, timedelta
 
 from inspectable_memory import Fact, Scope, digest, utc
 
-ENTITY = "project.python_runtime"
+ENTITY = "project.architecture"
 PREDICATES = {"default", "signature", "exists", "parameter_exists", "calls"}
 
 
@@ -177,8 +177,8 @@ class LiveLab:
             "at": 42,
         }
         old, new = (
-            demo.get("scenario://repo/runtime-policy-v41"),
-            demo.get("scenario://ci/python-313-migration-v42"),
+            demo.get("scenario://architecture/decision-x-v41"),
+            demo.get("scenario://architecture/evidence-y-v42"),
         )
         step = request.get("step")
         if type(step) is not int or step not in (1, 2, 3):
@@ -188,13 +188,13 @@ class LiveLab:
             return self.save(
                 {
                     **common,
-                    "value": "Python 3.11",
+                    "value": "Architecture X",
                     "valid_from": 41,
-                    "source": "scenario://repo/runtime-policy-v41",
-                    "agent": "Repository runtime policy",
+                    "source": "scenario://architecture/decision-x-v41",
+                    "agent": "Architecture decision · ADR-001",
                     "excerpt": (
-                        "At V41, the project runtime policy requires Python 3.11 "
-                        "for development and deployment."
+                        "At V41, ADR-001 records Architecture X as the approved project architecture. "
+                        "This decision is valid for the current project scope."
                     ),
                 }
             )
@@ -206,13 +206,13 @@ class LiveLab:
             return self.save(
                 {
                     **common,
-                    "value": "Python 3.13",
+                    "value": "Architecture Y",
                     "valid_from": 42,
-                    "source": "scenario://ci/python-313-migration-v42",
-                    "agent": "CI runtime migration · V42",
+                    "source": "scenario://architecture/evidence-y-v42",
+                    "agent": "Architecture review · ADR-002",
                     "excerpt": (
-                        "The V42 runtime migration updates CI and deployment to "
-                        "Python 3.13. Python 3.13 is now the required project runtime."
+                        "At V42, a later architecture review records Architecture Y for the same project scope. "
+                        "The relation to the earlier Architecture X decision has not yet been confirmed in memory."
                     ),
                 }
             )
