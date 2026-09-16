@@ -12,7 +12,7 @@ from datetime import UTC, datetime, timedelta
 
 from inspectable_memory import Fact, Scope, digest, utc
 
-ENTITY = "users.legacy_token"
+ENTITY = "project.python_runtime"
 PREDICATES = {"default", "signature", "exists", "parameter_exists", "calls"}
 
 
@@ -177,49 +177,62 @@ class LiveLab:
             "at": 42,
         }
         old, new = (
-            demo.get("scenario://db/cleanup-ticket-1842"),
-            demo.get("scenario://runtime/auth-compat-trace"),
+            demo.get("scenario://repo/runtime-policy-v41"),
+            demo.get("scenario://ci/python-313-migration-v42"),
         )
         step = request.get("step")
         if type(step) is not int or step not in (1, 2, 3):
             raise ValueError("step must be 1, 2 or 3")
+
         if step == 1 and not old:
             return self.save(
                 {
                     **common,
-                    "value": "DROP COLUMN",
+                    "value": "Python 3.11",
                     "valid_from": 41,
-                    "source": "scenario://db/cleanup-ticket-1842",
-                    "agent": "Cleanup ticket #1842",
+                    "source": "scenario://repo/runtime-policy-v41",
+                    "agent": "Repository runtime policy",
                     "excerpt": (
-                        "After the V41 migration no service reads users.legacy_token. "
-                        "The column is approved for removal."
+                        "At V41, the project runtime policy requires Python 3.11 "
+                        "for development and deployment."
                     ),
                 }
             )
+
         if step >= 2 and not old:
             raise ValueError("start with step 1")
+
         if step == 2 and not new:
             return self.save(
                 {
                     **common,
-                    "value": "KEEP COLUMN",
+                    "value": "Python 3.13",
                     "valid_from": 42,
-                    "source": "scenario://runtime/auth-compat-trace",
-                    "agent": "Production trace · 14:07",
+                    "source": "scenario://ci/python-313-migration-v42",
+                    "agent": "CI runtime migration · V42",
                     "excerpt": (
-                        "Emergency rollback V42 restored auth-compat. Production trace "
-                        "shows SELECT users.legacy_token on every legacy login."
+                        "The V42 runtime migration updates CI and deployment to "
+                        "Python 3.13. Python 3.13 is now the required project runtime."
                     ),
                 }
             )
+
         if step == 3:
             if not new:
                 raise ValueError("add the second assertion first")
-            if not any(e["old_id"] == old["id"] and e["new_id"] == new["id"] for e in replacements):
+            if not any(
+                event["old_id"] == old["id"] and event["new_id"] == new["id"]
+                for event in replacements
+            ):
                 return self.replace(
-                    {**common, "old_id": old["id"], "new_id": new["id"], "effective": 42}
+                    {
+                        **common,
+                        "old_id": old["id"],
+                        "new_id": new["id"],
+                        "effective": 42,
+                    }
                 )
+
         return self.snapshot(common)
 
     def snapshot(self, request):
