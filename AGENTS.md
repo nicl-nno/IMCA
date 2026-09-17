@@ -25,3 +25,6 @@ credentials. Never copy a broader development repository or its Git history here
   protection and never present workspace identifiers as public authentication.
 - Review staged files for local paths, archives, credentials, unrelated code and source
   provenance before publication. Preserve all upstream licenses.
+- Additional benchmark adapters are memory-isolated development diagnostics. Keep raw
+  MemoryAgentBench/HaluMem data in ignored `outputs/`, freeze top-5 before labels, and
+  never present the HaluMem oracle-writer result as leaderboard-comparable QA.

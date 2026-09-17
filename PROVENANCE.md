@@ -21,6 +21,12 @@ provider configuration, archive, or development repository history is included.
 Source files were selected explicitly and checked against excluded source
 archives before publication; this is not a blanket repository copy or rename.
 
+Additional-benchmark raw inputs are never committed. The compact reference in
+`benchmark_artifacts/` contains only aggregate measurements. MemoryAgentBench
+facts are parsed with new regular-expression templates; HaluMem uses a new
+oracle-writer adapter over upstream memory-point metadata. Neither adapter copies
+an upstream memory implementation or evaluation backend.
+
 ## What is independent and what is recorded
 
 The demo, SQLite memory and LoCoMo experiment execute independently. The six

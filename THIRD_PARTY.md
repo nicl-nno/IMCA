@@ -33,9 +33,30 @@ Original research code is covered by the repository's existing BSD-3-Clause
 - Committed references contain question identifiers, retrieved turn identifiers
   and aggregate statistics, not raw conversations or questions.
 
+## MemoryAgentBench
+
+- Source: https://github.com/HUST-AI-HYZ/MemoryAgentBench
+- Dataset revision: `7ea066982b140a19337e17e60d45d4076e042faf`.
+- Evaluated file SHA-256:
+  `24d5c3f09ce0ce15625cb9f8a98f44f0d864ca6c94d7b4ad04eb697ca3a5ff45`.
+- License: MIT. Raw Parquet data is downloaded to ignored `outputs/`; only
+  aggregate metrics and numeric row identifiers are retained in the artifact.
+
+## HaluMem
+
+- Source: https://github.com/MemTensor/HaluMem
+- Dataset revision: `cb04336aa1b732d4b24f5186c552456b4099806e`.
+- Evaluated file SHA-256:
+  `486fbc130a5c8781a2af27ffa508a1d7855245137aa449c193ac4d29c45634e7`.
+- License: CC-BY-NC-ND-4.0. The dataset is not redistributed. The downloader
+  stores it only in ignored `outputs/`; the committed reference contains
+  aggregate counts and metrics, not dialogue, questions, answers, or evidence.
+
 ## Libraries
 
 The demo and conversation runtime use only Python's standard library. Code
 retrieval uses NumPy; tests use pytest. Optional raw-SCIP projection uses the
 public `@scip-code/scip` and `@bufbuild/protobuf` libraries. Their packages retain
 their respective licenses; they are not vendored in this repository.
+The additional MemoryAgentBench adapter uses PyArrow from the optional
+`benchmark` dependency group to read the pinned public Parquet file.
