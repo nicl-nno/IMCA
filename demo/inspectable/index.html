@@ -1,157 +1,307 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Inspectable Memory — лаборатория памяти кодового агента</title>
+
+    <title>Inspectable Memory · Benchmark & Error Analysis</title>
+
     <meta
       name="description"
-      content="Проверяемый поиск по коду: источники связей, ошибки отбора, противоречия и история фактов."
+      content="Inspectable retrieval replay, source-grounded diagnostics, temporal conflicts, and memory history."
     />
+
     <link rel="stylesheet" href="/style.css" />
     <script src="/app.js" defer></script>
   </head>
+
   <body>
-    <header>
-      <div>
-        <span class="eyebrow">CODE MEMORY LAB / LOCAL DEMO</span>
-        <h1>Inspectable Memory<span class="dot">.</span></h1>
-      </div>
-      <div class="header-note">
-        От результата — к свидетельству<br /><span id="verification"
-          >Проверка артефактов…</span
-        >
+    <header class="product-header">
+      <a class="product-brand" href="/workbench">
+        <span class="brand-mark">im</span>
+
+        <span class="brand-copy">
+          <strong>Inspectable Memory</strong>
+          <small>Research Workbench</small>
+        </span>
+      </a>
+
+      <nav class="product-nav" aria-label="Primary navigation">
+        <a href="/workbench">Workspace</a>
+        <a class="active" href="/replay">
+          Benchmark &amp; Error Analysis
+        </a>
+      </nav>
+
+      <div class="product-status">
+        <i></i>
+        Local · no LLM
       </div>
     </header>
-    <nav aria-label="Режим демонстрации">
-      <button id="retrieval-tab" class="active" aria-pressed="true">
-        01 · Поиск и причины ошибок</button
-      ><button id="temporal-tab" aria-pressed="false">
-        02 · Противоречия и время
+
+    <section class="analysis-titlebar">
+      <div>
+        <span class="eyebrow">BENCHMARK &amp; ERROR ANALYSIS</span>
+
+        <h1>Retrieval and temporal diagnostics</h1>
+
+        <p>
+          Replay retrieval decisions, inspect their source evidence,
+          and analyze temporal memory conflicts.
+        </p>
+      </div>
+
+      <div class="verification-block">
+        <strong>Reproducibility</strong>
+        <span id="verification">Verifying artifacts…</span>
+      </div>
+    </section>
+
+    <nav class="analysis-tabs" aria-label="Analysis mode">
+      <button
+        id="retrieval-tab"
+        class="active"
+        aria-pressed="true"
+      >
+        Retrieval Replay
+      </button>
+
+      <button
+        id="temporal-tab"
+        aria-pressed="false"
+      >
+        Temporal Analysis
       </button>
     </nav>
+
     <div id="error" role="alert" hidden></div>
+
     <main>
       <section id="retrieval-view">
         <div class="toolbar">
-          <label>Пример LongMemCode<select id="case"></select></label
-          ><label
-            >Тип связи<select id="relation">
-              <option value="references">Ссылки · исходный профиль</option>
-              <option value="calls">Только вызовы · вмешательство</option>
-            </select></label
-          ><button id="replay" class="primary">Повторить поиск ↗</button
-          ><button class="export">Экспорт JSON ↓</button>
+          <label>
+            LongMemCode case
+
+            <select id="case"></select>
+          </label>
+
+          <label>
+            Relation
+
+            <select id="relation">
+              <option value="references">
+                References · original profile
+              </option>
+
+              <option value="calls">
+                Calls only · intervention
+              </option>
+            </select>
+          </label>
+
+          <button id="replay" class="primary">
+            Replay retrieval ↗
+          </button>
+
+          <button class="export">
+            Export JSON ↓
+          </button>
         </div>
+
         <p class="notice">
-          Ранжирование зафиксированных кандидатов выполняется заново. Ответ
-          Luna — сохранённый эксперимент, не новый вызов модели. Эталоны
-          доступны только после поиска.
+          Frozen candidates are re-ranked locally.
+          The Luna answer is a stored experiment, not a new model call.
+          Gold labels are revealed only after retrieval.
         </p>
+
         <div id="query" class="query"></div>
+
         <div id="signals" class="signals"></div>
+
         <div id="metrics" class="metrics"></div>
+
         <div class="workspace">
           <section class="panel">
             <div class="panel-heading">
-              <h2>Путь кандидата</h2>
+              <h2>Candidate path</h2>
               <span id="route-name"></span>
             </div>
+
             <div id="candidates"></div>
           </section>
+
           <section class="panel evidence-panel">
             <div class="panel-heading">
-              <h2>Проверка по исходникам</h2>
+              <h2>Source verification</h2>
               <span>SCIP + AST</span>
             </div>
+
             <div id="evidence"></div>
           </section>
         </div>
+
         <div class="workspace bottom">
           <section class="panel">
-            <h2>Где потерялись эталонные фрагменты?</h2>
+            <h2>Where were the gold fragments lost?</h2>
+
             <p class="muted">
-              Диагностика этапа потери, не догадка о намерениях модели.
+              Stage-level loss diagnosis, not speculation about model intent.
             </p>
+
             <div id="diagnosis"></div>
           </section>
+
           <section class="panel">
-            <h2>После отбора Luna</h2>
+            <h2>After reader selection</h2>
+
             <div id="reader"></div>
           </section>
         </div>
       </section>
+
       <section id="temporal-view" hidden>
         <div class="toolbar">
-          <label
-            >Исходный фрагмент бенчмарка<select
-              id="temporal-case"
-            ></select></label
-          ><label
-            >Правила памяти<select id="mode">
-              <option value="combined">Время + противоречия</option>
-              <option value="baseline">Без правил · контроль</option>
-              <option value="temporal">Только актуальность</option>
-              <option value="conflict">Противоречия без времени</option>
-            </select></label
-          ><button id="recall" class="primary">Запросить память ↗</button
-          ><button class="export">Экспорт JSON ↓</button>
+          <label>
+            Benchmark source fragment
+
+            <select id="temporal-case"></select>
+          </label>
+
+          <label>
+            Memory rules
+
+            <select id="mode">
+              <option value="combined">
+                Time + conflicts
+              </option>
+
+              <option value="baseline">
+                No rules · control
+              </option>
+
+              <option value="temporal">
+                Temporal validity only
+              </option>
+
+              <option value="conflict">
+                Conflicts without time
+              </option>
+            </select>
+          </label>
+
+          <button id="recall" class="primary">
+            Recall memory ↗
+          </button>
+
+          <button class="export">
+            Export JSON ↓
+          </button>
         </div>
+
         <p class="notice synthetic">
-          Контролируемое расширение: исходный параметр взят из LongMemCode,
-          изменение и хронология созданы для демонстрации. Это не реальные
-          коммиты и не официальный временной бенчмарк.
+          Controlled extension: the original parameter comes from LongMemCode.
+          The change and temporal sequence are authored for this demonstration;
+          they are not real repository commits or an official temporal benchmark.
         </p>
+
         <div class="timeline panel">
           <div>
-            <h2>Два времени — два разных вопроса</h2>
+            <h2>Two clocks, two different questions</h2>
+
             <p class="muted">
-              В какой версии верен факт? Какие сведения уже поступили в память?
+              In which world version is a fact valid?
+              What information had reached memory at that point?
             </p>
           </div>
-          <label
-            >Версия, о которой спрашиваем<select id="valid-at">
-              <option value="0">V0 · до изменения</option>
-              <option value="1" selected>V1 · после изменения</option>
-              <option value="2">V2 · поздний снимок</option>
-            </select></label
-          ><label
-            >Что было известно<select id="known-at">
-              <option value="0">K0 · только исходный факт</option>
+
+          <label>
+            World version
+
+            <select id="valid-at">
+              <option value="0">V0 · before change</option>
+
               <option value="1" selected>
-                K1 · новая запись, замена не подтверждена
+                V1 · after change
               </option>
-              <option value="2">K2 · замена подтверждена</option>
-            </select></label
-          >
+
+              <option value="2">
+                V2 · later snapshot
+              </option>
+            </select>
+          </label>
+
+          <label>
+            Knowledge cutoff
+
+            <select id="known-at">
+              <option value="0">
+                K0 · original fact only
+              </option>
+
+              <option value="1" selected>
+                K1 · new assertion, replacement unconfirmed
+              </option>
+
+              <option value="2">
+                K2 · replacement confirmed
+              </option>
+            </select>
+          </label>
         </div>
-        <div id="temporal-metrics" class="metrics"></div>
+
+        <div
+          id="temporal-metrics"
+          class="metrics"
+        ></div>
+
         <div class="workspace">
           <section class="panel">
-            <h2>Журнал утверждений</h2>
+            <h2>Assertion journal</h2>
+
             <div id="facts"></div>
           </section>
+
           <section class="panel">
-            <h2>Проверка совместимости</h2>
+            <h2>Compatibility check</h2>
+
             <div id="conflicts"></div>
-            <h2>Исходный фрагмент</h2>
+
+            <h2 class="subsection-title">
+              Source fragment
+            </h2>
+
             <div id="temporal-source"></div>
           </section>
         </div>
       </section>
+
       <section class="panel history">
         <div class="panel-heading">
-          <h2>История запусков</h2>
-          <span>Новый запуск не переписывает предыдущий</span>
+          <h2>Run history</h2>
+
+          <span>
+            New runs never overwrite previous ones
+          </span>
         </div>
+
         <div id="history">
-          <p class="muted">Запуски появятся после первого запроса.</p>
+          <p class="muted">
+            Runs will appear after the first query.
+          </p>
         </div>
       </section>
     </main>
+
     <footer>
-      Исследовательский прототип · Локальная обработка · Не раскрывает
-      внутренние рассуждения LLM · <span id="fixture-hash"></span>
+      <span>
+        Inspectable Memory · research prototype
+      </span>
+
+      <span>
+        Local processing · explicit evidence · no hidden chain-of-thought
+      </span>
+
+      <span id="fixture-hash"></span>
     </footer>
   </body>
 </html>
