@@ -81,15 +81,15 @@ function render() {
     : "До поступления первого утверждения";
   const stages = [
     state.facts.some(
-      (f) => f.evidence.source === "scenario://db/cleanup-ticket-1842",
+      (f) => f.evidence.source === "scenario://architecture/decision-x-v41",
     ),
     state.facts.some(
-      (f) => f.evidence.source === "scenario://runtime/auth-compat-trace",
+      (f) => f.evidence.source === "scenario://architecture/evidence-y-v42",
     ),
     state.replacements.some(
       (e) =>
         state.facts.find((f) => f.id === e.old_id)?.evidence.source ===
-        "scenario://db/cleanup-ticket-1842",
+        "scenario://architecture/decision-x-v41",
     ),
   ];
   document.querySelectorAll("[data-step]").forEach((b, i) => {
@@ -101,93 +101,465 @@ function render() {
   renderAnswer();
   renderInspector();
   renderEvents();
+  renderJourney();
 }
+function renderJourney() {
+  const currentTitle = document.querySelector(
+    ".journey-label-now strong",
+  );
+  const currentLabel = $("journey-current");
+  const currentPoint = document.querySelector(
+    ".journey-label-now",
+  );
+
+  if (!currentTitle || !currentLabel || !currentPoint) {
+    return;
+  }
+
+  const oldFact = state.facts.find(
+    (f) =>
+      f.evidence.source ===
+      "scenario://architecture/decision-x-v41",
+  );
+
+  const newFact = state.facts.find(
+    (f) =>
+      f.evidence.source ===
+      "scenario://architecture/evidence-y-v42",
+  );
+
+  const replacement =
+    oldFact && newFact
+      ? state.replacements.find(
+          (edge) =>
+            edge.old_id === oldFact.id &&
+            edge.new_id === newFact.id &&
+            edge.recorded_at <= state.known_at,
+        )
+      : null;
+
+  currentPoint.classList.remove(
+    "journey-conflict",
+    "journey-current",
+  );
+
+  if (replacement) {
+    currentTitle.textContent = "Текущее решение";
+    currentLabel.textContent = "Architecture Y · current";
+    currentPoint.classList.add("journey-current");
+  } else if (
+    newFact &&
+    state.answer_status === "conflict"
+  ) {
+    currentTitle.textContent = "Новое evidence";
+    currentLabel.textContent = "Architecture Y · конфликт";
+    currentPoint.classList.add("journey-conflict");
+  } else {
+    currentTitle.textContent = "Текущее состояние?";
+    currentLabel.textContent = "пока неизвестно";
+  }
+}
+
 function renderGate() {
   const gate = $("pr-gate");
   const selected = state.facts.filter((f) => f.selected);
-  const action = selected.length === 1 ? selected[0].value : null;
+  const current = selected.length === 1 ? selected[0].value : null;
+
   let style = "review";
-  let status = "ПРОВЕРКА НУЖНА";
-  let reason = "Нет оснований разрешить необратимую миграцию.";
+  let status = "НУЖНЫ ОСНОВАНИЯ";
+  let reason = "Память ещё не знает, какое решение действует сейчас.";
+
   if (state.answer_status === "conflict") {
     style = "blocked";
-    status = "MERGE BLOCKED";
-    reason = "Cleanup ticket и production trace требуют противоположных действий.";
-  } else if (action === "KEEP COLUMN") {
+    status = "STATE CONFLICT";
+    reason =
+      "Architecture X и Architecture Y одновременно претендуют на текущее состояние проекта.";
+  } else if (current === "Architecture Y") {
     style = "blocked";
-    status = "MERGE BLOCKED";
-    reason = "После rollback сервис auth-compat снова читает legacy_token.";
-  } else if (action === "DROP COLUMN" && state.at < 42) {
+    status = "STALE CONFIGURATION";
+    reason =
+      'Текущее решение — Architecture Y, а агент всё ещё предлагает Architecture X.';
+  } else if (current === "Architecture X" && state.at < 42) {
     style = "historical";
-    status = `SAFE IN V${state.at}`;
-    reason = "Cleanup ticket явно фиксирует отсутствие читателей до rollback.";
-  } else if (action === "DROP COLUMN") {
-    status = "DROP ПОДДЕРЖАН ОДНИМ ФАКТОМ";
-    reason = "Нужна проверка runtime-состояния перед merge.";
+    status = `VALID IN V${state.at}`;
+    reason =
+      "В этом историческом состоянии Architecture X действительно была актуальным решением.";
+  } else if (current === "Architecture X") {
+    status = "KNOWN STATE: ARCHITECTURE X";
+    reason =
+      "Пока память знает только Architecture X. Это не доказывает, что более нового решения нет.";
   }
+
   gate.className = `card pr-gate ${style}`;
   $("gate-status").textContent = status;
   $("gate-reason").textContent = reason;
 }
+
 function renderGraph() {
+  const oldFact = state.facts.find(
+    (f) =>
+      f.evidence.source ===
+      "scenario://architecture/decision-x-v41",
+  );
+
+  const newFact = state.facts.find(
+    (f) =>
+      f.evidence.source ===
+      "scenario://architecture/evidence-y-v42",
+  );
+
+  const replacement =
+    oldFact && newFact
+      ? state.replacements.find(
+          (edge) =>
+            edge.old_id === oldFact.id &&
+            edge.new_id === newFact.id &&
+            edge.recorded_at <= state.known_at,
+        )
+      : null;
+
+  const knownReplacementCount =
+    state.replacements.filter(
+      (edge) => edge.recorded_at <= state.known_at,
+    ).length;
+
   $("graph-count").textContent =
-    `${state.facts.length} утверждений · ${state.replacements.filter((e) => e.recorded_at <= state.known_at).length} известных связей замены`;
-  if (!state.facts.length) {
-    $("graph").innerHTML =
-      '<div class="empty"><strong>У памяти пока нет оснований для ответа</strong>Начните с шага 1 слева или добавьте собственное утверждение.<br>Здесь появятся источники, факты и связи между ними.</div>';
-    return;
-  }
-  let html = state.facts
-    .map((f) => {
-      const style = f.conflicting ? "conflict" : f.selected ? "" : "excluded";
-      return `<div class="graph-line"><div class="source-node"><strong>${escape(f.evidence.agent)}</strong>источник утверждения</div><span class="connector"></span><button class="fact-node ${style} ${focusId === f.id ? "focus" : ""}" data-fact="${f.id}"><strong>${f.negated ? "НЕ " : ""}${escape(f.value)}</strong><small>${escape(f.entity)} · ${escape(f.predicate)}<br>V${f.valid_from ?? "?"} → ${f.effective_to == null ? "∞" : `V${f.effective_to}`} · ${escape(f.scope.environment)}</small></button><span class="connector"></span><div class="node-status ${style}">${f.conflicting ? "Противоречие" : f.selected ? "В ответе" : escape(reasons[f.status])}</div></div>`;
-    })
-    .join("");
-  html += state.conflicts
-    .map(
-      (pair) =>
-        `<div class="edge-note conflict">↔ Конфликт ${pair.ids.map(short).join(" / ")}: разные несовместимые утверждения, один объект и пересекающиеся интервалы.</div>`,
-    )
-    .join("");
-  html += state.replacements
-    .map(
-      (e) =>
-        `<div class="edge-note ${e.recorded_at > state.known_at ? "past" : ""}">↪ ${short(e.old_id)} → ${short(e.new_id)} · замена с V${e.effective}${e.recorded_at > state.known_at ? " · пока не известна в выбранном K" : " · исходный факт сохранён"}</div>`,
-    )
-    .join("");
-  $("graph").innerHTML = html;
-  $("graph")
-    .querySelectorAll("[data-fact]")
-    .forEach(
-      (b) =>
-        (b.onclick = () => {
-          focusId = b.dataset.fact;
+    `${state.facts.length} утверждений · ` +
+    `${knownReplacementCount} известных связей изменения`;
+
+  const bindClicks = () => {
+    $("graph")
+      .querySelectorAll("[data-fact]")
+      .forEach((button) => {
+        button.onclick = () => {
+          focusId = button.dataset.fact;
           renderGraph();
           renderInspector();
-        }),
-    );
+        };
+      });
+  };
+
+  // Guided architecture scenario.
+  if (state.query.entity === "project.architecture") {
+    if (!oldFact && !newFact) {
+      $("graph").innerHTML = `
+        <div class="decision-empty">
+          <div class="decision-empty-number">01</div>
+          <strong>Начните с предыдущего решения</strong>
+          <p>
+            Нажмите шаг 1 слева.
+            Мы сначала увидим только то,
+            что уже находится в памяти агента.
+          </p>
+        </div>`;
+      return;
+    }
+
+    const oldConflict =
+      oldFact && oldFact.conflicting;
+
+    const newConflict =
+      newFact && newFact.conflicting;
+
+    const oldClass = replacement
+      ? "historical"
+      : oldConflict
+        ? "conflict"
+        : "known";
+
+    const newClass = replacement
+      ? "current"
+      : newConflict
+        ? "conflict"
+        : "new-evidence";
+
+    const oldBadge = replacement
+      ? "HISTORICAL"
+      : oldConflict
+        ? "ACTIVE CLAIM"
+        : "KNOWN";
+
+    const newBadge = replacement
+      ? "CURRENT"
+      : newConflict
+        ? "ACTIVE CLAIM"
+        : "NEW EVIDENCE";
+
+    const card = (
+      fact,
+      role,
+      visualClass,
+      badge,
+    ) => {
+      if (!fact) {
+        return `
+          <div class="decision-card decision-placeholder">
+            <div class="decision-card-head">
+              <span>V42</span>
+              <em>СЛЕДУЮЩИЙ ШАГ</em>
+            </div>
+
+            <strong>Architecture Y</strong>
+
+            <p>
+              Новое evidence появится здесь
+              после шага 2.
+            </p>
+          </div>`;
+      }
+
+      return `
+        <button
+          type="button"
+          class="
+            decision-card
+            ${visualClass}
+            ${focusId === fact.id ? "focused" : ""}
+          "
+          data-fact="${fact.id}"
+        >
+          <div class="decision-card-head">
+            <span>
+              ${role === "old" ? "V41" : "V42"}
+            </span>
+            <em>${badge}</em>
+          </div>
+
+          <div class="decision-card-body">
+            <div class="decision-card-type">
+              ${
+                role === "old"
+                  ? "Предыдущее решение"
+                  : "Более позднее evidence"
+              }
+            </div>
+
+            <strong>${escape(fact.value)}</strong>
+
+            <p>${escape(fact.evidence.agent)}</p>
+          </div>
+
+          <div class="decision-card-foot">
+            <span>
+              ${
+                role === "old"
+                  ? "ADR-001"
+                  : "ADR-002"
+              }
+            </span>
+
+            <span>
+              V${fact.valid_from ?? "?"}
+              →
+              ${
+                fact.effective_to == null
+                  ? "∞"
+                  : `V${fact.effective_to}`
+              }
+            </span>
+          </div>
+        </button>`;
+    };
+
+    let bridge;
+
+    if (!newFact) {
+      bridge = `
+        <div class="decision-bridge waiting">
+          <span>Позже появляется</span>
+          <strong>→</strong>
+          <small>новое evidence</small>
+        </div>`;
+    } else if (
+      state.answer_status === "conflict" &&
+      !replacement
+    ) {
+      bridge = `
+        <div class="decision-bridge conflict">
+          <span>STATE CONFLICT</span>
+          <strong>↔</strong>
+          <small>
+            оба утверждения пока активны
+          </small>
+        </div>`;
+    } else if (replacement) {
+      bridge = `
+        <div class="decision-bridge resolved">
+          <span>SUPERSEDED</span>
+          <strong>→</strong>
+          <small>
+            изменение подтверждено с V${replacement.effective}
+          </small>
+        </div>`;
+    } else {
+      bridge = `
+        <div class="decision-bridge waiting">
+          <span>Новое evidence</span>
+          <strong>→</strong>
+        </div>`;
+    }
+
+    let explanation = "";
+
+    if (
+      state.answer_status === "conflict" &&
+      !replacement
+    ) {
+      explanation = `
+        <div class="decision-message conflict">
+          <strong>Конфликт состояния.</strong>
+          Новое evidence не получает приоритет
+          только потому, что оно новее.
+          Система ждёт явного подтверждения изменения.
+        </div>`;
+    }
+
+    if (replacement) {
+      explanation = `
+        <div class="decision-message resolved">
+          <strong>Изменение состояния подтверждено.</strong>
+          Architecture X остаётся в истории,
+          Architecture Y становится текущим решением.
+        </div>`;
+    }
+
+    $("graph").innerHTML = `
+      <div class="decision-flow">
+        ${card(
+          oldFact,
+          "old",
+          oldClass,
+          oldBadge,
+        )}
+
+        ${bridge}
+
+        ${card(
+          newFact,
+          "new",
+          newClass,
+          newBadge,
+        )}
+      </div>
+
+      ${explanation}
+    `;
+
+    bindClicks();
+    return;
+  }
+
+  // Generic fallback for custom experiments.
+  if (!state.facts.length) {
+    $("graph").innerHTML =
+      '<div class="empty">' +
+      '<strong>Нет подходящих утверждений</strong>' +
+      'Добавьте факт или измените запрос.' +
+      "</div>";
+    return;
+  }
+
+  $("graph").innerHTML = state.facts
+    .map(
+      (fact) => `
+        <button
+          class="generic-memory-card"
+          data-fact="${fact.id}"
+          type="button"
+        >
+          <strong>${escape(fact.value)}</strong>
+          <span>${escape(fact.evidence.agent)}</span>
+          <small>
+            V${fact.valid_from ?? "?"}
+            →
+            ${
+              fact.effective_to == null
+                ? "∞"
+                : `V${fact.effective_to}`
+            }
+          </small>
+        </button>`,
+    )
+    .join("");
+
+  bindClicks();
 }
+
 function renderAnswer() {
   const selected = state.facts.filter((f) => f.selected);
   const excluded = state.facts.length - selected.length;
-  let title, body;
+  const values = selected.map(
+    (f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`,
+  );
+
+  let title;
+  let body;
+
   if (state.answer_status === "conflict") {
-    title = "Опасную миграцию нельзя мержить";
-    body = `<p>Память нашла два несовместимых действия над одной колонкой.</p><div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" / ")}</div><p>Проверьте rollback. Runtime trace не побеждает автоматически только потому, что он новее.</p>`;
+    title = "Какое решение текущее — пока неясно";
+    body = `
+      <p>Память содержит два несовместимых состояния одного проекта.</p>
+      <div class="answer-value">${values.join(" / ")}</div>
+      <p>
+        Более новое evidence не перезаписывает прошлое автоматически.
+        Пока переход не подтверждён, конфликт остаётся явным.
+      </p>`;
   } else if (state.answer_status === "supported") {
-    title = selected.some((f) => f.value === "KEEP COLUMN")
-      ? "Колонку удалять нельзя"
-      : "Удаление поддерживается памятью";
-    body = `<div class="answer-value">${selected.map((f) => `${f.negated ? "НЕ " : ""}${escape(f.value)}`).join(" · ")}</div><p>Для users.legacy_token в ${escape(state.query.environment)}, версия мира V${state.at}. Ответ опирается на показанные ticket, runtime trace и подтверждённый rollback.</p>`;
+    const current = selected.length === 1 ? selected[0].value : null;
+
+    if (current === "Architecture Y") {
+      title = "Текущее состояние: Architecture Y";
+      body = `
+        <div class="answer-value">Architecture Y</div>
+        <p>
+          Миграция подтверждена с V42. Architecture X не удалён:
+          он остаётся в памяти как исторически верное состояние.
+        </p>`;
+    } else if (current === "Architecture X" && state.at < 42) {
+      title = "Историческое состояние: Architecture X";
+      body = `
+        <div class="answer-value">Architecture X</div>
+        <p>
+          В снимке мира V${state.at} это состояние действительно было актуальным.
+          Более поздняя миграция не переписывает прошлое.
+        </p>`;
+    } else {
+      title = "Пока известно только Architecture X";
+      body = `
+        <div class="answer-value">Architecture X</div>
+        <p>
+          Это единственное состояние, известное памяти к K${state.known}.
+          Оно подтверждено имеющимся evidence, но не доказывает,
+          что более нового состояния не существует.
+        </p>`;
+    }
   } else {
-    title = "Недостаточно оснований";
-    body =
-      "<p>Нет подходящего утверждения с известным интервалом действия. Отсутствие сведений не означает, что факт ложен.</p>";
+    title = "Текущее состояние пока неизвестно";
+    body = `
+      <p>
+        Для выбранного снимка мира и cutoff знаний нет подходящего утверждения.
+        Отсутствие сведений не означает, что другое состояние ложно.
+      </p>`;
   }
+
   $("answer").className = `card answer ${state.answer_status}`;
   $("answer").innerHTML =
-    `<div class="section-label">ОТВЕТ И ЕГО ОСНОВАНИЯ <span>V${state.at} · K${state.known}</span></div><h2 class="answer-title">${title}</h2>${body}<ol><li>Проверены объект, свойство и окружение.</li><li>Учтено только известное к K${state.known}; интервал должен содержать V${state.at}.</li><li>${selected.length} утверждений выбрано, ${excluded} исключено. ${state.conflicts.length} текущих конфликтов.</li></ol><div class="stats"><span>${state.latency_ms.toFixed(2)} ms</span><span>${state.cache_hit ? "CACHE HIT" : "LIVE QUERY"}</span><span>REV ${state.revision}</span><span>LLM CALLS: 0</span></div>`;
+    `<div class="section-label">ПОЧЕМУ ПАМЯТЬ ТАК СЧИТАЕТ? <span>V${state.at} · K${state.known}</span></div>` +
+    `<h2 class="answer-title">${title}</h2>` +
+    body +
+    `<ol>` +
+    `<li>Проверены объект, свойство и окружение.</li>` +
+    `<li>Учтено только то, что было известно к K${state.known}; утверждение должно действовать в V${state.at}.</li>` +
+    `<li>${selected.length} утверждений выбрано, ${excluded} исключено. Текущих конфликтов: ${state.conflicts.length}.</li>` +
+    `</ol>` +
+    `<div class="stats">` +
+    `<span>${state.latency_ms.toFixed(2)} ms</span>` +
+    `<span>${state.cache_hit ? "CACHE HIT" : "LIVE QUERY"}</span>` +
+    `<span>REV ${state.revision}</span>` +
+    `<span>LLM CALLS: 0</span>` +
+    `</div>`;
 }
+
 function renderInspector() {
   const fact = state.facts.find((f) => f.id === focusId);
   if (!fact) {

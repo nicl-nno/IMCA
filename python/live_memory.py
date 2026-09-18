@@ -12,7 +12,7 @@ from datetime import UTC, datetime, timedelta
 
 from inspectable_memory import Fact, Scope, digest, utc
 
-ENTITY = "users.legacy_token"
+ENTITY = "project.architecture"
 PREDICATES = {"default", "signature", "exists", "parameter_exists", "calls"}
 
 
@@ -177,49 +177,62 @@ class LiveLab:
             "at": 42,
         }
         old, new = (
-            demo.get("scenario://db/cleanup-ticket-1842"),
-            demo.get("scenario://runtime/auth-compat-trace"),
+            demo.get("scenario://architecture/decision-x-v41"),
+            demo.get("scenario://architecture/evidence-y-v42"),
         )
         step = request.get("step")
         if type(step) is not int or step not in (1, 2, 3):
             raise ValueError("step must be 1, 2 or 3")
+
         if step == 1 and not old:
             return self.save(
                 {
                     **common,
-                    "value": "DROP COLUMN",
+                    "value": "Architecture X",
                     "valid_from": 41,
-                    "source": "scenario://db/cleanup-ticket-1842",
-                    "agent": "Cleanup ticket #1842",
+                    "source": "scenario://architecture/decision-x-v41",
+                    "agent": "Architecture decision · ADR-001",
                     "excerpt": (
-                        "After the V41 migration no service reads users.legacy_token. "
-                        "The column is approved for removal."
+                        "At V41, ADR-001 records Architecture X as the approved project architecture. "
+                        "This decision is valid for the current project scope."
                     ),
                 }
             )
+
         if step >= 2 and not old:
             raise ValueError("start with step 1")
+
         if step == 2 and not new:
             return self.save(
                 {
                     **common,
-                    "value": "KEEP COLUMN",
+                    "value": "Architecture Y",
                     "valid_from": 42,
-                    "source": "scenario://runtime/auth-compat-trace",
-                    "agent": "Production trace · 14:07",
+                    "source": "scenario://architecture/evidence-y-v42",
+                    "agent": "Architecture review · ADR-002",
                     "excerpt": (
-                        "Emergency rollback V42 restored auth-compat. Production trace "
-                        "shows SELECT users.legacy_token on every legacy login."
+                        "At V42, a later architecture review records Architecture Y for the same project scope. "
+                        "The relation to the earlier Architecture X decision has not yet been confirmed in memory."
                     ),
                 }
             )
+
         if step == 3:
             if not new:
                 raise ValueError("add the second assertion first")
-            if not any(e["old_id"] == old["id"] and e["new_id"] == new["id"] for e in replacements):
+            if not any(
+                event["old_id"] == old["id"] and event["new_id"] == new["id"]
+                for event in replacements
+            ):
                 return self.replace(
-                    {**common, "old_id": old["id"], "new_id": new["id"], "effective": 42}
+                    {
+                        **common,
+                        "old_id": old["id"],
+                        "new_id": new["id"],
+                        "effective": 42,
+                    }
                 )
+
         return self.snapshot(common)
 
     def snapshot(self, request):

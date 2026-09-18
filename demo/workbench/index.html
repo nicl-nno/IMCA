@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inspectable Memory · Developer Workbench</title>
+    <meta
+      name="description"
+      content="Developer workbench for inspecting temporal memory state, evidence, conflicts, and provenance."
+    />
+    <link rel="stylesheet" href="/workbench.css" />
+    <script src="/workbench.js" defer></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">im</span>
+        <div>
+          <strong>Inspectable Memory</strong>
+          <small>Developer Workbench</small>
+        </div>
+      </div>
+
+      <nav class="product-nav" aria-label="Primary navigation">
+        <a class="active" href="/workbench">Workspace</a>
+        <a href="/replay">Benchmark &amp; Error Analysis</a>
+      </nav>
+
+      <div class="repo-strip">
+        <span class="repo-label">REPOSITORY</span>
+        <strong id="repo-name">No case loaded</strong>
+        <span class="separator">/</span>
+        <span id="repo-revision">—</span>
+      </div>
+
+      <div class="runtime-status">
+        <i></i>
+        Local · no LLM
+      </div>
+    </header>
+
+    <main class="workbench">
+      <aside class="project-panel panel">
+        <div class="panel-heading">
+          <span>PROJECT</span>
+          <button class="icon-button" aria-label="Project options">•••</button>
+        </div>
+
+        <div class="empty-project">
+          <span class="folder-icon">⌘</span>
+          <strong>No demo case loaded</strong>
+          <p>
+            A real repository case will appear here with its files,
+            commits, and evidence sources.
+          </p>
+        </div>
+
+        <div class="project-section">
+          <span class="section-label">EVIDENCE</span>
+
+          <div class="tree-item muted">
+            <span>○</span>
+            Source files
+          </div>
+
+          <div class="tree-item muted">
+            <span>○</span>
+            Commits / PRs
+          </div>
+
+          <div class="tree-item muted">
+            <span>○</span>
+            Recorded decisions
+          </div>
+        </div>
+      </aside>
+
+      <section class="workspace-panel panel">
+        <div class="workspace-toolbar">
+          <div>
+            <span class="section-label">AGENT WORKSPACE</span>
+            <strong id="task-title">Waiting for a repository case</strong>
+          </div>
+
+          <div class="workspace-actions">
+            <label class="preset-picker">
+              <span>PRESET EXAMPLE</span>
+              <select id="preset-case"></select>
+            </label>
+
+            <button id="new-session" class="secondary">
+              New session
+            </button>
+          </div>
+        </div>
+
+        <div class="preset-request">
+          <span>PRESET USER REQUEST</span>
+
+          <p id="preset-request-text">
+            Waiting for a repository case.
+          </p>
+        </div>
+
+        <div class="editor-shell">
+          <div class="editor-tabs">
+            <button class="editor-tab active">agent.log</button>
+          </div>
+
+          <div class="editor-content">
+            <div class="line-number">1</div>
+            <div class="agent-line comment">
+              # Inspectable Memory workbench
+            </div>
+
+            <div class="line-number">2</div>
+            <div class="agent-line">
+              Select a repository case to replay the agent context.
+            </div>
+
+            <div class="line-number">3</div>
+            <div class="agent-line muted">
+              Memory inspection becomes available when state evidence is loaded.
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-status neutral" id="agent-status">
+          <div>
+            <span class="status-kicker">MEMORY STATUS</span>
+            <strong>No state loaded</strong>
+            <p>
+              The workbench has not received memory evidence yet.
+            </p>
+          </div>
+
+          <button id="inspect-memory" class="primary" disabled>
+            Inspect memory
+          </button>
+        </div>
+      </section>
+
+      <aside class="context-panel panel">
+        <div class="panel-heading">
+          <span>CONTEXT</span>
+        </div>
+
+        <dl class="context-list">
+          <dt>Repository</dt>
+          <dd id="context-repo">—</dd>
+
+          <dt>Revision</dt>
+          <dd id="context-revision">—</dd>
+
+          <dt>User request</dt>
+          <dd id="context-task">—</dd>
+
+          <dt>World state</dt>
+          <dd id="context-world">—</dd>
+
+          <dt>Known at</dt>
+          <dd id="context-known">—</dd>
+        </dl>
+
+        <div class="context-note">
+          <strong>Why this panel exists</strong>
+          <p>
+            Memory and current project state are inspected separately.
+          </p>
+        </div>
+      </aside>
+
+      <section id="memory-inspector" class="memory-inspector panel" hidden>
+        <div class="inspector-heading">
+          <div>
+            <span class="section-label">MEMORY INSPECTOR</span>
+            <h2>What happened in memory?</h2>
+          </div>
+
+          <button id="close-inspector" class="secondary">
+            Close
+          </button>
+        </div>
+
+        <div class="inspector-empty">
+          <strong>No case loaded yet</strong>
+          <p>
+            This area will show earlier evidence, later evidence,
+            conflicts, supersession, temporal state, and provenance.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Inspectable Memory · research prototype</span>
+      <span>Explicit state and provenance · no hidden chain-of-thought</span>
+    </footer>
+  </body>
+</html>

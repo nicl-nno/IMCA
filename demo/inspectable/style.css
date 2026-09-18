@@ -416,3 +416,502 @@ summary {
     padding: 3px;
   }
 }
+
+
+/* PRODUCT SHELL V1 */
+
+.product-header {
+  height: 62px;
+
+  display: grid;
+  grid-template-columns:
+    270px
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 24px;
+
+  padding: 0 4vw;
+
+  border-bottom:
+    1px solid var(--line);
+
+  background: rgba(255, 255, 255, 0.97);
+}
+
+
+.product-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--ink);
+
+  text-decoration: none;
+}
+
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 8px;
+
+  background: var(--green);
+  color: white;
+
+  font-size: 11px;
+  font-weight: 850;
+}
+
+
+.brand-copy {
+  display: grid;
+
+  gap: 1px;
+}
+
+
+.brand-copy strong {
+  font-size: 13px;
+}
+
+
+.brand-copy small {
+  color: var(--muted);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+
+.product-nav {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+}
+
+
+.product-nav a {
+  position: relative;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 11px;
+
+  color: var(--muted);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+
+.product-nav a:hover {
+  color: var(--ink);
+}
+
+
+.product-nav a.active {
+  color: var(--green);
+}
+
+
+.product-nav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 11px;
+  right: 11px;
+  bottom: -1px;
+
+  height: 2px;
+
+  border-radius: 2px 2px 0 0;
+
+  background: var(--green);
+}
+
+
+.product-status {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--muted);
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+
+.product-status i {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #2b886b;
+}
+
+
+/* Compact page title */
+
+.analysis-titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 22px 4vw 18px;
+
+  border-bottom:
+    1px solid var(--line);
+
+  background: #f7f8f5;
+}
+
+
+.analysis-titlebar h1 {
+  margin: 5px 0 4px;
+
+  font-size: 24px;
+
+  letter-spacing: -0.6px;
+}
+
+
+.analysis-titlebar p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 11px;
+}
+
+
+.verification-block {
+  display: grid;
+
+  gap: 3px;
+
+  min-width: 260px;
+
+  text-align: right;
+}
+
+
+.verification-block strong {
+  color: var(--ink);
+
+  font-size: 10px;
+}
+
+
+.verification-block span {
+  color: var(--muted);
+
+  font-size: 10px;
+}
+
+
+/* Internal analysis tabs */
+
+.analysis-tabs {
+  display: flex;
+
+  gap: 7px;
+
+  padding: 10px 4vw;
+
+  border-bottom:
+    1px solid var(--line);
+
+  background: var(--surface);
+}
+
+
+.analysis-tabs button {
+  padding: 7px 11px;
+
+  border-color: transparent;
+
+  background: transparent;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+.analysis-tabs button:hover {
+  background: #f3f6f4;
+
+  color: var(--ink);
+}
+
+
+.analysis-tabs button.active {
+  border-color: #cbd8d1;
+
+  background: #edf5f1;
+
+  color: var(--green);
+}
+
+
+/* Prevent the old generic nav/header rules from changing product shell. */
+
+body > header.product-header {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+body > nav.analysis-tabs {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.subsection-title {
+  margin-top: 24px;
+}
+
+
+/* Footer aligned with Workbench */
+
+body > footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 10px 4vw;
+
+  border-top:
+    1px solid var(--line);
+
+  background: var(--surface);
+
+  color: var(--muted);
+
+  font-size: 9px;
+}
+
+
+/* Slightly denser research surface */
+
+main {
+  padding-top: 20px;
+}
+
+
+@media (max-width: 1000px) {
+  .product-header {
+    grid-template-columns:
+      230px
+      1fr
+      auto;
+
+    gap: 12px;
+  }
+
+  .product-nav a {
+    padding: 0 7px;
+
+    font-size: 9px;
+  }
+
+  .analysis-titlebar {
+    align-items: flex-start;
+  }
+
+  .verification-block {
+    min-width: 200px;
+  }
+}
+
+
+/* TYPOGRAPHY SCALE V1 */
+
+.product-nav a {
+  font-size: 11px;
+}
+
+.product-status {
+  font-size: 11px;
+}
+
+.analysis-titlebar h1 {
+  font-size: 26px;
+}
+
+.analysis-titlebar p {
+  font-size: 12px;
+}
+
+.verification-block strong,
+.verification-block span {
+  font-size: 11px;
+}
+
+.analysis-tabs button {
+  font-size: 12px;
+  padding: 8px 13px;
+}
+
+label {
+  font-size: 13px;
+}
+
+select {
+  font-size: 15px;
+}
+
+button {
+  font-size: 14px;
+}
+
+.notice {
+  font-size: 13px;
+}
+
+.query {
+  font-size: 14px;
+}
+
+.signals label {
+  font-size: 13px;
+}
+
+.metric strong {
+  font-size: 27px;
+}
+
+.metric span {
+  font-size: 13px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.panel-heading span {
+  font-size: 12px;
+}
+
+.candidate b {
+  font-size: 14px;
+}
+
+.candidate small {
+  font-size: 12px;
+}
+
+.badge {
+  font-size: 12px;
+}
+
+pre {
+  font-size: 13px;
+}
+
+code {
+  font-size: 13px;
+}
+
+.muted {
+  font-size: 13px;
+}
+
+body > footer {
+  font-size: 10px;
+}
+
+/* UI CHROME TYPOGRAPHY V1 */
+
+.product-header {
+  height: 68px;
+}
+
+.brand-copy strong {
+  font-size: 15px;
+}
+
+.brand-copy small {
+  font-size: 9px;
+}
+
+.product-nav a {
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.product-status {
+  font-size: 11px;
+}
+
+.eyebrow {
+  font-size: 12px;
+}
+
+.analysis-titlebar h1 {
+  font-size: 28px;
+}
+
+.analysis-titlebar p {
+  font-size: 13px;
+}
+
+.verification-block strong {
+  font-size: 12px;
+}
+
+.verification-block span {
+  font-size: 11px;
+}
+
+.analysis-tabs button {
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.panel-heading h2 {
+  font-size: 19px;
+}
+
+.panel-heading span {
+  font-size: 12px;
+}

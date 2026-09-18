@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Inspectable Memory · Safety gate для опасного PR</title>
+    <title>Inspectable Memory · Когда правильная память устаревает</title>
     <meta
       name="description"
-      content="Проверьте опасную миграцию базы: интерпретируемая память обнаружит, что production снова читает удаляемую колонку."
+      content="Интерактивная демонстрация того, как исторически верная память отличается от текущего состояния проекта."
     />
     <link rel="stylesheet" href="/live.css" />
     <script src="/live.js" defer></script>
@@ -25,67 +25,105 @@
       <span class="local"><i></i> Локально · без LLM</span>
     </header>
     <main>
-      <div class="heading">
-        <div>
-          <p class="eyebrow">01 / CODE REVIEW · DESTRUCTIVE MIGRATION</p>
-          <h1>Агент хочет удалить колонку.<br /><span>Можно мержить PR?</span></h1>
+      <div class="heading hero-heading">
+        <div class="hero-copy">
+          <p class="eyebrow">01 / STATE INTEGRITY · STALE MEMORY</p>
+
+          <h1>
+            Агент помнит старое решение.<br />
+            <span>Но действует ли оно сейчас?</span>
+          </h1>
+
           <p class="intro">
-            Cleanup ticket разрешает DROP, но после аварийного rollback<br
-              class="desktop"
-            />
-            production снова читает колонку. Память должна остановить опасный
-            merge и показать всю цепочку доказательств.
+            Исторически верная память ещё не означает текущее состояние.
+            Проследите, как Architecture X остаётся частью истории,
+            когда проект переходит к Architecture Y.
           </p>
         </div>
+
+        <div
+          class="state-journey"
+          aria-label="Переход от прошлого решения к текущему состоянию"
+        >
+          <svg viewBox="0 0 480 170" aria-hidden="true">
+            <path
+              class="journey-path"
+              d="M42 119 C108 48, 178 142, 245 87 S361 35, 433 76"
+            />
+          </svg>
+
+          <div class="journey-label journey-label-past">
+            <i></i>
+            <span>
+              <strong>Предыдущее решение</strong>
+              <small>Architecture X</small>
+            </span>
+          </div>
+
+          <div class="journey-label journey-label-now">
+            <i></i>
+            <span>
+              <strong>Текущее состояние?</strong>
+              <small id="journey-current">пока неизвестно</small>
+            </span>
+          </div>
+
+          <div class="journey-caption">
+            MEMORY
+            <span>→</span>
+            STATE
+          </div>
+        </div>
+
         <div class="session-tools">
-          <span id="workspace-id">Подключение к журналу…</span
-          ><button id="new-room" class="subtle">＋ Новая сессия</button
-          ><button id="export" class="subtle">↓ Экспорт объяснения</button>
+          <span id="workspace-id">Подключение к журналу…</span>
+          <button id="new-room" class="subtle">↻ Сбросить демо</button>
+          <button id="export" class="subtle">↓ Экспорт объяснения</button>
         </div>
       </div>
       <div id="error" role="alert" hidden></div>
       <section id="pr-gate" class="card pr-gate review" aria-live="polite">
         <div class="pr-summary">
-          <span class="pr-number">PR #1842 · ALEMBIC MIGRATION</span>
-          <strong>Remove obsolete legacy auth token</strong>
-          <code>op.drop_column("users", "legacy_token")</code>
+          <span class="pr-number">AGENT PROPOSAL · ARCHITECTURE DECISION</span>
+          <strong>Use the remembered project architecture</strong>
+          <code>Use architecture X</code>
         </div>
         <div class="gate-result">
-          <span>INTERPRETABLE MEMORY GATE</span>
-          <strong id="gate-status">ПРОВЕРКА НУЖНА</strong>
-          <p id="gate-reason">Нет оснований разрешить необратимую миграцию.</p>
+          <span>MEMORY STATE CHECK</span>
+          <strong id="gate-status">НУЖНЫ ОСНОВАНИЯ</strong>
+          <p id="gate-reason">Память ещё не знает, какое решение действует сейчас.</p>
         </div>
       </section>
       <div class="layout">
         <aside>
           <section class="card scenario">
             <div class="section-label">
-              РАЗБЕРИТЕ ИНЦИДЕНТ <span>~ 45 сек</span>
+              ПРОСЛЕДИТЕ ИЗМЕНЕНИЕ <span>~ 45 сек</span>
             </div>
-            <h2>Один DROP.<br />Две версии мира.</h2>
+            <h2>Одна память.<br />Два состояния проекта.</h2>
             <p>
-              Если удалить колонку после rollback, legacy login начнёт падать
-              уже в production.
+              Architecture X была правильным решением раньше. Новое evidence говорит, что
+              в V42 появилось утверждение Architecture Y для того же проекта.
             </p>
             <button class="step" data-step="1">
               <span class="step-number">1</span
               ><span
-                ><strong>Прочитать cleanup ticket</strong
-                ><small>DROP COLUMN · безопасно с V41</small></span
+                ><strong>Загрузить старое решение</strong
+                ><small>Architecture X · действует с V41</small></span
               ><span class="step-mark">↗</span>
             </button>
             <button class="step" data-step="2">
               <span class="step-number">2</span
               ><span
-                ><strong>Подключить runtime trace</strong
-                ><small>KEEP COLUMN · rollback с V42</small></span
+                ><strong>Получить новое evidence</strong
+                ><small>Architecture Y · новое evidence в V42</small></span
               ><span class="step-mark">↗</span>
             </button>
             <button class="step" data-step="3">
               <span class="step-number">3</span
               ><span
-                ><strong>Подтвердить rollback</strong
-                ><small>Cleanup ticket устарел с V42</small></span
+                ><strong>Подтвердить миграцию</strong
+                ><small>X становится historical, Y — current</small></span
               ><span class="step-mark">↗</span>
             </button>
             <div class="scenario-note">
@@ -102,7 +140,7 @@
                 <label
                   >Объект<input
                     name="entity"
-                    value="users.legacy_token"
+                    value="project.architecture"
                     required
                     maxlength="160"
                 /></label>
@@ -120,7 +158,7 @@
                   ><label
                     >Значение<input
                       name="value"
-                      value="RENAME COLUMN"
+                      value="Architecture Z"
                       required
                       maxlength="500"
                   /></label>
@@ -166,7 +204,7 @@
                     required
                     maxlength="1500"
                   >
-Production-наблюдение требует другого действия с колонкой.</textarea
+A later architecture note proposes a different decision for the same project.</textarea
                   >
                 </label>
                 <label class="check"
@@ -193,7 +231,7 @@ Production-наблюдение требует другого действия �
               <label
                 >Объект<input
                   id="query-entity"
-                  value="users.legacy_token"
+                  value="project.architecture"
                   maxlength="160" /></label
               ><label
                 >Свойство<select id="query-predicate">
@@ -230,8 +268,8 @@ Production-наблюдение требует другого действия �
           <section class="card graph-card">
             <div class="graph-heading">
               <div>
-                <div class="section-label">КАРТА ПАМЯТИ</div>
-                <h2>От источника — к ответу</h2>
+                <div class="section-label">КАРТА СОСТОЯНИЙ · КАК МЕНЯЛОСЬ РЕШЕНИЕ</div>
+                <h2>Эволюция состояния проекта</h2>
               </div>
               <div class="legend">
                 <span><i class="green"></i> выбрано</span

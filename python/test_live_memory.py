@@ -20,7 +20,7 @@ def test_live_save_conflict_replace_time_travel_and_restart(tmp_path):
     assert first["answer_status"] == "supported"
     second = lab.step({"room": room, "step": 2})
     assert second["answer_status"] == "conflict"
-    old_payload = next(f for f in second["facts"] if f["value"] == "DROP COLUMN")
+    old_payload = next(f for f in second["facts"] if f["value"] == "Architecture X")
     third = lab.step({"room": room, "step": 3})
     assert third["answer_status"] == "supported" and len(third["selected_ids"]) == 1
     assert len(third["facts"]) == 2 and len(third["events"]) == 3
@@ -58,7 +58,7 @@ def test_live_scope_unknown_dates_negation_and_invalid_write():
         "room": a,
         "entity": ENTITY,
         "predicate": "default",
-        "value": "KEEP COLUMN",
+        "value": "Architecture Y",
         "source": "visitor-note",
         "excerpt": "Demo assertion",
         "environment": "staging",
@@ -72,7 +72,7 @@ def test_live_scope_unknown_dates_negation_and_invalid_write():
         {
             **request,
             "environment": "production",
-            "value": "DROP COLUMN",
+            "value": "Architecture X",
             "negated": True,
         }
     )

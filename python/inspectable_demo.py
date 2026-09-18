@@ -171,6 +171,10 @@ def make_handler(service: DemoService):
                 "/replay": ("index.html", "text/html; charset=utf-8"),
                 "/live.js": ("../live/live.js", "text/javascript; charset=utf-8"),
                 "/live.css": ("../live/live.css", "text/css; charset=utf-8"),
+                "/workbench": ("../workbench/index.html", "text/html; charset=utf-8"),
+                "/workbench/": ("../workbench/index.html", "text/html; charset=utf-8"),
+                "/workbench.js": ("../workbench/workbench.js", "text/javascript; charset=utf-8"),
+                "/workbench.css": ("../workbench/workbench.css", "text/css; charset=utf-8"),
                 "/app.js": ("app.js", "text/javascript; charset=utf-8"),
                 "/style.css": ("style.css", "text/css; charset=utf-8"),
             }
