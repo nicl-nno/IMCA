@@ -10,6 +10,8 @@ It needs no API key, model download, database service, plugin, or session hook.
 Code-graph reconstruction additionally uses NumPy. The LoCoMo experiment is
 fully model-free, including indexing and answering.
 
+![Live Inspectable Memory walkthrough](demo/live/inspectable-memory-demo.gif)
+
 ## Start the demo
 
 Python 3.11–3.13 is supported; 3.13 was used for release verification.
@@ -24,12 +26,27 @@ Open **http://127.0.0.1:8765**. The server binds to loopback only. Its writable
 journal is `.inspectable/demo.sqlite`; it does not modify the bundled fixture.
 Use `--port` and `--database` to run an isolated instance.
 
-Try a callers-of-symbol case: inspect witnesses, switch references to calls,
-disable a ranking signal, and compare saved runs. In the temporal panel, vary
-the snapshot and knowledge cutoff to see conflicts, replacement, historical
-recall, and cache reuse. Temporal changes are explicitly authored examples,
-not actual historical benchmark commits. The LoCoMo companion is an offline
-experiment, not a separate implemented UI panel.
+The landing page is a **live safety gate for a destructive code change**. A code
+agent proposes `DROP COLUMN users.legacy_token` from an approved cleanup ticket,
+but a later production trace shows that an emergency rollback restored an active
+reader. Inspect the conflict and explicitly confirm the rollback before the
+system blocks the merge. The graph, answer and provenance inspector are
+computed from real SQLite writes, not precomputed responses. Two sliders
+independently control valid snapshot and knowledge cutoff. Custom assertions,
+explicit negation,
+environment isolation, historical recall and JSON trace export are supported.
+Each workspace persists under its URL; creating another does not delete it.
+
+The guided database-migration example is authored. Agent names label sources;
+no actual LLM agent or free-text extraction runs. The interface explains
+selection rules and source evidence, not model reasoning. Visit `/replay` for the unchanged
+LongMemCode and controlled source-derived temporal examples. The LoCoMo companion
+remains an offline experiment, not a separate implemented UI panel.
+
+See [the guided demo script](docs/live-demo.md). The live service is
+**loopback-only, single-user research software**, not an authenticated public
+multi-user deployment. The URL workspace ID is a convenience, not an access
+control mechanism. Do not expose the port directly to the Internet.
 
 ## Install evaluation dependencies and test
 
@@ -56,6 +73,7 @@ or database endpoint is contacted by the test suite.
 | LoCoMo preparation | `uv run python experiments/download_locomo.py` | Download and SHA-256 verification of the pinned public dataset |
 | LoCoMo, 17 profiles | `uv run python experiments/locomo_context_eval.py --output outputs/locomo --repeats 3` | Fresh ingestion, retrieval, narrow calendar reader, then scoring |
 | LoCoMo paper comparison | `uv run python experiments/verify_locomo_reference.py --output outputs/locomo` | Source/artifact integrity, exact 33,762 top-5 lists, per-category metrics and paired results |
+| Additional memory diagnostics | `uv run --group benchmark python experiments/download_additional_benchmarks.py` then `uv run --group benchmark python experiments/additional_benchmark_eval.py` | MemoryAgentBench conflict chains and HaluMem bitemporal retrieval, with no model calls |
 
 The temporal command creates its output directory. LoCoMo's output directory
 must **not** already exist; use a new directory for a new run.
@@ -108,6 +126,17 @@ guarded (250 versus 248); lure retrieval is not answer/rejection accuracy.
 The fixed calendar reader remains at 22 correct answers out of 69 questions.
 New timings depend on the machine; historical timings remain labeled reference
 measurements in `results/locomo_reference.json`.
+
+Two additional model-free diagnostics are documented in
+[docs/additional-benchmarks.md](docs/additional-benchmarks.md). On the two
+official MemoryAgentBench 6k contexts, guarded adjacency expansion raises the
+answer-bearing-fact Hit@5 proxy from 56.0% to 62.0%; the multi-hop half moves
+from 12.0% to 24.0%, while the single-hop half remains 100.0%. On all 2,639
+HaluMem-Medium questions with evidence, bitemporal filtering keeps overall
+Hit@5 essentially flat (74.88% to 74.95%) while removing all 1,173 result slots
+that are invalid at the interpreted question date. These are development-set,
+memory-isolated retrieval diagnostics, not official end-to-end leaderboard
+scores. HaluMem uses an explicitly labeled oracle-writer boundary.
 
 ## Organization
 

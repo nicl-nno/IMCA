@@ -58,11 +58,11 @@
     "results/locomo_reference.json": "d5e5cdfd376cba66c11073173ef34b4519d77c1df4db1d46208ed1c04797ee37",
     "results/locomo_top5.json.gz": "a78a8e9669ecfe5877c608d49fa1c31ae543ab7e4125b611e39e18ee6c286fd4",
     "results/temporal_reference.json": "15c284972161539eb245ed8af880d37e7f8ac1bfcaab9e2995c904f7fd7b84f0",
-    "demo/inspectable/app.js": "e67a3d7b9fed142b6c1fbdcf43004d8d36b033b7b6452261e358dc408e1850a2",
+    "demo/inspectable/app.js": "b86ab5eb77408c4ab18ed2932461f68e581df279bf9337abe78721c6dc28be92",
     "demo/inspectable/fixture.json": "c114639780929eb7a614a14b52e723a21be85f60f92a162bffe29e8436bbd94d",
-    "demo/inspectable/index.html": "8b965a9a57bbd09d49e85b66aec64b36c8f2b76a89672a85d697403ff64347da",
+    "demo/inspectable/index.html": "498ef50df54dd2653a1405bfd89c1e6c5252dd14e722309647cc6c9cd34f50c6",
     "demo/inspectable/LICENSE.fastapi": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e",
     "demo/inspectable/LICENSE.longmemcode": "6f7913f104892e95386736bef0d7c6aaa0672279ac1c4038b569db2e188e3b1a",
-    "demo/inspectable/style.css": "6ae6bfa94465dc918aaa9724418c8599ae682e1c8094f4f0187e98862b902941"
+    "demo/inspectable/style.css": "83f42b785b8c5e32b443a265d2ebfd49e6eaad606eaaf13f504bd5c9119720eb"
   }
 }

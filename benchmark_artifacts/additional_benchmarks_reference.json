@@ -1,0 +1,161 @@
+{
+  "protocol_version": "additional-benchmarks-v2",
+  "model_calls": 0,
+  "models": [],
+  "machine": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.7",
+  "sources": {
+    "mab_conflict.parquet": "24d5c3f09ce0ce15625cb9f8a98f44f0d864ca6c94d7b4ad04eb697ca3a5ff45",
+    "halumem-medium.jsonl": "486fbc130a5c8781a2af27ffa508a1d7855245137aa449c193ac4d29c45634e7"
+  },
+  "memory_agent_bench": {
+    "protocol": "official 6k single-hop and multi-hop contexts; answer-string evidence proxy@5",
+    "comparability": "memory-isolated retrieval diagnostic, not official end-to-end accuracy",
+    "n": 200,
+    "bm25": {
+      "n": 200,
+      "hits": 112,
+      "rate": 0.56
+    },
+    "graph": {
+      "n": 200,
+      "hits": 124,
+      "rate": 0.62
+    },
+    "paired": {
+      "wins": 13,
+      "losses": 1,
+      "ties": 186
+    },
+    "routed_questions": 71,
+    "by_source": {
+      "factconsolidation_mh_6k": {
+        "bm25": {
+          "n": 100,
+          "hits": 12,
+          "rate": 0.12
+        },
+        "graph": {
+          "n": 100,
+          "hits": 24,
+          "rate": 0.24
+        }
+      },
+      "factconsolidation_sh_6k": {
+        "bm25": {
+          "n": 100,
+          "hits": 100,
+          "rate": 1.0
+        },
+        "graph": {
+          "n": 100,
+          "hits": 100,
+          "rate": 1.0
+        }
+      }
+    },
+    "timings_ms": {
+      "bm25": {
+        "p50": 0.2204500196967274,
+        "p95": 0.35149999894201756
+      },
+      "graph_all": {
+        "p50": 0.000100000761449337,
+        "p95": 2.5138000200968236
+      },
+      "graph_routed": {
+        "p50": 2.424800011795014,
+        "p95": 2.597699989564717
+      }
+    }
+  },
+  "halumem": {
+    "protocol": "all HaluMem-Medium questions with evidence; top-5 memory retrieval",
+    "comparability": "oracle-writer/update-layer diagnostic: official memory points and original_memories are structured writes; not leaderboard QA or extraction scores",
+    "users": 20,
+    "sessions": 1387,
+    "memory_points": 14948,
+    "annotated_updates": 3122,
+    "linked_replacements": 828,
+    "questions": 3467,
+    "questions_with_evidence": 2639,
+    "overall": {
+      "n": 2639,
+      "flat_hit5": 0.7487684729064039,
+      "temporal_hit5": 0.7495263357332322,
+      "flat_recall5": 0.5993873942149804,
+      "temporal_recall5": 0.6002084122773778,
+      "wins": 42,
+      "losses": 40,
+      "flat_stale_slots": 1173,
+      "temporal_stale_slots": 0
+    },
+    "by_type": {
+      "Basic Fact Recall": {
+        "n": 746,
+        "flat_hit5": 0.7278820375335121,
+        "temporal_hit5": 0.7319034852546917,
+        "flat_recall5": 0.7184092940125111,
+        "temporal_recall5": 0.7219839142091153,
+        "wins": 11,
+        "losses": 8,
+        "flat_stale_slots": 267,
+        "temporal_stale_slots": 0
+      },
+      "Dynamic Update": {
+        "n": 180,
+        "flat_hit5": 0.6944444444444444,
+        "temporal_hit5": 0.7,
+        "flat_recall5": 0.5953703703703704,
+        "temporal_recall5": 0.5925925925925927,
+        "wins": 3,
+        "losses": 2,
+        "flat_stale_slots": 99,
+        "temporal_stale_slots": 0
+      },
+      "Generalization & Application": {
+        "n": 746,
+        "flat_hit5": 0.6903485254691689,
+        "temporal_hit5": 0.6970509383378016,
+        "flat_recall5": 0.41827524575513847,
+        "temporal_recall5": 0.4202859696157283,
+        "wins": 7,
+        "losses": 2,
+        "flat_stale_slots": 178,
+        "temporal_stale_slots": 0
+      },
+      "Memory Conflict": {
+        "n": 769,
+        "flat_hit5": 0.8491547464239272,
+        "temporal_hit5": 0.8322496749024707,
+        "flat_recall5": 0.7132423060251409,
+        "temporal_recall5": 0.708690940615518,
+        "wins": 14,
+        "losses": 27,
+        "flat_stale_slots": 490,
+        "temporal_stale_slots": 0
+      },
+      "Multi-hop Inference": {
+        "n": 198,
+        "flat_hit5": 0.7070707070707071,
+        "temporal_hit5": 0.7373737373737373,
+        "flat_recall5": 0.3947811447811448,
+        "temporal_recall5": 0.4048821548821549,
+        "wins": 7,
+        "losses": 1,
+        "flat_stale_slots": 139,
+        "temporal_stale_slots": 0
+      }
+    },
+    "timings_ms": {
+      "flat": {
+        "p50": 0.446999998530373,
+        "p95": 0.916799996048212
+      },
+      "temporal": {
+        "p50": 0.4098000063095242,
+        "p95": 0.8621999877505004
+      }
+    }
+  }
+}

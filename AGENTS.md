@@ -17,5 +17,14 @@ credentials. Never copy a broader development repository or its Git history here
   are made by the release; historical reader output applies only to its original top-5.
 - Temporal fixtures are authored extensions. Valid time is a pinned linear snapshot
   position; recorded time is UTC. Preserve evidence, scopes and historical assertions.
+- `/` and `/live` are real-write workspace labs; `/replay` preserves the frozen
+  artifact. `live_memory.py` wraps, but does not change, frozen memory rules.
+  Workspaces isolate data by scope, assertions are append-only, and only explicit
+  replacement closes validity. Keep actual UTC recording time distinct from snapshot
+  position. Guided agents are source labels, not LLM calls. Preserve loopback/Origin
+  protection and never present workspace identifiers as public authentication.
 - Review staged files for local paths, archives, credentials, unrelated code and source
   provenance before publication. Preserve all upstream licenses.
+- Additional benchmark adapters are memory-isolated development diagnostics. Keep raw
+  MemoryAgentBench/HaluMem data in ignored `outputs/`, freeze top-5 before labels, and
+  never present the HaluMem oracle-writer result as leaderboard-comparable QA.

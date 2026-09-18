@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inspectable Memory · Когда правильная память устаревает</title>
+    <meta
+      name="description"
+      content="Интерактивная демонстрация того, как исторически верная память отличается от текущего состояния проекта."
+    />
+    <link rel="stylesheet" href="/live.css" />
+    <script src="/live.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/live"
+        ><span class="logo">im</span>Inspectable Memory<span class="lab-tag"
+          >RESEARCH LAB</span
+        ></a
+      >
+      <nav aria-label="Разделы">
+        <a class="active" href="/live">Живая память</a
+        ><a href="/replay">Бенчмарк и разбор ошибок ↗</a>
+      </nav>
+      <span class="local"><i></i> Локально · без LLM</span>
+    </header>
+    <main>
+      <div class="heading hero-heading">
+        <div class="hero-copy">
+          <p class="eyebrow">01 / STATE INTEGRITY · STALE MEMORY</p>
+
+          <h1>
+            Агент помнит старое решение.<br />
+            <span>Но действует ли оно сейчас?</span>
+          </h1>
+
+          <p class="intro">
+            Исторически верная память ещё не означает текущее состояние.
+            Проследите, как Architecture X остаётся частью истории,
+            когда проект переходит к Architecture Y.
+          </p>
+        </div>
+
+        <div
+          class="state-journey"
+          aria-label="Переход от прошлого решения к текущему состоянию"
+        >
+          <svg viewBox="0 0 480 170" aria-hidden="true">
+            <path
+              class="journey-path"
+              d="M42 119 C108 48, 178 142, 245 87 S361 35, 433 76"
+            />
+          </svg>
+
+          <div class="journey-label journey-label-past">
+            <i></i>
+            <span>
+              <strong>Предыдущее решение</strong>
+              <small>Architecture X</small>
+            </span>
+          </div>
+
+          <div class="journey-label journey-label-now">
+            <i></i>
+            <span>
+              <strong>Текущее состояние?</strong>
+              <small id="journey-current">пока неизвестно</small>
+            </span>
+          </div>
+
+          <div class="journey-caption">
+            MEMORY
+            <span>→</span>
+            STATE
+          </div>
+        </div>
+
+        <div class="session-tools">
+          <span id="workspace-id">Подключение к журналу…</span>
+          <button id="new-room" class="subtle">↻ Сбросить демо</button>
+          <button id="export" class="subtle">↓ Экспорт объяснения</button>
+        </div>
+      </div>
+      <div id="error" role="alert" hidden></div>
+      <section id="pr-gate" class="card pr-gate review" aria-live="polite">
+        <div class="pr-summary">
+          <span class="pr-number">AGENT PROPOSAL · ARCHITECTURE DECISION</span>
+          <strong>Use the remembered project architecture</strong>
+          <code>Use architecture X</code>
+        </div>
+        <div class="gate-result">
+          <span>MEMORY STATE CHECK</span>
+          <strong id="gate-status">НУЖНЫ ОСНОВАНИЯ</strong>
+          <p id="gate-reason">Память ещё не знает, какое решение действует сейчас.</p>
+        </div>
+      </section>
+      <div class="layout">
+        <aside>
+          <section class="card scenario">
+            <div class="section-label">
+              ПРОСЛЕДИТЕ ИЗМЕНЕНИЕ <span>~ 45 сек</span>
+            </div>
+            <h2>Одна память.<br />Два состояния проекта.</h2>
+            <p>
+              Architecture X была правильным решением раньше. Новое evidence говорит, что
+              в V42 появилось утверждение Architecture Y для того же проекта.
+            </p>
+            <button class="step" data-step="1">
+              <span class="step-number">1</span
+              ><span
+                ><strong>Загрузить старое решение</strong
+                ><small>Architecture X · действует с V41</small></span
+              ><span class="step-mark">↗</span>
+            </button>
+            <button class="step" data-step="2">
+              <span class="step-number">2</span
+              ><span
+                ><strong>Получить новое evidence</strong
+                ><small>Architecture Y · новое evidence в V42</small></span
+              ><span class="step-mark">↗</span>
+            </button>
+            <button class="step" data-step="3">
+              <span class="step-number">3</span
+              ><span
+                ><strong>Подтвердить миграцию</strong
+                ><small>X становится historical, Y — current</small></span
+              ><span class="step-mark">↗</span>
+            </button>
+            <div class="scenario-note">
+              Учебный сценарий, не результат бенчмарка. Кнопки действительно
+              записывают факты в SQLite; «агенты» здесь — обозначения
+              источников.
+            </div>
+          </section>
+          <section class="card custom">
+            <div class="section-label">СВОЙ ЭКСПЕРИМЕНТ</div>
+            <details>
+              <summary>＋ Добавить утверждение</summary>
+              <form id="fact-form">
+                <label
+                  >Объект<input
+                    name="entity"
+                    value="project.architecture"
+                    required
+                    maxlength="160"
+                /></label>
+                <div class="form-row">
+                  <label
+                    >Свойство<select name="predicate">
+                      <option value="default">Значение</option>
+                      <option value="signature">Сигнатура</option>
+                      <option value="exists">Существует</option>
+                      <option value="parameter_exists">
+                        Параметр существует
+                      </option>
+                      <option value="calls">Вызывает (несколько связей)</option>
+                    </select></label
+                  ><label
+                    >Значение<input
+                      name="value"
+                      value="Architecture Z"
+                      required
+                      maxlength="500"
+                  /></label>
+                </div>
+                <div class="form-row">
+                  <label
+                    >Начиная с версии<input
+                      name="valid_from"
+                      type="number"
+                      min="0"
+                      max="100"
+                      value="42" /></label
+                  ><label
+                    >До версии, не включая<input
+                      name="valid_to"
+                      type="number"
+                      min="0"
+                      max="100"
+                      placeholder="Без ограничения"
+                  /></label>
+                </div>
+                <label
+                  >Окружение<input
+                    name="environment"
+                    value="production"
+                    required
+                    maxlength="40" /></label
+                ><label
+                  >Кто сообщил<input
+                    name="agent"
+                    value="Visitor agent"
+                    required
+                    maxlength="80" /></label
+                ><label
+                  >Источник<input
+                    name="source"
+                    value="note://manual-observation"
+                    required
+                    maxlength="300" /></label
+                ><label
+                  >Свидетельство<textarea
+                    name="excerpt"
+                    required
+                    maxlength="1500"
+                  >
+A later architecture note proposes a different decision for the same project.</textarea
+                  >
+                </label>
+                <label class="check"
+                  ><input name="negated" type="checkbox" /> Явное отрицание
+                  этого значения</label
+                >
+                <p class="hint">
+                  Пустая начальная версия означает неизвестную актуальность.
+                  Текст не интерпретируется моделью; значения вводятся как
+                  строки.
+                </p>
+                <button class="primary" type="submit">Записать в память</button>
+              </form>
+            </details>
+          </section>
+        </aside>
+        <div class="workbench">
+          <section class="card question">
+            <div class="section-label">
+              ЗАПРОС К ПАМЯТИ
+              <span>Структурированный · без догадок модели</span>
+            </div>
+            <div class="query-row">
+              <label
+                >Объект<input
+                  id="query-entity"
+                  value="project.architecture"
+                  maxlength="160" /></label
+              ><label
+                >Свойство<select id="query-predicate">
+                  <option value="default">Значение</option>
+                  <option value="signature">Сигнатура</option>
+                  <option value="exists">Существует</option>
+                  <option value="parameter_exists">Параметр существует</option>
+                  <option value="calls">Вызывает</option>
+                </select></label
+              ><label
+                >Окружение<input
+                  id="query-environment"
+                  value="production"
+                  maxlength="40" /></label
+              ><button id="ask" class="primary">Спросить ↗</button>
+            </div>
+            <div class="coordinates">
+              <div>
+                <label for="valid-at"
+                  >Какая версия мира?
+                  <strong id="valid-label">V42</strong></label
+                ><input id="valid-at" type="range" min="0" max="100" value="42" />
+                <p>Когда действует утверждение</p>
+              </div>
+              <div>
+                <label for="known-at"
+                  >Что уже было известно?
+                  <strong id="known-label">K0</strong></label
+                ><input id="known-at" type="range" min="0" max="0" value="0" />
+                <p id="known-caption">Память ещё пуста</p>
+              </div>
+            </div>
+          </section>
+          <section class="card graph-card">
+            <div class="graph-heading">
+              <div>
+                <div class="section-label">КАРТА СОСТОЯНИЙ · КАК МЕНЯЛОСЬ РЕШЕНИЕ</div>
+                <h2>Эволюция состояния проекта</h2>
+              </div>
+              <div class="legend">
+                <span><i class="green"></i> выбрано</span
+                ><span><i class="red"></i> конфликт</span
+                ><span><i class="gray"></i> исключено</span>
+              </div>
+            </div>
+            <div
+              id="graph"
+              class="graph"
+              aria-label="Граф источников, утверждений и решения"
+            ></div>
+            <div class="graph-footer">
+              <span id="graph-count">0 утверждений · 0 связей замены</span
+              ><span>Нажмите на факт, чтобы открыть его основание</span>
+            </div>
+          </section>
+          <div class="bottom-grid">
+            <section
+              id="answer"
+              class="card answer"
+              aria-live="polite"
+            ></section>
+            <section id="inspector" class="card inspector">
+              <div class="section-label">ИНСПЕКТОР ФАКТА</div>
+              <h2>Выберите узел на карте</h2>
+              <p>
+                Здесь появятся источник, интервал действия и точная причина
+                включения или исключения.
+              </p>
+            </section>
+          </div>
+          <section class="card history-card">
+            <div class="graph-heading">
+              <div>
+                <div class="section-label">НЕИЗМЕНЯЕМЫЙ ЖУРНАЛ</div>
+                <h2>История поступления знаний</h2>
+              </div>
+              <span class="history-hint">Факты не удаляются при замене</span>
+            </div>
+            <div id="events"></div>
+          </section>
+        </div>
+      </div>
+      <footer>
+        <span>Inspectable Memory · Research prototype</span
+        ><span
+          >Объяснение правил и источников, не внутренние рассуждения LLM</span
+        ><a href="https://github.com/nicl-nno/aaai2026_demo_agentic_memory_code"
+          >Код и воспроизведение ↗</a
+        >
+      </footer>
+    </main>
+  </body>
+</html>
