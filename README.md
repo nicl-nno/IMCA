@@ -3,7 +3,6 @@
 Code and reproducibility materials for **Inspectable Memory for Code Agents:
 An Interactive System for Retrieval and Error Analysis**.
 
-[Paper repository](https://github.com/nicl-nno/AAAI2026_Demo_AgentMemory)
 
 The interactive demo runs locally using Python's standard library and SQLite.
 It needs no API key, model download, database service, plugin, or session hook.
@@ -22,7 +21,7 @@ cd aaai2026_demo_agentic_memory_code
 python python/inspectable_demo.py
 ```
 
-Open **http://127.0.0.1:8765**. The server binds to loopback only. Its writable
+After starting the server, open `http://127.0.0.1:8765` in your browser. The server binds to loopback only. Its writable
 journal is `.inspectable/demo.sqlite`; it does not modify the bundled fixture.
 Use `--port` and `--database` to run an isolated instance.
 
