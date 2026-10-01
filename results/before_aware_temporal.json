@@ -1,0 +1,65 @@
+{
+  "overall": {
+    "n": 2639,
+    "flat_hit5": 0.7487684729064039,
+    "temporal_hit5": 0.7495263357332322,
+    "direction_aware_hit5": 0.7499052671466464,
+    "flat_recall5": 0.5993873942149804,
+    "temporal_recall5": 0.6002084122773778,
+    "direction_aware_recall5": 0.600587343690792,
+    "flat_stale_slots": 1173,
+    "temporal_stale_slots": 0,
+    "direction_aware_stale_slots": 4,
+    "direction_vs_temporal_wins": 1,
+    "direction_vs_temporal_losses": 0
+  },
+  "memory_conflict": {
+    "n": 769,
+    "flat_hit5": 0.8491547464239272,
+    "temporal_hit5": 0.8322496749024707,
+    "direction_aware_hit5": 0.8335500650195059,
+    "flat_recall5": 0.7132423060251409,
+    "temporal_recall5": 0.708690940615518,
+    "direction_aware_recall5": 0.7099913307325532,
+    "flat_stale_slots": 490,
+    "temporal_stale_slots": 0,
+    "direction_aware_stale_slots": 2,
+    "direction_vs_temporal_wins": 1,
+    "direction_vs_temporal_losses": 0
+  },
+  "before_questions": {
+    "n": 26,
+    "flat_hit5": 0.8461538461538461,
+    "temporal_hit5": 0.8076923076923077,
+    "direction_aware_hit5": 0.8461538461538461,
+    "flat_recall5": 0.7692307692307693,
+    "temporal_recall5": 0.7307692307692307,
+    "direction_aware_recall5": 0.7692307692307693,
+    "flat_stale_slots": 17,
+    "temporal_stale_slots": 0,
+    "direction_aware_stale_slots": 4,
+    "direction_vs_temporal_wins": 1,
+    "direction_vs_temporal_losses": 0
+  },
+  "after_questions": {
+    "n": 0
+  },
+  "strict_questions": {
+    "n": 2613,
+    "flat_hit5": 0.7477994642173746,
+    "temporal_hit5": 0.7489475698430922,
+    "direction_aware_hit5": 0.7489475698430922,
+    "flat_recall5": 0.5976974103839775,
+    "temporal_recall5": 0.5989092996555684,
+    "direction_aware_recall5": 0.5989092996555684,
+    "flat_stale_slots": 1156,
+    "temporal_stale_slots": 0,
+    "direction_aware_stale_slots": 0,
+    "direction_vs_temporal_wins": 0,
+    "direction_vs_temporal_losses": 0
+  },
+  "query_directions": {
+    "strict": 2613,
+    "before": 26
+  }
+}

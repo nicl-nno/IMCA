@@ -1,0 +1,77 @@
+{
+  "overall": {
+    "n": 2639,
+    "flat_hit5": 0.7487684729064039,
+    "temporal_hit5": 0.7495263357332322,
+    "direction_aware_hit5": 0.7487684729064039,
+    "flat_recall5": 0.5993873942149804,
+    "temporal_recall5": 0.6002084122773778,
+    "direction_aware_recall5": 0.5990084628015663,
+    "flat_stale_slots": 1173,
+    "temporal_stale_slots": 0,
+    "direction_aware_stale_slots": 114,
+    "direction_vs_temporal_wins": 1,
+    "direction_vs_temporal_losses": 3
+  },
+  "memory_conflict": {
+    "n": 769,
+    "flat_hit5": 0.8491547464239272,
+    "temporal_hit5": 0.8322496749024707,
+    "direction_aware_hit5": 0.8322496749024707,
+    "flat_recall5": 0.7132423060251409,
+    "temporal_recall5": 0.708690940615518,
+    "direction_aware_recall5": 0.7056566970091027,
+    "flat_stale_slots": 490,
+    "temporal_stale_slots": 0,
+    "direction_aware_stale_slots": 64,
+    "direction_vs_temporal_wins": 1,
+    "direction_vs_temporal_losses": 1
+  },
+  "before_questions": {
+    "n": 26,
+    "flat_hit5": 0.8461538461538461,
+    "temporal_hit5": 0.8076923076923077,
+    "direction_aware_hit5": 0.8461538461538461,
+    "flat_recall5": 0.7692307692307693,
+    "temporal_recall5": 0.7307692307692307,
+    "direction_aware_recall5": 0.7692307692307693,
+    "flat_stale_slots": 17,
+    "temporal_stale_slots": 0,
+    "direction_aware_stale_slots": 4,
+    "direction_vs_temporal_wins": 1,
+    "direction_vs_temporal_losses": 0
+  },
+  "after_questions": {
+    "n": 579,
+    "flat_hit5": 0.7150259067357513,
+    "temporal_hit5": 0.7132987910189983,
+    "direction_aware_hit5": 0.7081174438687392,
+    "flat_recall5": 0.5145653425446172,
+    "temporal_recall5": 0.5162924582613702,
+    "direction_aware_recall5": 0.5090961427748992,
+    "flat_stale_slots": 282,
+    "temporal_stale_slots": 0,
+    "direction_aware_stale_slots": 110,
+    "direction_vs_temporal_wins": 0,
+    "direction_vs_temporal_losses": 3
+  },
+  "strict_questions": {
+    "n": 2034,
+    "flat_hit5": 0.7571288102261554,
+    "temporal_hit5": 0.7590953785644051,
+    "direction_aware_hit5": 0.7590953785644051,
+    "flat_recall5": 0.6213618485742379,
+    "temporal_recall5": 0.6224270730907899,
+    "direction_aware_recall5": 0.6224270730907899,
+    "flat_stale_slots": 874,
+    "temporal_stale_slots": 0,
+    "direction_aware_stale_slots": 0,
+    "direction_vs_temporal_wins": 0,
+    "direction_vs_temporal_losses": 0
+  },
+  "query_directions": {
+    "strict": 2034,
+    "after": 579,
+    "before": 26
+  }
+}

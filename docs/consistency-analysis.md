@@ -130,3 +130,68 @@ In particular:
 - explicit replacement links alone are too sparse to solve the problem.
 
 The next step is therefore to design a more precise query-aware temporal policy rather than globally relaxing temporal validity constraints.
+
+### Variant 3: direction-aware temporal retrieval
+
+The previous experiments suggested that transition and retrospective questions should not be treated uniformly.
+
+A direction-aware variant was evaluated that modifies strict temporal retrieval only for explicit `before` and `after` questions.
+
+For these queries, one out-of-slice candidate may replace the fifth temporal result only when:
+
+- its temporal direction is compatible with the question;
+- it ranks above the fifth temporal result in the global BM25 ranking.
+
+Results:
+
+| Scope | Strict temporal Hit@5 | Direction-aware Hit@5 | Strict Recall@5 | Direction-aware Recall@5 | Wins | Losses | Direction-aware invalid slots |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Overall | 0.7495 | 0.7488 | 0.6002 | 0.5990 | 1 | 3 | 114 |
+| Memory Conflict | 0.8322 | 0.8322 | 0.7087 | 0.7057 | 1 | 1 | 64 |
+| Explicit `before` questions | 0.8077 | 0.8462 | 0.7308 | 0.7692 | 1 | 0 | 4 |
+| Explicit `after` questions | 0.7133 | 0.7081 | 0.5163 | 0.5091 | 0 | 3 | 110 |
+
+The aggregate result does not improve over strict temporal retrieval.
+
+However, the results reveal a clear asymmetry between temporal directions.
+
+For explicit `before` questions, the direction-aware rule improves Hit@5 from 80.77% to 84.62% and Recall@5 from 73.08% to 76.92%, with one gain and no losses.
+
+For explicit `after` questions, the same relaxation is harmful: it introduces three losses and decreases both Hit@5 and Recall@5.
+
+This indicates that `before` and `after` questions should not share the same temporal retrieval policy.
+
+### Variant 4: conservative before-aware temporal retrieval
+
+Based on the directional asymmetry observed in Variant 3, a conservative variant was evaluated.
+
+The out-of-slice contrastive rule is applied only to explicit `before` questions. All `after` questions and all other query types retain strict temporal filtering.
+
+Results:
+
+| Scope | Strict temporal Hit@5 | Before-aware Hit@5 | Strict Recall@5 | Before-aware Recall@5 | Wins | Losses | Before-aware invalid slots |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Overall | 0.7495 | 0.7499 | 0.6002 | 0.6006 | 1 | 0 | 4 |
+| Memory Conflict | 0.8322 | 0.8336 | 0.7087 | 0.7100 | 1 | 0 | 2 |
+| Explicit `before` questions | 0.8077 | 0.8462 | 0.7308 | 0.7692 | 1 | 0 | 4 |
+
+The before-aware variant is the strongest conservative heuristic tested so far.
+
+It improves both Hit@5 and Recall@5 relative to strict temporal retrieval without losing any previously successful Hit@5 cases.
+
+The improvement is small on the full benchmark because explicit `before` questions account for only 26 of 2639 evidence-bearing questions.
+
+However, on the targeted `before` subset, the effect is substantially larger.
+
+The remaining limitation is that the method introduces a small number of out-of-slice results. These results should not automatically be interpreted as harmful stale evidence.
+
+In retrospective questions, later evidence may be required to establish whether an event had already occurred before the queried date.
+
+This motivates a semantic evaluation layer capable of distinguishing:
+
+- harmful stale evidence;
+- useful retrospective or contrastive evidence;
+- legitimate temporal state transitions;
+- true contradictions.
+
+This is the motivation for evaluating the retrieval outputs with an LLM-based judge such as AutoJudge.
