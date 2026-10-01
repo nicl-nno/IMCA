@@ -77,3 +77,56 @@ The aim is to preserve the consistency benefit of temporal filtering while retai
 IMCA distinguishes valid time (when an assertion holds) from recorded/knowledge time (when the assertion became known).
 
 The current HaluMem adapter uses a simplified temporal representation. The next step is to test whether separating temporal semantics and query intent reduces the observed Memory Conflict retrieval losses.
+
+## Experimental query-aware retrieval
+
+After identifying that many temporal retrieval failures involve retrospective or transition questions, two lightweight retrieval variants were tested.
+
+### Variant 1: query-aware temporal retrieval
+
+For questions classified as transition/retrospective, the method keeps four results from strict temporal retrieval and allows one additional candidate from outside the interpreted temporal slice.
+
+The motivation was to preserve most temporally valid context while allowing one contrastive fact that may be required to reason about a change, comparison, or retrospective question.
+
+Results on HaluMem Memory Conflict questions:
+
+| Method | Hit@5 | Recall@5 | Invalid result slots | Wins vs temporal | Losses vs temporal |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Flat retrieval | 0.8492 | 0.7132 | 490 | - | - |
+| Strict temporal | 0.8322 | 0.7087 | 0 | - | - |
+| Query-aware temporal | 0.8414 | 0.7040 | 233 | 12 | 5 |
+
+The query-aware variant recovered part of the retrieval loss on Memory Conflict questions: Hit@5 increased from 83.22% to 84.14%. However, this improvement came at the cost of reintroducing 233 temporally invalid result slots.
+
+This suggests that allowing arbitrary out-of-slice evidence is too permissive, even when restricted to transition/retrospective questions.
+
+### Variant 2: transition-aware retrieval using explicit update links
+
+A stricter variant was then evaluated. Instead of admitting any highly ranked out-of-slice fact, it allows an additional candidate only when the candidate participates in an explicit old/new replacement relation derived from `original_memories`.
+
+Results on HaluMem Memory Conflict questions:
+
+| Method | Hit@5 | Recall@5 | Invalid result slots | Wins vs temporal | Losses vs temporal |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Strict temporal | 0.8322 | 0.7087 | 0 | - | - |
+| Transition-aware | 0.8283 | 0.6938 | 274 | 3 | 6 |
+
+The stricter update-linked variant did not improve retrieval. It reduced Hit@5 below the strict temporal baseline and recovered only three temporal failures.
+
+This is consistent with the earlier error analysis: among the 27 Memory Conflict cases where flat retrieval succeeds and strict temporal retrieval fails, only three are linked to explicit replacement relations, while 24 require evidence whose timestamp is later than the date interpreted from the question.
+
+### Current interpretation
+
+The experiments indicate that the main issue is not simply whether an assertion belongs to an explicit update pair.
+
+Instead, the retrieval policy must distinguish the temporal semantics of the query itself.
+
+In particular:
+
+- state-at-time questions benefit from strict temporal filtering;
+- retrospective and comparison questions may require evidence recorded after the queried date;
+- transition questions may require both sides of a state change;
+- allowing arbitrary future or expired evidence restores some recall but weakens temporal consistency;
+- explicit replacement links alone are too sparse to solve the problem.
+
+The next step is therefore to design a more precise query-aware temporal policy rather than globally relaxing temporal validity constraints.
