@@ -1,0 +1,32 @@
+[
+  {
+    "trace_id": "halumem-memory-conflict-001__before_aware",
+    "retrieval_policy": "before_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict_raw": "```json\n{\n  \"consistency_status\": \"underdetermined\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.0,\n  \"reason\": \"The retrieved evidence consistently indicates Martin was considering retirement as of March 2028, but there is no information confirming or denying an official retirement on June 1, 2028. Critical evidence for the specific date is missing, making it impossible to answer the question.\"\n}\n```"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__flat_bm25",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict_raw": "```json\n{\n  \"consistency_status\": \"conflicting\",\n  \"conflict_type\": \"true_conflict\",\n  \"out_of_slice_evidence\": \"harmful\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.1,\n  \"reason\": \"The evidence contains conflicting information about Martin's sabbatical start date (June 1 vs July 1, 2028), which is a different event than retirement. There is no evidence confirming Martin officially began retirement on June 1, 2028; only that he considered it. The conflicting sabbatical dates are harmful as they are out-of-slice and contradict each other, and the overall evidence is insufficient to answer the question about retirement.\"\n}\n```"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__query_aware",
+    "retrieval_policy": "query_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict_raw": "```json\n{\n  \"consistency_status\": \"conflicting\",\n  \"conflict_type\": \"true_conflict\",\n  \"out_of_slice_evidence\": \"harmful\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.0,\n  \"reason\": \"The context contains conflicting information. While some memories indicate Martin was 'considering early retirement,' another memory (279) explicitly states he 'officially started his sabbatical on June 1, 2028,' not retirement. A sabbatical is distinct from retirement, creating a true conflict regarding his status on the specified date. Furthermore, memory 279 is considered out-of-slice and harmful as it directly addresses the date but provides a different event, potentially misleading the answer. Crucially, there is no evidence confirming Martin officially began his *retirement* on June 1, 2028.\"\n}\n```"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__strict_temporal",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict_raw": "```json\n{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.8,\n  \"reason\": \"The retrieved memories are consistent in their content, all active at the question time, and do not contain conflicting information. However, they lack any evidence regarding Martin's official retirement date, specifically June 1, 2028, making it impossible to answer the question.\"\n}\n```"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__transition_aware",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict_raw": "```json\n{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.1,\n  \"reason\": \"The evidence consistently states Martin is considering retirement, but none confirms an official start date on June 1, 2028. There is missing required evidence to answer the question reliably.\"\n}\n```"
+  }
+]

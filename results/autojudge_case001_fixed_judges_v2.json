@@ -1,0 +1,47 @@
+[
+  {
+    "trace_id": "halumem-memory-conflict-001__before_aware",
+    "retrieval_policy": "before_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.0,
+      "reason": "The retrieved memories consistently indicate Martin is considering or considered early retirement but do not provide any information about whether he officially began his retirement on June 1, 2028. Therefore, there is insufficient evidence to answer the query."
+    },
+    "verdict_raw": "```json\n{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.0,\n  \"reason\": \"The retrieved memories consistently indicate Martin is considering or considered early retirement but do not provide any information about whether he officially began his retirement on June 1, 2028. Therefore, there is insufficient evidence to answer the query.\"\n}\n```"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__flat_bm25",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "true_conflict",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.9,
+      "reason": "Memories 279 and 289 conflict on the start date of Martin's sabbatical (June 1, 2028 vs. July 1, 2028). While the query asks about retirement, the retrieved evidence consistently points to a sabbatical, not retirement, on or around June 1, 2028. Therefore, the evidence supports a negative answer to the retirement question, despite the conflict regarding the sabbatical start date. The out-of-slice evidence is relevant as it provides information about events occurring after the question time, which is pertinent to the query about a future date."
+    },
+    "verdict_raw": "```json\n{\n  \"consistency_status\": \"conflicting\",\n  \"conflict_type\": \"true_conflict\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.9,\n  \"reason\": \"Memories 279 and 289 conflict on the start date of Martin's sabbatical (June 1, 2028 vs. July 1, 2028). While the query asks about retirement, the retrieved evidence consistently points to a sabbatical, not retirement, on or around June 1, 2028. Therefore, the evidence supports a negative answer to the retirement question, despite the conflict regarding the sabbatical start date. The out-of-slice evidence is relevant as it provides information about events occurring after the question time, which is pertinent to the query about a future date.\"\n}\n```"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__query_aware",
+    "retrieval_policy": "query_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.9,
+      "reason": "The retrieved memory 279 explicitly states that Martin officially started his sabbatical on June 1, 2028, not his retirement. While other memories discuss his consideration of early retirement, none confirm he retired on that date. A sabbatical is distinct from retirement, thus providing a clear answer to the query. The out-of-slice evidence is relevant as it directly addresses the date in question."
+    },
+    "verdict_raw": "```json\n{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.9,\n  \"reason\": \"The retrieved memory 279 explicitly states that Martin officially started his sabbatical on June 1, 2028, not his retirement. While other memories discuss his consideration of early retirement, none confirm he retired on that date. A sabbatical is distinct from retirement, thus providing a clear answer to the query. The out-of-slice evidence is relevant as it directly addresses the date in question.\"\n}\n```"
+  }
+]

@@ -1,0 +1,127 @@
+diff --git a/src/autojudge/pipeline/node.py b/src/autojudge/pipeline/node.py
+index 1039ac0..21fb544 100644
+--- a/src/autojudge/pipeline/node.py
++++ b/src/autojudge/pipeline/node.py
+@@ -19,7 +19,10 @@ load_dotenv(".env")
+ setup_langfuse_instrumentation()
+ 
+ AGENT_NODE_TEMPERATURE = float(os.getenv("AGENT_NODE_TEMPERATURE", "0.1"))
++AGENT_NODE_MAX_TOKENS = int(os.getenv("AGENT_NODE_MAX_TOKENS", "2000"))
++
+ print('Judge temperature = ', AGENT_NODE_TEMPERATURE)
++print('Judge max tokens = ', AGENT_NODE_MAX_TOKENS)
+ 
+ @dataclass
+ class AgentNode(UsageTrackingMixin):
+@@ -48,7 +51,10 @@ class AgentNode(UsageTrackingMixin):
+         model = OpenAIChatModel(
+             self.model,
+             provider=OpenRouterProvider(api_key=self.api_key or ""),
+-            settings={"temperature": AGENT_NODE_TEMPERATURE},
++            settings={
++                "temperature": AGENT_NODE_TEMPERATURE,
++                "max_tokens": AGENT_NODE_MAX_TOKENS,
++            },
+         )
+ 
+         tools = [get_content_tool] if self.use_tools else []
+diff --git a/src/autojudge/pipeline/pipeline.py b/src/autojudge/pipeline/pipeline.py
+index ff3fad2..0e5ab0f 100644
+--- a/src/autojudge/pipeline/pipeline.py
++++ b/src/autojudge/pipeline/pipeline.py
+@@ -1,6 +1,7 @@
+ from __future__ import annotations
+ 
+ import asyncio
++import os
+ import base64
+ import io
+ from pathlib import Path
+@@ -121,33 +122,70 @@ class Pipeline:
+         return result.output
+ 
+     async def _execute_level(self, level_nodes: list[AgentNode]) -> None:
+-        """Execute all nodes in a level concurrently using asyncio.gather()."""
++        """Execute nodes in a level sequentially or concurrently."""
+         if not level_nodes:
+             return
+ 
+-        # Log which nodes will be executed concurrently
++        sequential = os.getenv(
++            "AUTOJUDGE_SEQUENTIAL_LEVELS",
++            "0",
++        ).lower() in {"1", "true", "yes"}
++
+         node_names = [f"{node.name} (id: {node.id})" for node in level_nodes]
+-        if len(level_nodes) > 1:
+-            logger.info(
+-                f"Executing {len(level_nodes)} nodes concurrently: {', '.join(node_names)}"
++
++        if sequential:
++            if len(level_nodes) > 1:
++                logger.info(
++                    f"Executing {len(level_nodes)} nodes sequentially: "
++                    f"{', '.join(node_names)}"
++                )
++
++            errors = []
++
++            for node in level_nodes:
++                try:
++                    await self._execute_node(node)
++                except Exception as exc:
++                    logger.error(
++                        f"Node '{node.name}' failed with error: {exc}"
++                    )
++                    errors.append((node.name, exc))
++                    break
++
++        else:
++            if len(level_nodes) > 1:
++                logger.info(
++                    f"Executing {len(level_nodes)} nodes concurrently: "
++                    f"{', '.join(node_names)}"
++                )
++
++            tasks = [
++                self._execute_node(node)
++                for node in level_nodes
++            ]
++
++            results = await asyncio.gather(
++                *tasks,
++                return_exceptions=True,
+             )
+ 
+-        # Execute all nodes concurrently
+-        tasks = [self._execute_node(node) for node in level_nodes]
+-        results = await asyncio.gather(*tasks, return_exceptions=True)
++            errors = []
+ 
+-        # Check for exceptions and log them
+-        errors = []
+-        for node, result in zip(level_nodes, results):
+-            if isinstance(result, Exception):
+-                logger.error(f"Node '{node.name}' failed with error: {result}")
+-                errors.append((node.name, result))
++            for node, result in zip(level_nodes, results):
++                if isinstance(result, Exception):
++                    logger.error(
++                        f"Node '{node.name}' failed with error: {result}"
++                    )
++                    errors.append((node.name, result))
+ 
+-        # If any node failed, raise an exception with details
+         if errors:
+-            error_details = "; ".join([f"{name}: {err}" for name, err in errors])
++            error_details = "; ".join(
++                [f"{name}: {err}" for name, err in errors]
++            )
++
+             raise RuntimeError(
+-                f"Failed to execute level with {len(errors)} error(s): {error_details}"
++                f"Failed to execute level with "
++                f"{len(errors)} error(s): {error_details}"
+             )
+ 
+     async def ainvoke(self, query: Any) -> Any:
