@@ -157,3 +157,25 @@ query-aware retrieval выглядит хуже строгой временно�
 Код и промежуточные результаты находятся в ветке:
 
 `alexandra/consistency-analysis`
+
+Из-за смены evaluator model (модели-оценщика) продолжать тот же v2 некорректно, поэтому вместо смешанного прогона был выполнен отдельный полный контролируемый эксперимент на GLM-5.3-Flash.
+
+## Контролируемый прогон на GLM-5.3-Flash
+
+Чтобы не смешивать разные judge-модели (модели-оценщики) внутри одного сравнения, был выполнен отдельный полный прогон всех пяти retrieval policies (политик поиска) с одним и тем же фиксированным набором оценщиков и одной моделью `glm-5.3-flash`.
+
+Результаты для HaluMem Memory Conflict case 001:
+
+| Retrieval policy | Consistency | Out-of-slice evidence | Missing required evidence | Supports answer |
+|---|---|---|---|---|
+| `before_aware` | consistent | none | true | false |
+| `flat_bm25` | conflicting / true_conflict | relevant | false | true |
+| `query_aware` | consistent | relevant | false | true |
+| `strict_temporal` | underdetermined | none | true | false |
+| `transition_aware` | consistent | relevant | true | false |
+
+Главный качественный результат сохраняется: `strict_temporal` оставляет временно согласованный контекст, но теряет факт, необходимый для ответа на ретроспективный вопрос. `query_aware`, напротив, извлекает релевантный факт вне строгого временного среза, при этом AutoJudge не обнаруживает дополнительного противоречия и считает контекст достаточным для ответа.
+
+`flat_bm25` также находит необходимый факт, но одновременно извлекает конфликтующие версии события, поэтому AutoJudge классифицирует контекст как `true_conflict`.
+
+Этот результат пока следует рассматривать как qualitative validation (качественную проверку) на одном кейсе, а не как доказательство общего превосходства `query_aware`.
