@@ -1,0 +1,77 @@
+[
+  {
+    "trace_id": "halumem-memory-conflict-001__before_aware",
+    "retrieval_policy": "before_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.9,
+      "reason": "All four judges align. Retrieved memories (248, 228, 232, 230) uniformly describe Martin only *considering* early retirement due to stress, with uncertainty and continued healthcare interests; memory 14 (target metrics) is merely irrelevant. These items are mutually consistent, so there is no true_conflict, and no retrieved-vs-retrieved temporal_update. All five items are active_at_question_time=true, so out_of_slice_evidence is none. However, none of the retrieved items records an official start of retirement (or sabbatical) on June 1, 2028; the confirming fact exists only in benchmark reference evidence, which is post-question-time metadata and cannot supply the answer. This is a missing-evidence problem, not a contradiction: missing_required_evidence=true and supports_answer=false, since the retrieved context (consideration alone) cannot reliably determine either a positive or negative answer to whether Martin officially began retirement on June 1, 2028."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.9,\n  \"reason\": \"All four judges align. Retrieved memories (248, 228, 232, 230) uniformly describe Martin only *considering* early retirement due to stress, with uncertainty and continued healthcare interests; memory 14 (target metrics) is merely irrelevant. These items are mutually consistent, so there is no true_conflict, and no retrieved-vs-retrieved temporal_update. All five items are active_at_question_time=true, so out_of_slice_evidence is none. However, none of the retrieved items records an official start of retirement (or sabbatical) on June 1, 2028; the confirming fact exists only in benchmark reference evidence, which is post-question-time metadata and cannot supply the answer. This is a missing-evidence problem, not a contradiction: missing_required_evidence=true and supports_answer=false, since the retrieved context (consideration alone) cannot reliably determine either a positive or negative answer to whether Martin officially began retirement on June 1, 2028.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__flat_bm25",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "true_conflict",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.85,
+      "reason": "Retrieved mem_279 (sabbatical started June 1, 2028) and mem_289 (sabbatical started July 1, 2028) make incompatible claims about the same event with identical valid_from timestamps, so this is a true version conflict, not a temporal update. The conflict does not block answering: in-slice memories 248/228 show retirement was only under consideration, and the out-of-slice sabbatical record (relevant for this transition/retrospective query, despite valid_from being after question time) establishes that the June 1, 2028 event was a sabbatical, not a retirement. The context is therefore sufficient to determine the answer: No — Martin officially began a sabbatical, not his retirement, on June 1, 2028."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"conflicting\",\n  \"conflict_type\": \"true_conflict\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.85,\n  \"reason\": \"Retrieved mem_279 (sabbatical started June 1, 2028) and mem_289 (sabbatical started July 1, 2028) make incompatible claims about the same event with identical valid_from timestamps, so this is a true version conflict, not a temporal update. The conflict does not block answering: in-slice memories 248/228 show retirement was only under consideration, and the out-of-slice sabbatical record (relevant for this transition/retrospective query, despite valid_from being after question time) establishes that the June 1, 2028 event was a sabbatical, not a retirement. The context is therefore sufficient to determine the answer: No — Martin officially began a sabbatical, not his retirement, on June 1, 2028.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__query_aware",
+    "retrieval_policy": "query_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.8,
+      "reason": "All judges agree there is no contradiction among retrieved items: active memories (248, 228, 232) consistently describe Martin only *considering* early retirement, and no retrieved item asserts or denies an official retirement start on June 1, 2028. Memory 279, though inactive at question time (valid_from ~82 min after question_time), is semantically compatible — a sabbatical is a different event from retirement — so it is a legitimate later fact, not a conflict. For this transition/retrospective query, out-of-slice memory 279 is relevant and necessary: it establishes what actually occurred on June 1, 2028 (official sabbatical start for well-being and career reassessment). With it, the retrieved context is sufficient to determine a negative answer: Martin did not officially begin retirement on June 1, 2028 — he began a sabbatical. Absence within the strict slice is an insufficiency issue, but the required fact is present as relevant out-of-slice evidence, so missing_required_evidence is false and supports_answer is true."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.8,\n  \"reason\": \"All judges agree there is no contradiction among retrieved items: active memories (248, 228, 232) consistently describe Martin only *considering* early retirement, and no retrieved item asserts or denies an official retirement start on June 1, 2028. Memory 279, though inactive at question time (valid_from ~82 min after question_time), is semantically compatible — a sabbatical is a different event from retirement — so it is a legitimate later fact, not a conflict. For this transition/retrospective query, out-of-slice memory 279 is relevant and necessary: it establishes what actually occurred on June 1, 2028 (official sabbatical start for well-being and career reassessment). With it, the retrieved context is sufficient to determine a negative answer: Martin did not officially begin retirement on June 1, 2028 — he began a sabbatical. Absence within the strict slice is an insufficiency issue, but the required fact is present as relevant out-of-slice evidence, so missing_required_evidence is false and supports_answer is true.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__strict_temporal",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.9,
+      "reason": "All five retrieved memories (248, 228, 232, 230, 14) are active at question time and mutually consistent: they only establish that Martin was considering early retirement due to stress at Huaxin Consulting, with no contradiction among them and no out-of-slice items. However, no retrieved memory records any official transition event or date (retirement or sabbatical) on June 1, 2028, and diagnostic signals confirm the pivotal evidence falls after question time and was not retrieved. The transition-defining record is missing, so the retrieved context cannot determine whether Martin officially began retirement — an evidence gap, not a conflict."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"underdetermined\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.9,\n  \"reason\": \"All five retrieved memories (248, 228, 232, 230, 14) are active at question time and mutually consistent: they only establish that Martin was considering early retirement due to stress at Huaxin Consulting, with no contradiction among them and no out-of-slice items. However, no retrieved memory records any official transition event or date (retirement or sabbatical) on June 1, 2028, and diagnostic signals confirm the pivotal evidence falls after question time and was not retrieved. The transition-defining record is missing, so the retrieved context cannot determine whether Martin officially began retirement — an evidence gap, not a conflict.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__transition_aware",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.88,
+      "reason": "All four judges align: retrieved memories (248, 228, 232) consistently depict Martin merely considering early retirement and feeling uncertain, with no contradictory claims among them, so consistency_status=consistent and conflict_type=none (219→228 is a benign supersession, not a conflict). No retrieved item establishes or denies an official retirement start on June 1, 2028; memory 14 is topically irrelevant. The required official status-change record exists only in benchmark metadata (which describes a sabbatical, not retirement) and was not retrieved, so missing_required_evidence=true and supports_answer=false — the context shows deliberation, not an official transition, and cannot reliably determine a yes or no answer. The single out-of-slice item (219, expired) is content-consistent retrospective background establishing the earliest point of the consideration phase, hence relevant rather than harmful."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.88,\n  \"reason\": \"All four judges align: retrieved memories (248, 228, 232) consistently depict Martin merely considering early retirement and feeling uncertain, with no contradictory claims among them, so consistency_status=consistent and conflict_type=none (219→228 is a benign supersession, not a conflict). No retrieved item establishes or denies an official retirement start on June 1, 2028; memory 14 is topically irrelevant. The required official status-change record exists only in benchmark metadata (which describes a sabbatical, not retirement) and was not retrieved, so missing_required_evidence=true and supports_answer=false — the context shows deliberation, not an official transition, and cannot reliably determine a yes or no answer. The single out-of-slice item (219, expired) is content-consistent retrospective background establishing the earliest point of the consideration phase, hence relevant rather than harmful.\"\n}"
+  }
+]
