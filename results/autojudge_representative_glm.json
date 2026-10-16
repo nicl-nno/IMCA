@@ -1,0 +1,402 @@
+[
+  {
+    "trace_id": "halumem-memory-conflict-001__before_aware",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "before_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.93,
+      "reason": "All four specialists agree. Retrieved memories (248, 228, 232, 230) consistently show only that Martin was considering early retirement due to Huaxin Consulting stress; memory 14 is unrelated but not contradictory. No retrieved item records any official retirement (or sabbatical) start on June 1, 2028 — the transition event itself is absent, so consistency_status is consistent with no conflict, but the required June 1, 2028 evidence is missing (reference evidence confirms such an event exists and was not retrieved). All retrieved items are active at question time, so out-of-slice is none. The context supports only 'considering retirement' and cannot determine whether he officially began retirement on June 1, 2028, hence supports_answer=false."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.93,\n  \"reason\": \"All four specialists agree. Retrieved memories (248, 228, 232, 230) consistently show only that Martin was considering early retirement due to Huaxin Consulting stress; memory 14 is unrelated but not contradictory. No retrieved item records any official retirement (or sabbatical) start on June 1, 2028 — the transition event itself is absent, so consistency_status is consistent with no conflict, but the required June 1, 2028 evidence is missing (reference evidence confirms such an event exists and was not retrieved). All retrieved items are active at question time, so out-of-slice is none. The context supports only 'considering retirement' and cannot determine whether he officially began retirement on June 1, 2028, hence supports_answer=false.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__flat_bm25",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "true_conflict",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.75,
+      "reason": "Memories 279 and 289 assert incompatible sabbatical start dates (June 1 vs July 1, 2028) under an identical validity interval (same valid_from, no valid_to), a genuine same-time contradiction in the retrieved set; by contrast, the shift from 'considering early retirement' (228/248, in-slice) to 'started sabbatical' (279/289) is a legitimate temporal update, not a conflict. No retrieved memory states that retirement began on June 1, 2028 — the June 1 event was a sabbatical, a different event — so the answer is determinably negative (supports_answer=true), and this holds under either sabbatical date. The out-of-slice sabbatical records are necessary for this transition/retrospective query and clarify that the June 1, 2028 event was not a retirement, so they are relevant rather than harmful. The key fact matching the reference evidence is present (memory 279 verbatim), so no required evidence is missing; the June/July discrepancy affects only the sabbatical start date, not the retirement answer."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"conflicting\",\n  \"conflict_type\": \"true_conflict\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.75,\n  \"reason\": \"Memories 279 and 289 assert incompatible sabbatical start dates (June 1 vs July 1, 2028) under an identical validity interval (same valid_from, no valid_to), a genuine same-time contradiction in the retrieved set; by contrast, the shift from 'considering early retirement' (228/248, in-slice) to 'started sabbatical' (279/289) is a legitimate temporal update, not a conflict. No retrieved memory states that retirement began on June 1, 2028 — the June 1 event was a sabbatical, a different event — so the answer is determinably negative (supports_answer=true), and this holds under either sabbatical date. The out-of-slice sabbatical records are necessary for this transition/retrospective query and clarify that the June 1, 2028 event was not a retirement, so they are relevant rather than harmful. The key fact matching the reference evidence is present (memory 279 verbatim), so no required evidence is missing; the June/July discrepancy affects only the sabbatical start date, not the retirement answer.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__query_aware",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "query_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.9,
+      "reason": "All judges align. In-slice memories 248, 228, and 232 are mutually consistent: Martin was only considering early retirement and was uncertain about it; no retrieved item asserts an official retirement. Memory 279 (active_at_question_time=false, valid_from ~82 min after question_time) records that a sabbatical — a different event from retirement — officially began June 1, 2028, so it creates no true conflict and is not a temporal update to any retrieved retirement claim. This single out-of-slice item is directly relevant and necessary for transition/retrospective detection (query_group=transition_or_retrospective, evidence_after_question_time=true), and together with the contemplation memories it sufficiently determines the answer: No — Martin did not officially begin retirement on June 1, 2028; a sabbatical began then. Memory 14 is topically irrelevant but harmless; no required evidence is missing."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.9,\n  \"reason\": \"All judges align. In-slice memories 248, 228, and 232 are mutually consistent: Martin was only considering early retirement and was uncertain about it; no retrieved item asserts an official retirement. Memory 279 (active_at_question_time=false, valid_from ~82 min after question_time) records that a sabbatical — a different event from retirement — officially began June 1, 2028, so it creates no true conflict and is not a temporal update to any retrieved retirement claim. This single out-of-slice item is directly relevant and necessary for transition/retrospective detection (query_group=transition_or_retrospective, evidence_after_question_time=true), and together with the contemplation memories it sufficiently determines the answer: No — Martin did not officially begin retirement on June 1, 2028; a sabbatical began then. Memory 14 is topically irrelevant but harmless; no required evidence is missing.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__strict_temporal",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.9,
+      "reason": "All four judges agree: retrieved memories (248, 228, 232, 230) are mutually consistent, describing only Martin's ongoing consideration of early retirement due to Huaxin Consulting stress; none records an official retirement start date or status change on or around June 1, 2028. No retrieved item contradicts another (temporal continuity of the 'considering' state from Jan–Mar 2028, all active at question time), so there is no conflict. The core problem is missing evidence: 'considering early retirement' is compatible with both having and not having officially begun retirement, so neither a positive nor negative answer can be established from the retrieved context. All retrieved items are active at question time, so no out-of-slice evidence exists; the reference evidence (a sabbatical start on June 1, 2028) is benchmark metadata, was not retrieved, and cannot fill the gap or create a conflict."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.9,\n  \"reason\": \"All four judges agree: retrieved memories (248, 228, 232, 230) are mutually consistent, describing only Martin's ongoing consideration of early retirement due to Huaxin Consulting stress; none records an official retirement start date or status change on or around June 1, 2028. No retrieved item contradicts another (temporal continuity of the 'considering' state from Jan–Mar 2028, all active at question time), so there is no conflict. The core problem is missing evidence: 'considering early retirement' is compatible with both having and not having officially begun retirement, so neither a positive nor negative answer can be established from the retrieved context. All retrieved items are active at question time, so no out-of-slice evidence exists; the reference evidence (a sabbatical start on June 1, 2028) is benchmark metadata, was not retrieved, and cannot fill the gap or create a conflict.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__transition_aware",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.9,
+      "reason": "All judges agree: retrieved memories (248, 228, 232, plus expired 219) coherently establish only that Martin was considering early retirement due to director-role stress at Huaxin Consulting, with uncertainty about implications; the 219→228 supersession is a benign temporal update, not a conflict. No retrieved memory records an official retirement (or sabbatical) start on June 1, 2028 — the decisive transition event is absent from retrieval, so 'considering' cannot establish either a yes or no answer. Memory 14 is topically irrelevant but in-slice; the single out-of-slice item (219) is relevant historical context for transition detection, not harmful. Reference evidence (benchmark metadata) confirms the required transition evidence exists but was not retrieved, so missing_required_evidence=true and supports_answer=false."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.9,\n  \"reason\": \"All judges agree: retrieved memories (248, 228, 232, plus expired 219) coherently establish only that Martin was considering early retirement due to director-role stress at Huaxin Consulting, with uncertainty about implications; the 219→228 supersession is a benign temporal update, not a conflict. No retrieved memory records an official retirement (or sabbatical) start on June 1, 2028 — the decisive transition event is absent from retrieval, so 'considering' cannot establish either a yes or no answer. Memory 14 is topically irrelevant but in-slice; the single out-of-slice item (219) is relevant historical context for transition detection, not harmful. Reference evidence (benchmark metadata) confirms the required transition evidence exists but was not retrieved, so missing_required_evidence=true and supports_answer=false.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__before_aware",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "before_aware",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.88,
+      "reason": "All five retrieved items are mutually consistent and active at question time (no contradiction, no expiry, no out-of-slice items). However, none addresses the specific 2035-11-26 late-night session: Memory 314 describes the cat's playful behavior as a welcome distraction during stressful composing periods generally, while the remaining memories cover sugary drinks, espresso, and general focus challenges. The required evidence about the cat's effect during that exact session is absent (reference evidence indicates it exists but was recorded after question time, excluded by the before_aware policy). Missing evidence, not contradiction, leaves the answer underdetermined."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"underdetermined\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.88,\n  \"reason\": \"All five retrieved items are mutually consistent and active at question time (no contradiction, no expiry, no out-of-slice items). However, none addresses the specific 2035-11-26 late-night session: Memory 314 describes the cat's playful behavior as a welcome distraction during stressful composing periods generally, while the remaining memories cover sugary drinks, espresso, and general focus challenges. The required evidence about the cat's effect during that exact session is absent (reference evidence indicates it exists but was recorded after question time, excluded by the before_aware policy). Missing evidence, not contradiction, leaves the answer underdetermined.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__flat_bm25",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.85,
+      "reason": "Retrieved memories 538, 539, and 540 uniformly describe Donna's cat as comforting and inspiring during late-night composing sessions (539 matches reference evidence nearly verbatim), with no retrieved item claiming the cat was distracting. Memory 157 (sluggishness from a sugary soft drink) concerns a different event and cause, and memory 547 concerns her dog, so neither creates a conflict. The cat memories (valid_from 2079723653) became active only ~54 seconds after question_time (2079723599), making them out-of-slice but topically relevant; they are habitual ongoing facts (valid_to=None) formed contemporaneously with the queried session. This evidence is sufficient to determine the answer: No — the cat was a comforting, inspiring presence, not a distraction. No earlier 'distracting' fact exists to be superseded, so no temporal update pattern applies."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.85,\n  \"reason\": \"Retrieved memories 538, 539, and 540 uniformly describe Donna's cat as comforting and inspiring during late-night composing sessions (539 matches reference evidence nearly verbatim), with no retrieved item claiming the cat was distracting. Memory 157 (sluggishness from a sugary soft drink) concerns a different event and cause, and memory 547 concerns her dog, so neither creates a conflict. The cat memories (valid_from 2079723653) became active only ~54 seconds after question_time (2079723599), making them out-of-slice but topically relevant; they are habitual ongoing facts (valid_to=None) formed contemporaneously with the queried session. This evidence is sufficient to determine the answer: No — the cat was a comforting, inspiring presence, not a distraction. No earlier 'distracting' fact exists to be superseded, so no temporal update pattern applies.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__query_aware",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "query_aware",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.88,
+      "reason": "All five retrieved memories are active at question time and mutually consistent (sugar/focus items 157/521/305/397 align; only item 314 mentions the cat), so no conflict or temporal update exists and no retrieved item is out of slice. However, the only cat-related memory (314) is a general disposition about stressful composing periods with a positive framing, not a record of the 2035-11-26 late-night session; the benchmark-indicating evidence (cat inspiring/comforting, quietly observing) is absent from the retrieved context. The specific session evidence required to answer this state_at_time question is missing, so the context cannot reliably determine whether the cat was distracting that night."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.88,\n  \"reason\": \"All five retrieved memories are active at question time and mutually consistent (sugar/focus items 157/521/305/397 align; only item 314 mentions the cat), so no conflict or temporal update exists and no retrieved item is out of slice. However, the only cat-related memory (314) is a general disposition about stressful composing periods with a positive framing, not a record of the 2035-11-26 late-night session; the benchmark-indicating evidence (cat inspiring/comforting, quietly observing) is absent from the retrieved context. The specific session evidence required to answer this state_at_time question is missing, so the context cannot reliably determine whether the cat was distracting that night.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__strict_temporal",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.85,
+      "reason": "All five retrieved memories are active at question time and mutually consistent; none conflicts with another. However, only memory 314 touches the cat topic, and it describes a general positive effect ('much-needed distraction and joy during stressful composing periods'), not the specific 2035-11-26 late-night session. The session-specific evidence suggested by the benchmark (cat quietly observing, inspiring/comforting during late-night sessions) is absent from the retrieved context, so the question cannot be reliably answered from retrieved memories alone; missing evidence is not contradiction."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.85,\n  \"reason\": \"All five retrieved memories are active at question time and mutually consistent; none conflicts with another. However, only memory 314 touches the cat topic, and it describes a general positive effect ('much-needed distraction and joy during stressful composing periods'), not the specific 2035-11-26 late-night session. The session-specific evidence suggested by the benchmark (cat quietly observing, inspiring/comforting during late-night sessions) is absent from the retrieved context, so the question cannot be reliably answered from retrieved memories alone; missing evidence is not contradiction.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__transition_aware",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.87,
+      "reason": "All five retrieved memories are mutually compatible: memory 314 (cat's playful behavior as a welcomed distraction during stressful composing periods) is the only cat-related item, and memories 157/397/305/521 about sugary drinks, espresso, and focus challenges do not contradict it or each other. All items are active at question time, so no temporal update and no out-of-slice evidence. However, no retrieved memory addresses the specific late-night composing session on 2035-11-26; memory 314 is a general standing disposition with a positive framing, not a record of that session. The session-specific evidence needed to determine whether she found the cat distracting (or not) on that date is absent, so the retrieved context is insufficient to answer the question despite being internally consistent."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.87,\n  \"reason\": \"All five retrieved memories are mutually compatible: memory 314 (cat's playful behavior as a welcomed distraction during stressful composing periods) is the only cat-related item, and memories 157/397/305/521 about sugary drinks, espresso, and focus challenges do not contradict it or each other. All items are active at question time, so no temporal update and no out-of-slice evidence. However, no retrieved memory addresses the specific late-night composing session on 2035-11-26; memory 314 is a general standing disposition with a positive framing, not a record of that session. The session-specific evidence needed to determine whether she found the cat distracting (or not) on that date is absent, so the retrieved context is insufficient to answer the question despite being internally consistent.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__before_aware",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "before_aware",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.8,
+      "reason": "All five retrieved memories are active at question time and describe complementary facets of the same shift (motivation/goals, entry plan with partnerships, stress/health effects, social support) with no contradiction, so consistency is uniform and conflict_type is none. No out-of-slice items exist since active_at_question_time=true for all. No memory places any shift-related activity in 2024; the earliest temporal anchor is the strategic entry plan (mem 91, valid_from ≈ Dec 2025), followed by shift effects (mems 107/106, ≈ Mar 2026), which validly establishes a negative answer: the shift began in late 2025–2026, not 2024. Hence required evidence is present and supports_answer=true, though the conclusion rests on inferred dating rather than an explicit statement of the start date."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.8,\n  \"reason\": \"All five retrieved memories are active at question time and describe complementary facets of the same shift (motivation/goals, entry plan with partnerships, stress/health effects, social support) with no contradiction, so consistency is uniform and conflict_type is none. No out-of-slice items exist since active_at_question_time=true for all. No memory places any shift-related activity in 2024; the earliest temporal anchor is the strategic entry plan (mem 91, valid_from ≈ Dec 2025), followed by shift effects (mems 107/106, ≈ Mar 2026), which validly establishes a negative answer: the shift began in late 2025–2026, not 2024. Hence required evidence is present and supports_answer=true, though the conclusion rests on inferred dating rather than an explicit statement of the start date.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__flat_bm25",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.78,
+      "reason": "All five retrieved memories (128, 107, 91, 106, 89) describe complementary facets of the same strategic shift; none asserts an incompatible start date, so no true or temporal conflict exists among them. Memory 89's expiration exactly at question time is a benign transition, not a contradiction. Memory 89 — the pivotal decision record matching the reference evidence — is expired but directly relevant, and its valid_from (~Dec 2025, corroborated by memory 91) with consequence memories from Mar 2026 establishes via temporal metadata that the shift did not begin in 2024 (answer: No). Confidence is tempered because the negative answer rests on validity metadata rather than an explicit date in memory content, and the key decision memory is expired."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.78,\n  \"reason\": \"All five retrieved memories (128, 107, 91, 106, 89) describe complementary facets of the same strategic shift; none asserts an incompatible start date, so no true or temporal conflict exists among them. Memory 89's expiration exactly at question time is a benign transition, not a contradiction. Memory 89 — the pivotal decision record matching the reference evidence — is expired but directly relevant, and its valid_from (~Dec 2025, corroborated by memory 91) with consequence memories from Mar 2026 establishes via temporal metadata that the shift did not begin in 2024 (answer: No). Confidence is tempered because the negative answer rests on validity metadata rather than an explicit date in memory content, and the key decision memory is expired.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__query_aware",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "query_aware",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.85,
+      "reason": "All five retrieved memories describe the same strategic shift from complementary angles (decision, planning, motivation, health effects) with mutually compatible content; no item asserts a 2024 start, so no contradiction exists. Temporal metadata anchors the shift's beginning at valid_from ≈ Dec 2025 (memories 89 and 91), with later memories (Mar 2026, question time) treating it as ongoing — sufficient to determine the negative answer 'No, it did not begin in 2024.' Memory 89's expiry exactly at question time is a benign supersession, not a conflict, and constitutes relevant out-of-slice evidence necessary for retrospective transition dating. Required evidence (the decision fact matching the benchmark reference) is present."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.85,\n  \"reason\": \"All five retrieved memories describe the same strategic shift from complementary angles (decision, planning, motivation, health effects) with mutually compatible content; no item asserts a 2024 start, so no contradiction exists. Temporal metadata anchors the shift's beginning at valid_from ≈ Dec 2025 (memories 89 and 91), with later memories (Mar 2026, question time) treating it as ongoing — sufficient to determine the negative answer 'No, it did not begin in 2024.' Memory 89's expiry exactly at question time is a benign supersession, not a conflict, and constitutes relevant out-of-slice evidence necessary for retrospective transition dating. Required evidence (the decision fact matching the benchmark reference) is present.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__strict_temporal",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.78,
+      "reason": "All five retrieved memories (128, 107, 91, 106, 124) describe complementary facets of one event — plan (91), stress/health consequences (107/106), sustainability alignment (128), Sarah's enabling support (124) — with no incompatible same-time claims, so the set is consistent with no conflict. All items have active_at_question_time=true and open-ended validity, so no out-of-slice evidence exists (the evidence_expired diagnostic flag contradicts item-level metadata, which governs). No memory content states an explicit start year, but the temporal chain anchors the shift: valid_from ≈ Dec 2025 shows Donna still 'planning for entering' the refurbishment market, and valid_from ≈ Mar 2026 shows the shift in effect with workload/health impacts. Under strict_temporal reasoning, the Dec 2025 planning stage validly establishes the negative answer: the shift did not begin in 2024, but in the 2025–2026 window. The answer rests on metadata-based inference rather than an explicit start-date statement, which slightly reduces confidence."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.78,\n  \"reason\": \"All five retrieved memories (128, 107, 91, 106, 124) describe complementary facets of one event — plan (91), stress/health consequences (107/106), sustainability alignment (128), Sarah's enabling support (124) — with no incompatible same-time claims, so the set is consistent with no conflict. All items have active_at_question_time=true and open-ended validity, so no out-of-slice evidence exists (the evidence_expired diagnostic flag contradicts item-level metadata, which governs). No memory content states an explicit start year, but the temporal chain anchors the shift: valid_from ≈ Dec 2025 shows Donna still 'planning for entering' the refurbishment market, and valid_from ≈ Mar 2026 shows the shift in effect with workload/health impacts. Under strict_temporal reasoning, the Dec 2025 planning stage validly establishes the negative answer: the shift did not begin in 2024, but in the 2025–2026 window. The answer rests on metadata-based inference rather than an explicit start-date statement, which slightly reduces confidence.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__transition_aware",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.92,
+      "reason": "All four judges converge: the five retrieved memories form one coherent causal narrative (decision → entry plan → stress/health consequences → sustainability framing) with no semantic contradiction among them. Memory 89 (decision record, valid_from ≈ Dec 2025, expired exactly at question time) is superseded at the same boundary instant by memory 128 — a legitimate temporal update, not a true conflict. Memory 89 is the only out-of-slice item, and it is essential retrospective evidence: its valid_from anchors the shift's beginning to late 2025, with corroborating timestamps for memory 91 (≈ Dec 2025) and downstream effects (mem 106/107, ≈ Mar 2026). No retrieved evidence carries a 2024 timestamp, so the temporal evidence validly establishes a negative answer: the shift did not begin in 2024. Required evidence (matching memory 89) is present; nothing is missing."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"temporal_update\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.92,\n  \"reason\": \"All four judges converge: the five retrieved memories form one coherent causal narrative (decision → entry plan → stress/health consequences → sustainability framing) with no semantic contradiction among them. Memory 89 (decision record, valid_from ≈ Dec 2025, expired exactly at question time) is superseded at the same boundary instant by memory 128 — a legitimate temporal update, not a true conflict. Memory 89 is the only out-of-slice item, and it is essential retrospective evidence: its valid_from anchors the shift's beginning to late 2025, with corroborating timestamps for memory 91 (≈ Dec 2025) and downstream effects (mem 106/107, ≈ Mar 2026). No retrieved evidence carries a 2024 timestamp, so the temporal evidence validly establishes a negative answer: the shift did not begin in 2024. Required evidence (matching memory 89) is present; nothing is missing.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__before_aware",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "before_aware",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.85,
+      "reason": "Retrieved items 106 (decline to 'Below Average', valid_from ~2026-03, open-ended) and 249 ('improved health status', valid_from 1888248388, ~3.5h before question_time) yield incompatible states if read at face value, but they describe sequential events across different periods: 249 is the later in-slice fact that supersedes the stale 106. This is a temporal update, not a true conflict. Resolving by recency, Donna was no longer 'Below Average' on 2029-11-01 (answer: No). Memories 10/11/15 are topically irrelevant but harmless; all five items are active at question time, so no out-of-slice evidence exists. The temporal chain fully determines the answer, so no required evidence is missing."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"conflicting\",\n  \"conflict_type\": \"temporal_update\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.85,\n  \"reason\": \"Retrieved items 106 (decline to 'Below Average', valid_from ~2026-03, open-ended) and 249 ('improved health status', valid_from 1888248388, ~3.5h before question_time) yield incompatible states if read at face value, but they describe sequential events across different periods: 249 is the later in-slice fact that supersedes the stale 106. This is a temporal update, not a true conflict. Resolving by recency, Donna was no longer 'Below Average' on 2029-11-01 (answer: No). Memories 10/11/15 are topically irrelevant but harmless; all five items are active at question time, so no out-of-slice evidence exists. The temporal chain fully determines the answer, so no required evidence is missing.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__flat_bm25",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "flat_bm25",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.95,
+      "reason": "All four judges converge: retrieved memories form a coherent temporal chain on Donna's health status — memory 106 ('Normal' → 'Below Average', ~2026) superseded by memory 245 ('Below Average' → 'Normal', timestamp 1888248388, ~3.5h before question time on 2029-11-01), corroborated by memory 249. This is a legitimate temporal update, not a same-time contradiction; memory 106's open valid_to is a stale-interval artifact resolved by the later transition. Memory 245 is out-of-slice (active_at_question_time=False, zero-length interval) but is precisely the decisive transition evidence for this retrospective query, so it is relevant, not harmful. Required evidence is present (no missing items), and the dated transition validly establishes the negative answer: No, her status was no longer 'Below Average' on 2029-11-01 — it had changed to 'Normal' earlier that day."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"temporal_update\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.95,\n  \"reason\": \"All four judges converge: retrieved memories form a coherent temporal chain on Donna's health status — memory 106 ('Normal' → 'Below Average', ~2026) superseded by memory 245 ('Below Average' → 'Normal', timestamp 1888248388, ~3.5h before question time on 2029-11-01), corroborated by memory 249. This is a legitimate temporal update, not a same-time contradiction; memory 106's open valid_to is a stale-interval artifact resolved by the later transition. Memory 245 is out-of-slice (active_at_question_time=False, zero-length interval) but is precisely the decisive transition evidence for this retrospective query, so it is relevant, not harmful. Required evidence is present (no missing items), and the dated transition validly establishes the negative answer: No, her status was no longer 'Below Average' on 2029-11-01 — it had changed to 'Normal' earlier that day.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__query_aware",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "query_aware",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.93,
+      "reason": "Retrieved memories form a coherent temporal sequence, not a same-time contradiction: memory 106 records the decline to 'Below Average' (valid_from ~2026, open-ended), while memories 245 and 249 record the recovery to 'Normal'/'improved health' at ts 1888248388, ~3.5 hours before question_time (1888261199). Memory 106's open-ended interval is superseded by the later transition, so the divergent health states across 2026 and 2029-11-01 constitute a temporal update, not a true conflict. Memory 245 is flagged out-of-slice solely due to its zero-length interval, but its event timestamp precedes the question, making it the decisive, non-leaked evidence for this transition/retrospective query — relevant, not harmful. Memories 10 (married) and 15 (employed) merely fail to answer the question and create no contradiction. The transition record is present (245, corroborated by 249 and matching benchmark metadata), so no required evidence is missing, and the context is sufficient to determine the answer: No — Donna's health status was no longer 'Below Average' on 2029-11-01; it had changed to 'Normal' earlier that day."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"conflicting\",\n  \"conflict_type\": \"temporal_update\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.93,\n  \"reason\": \"Retrieved memories form a coherent temporal sequence, not a same-time contradiction: memory 106 records the decline to 'Below Average' (valid_from ~2026, open-ended), while memories 245 and 249 record the recovery to 'Normal'/'improved health' at ts 1888248388, ~3.5 hours before question_time (1888261199). Memory 106's open-ended interval is superseded by the later transition, so the divergent health states across 2026 and 2029-11-01 constitute a temporal update, not a true conflict. Memory 245 is flagged out-of-slice solely due to its zero-length interval, but its event timestamp precedes the question, making it the decisive, non-leaked evidence for this transition/retrospective query — relevant, not harmful. Memories 10 (married) and 15 (employed) merely fail to answer the question and create no contradiction. The transition record is present (245, corroborated by 249 and matching benchmark metadata), so no required evidence is missing, and the context is sufficient to determine the answer: No — Donna's health status was no longer 'Below Average' on 2029-11-01; it had changed to 'Normal' earlier that day.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__strict_temporal",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "strict_temporal",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.88,
+      "reason": "All specialist judges converge. Memory 106 (valid_from ~2026-03) records the transition to 'Below Average'; memory 249 (valid_from ~3.5h before question_time on 2029-11-01) records an improved health status. These are sequential, compatible transitions for the same entity and property — a legitimate temporal update, not a same-time contradiction; memory 106's open valid_to is stale metadata, not a conflicting claim. Memories 10/15/11 (married/employed/no children) concern different properties and are active at question time, so no out-of-slice evidence exists. Combined evidence is sufficient to answer the 'still X?' query: No — Donna's health status was no longer 'Below Average' on 2029-11-01; it had improved shortly before the question time. The new status value ('Normal' per benchmark metadata) is not explicitly retrieved but is not required for the yes/no answer. Reference evidence was used only to confirm evidence presence, never as a retrieved conflict."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"temporal_update\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.88,\n  \"reason\": \"All specialist judges converge. Memory 106 (valid_from ~2026-03) records the transition to 'Below Average'; memory 249 (valid_from ~3.5h before question_time on 2029-11-01) records an improved health status. These are sequential, compatible transitions for the same entity and property — a legitimate temporal update, not a same-time contradiction; memory 106's open valid_to is stale metadata, not a conflicting claim. Memories 10/15/11 (married/employed/no children) concern different properties and are active at question time, so no out-of-slice evidence exists. Combined evidence is sufficient to answer the 'still X?' query: No — Donna's health status was no longer 'Below Average' on 2029-11-01; it had improved shortly before the question time. The new status value ('Normal' per benchmark metadata) is not explicitly retrieved but is not required for the yes/no answer. Reference evidence was used only to confirm evidence presence, never as a retrieved conflict.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__transition_aware",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "transition_aware",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.95,
+      "reason": "All four judges converge. Retrieved memories form a coherent state chain, not a contradiction: mem_106 (Normal→'Below Average', valid_from ~2026-03-15, active) is superseded by mem_245 ('Below Average'→'Normal' at 1888248388, ~3.6h before question_time 1888261199), corroborated by active mem_249 ('improved health status') with the identical timestamp. This is a legitimate temporal update across disjoint periods, not a same-time conflict; mem_106's unclosed valid_to is resolved by transition-aware supersession. Mem_245 is the sole inactive item (zero-length transition marker) and is essential, relevant out-of-slice evidence matching the required transition record verbatim; it occurred before question_time (evidence_after_question_time=False). Mem_10 (Married) and mem_15 (Employed) concern unrelated attributes. Required evidence is present (nothing missing), and the context is sufficient to determine the answer, which is negative: at question time on 2029-11-01 Donna's health status was no longer 'Below Average' but 'Normal'."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"temporal_update\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.95,\n  \"reason\": \"All four judges converge. Retrieved memories form a coherent state chain, not a contradiction: mem_106 (Normal→'Below Average', valid_from ~2026-03-15, active) is superseded by mem_245 ('Below Average'→'Normal' at 1888248388, ~3.6h before question_time 1888261199), corroborated by active mem_249 ('improved health status') with the identical timestamp. This is a legitimate temporal update across disjoint periods, not a same-time conflict; mem_106's unclosed valid_to is resolved by transition-aware supersession. Mem_245 is the sole inactive item (zero-length transition marker) and is essential, relevant out-of-slice evidence matching the required transition record verbatim; it occurred before question_time (evidence_after_question_time=False). Mem_10 (Married) and mem_15 (Employed) concern unrelated attributes. Required evidence is present (nothing missing), and the context is sufficient to determine the answer, which is negative: at question time on 2029-11-01 Donna's health status was no longer 'Below Average' but 'Normal'.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-027__before_aware",
+    "case_id": "halumem-memory-conflict-027",
+    "retrieval_policy": "before_aware",
+    "query": "Did Christopher Anderson launch mobility programs on Apr 05, 2027?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.87,
+      "reason": "Retrieved memories 238 and 231 (both active at question time) describe only partnership outreach for community programs on Apr 05, 2027 — complementary activities, not a contradiction — and none of the retrieved items mention mobility programs at all. The mild divergence between the duplicate train-journey memories (164/156) concerns an unrelated Apr 2026 event and does not constitute a genuine conflict relevant to the query. All five retrieved items are active at question time, so there is no out-of-slice evidence. The decisive fact per benchmark metadata — mobility programs launched Apr 20, 2027, after question time — was not retrieved, and partnership outreach neither confirms nor precludes a same-day launch, so the retrieved context is insufficient to determine the answer (including a negative one). Required evidence is missing."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.87,\n  \"reason\": \"Retrieved memories 238 and 231 (both active at question time) describe only partnership outreach for community programs on Apr 05, 2027 — complementary activities, not a contradiction — and none of the retrieved items mention mobility programs at all. The mild divergence between the duplicate train-journey memories (164/156) concerns an unrelated Apr 2026 event and does not constitute a genuine conflict relevant to the query. All five retrieved items are active at question time, so there is no out-of-slice evidence. The decisive fact per benchmark metadata — mobility programs launched Apr 20, 2027, after question time — was not retrieved, and partnership outreach neither confirms nor precludes a same-day launch, so the retrieved context is insufficient to determine the answer (including a negative one). Required evidence is missing.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-027__flat_bm25",
+    "case_id": "halumem-memory-conflict-027",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Christopher Anderson launch mobility programs on Apr 05, 2027?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "missing_required_evidence": false,
+      "supports_answer": true,
+      "confidence": 0.95,
+      "reason": "Retrieved memories are mutually consistent: the in-slice items (238, 231) describe partnership outreach on Apr 05, 2027 and never claim a mobility program launch that day, while out-of-slice memory 248 places the actual launch on Apr 20, 2027 — a distinct later event, not a contradiction. No retrieved item asserts a conflicting Apr 05 launch, so conflict_type is none. Memory 248 is the decisive, required evidence for answering the query negatively (launch happened Apr 20, not Apr 05), making the out-of-slice retrieval relevant and the context sufficient to determine the answer; memory 246 (movie preferences) is merely off-topic and non-harmful."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"relevant\",\n  \"missing_required_evidence\": false,\n  \"supports_answer\": true,\n  \"confidence\": 0.95,\n  \"reason\": \"Retrieved memories are mutually consistent: the in-slice items (238, 231) describe partnership outreach on Apr 05, 2027 and never claim a mobility program launch that day, while out-of-slice memory 248 places the actual launch on Apr 20, 2027 — a distinct later event, not a contradiction. No retrieved item asserts a conflicting Apr 05 launch, so conflict_type is none. Memory 248 is the decisive, required evidence for answering the query negatively (launch happened Apr 20, not Apr 05), making the out-of-slice retrieval relevant and the context sufficient to determine the answer; memory 246 (movie preferences) is merely off-topic and non-harmful.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-027__query_aware",
+    "case_id": "halumem-memory-conflict-027",
+    "retrieval_policy": "query_aware",
+    "query": "Did Christopher Anderson launch mobility programs on Apr 05, 2027?",
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "true_conflict",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.85,
+      "reason": "Retrieved memories #164 and #156 give incompatible descriptions of the same Apr 08, 2026 train journey (solitude-only vs. solitude + social interactions), a genuine same-time true_conflict, though topically unrelated to this query. The query-relevant memories (#238, #231, both active at question time on Apr 05, 2027) are mutually compatible (outreach to different audiences) but concern partnership outreach for community programs, not a mobility-program launch. No retrieved item mentions mobility programs at all, and the benchmark launch date (Apr 20, 2027, after question time) was not retrieved, so the decisive temporal evidence is missing. The answer cannot be determined from the retrieved context. All five items are active_at_question_time=true, so out_of_slice_evidence is none."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"conflicting\",\n  \"conflict_type\": \"true_conflict\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.85,\n  \"reason\": \"Retrieved memories #164 and #156 give incompatible descriptions of the same Apr 08, 2026 train journey (solitude-only vs. solitude + social interactions), a genuine same-time true_conflict, though topically unrelated to this query. The query-relevant memories (#238, #231, both active at question time on Apr 05, 2027) are mutually compatible (outreach to different audiences) but concern partnership outreach for community programs, not a mobility-program launch. No retrieved item mentions mobility programs at all, and the benchmark launch date (Apr 20, 2027, after question time) was not retrieved, so the decisive temporal evidence is missing. The answer cannot be determined from the retrieved context. All five items are active_at_question_time=true, so out_of_slice_evidence is none.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-027__strict_temporal",
+    "case_id": "halumem-memory-conflict-027",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Christopher Anderson launch mobility programs on Apr 05, 2027?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.86,
+      "reason": "Retrieved memories 238 and 231 (both Apr 05, 2027) are complementary partnership-outreach facts, not contradictions, and neither mentions mobility programs; memories 143/164/156 are irrelevant 2026 events. All five items are active_at_question_time=true, so no out-of-slice evidence exists. No retrieved memory records a mobility-program launch (or its absence) on Apr 05, 2027; the benchmark's Apr 20, 2027 launch is unretrieved post-question metadata and cannot fill the gap or create a conflict. Since same-day partnership outreach neither confirms nor precludes a mobility launch, the answer cannot be determined from the retrieved context."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.86,\n  \"reason\": \"Retrieved memories 238 and 231 (both Apr 05, 2027) are complementary partnership-outreach facts, not contradictions, and neither mentions mobility programs; memories 143/164/156 are irrelevant 2026 events. All five items are active_at_question_time=true, so no out-of-slice evidence exists. No retrieved memory records a mobility-program launch (or its absence) on Apr 05, 2027; the benchmark's Apr 20, 2027 launch is unretrieved post-question metadata and cannot fill the gap or create a conflict. Since same-day partnership outreach neither confirms nor precludes a mobility launch, the answer cannot be determined from the retrieved context.\"\n}"
+  },
+  {
+    "trace_id": "halumem-memory-conflict-027__transition_aware",
+    "case_id": "halumem-memory-conflict-027",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Christopher Anderson launch mobility programs on Apr 05, 2027?",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "missing_required_evidence": true,
+      "supports_answer": false,
+      "confidence": 0.85,
+      "reason": "Retrieved memories 238 and 231 (both Apr 05, 2027) describe complementary partnership outreach activities and contain no contradiction; neither mentions mobility programs, so the query is simply unanswered rather than contradicted. All retrieved items are active_at_question_time=true, so no out-of-slice evidence exists. However, the decisive fact needed to establish the negative answer — that the mobility launch occurred later, on Apr 20, 2027 — was not retrieved, and partnership outreach does not logically exclude a same-day launch; the required evidence is therefore missing and the context cannot reliably determine the answer."
+    },
+    "verdict_raw": "{\n  \"consistency_status\": \"consistent\",\n  \"conflict_type\": \"none\",\n  \"out_of_slice_evidence\": \"none\",\n  \"missing_required_evidence\": true,\n  \"supports_answer\": false,\n  \"confidence\": 0.85,\n  \"reason\": \"Retrieved memories 238 and 231 (both Apr 05, 2027) describe complementary partnership outreach activities and contain no contradiction; neither mentions mobility programs, so the query is simply unanswered rather than contradicted. All retrieved items are active_at_question_time=true, so no out-of-slice evidence exists. However, the decisive fact needed to establish the negative answer — that the mobility launch occurred later, on Apr 20, 2027 — was not retrieved, and partnership outreach does not logically exclude a same-day launch; the required evidence is therefore missing and the context cannot reliably determine the answer.\"\n}"
+  }
+]
