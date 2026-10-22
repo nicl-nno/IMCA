@@ -419,24 +419,39 @@ Retrieval policy не передавалась оценщикам напряму
 
 ---
 
-# Дополнительный эксперимент: организация pipeline проверок
+# Дополнительный эксперимент: организация специализированных проверок
 
 Помимо качества retrieval отдельно рассматривается вопрос о том, как организация специализированных проверок влияет на итоговую оценку retrieved context.
 
 Были сравнены два варианта:
 
-1. parallel pipeline - специализированные judges независимо анализируют один и тот же retrieved context, после чего их результаты объединяет `FINAL_AGGREGATOR`;
-2. sequential pipeline - результаты предыдущих специализированных проверок передаются следующим этапам и могут использоваться как дополнительный контекст.
+1. independent judges - специализированные judges независимо анализируют один и тот же retrieved context, после чего их результаты объединяет `FINAL_AGGREGATOR`;
+2. sequential judges with shared context - результаты предыдущих специализированных проверок передаются следующим этапам и могут использоваться как дополнительный контекст.
 
-## Parallel baseline
+Здесь `independent` не означает, что API-вызовы обязательно выполняются одновременно. Из-за ограничений модели они могут запускаться последовательно по времени, но при этом сами judges не используют результаты друг друга.
 
-В parallel-варианте:
+## Independent baseline
+
+В baseline-варианте:
 
 `CONSISTENCY_JUDGE`, `TEMPORAL_JUDGE`, `EVIDENCE_JUDGE`
-и `OUT_OF_SLICE_JUDGE` выполняют независимые оценки,
-после чего `FINAL_AGGREGATOR` объединяет их выводы.
+и `OUT_OF_SLICE_JUDGE` выполняют независимые оценки одного и того же retrieved context.
+
+После этого `FINAL_AGGREGATOR` получает результаты всех четырёх проверок и формирует итоговый verdict.
 
 ## Sequential experiment
+
+Во втором варианте был реализован последовательный DAG, в котором более поздние judges получают результаты предыдущих проверок как дополнительный контекст.
+
+Использовалась следующая логика:
+
+`CONSISTENCY_JUDGE`
+→ `TEMPORAL_JUDGE`
+→ `EVIDENCE_JUDGE`
+→ `OUT_OF_SLICE_JUDGE`
+→ `FINAL_AGGREGATOR`.
+
+При этом информация накапливается: более поздние judges получают не только исходный retrieved context, но и промежуточные выводы предыдущих этапов.
 
 Sequential-вариант был проверен на тех же 5 репрезентативных HaluMem-кейсах и тех же 5 retrieval policies.
 
@@ -452,9 +467,9 @@ Sequential-вариант был проверен на тех же 5 репре�
 
 ## Результаты
 
-По признаку `supports_answer` результаты parallel и sequential pipeline совпали:
+По признаку `supports_answer` результаты independent и sequential вариантов совпали:
 
-| Retrieval policy | Parallel | Sequential |
+| Retrieval policy | Independent judges | Sequential judges |
 |---|---:|---:|
 | `flat_bm25` | 5/5 | 5/5 |
 | `query_aware` | 3/5 | 3/5 |
@@ -462,16 +477,16 @@ Sequential-вариант был проверен на тех же 5 репре�
 | `strict_temporal` | 2/5 | 2/5 |
 | `transition_aware` | 2/5 | 2/5 |
 
-Таким образом, на текущей выборке sequential pipeline не улучшил evidence sufficiency.
+Таким образом, передача промежуточных результатов между judges не улучшила evidence sufficiency на текущей репрезентативной выборке.
 
-При этом в отдельных случаях изменились semantic verdicts.
+При этом отдельные semantic verdicts изменились.
 
-Например, для `halumem-memory-conflict-027` с `query_aware` parallel pipeline определил:
+Например, для `halumem-memory-conflict-027` с `query_aware` independent-вариант определил:
 
 - `consistency_status = conflicting`;
 - `conflict_type = true_conflict`;
 
-а sequential pipeline:
+а sequential-вариант:
 
 - `consistency_status = consistent`;
 - `conflict_type = none`.
@@ -481,23 +496,22 @@ Sequential-вариант был проверен на тех же 5 репре�
 - `missing_required_evidence = true`;
 - `supports_answer = false`.
 
-То есть изменение организации judges может влиять на интерпретацию retrieved context, но не устраняет проблему отсутствующего evidence.
+То есть передача промежуточных выводов может влиять на интерпретацию retrieved context, но не устраняет проблему отсутствующего evidence.
 
 Также в некоторых оценках сохраняется сочетание:
 
 - `consistency_status = conflicting`;
 - `conflict_type = temporal_update`.
 
-Это показывает, что sequential pipeline сам по себе не устраняет неоднозначность между legitimate temporal update и true conflict.
+Это показывает, что последовательное использование промежуточных выводов само по себе не устраняет неоднозначность между legitimate temporal update и true conflict.
 
 ## Вывод
 
-На текущей небольшой выборке нельзя говорить о преимуществе sequential pipeline над parallel.
+На текущей небольшой выборке нельзя говорить о преимуществе sequential judges над independent judges.
 
 Sequential-вариант не изменил способность retrieval-политик предоставлять достаточный контекст для ответа, однако повлиял на отдельные semantic classifications.
 
 Поэтому этот эксперимент рассматривается как дополнительный архитектурный анализ, а не как отдельная основная гипотеза исследования.
-
 ---
 
 # Дополнительная проверка evaluator
