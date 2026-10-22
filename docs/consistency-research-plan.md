@@ -419,50 +419,84 @@ Retrieval policy не передавалась оценщикам напряму
 
 ---
 
-# H4. Архитектура проверок может влиять на качество оценки памяти
+# Дополнительный эксперимент: организация pipeline проверок
 
-## Гипотеза
+Помимо качества retrieval отдельно рассматривается вопрос о том, как организация специализированных проверок влияет на итоговую оценку retrieved context.
 
-Специализированные проверки consistency, temporal relations,
-evidence sufficiency и out-of-slice relevance могут давать разные результаты
-в зависимости от организации evaluation pipeline.
+Были сравнены два варианта:
 
-Сравниваются два варианта:
+1. parallel pipeline - специализированные judges независимо анализируют один и тот же retrieved context, после чего их результаты объединяет `FINAL_AGGREGATOR`;
+2. sequential pipeline - результаты предыдущих специализированных проверок передаются следующим этапам и могут использоваться как дополнительный контекст.
 
-1. parallel pipeline - специализированные judges работают независимо,
-   после чего их результаты объединяет final aggregator;
-2. sequential pipeline - каждая следующая проверка получает результаты
-   предыдущих этапов и может использовать их при принятии решения.
+## Parallel baseline
 
-## Текущий baseline
-
-Текущая реализация AutoJudge использует parallel pipeline:
+В parallel-варианте:
 
 `CONSISTENCY_JUDGE`, `TEMPORAL_JUDGE`, `EVIDENCE_JUDGE`
-и `OUT_OF_SLICE_JUDGE` выполняются независимо,
+и `OUT_OF_SLICE_JUDGE` выполняют независимые оценки,
 после чего `FINAL_AGGREGATOR` объединяет их выводы.
 
-## Следующий эксперимент
+## Sequential experiment
 
-На тех же 5 репрезентативных HaluMem-кейсах планируется:
+Sequential-вариант был проверен на тех же 5 репрезентативных HaluMem-кейсах и тех же 5 retrieval policies.
 
-- реализовать sequential pipeline;
-- сохранить тот же набор judges;
-- сохранить те же prompts;
-- использовать ту же модель `glm-5.3-flash`;
-- сравнить результаты с текущим parallel baseline.
+Для корректного сравнения сохранялись:
 
-Сравнение будет проводиться по:
+- те же исходные traces;
+- тот же набор judges;
+- те же инструкции;
+- модель `glm-5.3-flash`;
+- одинаковый формат итогового verdict.
 
-- consistency verdict;
-- conflict type;
-- missing required evidence;
-- supports answer;
-- стабильности итогового решения;
-- времени и стоимости evaluation.
+Всего выполнено 25 sequential-оценок.
 
-Цель - проверить, даёт ли последовательное использование промежуточных выводов
-более согласованную оценку, чем независимые параллельные проверки.
+## Результаты
+
+По признаку `supports_answer` результаты parallel и sequential pipeline совпали:
+
+| Retrieval policy | Parallel | Sequential |
+|---|---:|---:|
+| `flat_bm25` | 5/5 | 5/5 |
+| `query_aware` | 3/5 | 3/5 |
+| `before_aware` | 2/5 | 2/5 |
+| `strict_temporal` | 2/5 | 2/5 |
+| `transition_aware` | 2/5 | 2/5 |
+
+Таким образом, на текущей выборке sequential pipeline не улучшил evidence sufficiency.
+
+При этом в отдельных случаях изменились semantic verdicts.
+
+Например, для `halumem-memory-conflict-027` с `query_aware` parallel pipeline определил:
+
+- `consistency_status = conflicting`;
+- `conflict_type = true_conflict`;
+
+а sequential pipeline:
+
+- `consistency_status = consistent`;
+- `conflict_type = none`.
+
+При этом в обоих случаях:
+
+- `missing_required_evidence = true`;
+- `supports_answer = false`.
+
+То есть изменение организации judges может влиять на интерпретацию retrieved context, но не устраняет проблему отсутствующего evidence.
+
+Также в некоторых оценках сохраняется сочетание:
+
+- `consistency_status = conflicting`;
+- `conflict_type = temporal_update`.
+
+Это показывает, что sequential pipeline сам по себе не устраняет неоднозначность между legitimate temporal update и true conflict.
+
+## Вывод
+
+На текущей небольшой выборке нельзя говорить о преимуществе sequential pipeline над parallel.
+
+Sequential-вариант не изменил способность retrieval-политик предоставлять достаточный контекст для ответа, однако повлиял на отдельные semantic classifications.
+
+Поэтому этот эксперимент рассматривается как дополнительный архитектурный анализ, а не как отдельная основная гипотеза исследования.
 
 ---
 
@@ -470,10 +504,8 @@ evidence sufficiency и out-of-slice relevance могут давать разн�
 
 Отдельно планируется проверить `Jev` как альтернативный evaluator.
 
-Научный смысл этого эксперимента - проверить,
-насколько выводы зависят от используемой judge-модели.
+Цель этого эксперимента - проверить, насколько результаты semantic evaluation зависят от используемой judge-модели.
 
-Для корректного сравнения Jev должен оцениваться
-на тех же traces и тех же кейсах отдельно от GLM-эксперимента.
+Для корректного сравнения Jev должен оцениваться на тех же traces и тех же кейсах отдельно от GLM-эксперимента.
 
 Этот эксперимент пока не выполнен.
