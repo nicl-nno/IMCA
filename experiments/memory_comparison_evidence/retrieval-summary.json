@@ -1,0 +1,897 @@
+{
+  "quality": {
+    "imca_fresh_source": {
+      "n": 425,
+      "passed": 272,
+      "raw": 0.6976862745098039,
+      "weighted": 0.7152121854872034,
+      "categories": {
+        "Completion": {
+          "n": 159,
+          "passed": 120,
+          "average": 0.7786163522012578
+        },
+        "BugFix": {
+          "n": 90,
+          "passed": 28,
+          "average": 0.48055555555555557
+        },
+        "Refactor": {
+          "n": 52,
+          "passed": 26,
+          "average": 0.5666666666666667
+        },
+        "TestGen": {
+          "n": 1,
+          "passed": 1,
+          "average": 1.0
+        },
+        "FeatureAdd": {
+          "n": 35,
+          "passed": 26,
+          "average": 0.7714285714285715
+        },
+        "ApiDiscovery": {
+          "n": 79,
+          "passed": 64,
+          "average": 0.8227848101265823
+        },
+        "ControlFlow": {
+          "n": 9,
+          "passed": 7,
+          "average": 0.7777777777777778
+        }
+      }
+    },
+    "bm25": {
+      "n": 425,
+      "passed": 142,
+      "raw": 0.34890196078431374,
+      "weighted": 0.39815709158111834,
+      "categories": {
+        "Completion": {
+          "n": 159,
+          "passed": 83,
+          "average": 0.5340670859538784
+        },
+        "BugFix": {
+          "n": 90,
+          "passed": 14,
+          "average": 0.17148148148148148
+        },
+        "Refactor": {
+          "n": 52,
+          "passed": 8,
+          "average": 0.1737179487179487
+        },
+        "TestGen": {
+          "n": 1,
+          "passed": 1,
+          "average": 1.0
+        },
+        "FeatureAdd": {
+          "n": 35,
+          "passed": 12,
+          "average": 0.3666666666666667
+        },
+        "ApiDiscovery": {
+          "n": 79,
+          "passed": 17,
+          "average": 0.22869198312236286
+        },
+        "ControlFlow": {
+          "n": 9,
+          "passed": 7,
+          "average": 0.7777777777777778
+        }
+      }
+    },
+    "codebase_memory_structural_adapter": {
+      "n": 425,
+      "passed": 261,
+      "raw": 0.6502352941176471,
+      "weighted": 0.6684403911111578,
+      "categories": {
+        "Completion": {
+          "n": 159,
+          "passed": 118,
+          "average": 0.7647798742138364
+        },
+        "BugFix": {
+          "n": 90,
+          "passed": 27,
+          "average": 0.39166666666666666
+        },
+        "Refactor": {
+          "n": 52,
+          "passed": 18,
+          "average": 0.3903846153846154
+        },
+        "TestGen": {
+          "n": 1,
+          "passed": 1,
+          "average": 1.0
+        },
+        "FeatureAdd": {
+          "n": 35,
+          "passed": 26,
+          "average": 0.7657142857142857
+        },
+        "ApiDiscovery": {
+          "n": 79,
+          "passed": 64,
+          "average": 0.8151898734177216
+        },
+        "ControlFlow": {
+          "n": 9,
+          "passed": 7,
+          "average": 0.7777777777777778
+        }
+      }
+    }
+  },
+  "by_operation": {
+    "lookup": {
+      "imca_fresh_source": {
+        "n": 240,
+        "passed": 194,
+        "raw": 0.8083333333333333
+      },
+      "bm25": {
+        "n": 240,
+        "passed": 110,
+        "raw": 0.4583333333333333
+      },
+      "codebase_memory_structural_adapter": {
+        "n": 240,
+        "passed": 193,
+        "raw": 0.8041666666666667
+      }
+    },
+    "file_symbols": {
+      "imca_fresh_source": {
+        "n": 41,
+        "passed": 22,
+        "raw": 0.6634146341463415
+      },
+      "bm25": {
+        "n": 41,
+        "passed": 15,
+        "raw": 0.4386178861788618
+      },
+      "codebase_memory_structural_adapter": {
+        "n": 41,
+        "passed": 21,
+        "raw": 0.6195121951219512
+      }
+    },
+    "callers": {
+      "imca_fresh_source": {
+        "n": 58,
+        "passed": 7,
+        "raw": 0.30000000000000004
+      },
+      "bm25": {
+        "n": 58,
+        "passed": 3,
+        "raw": 0.06551724137931034
+      },
+      "codebase_memory_structural_adapter": {
+        "n": 58,
+        "passed": 3,
+        "raw": 0.16551724137931034
+      }
+    },
+    "callees": {
+      "imca_fresh_source": {
+        "n": 18,
+        "passed": 1,
+        "raw": 0.36944444444444446
+      },
+      "bm25": {
+        "n": 18,
+        "passed": 0,
+        "raw": 0.0
+      },
+      "codebase_memory_structural_adapter": {
+        "n": 18,
+        "passed": 0,
+        "raw": 0.125
+      }
+    },
+    "implementors": {
+      "imca_fresh_source": {
+        "n": 39,
+        "passed": 32,
+        "raw": 0.8666666666666666
+      },
+      "bm25": {
+        "n": 39,
+        "passed": 8,
+        "raw": 0.2692307692307692
+      },
+      "codebase_memory_structural_adapter": {
+        "n": 39,
+        "passed": 32,
+        "raw": 0.8512820512820514
+      }
+    },
+    "contained_by": {
+      "imca_fresh_source": {
+        "n": 18,
+        "passed": 12,
+        "raw": 0.7481481481481481
+      },
+      "bm25": {
+        "n": 18,
+        "passed": 6,
+        "raw": 0.3333333333333333
+      },
+      "codebase_memory_structural_adapter": {
+        "n": 18,
+        "passed": 12,
+        "raw": 0.7166666666666667
+      }
+    },
+    "orphans": {
+      "imca_fresh_source": {
+        "n": 11,
+        "passed": 4,
+        "raw": 0.36363636363636365
+      },
+      "bm25": {
+        "n": 11,
+        "passed": 0,
+        "raw": 0.0
+      },
+      "codebase_memory_structural_adapter": {
+        "n": 11,
+        "passed": 0,
+        "raw": 0.0
+      }
+    }
+  },
+  "paired_scores": {
+    "imca_fresh_source__vs__bm25": {
+      "left": "imca_fresh_source",
+      "right": "bm25",
+      "left_higher": 191,
+      "right_higher": 1,
+      "equal": 233
+    },
+    "imca_fresh_source__vs__codebase_memory_structural_adapter": {
+      "left": "imca_fresh_source",
+      "right": "codebase_memory_structural_adapter",
+      "left_higher": 54,
+      "right_higher": 12,
+      "equal": 359
+    },
+    "bm25__vs__codebase_memory_structural_adapter": {
+      "left": "bm25",
+      "right": "codebase_memory_structural_adapter",
+      "left_higher": 8,
+      "right_higher": 166,
+      "equal": 251
+    }
+  },
+  "query_status_counts": {
+    "supported": 368,
+    "query_anchor_not_mapped": 57
+  },
+  "empty_adapter_results": 116,
+  "tasks_with_unmapped_top5_nodes": 33,
+  "unmapped_top5_node_occurrences": 59,
+  "posthoc_target_coverage": {
+    "tasks_by_coverage": {
+      "all_targets_mapped": 286,
+      "no_targets_mapped": 70,
+      "some_targets_mapped": 37,
+      "empty_expected_set": 32
+    },
+    "target_instances": 824,
+    "mapped_target_instances": 630,
+    "unique_expected_ids": 239,
+    "unique_expected_ids_mapped": 170,
+    "tasks_requiring_more_than_five_ids": 1
+  },
+  "duplicate_inputs": {
+    "unique_query_and_text_inputs": 328,
+    "repeated_input_groups": 69,
+    "tasks_in_repeated_input_groups": 166,
+    "groups_with_different_expected_values": 1,
+    "groups": [
+      {
+        "task_ids": [
+          "signature_recall-000",
+          "signature_arity_check-000"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "signature_recall-001",
+          "signature_arity_check-001"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "signature_recall-002",
+          "signature_arity_check-002"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "signature_recall-003",
+          "signature_arity_check-003"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "signature_recall-004",
+          "signature_arity_check-004"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "signature_recall-005",
+          "signature_arity_check-005"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "signature_recall-006",
+          "signature_arity_check-006"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "signature_recall-007",
+          "signature_arity_check-007"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "cross_module_sibling-001",
+          "scope_restricted_lookup-001"
+        ],
+        "operation": "file_symbols",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "cross_module_sibling-002",
+          "scope_restricted_lookup-002"
+        ],
+        "operation": "file_symbols",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "cross_module_sibling-003",
+          "scope_restricted_lookup-003"
+        ],
+        "operation": "file_symbols",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "cross_module_sibling-004",
+          "scope_restricted_lookup-004"
+        ],
+        "operation": "file_symbols",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "cross_module_sibling-005",
+          "scope_restricted_lookup-005"
+        ],
+        "operation": "file_symbols",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "cross_module_sibling-006",
+          "scope_restricted_lookup-006"
+        ],
+        "operation": "file_symbols",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "cross_module_sibling-007",
+          "scope_restricted_lookup-007"
+        ],
+        "operation": "file_symbols",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-000",
+          "call_site_enumeration-000"
+        ],
+        "operation": "callers",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-001",
+          "call_site_enumeration-001"
+        ],
+        "operation": "callers",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-002",
+          "call_site_enumeration-002"
+        ],
+        "operation": "callers",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-003",
+          "call_site_enumeration-003"
+        ],
+        "operation": "callers",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-004",
+          "call_site_enumeration-004"
+        ],
+        "operation": "callers",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-005",
+          "call_site_enumeration-005"
+        ],
+        "operation": "callers",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-006",
+          "call_site_enumeration-006"
+        ],
+        "operation": "callers",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-007",
+          "call_site_enumeration-007"
+        ],
+        "operation": "callers",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-008",
+          "call_site_enumeration-008"
+        ],
+        "operation": "callers",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-009",
+          "call_site_enumeration-009"
+        ],
+        "operation": "callers",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-010",
+          "call_site_enumeration-010"
+        ],
+        "operation": "callers",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "override_detection-000",
+          "trait_implementors-000",
+          "plugin_extension_point-000"
+        ],
+        "operation": "implementors",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "override_detection-001",
+          "trait_implementors-001",
+          "plugin_extension_point-001"
+        ],
+        "operation": "implementors",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "override_detection-002",
+          "trait_implementors-002",
+          "plugin_extension_point-002"
+        ],
+        "operation": "implementors",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "override_detection-003",
+          "trait_implementors-003",
+          "plugin_extension_point-003"
+        ],
+        "operation": "implementors",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "override_detection-004",
+          "trait_implementors-004",
+          "plugin_extension_point-004"
+        ],
+        "operation": "implementors",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "override_detection-005",
+          "trait_implementors-005",
+          "plugin_extension_point-005"
+        ],
+        "operation": "implementors",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "override_detection-006",
+          "trait_implementors-006",
+          "plugin_extension_point-006"
+        ],
+        "operation": "implementors",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "override_detection-007",
+          "trait_implementors-007",
+          "plugin_extension_point-007"
+        ],
+        "operation": "implementors",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "override_detection-008",
+          "trait_implementors-008",
+          "plugin_extension_point-008"
+        ],
+        "operation": "implementors",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "override_detection-009",
+          "trait_implementors-009",
+          "plugin_extension_point-009"
+        ],
+        "operation": "implementors",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "override_detection-010",
+          "trait_implementors-010",
+          "plugin_extension_point-010"
+        ],
+        "operation": "implementors",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exception_type_discovery-000",
+          "exception_raisers-000"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exception_type_discovery-001",
+          "exception_raisers-001"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exception_type_discovery-002",
+          "exception_raisers-002"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exception_type_discovery-003",
+          "exception_raisers-003"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exception_type_discovery-004",
+          "exception_raisers-004"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exception_type_discovery-005",
+          "exception_raisers-005"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exception_type_discovery-006",
+          "exception_raisers-006"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exception_type_discovery-007",
+          "exception_raisers-007"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exception_type_discovery-008",
+          "exception_raisers-008"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "dead_export_detection-000",
+          "dead_export_detection-001",
+          "dead_export_detection-002",
+          "dead_export_detection-003",
+          "dead_export_detection-004",
+          "dead_export_detection-005",
+          "dead_export_detection-006",
+          "dead_export_detection-007",
+          "dead_export_detection-008",
+          "dead_export_detection-009",
+          "dead_export_detection-010"
+        ],
+        "operation": "orphans",
+        "distinct_expected_values": 11
+      },
+      {
+        "task_ids": [
+          "exact_symbol_exists-000",
+          "naming_convention_query-000",
+          "disambiguate_by_module-000"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exact_symbol_exists-001",
+          "naming_convention_query-001",
+          "disambiguate_by_module-001"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exact_symbol_exists-002",
+          "naming_convention_query-002",
+          "disambiguate_by_module-002"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exact_symbol_exists-003",
+          "naming_convention_query-003",
+          "disambiguate_by_module-003"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exact_symbol_exists-004",
+          "naming_convention_query-004",
+          "disambiguate_by_module-004"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exact_symbol_exists-005",
+          "naming_convention_query-005",
+          "disambiguate_by_module-005"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exact_symbol_exists-006",
+          "naming_convention_query-006",
+          "disambiguate_by_module-006"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exact_symbol_exists-007",
+          "naming_convention_query-007",
+          "disambiguate_by_module-007"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exact_symbol_absent-000",
+          "exact_symbol_absent-005"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exact_symbol_absent-001",
+          "exact_symbol_absent-006"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "exact_symbol_absent-002",
+          "exact_symbol_absent-007"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "fake_type_absent-000",
+          "fake_type_absent-005"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "fake_type_absent-001",
+          "fake_type_absent-006"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "fake_type_absent-002",
+          "fake_type_absent-007"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "typo_detection-000",
+          "fuzzy_match_ranking-000"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "typo_detection-001",
+          "fuzzy_match_ranking-001"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "typo_detection-002",
+          "fuzzy_match_ranking-002"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "typo_detection-003",
+          "fuzzy_match_ranking-003"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "typo_detection-004",
+          "fuzzy_match_ranking-004"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "typo_detection-005",
+          "fuzzy_match_ranking-005"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "typo_detection-006",
+          "fuzzy_match_ranking-006"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      },
+      {
+        "task_ids": [
+          "typo_detection-007",
+          "fuzzy_match_ranking-007"
+        ],
+        "operation": "lookup",
+        "distinct_expected_values": 1
+      }
+    ]
+  },
+  "direct_identifier_lookup_tasks": 134,
+  "categories_without_weight": {
+    "ControlFlow": 9
+  },
+  "distinct_input_sensitivity": {
+    "unique_input_group_count": 328,
+    "raw_mean_of_input_group_means": {
+      "imca_fresh_source": 0.6996350702143385,
+      "bm25": 0.37911585365853656,
+      "codebase_memory_structural_adapter": 0.6547256097560976
+    }
+  }
+}

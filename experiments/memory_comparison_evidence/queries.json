@@ -1,0 +1,3674 @@
+[
+  {
+    "id": "lookup_class_by_name-000",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "Query",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `Query` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: Query"
+  },
+  {
+    "id": "lookup_class_by_name-001",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "OAuth2PasswordRequestForm",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `OAuth2PasswordRequestForm` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: OAuth2PasswordRequestForm"
+  },
+  {
+    "id": "lookup_class_by_name-002",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "_OrjsonModule",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `_OrjsonModule` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: _OrjsonModule"
+  },
+  {
+    "id": "lookup_class_by_name-003",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "APIKeyQuery",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `APIKeyQuery` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: APIKeyQuery"
+  },
+  {
+    "id": "lookup_class_by_name-004",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "EndpointContext",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `EndpointContext` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: EndpointContext"
+  },
+  {
+    "id": "lookup_class_by_name-005",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "Discriminator",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `Discriminator` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: Discriminator"
+  },
+  {
+    "id": "lookup_class_by_name-006",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "UploadFile",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `UploadFile` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: UploadFile"
+  },
+  {
+    "id": "lookup_class_by_name-007",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "SolvedDependency",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `SolvedDependency` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: SolvedDependency"
+  },
+  {
+    "id": "lookup_class_by_name-008",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "UJSONResponse",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `UJSONResponse` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: UJSONResponse"
+  },
+  {
+    "id": "lookup_class_by_name-009",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "ORJSONResponse",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `ORJSONResponse` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: ORJSONResponse"
+  },
+  {
+    "id": "lookup_class_by_name-010",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "Cookie",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `Cookie` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: Cookie"
+  },
+  {
+    "id": "lookup_class_by_name-011",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "EventSourceResponse",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `EventSourceResponse` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: EventSourceResponse"
+  },
+  {
+    "id": "lookup_class_by_name-012",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "ParamTypes",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `ParamTypes` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: ParamTypes"
+  },
+  {
+    "id": "lookup_class_by_name-013",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "HTTPAuthorizationCredentials",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `HTTPAuthorizationCredentials` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: HTTPAuthorizationCredentials"
+  },
+  {
+    "id": "lookup_class_by_name-014",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "WebSocketRequestValidationError",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `WebSocketRequestValidationError` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: WebSocketRequestValidationError"
+  },
+  {
+    "id": "lookup_class_by_name-015",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "Contact",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `Contact` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: Contact"
+  },
+  {
+    "id": "lookup_class_by_name-016",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "ServerSentEvent",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `ServerSentEvent` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: ServerSentEvent"
+  },
+  {
+    "id": "lookup_class_by_name-017",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "ParameterBase",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `ParameterBase` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: ParameterBase"
+  },
+  {
+    "id": "lookup_class_by_name-018",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "OAuth2AuthorizationCodeBearer",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `OAuth2AuthorizationCodeBearer` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: OAuth2AuthorizationCodeBearer"
+  },
+  {
+    "id": "lookup_class_by_name-019",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "HTTPDigest",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `HTTPDigest` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: HTTPDigest"
+  },
+  {
+    "id": "lookup_class_by_name-020",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "OAuthFlowClientCredentials",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `OAuthFlowClientCredentials` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: OAuthFlowClientCredentials"
+  },
+  {
+    "id": "lookup_class_by_name-021",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "Encoding",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `Encoding` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: Encoding"
+  },
+  {
+    "id": "lookup_class_by_name-022",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "Header",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `Header` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: Header"
+  },
+  {
+    "id": "lookup_class_by_name-023",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "File",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `File` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: File"
+  },
+  {
+    "id": "lookup_class_by_name-024",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "FastAPI",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `FastAPI` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: FastAPI"
+  },
+  {
+    "id": "lookup_class_by_name-025",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "OAuthFlows",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `OAuthFlows` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: OAuthFlows"
+  },
+  {
+    "id": "lookup_class_by_name-026",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "SecurityBase",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `SecurityBase` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: SecurityBase"
+  },
+  {
+    "id": "lookup_class_by_name-027",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "Parameter",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `Parameter` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: Parameter"
+  },
+  {
+    "id": "lookup_class_by_name-028",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "HTTPBase",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `HTTPBase` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: HTTPBase"
+  },
+  {
+    "id": "lookup_class_by_name-029",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "Components",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `Components` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: Components"
+  },
+  {
+    "id": "lookup_class_by_name-030",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "Param",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `Param` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: Param"
+  },
+  {
+    "id": "lookup_class_by_name-031",
+    "query": {
+      "bare_name": true,
+      "kind": "struct",
+      "name": "APIKeyHeader",
+      "op": "lookup"
+    },
+    "query_text": "Agent importing class `APIKeyHeader` \u2014 needs the canonical id. Operation: lookup; bare name: true; kind: struct; name: APIKeyHeader"
+  },
+  {
+    "id": "lookup_method_on_type-000",
+    "query": {
+      "bare_name": true,
+      "name": "Query#__init__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `Query#__init__` on its type. Operation: lookup; bare name: true; name: Query#__init__"
+  },
+  {
+    "id": "lookup_method_on_type-001",
+    "query": {
+      "bare_name": true,
+      "name": "OAuth2PasswordRequestForm#__init__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `OAuth2PasswordRequestForm#__init__` on its type. Operation: lookup; bare name: true; name: OAuth2PasswordRequestForm#__init__"
+  },
+  {
+    "id": "lookup_method_on_type-002",
+    "query": {
+      "bare_name": true,
+      "name": "_OrjsonModule#dumps",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `_OrjsonModule#dumps` on its type. Operation: lookup; bare name: true; name: _OrjsonModule#dumps"
+  },
+  {
+    "id": "lookup_method_on_type-003",
+    "query": {
+      "bare_name": true,
+      "name": "APIKeyQuery#__init__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `APIKeyQuery#__init__` on its type. Operation: lookup; bare name: true; name: APIKeyQuery#__init__"
+  },
+  {
+    "id": "lookup_method_on_type-004",
+    "query": {
+      "bare_name": true,
+      "name": "APIKeyQuery#__call__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `APIKeyQuery#__call__` on its type. Operation: lookup; bare name: true; name: APIKeyQuery#__call__"
+  },
+  {
+    "id": "lookup_method_on_type-005",
+    "query": {
+      "bare_name": true,
+      "name": "UploadFile#seek",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `UploadFile#seek` on its type. Operation: lookup; bare name: true; name: UploadFile#seek"
+  },
+  {
+    "id": "lookup_method_on_type-006",
+    "query": {
+      "bare_name": true,
+      "name": "UploadFile#close",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `UploadFile#close` on its type. Operation: lookup; bare name: true; name: UploadFile#close"
+  },
+  {
+    "id": "lookup_method_on_type-007",
+    "query": {
+      "bare_name": true,
+      "name": "UploadFile#_validate",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `UploadFile#_validate` on its type. Operation: lookup; bare name: true; name: UploadFile#_validate"
+  },
+  {
+    "id": "lookup_method_on_type-008",
+    "query": {
+      "bare_name": true,
+      "name": "UploadFile#read",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `UploadFile#read` on its type. Operation: lookup; bare name: true; name: UploadFile#read"
+  },
+  {
+    "id": "lookup_method_on_type-009",
+    "query": {
+      "bare_name": true,
+      "name": "UploadFile#write",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `UploadFile#write` on its type. Operation: lookup; bare name: true; name: UploadFile#write"
+  },
+  {
+    "id": "lookup_method_on_type-010",
+    "query": {
+      "bare_name": true,
+      "name": "UploadFile#__get_pydantic_core_schema__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `UploadFile#__get_pydantic_core_schema__` on its type. Operation: lookup; bare name: true; name: UploadFile#__get_pydantic_core_schema__"
+  },
+  {
+    "id": "lookup_method_on_type-011",
+    "query": {
+      "bare_name": true,
+      "name": "UploadFile#__get_pydantic_json_schema__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `UploadFile#__get_pydantic_json_schema__` on its type. Operation: lookup; bare name: true; name: UploadFile#__get_pydantic_json_schema__"
+  },
+  {
+    "id": "lookup_method_on_type-012",
+    "query": {
+      "bare_name": true,
+      "name": "UJSONResponse#render",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `UJSONResponse#render` on its type. Operation: lookup; bare name: true; name: UJSONResponse#render"
+  },
+  {
+    "id": "lookup_method_on_type-013",
+    "query": {
+      "bare_name": true,
+      "name": "ORJSONResponse#render",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `ORJSONResponse#render` on its type. Operation: lookup; bare name: true; name: ORJSONResponse#render"
+  },
+  {
+    "id": "lookup_method_on_type-014",
+    "query": {
+      "bare_name": true,
+      "name": "Cookie#__init__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `Cookie#__init__` on its type. Operation: lookup; bare name: true; name: Cookie#__init__"
+  },
+  {
+    "id": "lookup_method_on_type-015",
+    "query": {
+      "bare_name": true,
+      "name": "WebSocketRequestValidationError#__init__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `WebSocketRequestValidationError#__init__` on its type. Operation: lookup; bare name: true; name: WebSocketRequestValidationError#__init__"
+  },
+  {
+    "id": "lookup_method_on_type-016",
+    "query": {
+      "bare_name": true,
+      "name": "ServerSentEvent#_check_data_exclusive",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `ServerSentEvent#_check_data_exclusive` on its type. Operation: lookup; bare name: true; name: ServerSentEvent#_check_data_exclusive"
+  },
+  {
+    "id": "lookup_method_on_type-017",
+    "query": {
+      "bare_name": true,
+      "name": "OAuth2AuthorizationCodeBearer#__call__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `OAuth2AuthorizationCodeBearer#__call__` on its type. Operation: lookup; bare name: true; name: OAuth2AuthorizationCodeBearer#__call__"
+  },
+  {
+    "id": "lookup_method_on_type-018",
+    "query": {
+      "bare_name": true,
+      "name": "OAuth2AuthorizationCodeBearer#__init__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `OAuth2AuthorizationCodeBearer#__init__` on its type. Operation: lookup; bare name: true; name: OAuth2AuthorizationCodeBearer#__init__"
+  },
+  {
+    "id": "lookup_method_on_type-019",
+    "query": {
+      "bare_name": true,
+      "name": "HTTPDigest#__init__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `HTTPDigest#__init__` on its type. Operation: lookup; bare name: true; name: HTTPDigest#__init__"
+  },
+  {
+    "id": "lookup_method_on_type-020",
+    "query": {
+      "bare_name": true,
+      "name": "HTTPDigest#__call__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `HTTPDigest#__call__` on its type. Operation: lookup; bare name: true; name: HTTPDigest#__call__"
+  },
+  {
+    "id": "lookup_method_on_type-021",
+    "query": {
+      "bare_name": true,
+      "name": "Header#__init__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `Header#__init__` on its type. Operation: lookup; bare name: true; name: Header#__init__"
+  },
+  {
+    "id": "lookup_method_on_type-022",
+    "query": {
+      "bare_name": true,
+      "name": "File#__init__",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `File#__init__` on its type. Operation: lookup; bare name: true; name: File#__init__"
+  },
+  {
+    "id": "lookup_method_on_type-023",
+    "query": {
+      "bare_name": true,
+      "name": "FastAPI#options",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `FastAPI#options` on its type. Operation: lookup; bare name: true; name: FastAPI#options"
+  },
+  {
+    "id": "lookup_method_on_type-024",
+    "query": {
+      "bare_name": true,
+      "name": "FastAPI#trace",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `FastAPI#trace` on its type. Operation: lookup; bare name: true; name: FastAPI#trace"
+  },
+  {
+    "id": "lookup_method_on_type-025",
+    "query": {
+      "bare_name": true,
+      "name": "FastAPI#middleware",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `FastAPI#middleware` on its type. Operation: lookup; bare name: true; name: FastAPI#middleware"
+  },
+  {
+    "id": "lookup_method_on_type-026",
+    "query": {
+      "bare_name": true,
+      "name": "FastAPI#get",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `FastAPI#get` on its type. Operation: lookup; bare name: true; name: FastAPI#get"
+  },
+  {
+    "id": "lookup_method_on_type-027",
+    "query": {
+      "bare_name": true,
+      "name": "FastAPI#redoc_html",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `FastAPI#redoc_html` on its type. Operation: lookup; bare name: true; name: FastAPI#redoc_html"
+  },
+  {
+    "id": "lookup_method_on_type-028",
+    "query": {
+      "bare_name": true,
+      "name": "FastAPI#exception_handler",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `FastAPI#exception_handler` on its type. Operation: lookup; bare name: true; name: FastAPI#exception_handler"
+  },
+  {
+    "id": "lookup_method_on_type-029",
+    "query": {
+      "bare_name": true,
+      "name": "FastAPI#head",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `FastAPI#head` on its type. Operation: lookup; bare name: true; name: FastAPI#head"
+  },
+  {
+    "id": "lookup_method_on_type-030",
+    "query": {
+      "bare_name": true,
+      "name": "FastAPI#setup",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `FastAPI#setup` on its type. Operation: lookup; bare name: true; name: FastAPI#setup"
+  },
+  {
+    "id": "lookup_method_on_type-031",
+    "query": {
+      "bare_name": true,
+      "name": "FastAPI#patch",
+      "op": "lookup"
+    },
+    "query_text": "Agent calling method `FastAPI#patch` on its type. Operation: lookup; bare name: true; name: FastAPI#patch"
+  },
+  {
+    "id": "signature_recall-000",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.applications`/FastAPI#options().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `FastAPI#options` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.applications`/FastAPI#options()."
+  },
+  {
+    "id": "signature_recall-001",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/_OrjsonModule#dumps().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `_OrjsonModule#dumps` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/_OrjsonModule#dumps()."
+  },
+  {
+    "id": "signature_recall-002",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#on_event().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `APIRouter#on_event` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#on_event()."
+  },
+  {
+    "id": "signature_recall-003",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/get_model_fields().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `get_model_fields` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/get_model_fields()."
+  },
+  {
+    "id": "signature_recall-004",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._producer().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `_producer` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._producer()."
+  },
+  {
+    "id": "signature_recall-005",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `get_swagger_ui_oauth2_redirect_html` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+  },
+  {
+    "id": "signature_recall-006",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#get().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `APIRouter#get` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#get()."
+  },
+  {
+    "id": "signature_recall-007",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `_should_embed_body_fields` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.dependencies.utils`/_should_embed_body_fields()."
+  },
+  {
+    "id": "signature_recall-008",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `_get_flat_fields_from_params` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params()."
+  },
+  {
+    "id": "signature_recall-009",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/get_definitions().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `get_definitions` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/get_definitions()."
+  },
+  {
+    "id": "signature_recall-010",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.exceptions`/ResponseValidationError#__init__().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `ResponseValidationError#__init__` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.exceptions`/ResponseValidationError#__init__()."
+  },
+  {
+    "id": "signature_recall-011",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/ModelField#serialize().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `ModelField#serialize` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/ModelField#serialize()."
+  },
+  {
+    "id": "signature_recall-012",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.utils`/generate_operation_summary().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `generate_operation_summary` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.utils`/generate_operation_summary()."
+  },
+  {
+    "id": "signature_recall-013",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.concurrency`/contextmanager_in_threadpool().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `contextmanager_in_threadpool` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.concurrency`/contextmanager_in_threadpool()."
+  },
+  {
+    "id": "signature_recall-014",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.applications`/FastAPI#trace().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `FastAPI#trace` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.applications`/FastAPI#trace()."
+  },
+  {
+    "id": "signature_recall-015",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRoute#get_route_handler().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `APIRoute#get_route_handler` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRoute#get_route_handler()."
+  },
+  {
+    "id": "signature_recall-016",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/serialize_response().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `serialize_response` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/serialize_response()."
+  },
+  {
+    "id": "signature_recall-017",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.dependencies.models`/Dependant#_security_scheme().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `Dependant#_security_scheme` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.dependencies.models`/Dependant#_security_scheme()."
+  },
+  {
+    "id": "signature_recall-018",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#include_router().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `APIRouter#include_router` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#include_router()."
+  },
+  {
+    "id": "signature_recall-019",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.exception_handlers`/http_exception_handler().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `http_exception_handler` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.exception_handlers`/http_exception_handler()."
+  },
+  {
+    "id": "signature_recall-020",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.models`/EmailStr#__get_pydantic_core_schema__().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `EmailStr#__get_pydantic_core_schema__` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.models`/EmailStr#__get_pydantic_core_schema__()."
+  },
+  {
+    "id": "signature_recall-021",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.params`/Path#__init__().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `Path#__init__` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.params`/Path#__init__()."
+  },
+  {
+    "id": "signature_recall-022",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/_merge_lifespan_context().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `_merge_lifespan_context` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/_merge_lifespan_context()."
+  },
+  {
+    "id": "signature_recall-023",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.dependencies.utils`/get_typed_return_annotation().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `get_typed_return_annotation` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.dependencies.utils`/get_typed_return_annotation()."
+  },
+  {
+    "id": "signature_recall-024",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/_UjsonModule#dumps().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `_UjsonModule#dumps` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/_UjsonModule#dumps()."
+  },
+  {
+    "id": "signature_recall-025",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.param_functions`/Header().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `Header` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.param_functions`/Header()."
+  },
+  {
+    "id": "signature_recall-026",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#route().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `APIRouter#route` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#route()."
+  },
+  {
+    "id": "signature_recall-027",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.params`/Header#__init__().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `Header#__init__` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.params`/Header#__init__()."
+  },
+  {
+    "id": "signature_recall-028",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIWebSocketRoute#matches().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `APIWebSocketRoute#matches` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIWebSocketRoute#matches()."
+  },
+  {
+    "id": "signature_recall-029",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.applications`/FastAPI#middleware().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `FastAPI#middleware` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.applications`/FastAPI#middleware()."
+  },
+  {
+    "id": "signature_recall-030",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._keepalive_inserter().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `_keepalive_inserter` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._keepalive_inserter()."
+  },
+  {
+    "id": "signature_recall-031",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.dependencies.utils`/solve_dependencies().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `solve_dependencies` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.dependencies.utils`/solve_dependencies()."
+  },
+  {
+    "id": "import_path_resolution-000",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.params`/Query#",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `Query` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.params`/Query#"
+  },
+  {
+    "id": "import_path_resolution-001",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.applications`/FastAPI#options().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `FastAPI#options` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.applications`/FastAPI#options()."
+  },
+  {
+    "id": "import_path_resolution-002",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/_OrjsonModule#dumps().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `_OrjsonModule#dumps` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/_OrjsonModule#dumps()."
+  },
+  {
+    "id": "import_path_resolution-003",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#on_event().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `APIRouter#on_event` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#on_event()."
+  },
+  {
+    "id": "import_path_resolution-004",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/get_model_fields().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `get_model_fields` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/get_model_fields()."
+  },
+  {
+    "id": "import_path_resolution-005",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._producer().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `_producer` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._producer()."
+  },
+  {
+    "id": "import_path_resolution-006",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `get_swagger_ui_oauth2_redirect_html` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+  },
+  {
+    "id": "import_path_resolution-007",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#get().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `APIRouter#get` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#get()."
+  },
+  {
+    "id": "import_path_resolution-008",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `OAuth2PasswordRequestForm` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+  },
+  {
+    "id": "import_path_resolution-009",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `_should_embed_body_fields` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.dependencies.utils`/_should_embed_body_fields()."
+  },
+  {
+    "id": "import_path_resolution-010",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `_get_flat_fields_from_params` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params()."
+  },
+  {
+    "id": "import_path_resolution-011",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/get_definitions().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `get_definitions` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/get_definitions()."
+  },
+  {
+    "id": "import_path_resolution-012",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/_OrjsonModule#",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `_OrjsonModule` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/_OrjsonModule#"
+  },
+  {
+    "id": "import_path_resolution-013",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.exceptions`/ResponseValidationError#__init__().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `ResponseValidationError#__init__` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.exceptions`/ResponseValidationError#__init__()."
+  },
+  {
+    "id": "import_path_resolution-014",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/ModelField#serialize().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `ModelField#serialize` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/ModelField#serialize()."
+  },
+  {
+    "id": "import_path_resolution-015",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.utils`/generate_operation_summary().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `generate_operation_summary` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.utils`/generate_operation_summary()."
+  },
+  {
+    "id": "import_path_resolution-016",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.concurrency`/contextmanager_in_threadpool().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `contextmanager_in_threadpool` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.concurrency`/contextmanager_in_threadpool()."
+  },
+  {
+    "id": "import_path_resolution-017",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.applications`/FastAPI#trace().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `FastAPI#trace` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.applications`/FastAPI#trace()."
+  },
+  {
+    "id": "import_path_resolution-018",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.security.api_key`/APIKeyQuery#",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `APIKeyQuery` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.security.api_key`/APIKeyQuery#"
+  },
+  {
+    "id": "import_path_resolution-019",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRoute#get_route_handler().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `APIRoute#get_route_handler` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRoute#get_route_handler()."
+  },
+  {
+    "id": "import_path_resolution-020",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/serialize_response().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `serialize_response` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/serialize_response()."
+  },
+  {
+    "id": "import_path_resolution-021",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.dependencies.models`/Dependant#_security_scheme().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `Dependant#_security_scheme` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.dependencies.models`/Dependant#_security_scheme()."
+  },
+  {
+    "id": "import_path_resolution-022",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#include_router().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `APIRouter#include_router` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#include_router()."
+  },
+  {
+    "id": "import_path_resolution-023",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.exceptions`/EndpointContext#",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `EndpointContext` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.exceptions`/EndpointContext#"
+  },
+  {
+    "id": "import_path_resolution-024",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.exception_handlers`/http_exception_handler().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `http_exception_handler` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.exception_handlers`/http_exception_handler()."
+  },
+  {
+    "id": "import_path_resolution-025",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.models`/EmailStr#__get_pydantic_core_schema__().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `EmailStr#__get_pydantic_core_schema__` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.models`/EmailStr#__get_pydantic_core_schema__()."
+  },
+  {
+    "id": "import_path_resolution-026",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.params`/Path#__init__().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `Path#__init__` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.params`/Path#__init__()."
+  },
+  {
+    "id": "import_path_resolution-027",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/_merge_lifespan_context().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `_merge_lifespan_context` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/_merge_lifespan_context()."
+  },
+  {
+    "id": "import_path_resolution-028",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.dependencies.utils`/get_typed_return_annotation().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `get_typed_return_annotation` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.dependencies.utils`/get_typed_return_annotation()."
+  },
+  {
+    "id": "import_path_resolution-029",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/_UjsonModule#dumps().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `_UjsonModule#dumps` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/_UjsonModule#dumps()."
+  },
+  {
+    "id": "import_path_resolution-030",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.param_functions`/Header().",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `Header` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.param_functions`/Header()."
+  },
+  {
+    "id": "import_path_resolution-031",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.models`/Discriminator#",
+      "op": "lookup"
+    },
+    "query_text": "Agent needs the file path where `Discriminator` is defined. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.models`/Discriminator#"
+  },
+  {
+    "id": "cross_module_sibling-001",
+    "query": {
+      "file_path": "__init__.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `__init__.py`. Operation: file_symbols; file path: __init__.py"
+  },
+  {
+    "id": "cross_module_sibling-002",
+    "query": {
+      "file_path": "__main__.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `__main__.py`. Operation: file_symbols; file path: __main__.py"
+  },
+  {
+    "id": "cross_module_sibling-003",
+    "query": {
+      "file_path": "applications.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `applications.py`. Operation: file_symbols; file path: applications.py"
+  },
+  {
+    "id": "cross_module_sibling-004",
+    "query": {
+      "file_path": "background.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `background.py`. Operation: file_symbols; file path: background.py"
+  },
+  {
+    "id": "cross_module_sibling-005",
+    "query": {
+      "file_path": "cli.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `cli.py`. Operation: file_symbols; file path: cli.py"
+  },
+  {
+    "id": "cross_module_sibling-006",
+    "query": {
+      "file_path": "concurrency.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `concurrency.py`. Operation: file_symbols; file path: concurrency.py"
+  },
+  {
+    "id": "cross_module_sibling-007",
+    "query": {
+      "file_path": "datastructures.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `datastructures.py`. Operation: file_symbols; file path: datastructures.py"
+  },
+  {
+    "id": "cross_module_sibling-008",
+    "query": {
+      "file_path": "encoders.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `encoders.py`. Operation: file_symbols; file path: encoders.py"
+  },
+  {
+    "id": "cross_module_sibling-009",
+    "query": {
+      "file_path": "exception_handlers.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `exception_handlers.py`. Operation: file_symbols; file path: exception_handlers.py"
+  },
+  {
+    "id": "cross_module_sibling-010",
+    "query": {
+      "file_path": "exceptions.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `exceptions.py`. Operation: file_symbols; file path: exceptions.py"
+  },
+  {
+    "id": "cross_module_sibling-011",
+    "query": {
+      "file_path": "logger.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `logger.py`. Operation: file_symbols; file path: logger.py"
+  },
+  {
+    "id": "cross_module_sibling-012",
+    "query": {
+      "file_path": "param_functions.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `param_functions.py`. Operation: file_symbols; file path: param_functions.py"
+  },
+  {
+    "id": "cross_module_sibling-013",
+    "query": {
+      "file_path": "params.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `params.py`. Operation: file_symbols; file path: params.py"
+  },
+  {
+    "id": "cross_module_sibling-014",
+    "query": {
+      "file_path": "requests.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `requests.py`. Operation: file_symbols; file path: requests.py"
+  },
+  {
+    "id": "cross_module_sibling-015",
+    "query": {
+      "file_path": "responses.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `responses.py`. Operation: file_symbols; file path: responses.py"
+  },
+  {
+    "id": "cross_module_sibling-016",
+    "query": {
+      "file_path": "routing.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `routing.py`. Operation: file_symbols; file path: routing.py"
+  },
+  {
+    "id": "cross_module_sibling-017",
+    "query": {
+      "file_path": "sse.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `sse.py`. Operation: file_symbols; file path: sse.py"
+  },
+  {
+    "id": "cross_module_sibling-018",
+    "query": {
+      "file_path": "staticfiles.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `staticfiles.py`. Operation: file_symbols; file path: staticfiles.py"
+  },
+  {
+    "id": "cross_module_sibling-019",
+    "query": {
+      "file_path": "templating.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `templating.py`. Operation: file_symbols; file path: templating.py"
+  },
+  {
+    "id": "cross_module_sibling-020",
+    "query": {
+      "file_path": "testclient.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `testclient.py`. Operation: file_symbols; file path: testclient.py"
+  },
+  {
+    "id": "cross_module_sibling-021",
+    "query": {
+      "file_path": "types.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `types.py`. Operation: file_symbols; file path: types.py"
+  },
+  {
+    "id": "cross_module_sibling-022",
+    "query": {
+      "file_path": "utils.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `utils.py`. Operation: file_symbols; file path: utils.py"
+  },
+  {
+    "id": "cross_module_sibling-023",
+    "query": {
+      "file_path": "websockets.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `websockets.py`. Operation: file_symbols; file path: websockets.py"
+  },
+  {
+    "id": "cross_module_sibling-024",
+    "query": {
+      "file_path": "_compat/__init__.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `_compat/__init__.py`. Operation: file_symbols; file path: _compat/__init__.py"
+  },
+  {
+    "id": "cross_module_sibling-025",
+    "query": {
+      "file_path": "_compat/shared.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `_compat/shared.py`. Operation: file_symbols; file path: _compat/shared.py"
+  },
+  {
+    "id": "cross_module_sibling-026",
+    "query": {
+      "file_path": "_compat/v2.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `_compat/v2.py`. Operation: file_symbols; file path: _compat/v2.py"
+  },
+  {
+    "id": "cross_module_sibling-027",
+    "query": {
+      "file_path": "dependencies/__init__.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `dependencies/__init__.py`. Operation: file_symbols; file path: dependencies/__init__.py"
+  },
+  {
+    "id": "cross_module_sibling-028",
+    "query": {
+      "file_path": "dependencies/models.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `dependencies/models.py`. Operation: file_symbols; file path: dependencies/models.py"
+  },
+  {
+    "id": "cross_module_sibling-029",
+    "query": {
+      "file_path": "dependencies/utils.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `dependencies/utils.py`. Operation: file_symbols; file path: dependencies/utils.py"
+  },
+  {
+    "id": "cross_module_sibling-030",
+    "query": {
+      "file_path": "middleware/__init__.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `middleware/__init__.py`. Operation: file_symbols; file path: middleware/__init__.py"
+  },
+  {
+    "id": "cross_module_sibling-031",
+    "query": {
+      "file_path": "middleware/asyncexitstack.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `middleware/asyncexitstack.py`. Operation: file_symbols; file path: middleware/asyncexitstack.py"
+  },
+  {
+    "id": "callers_of_symbol-000",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:routing.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:routing.py"
+  },
+  {
+    "id": "callers_of_symbol-001",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:openapi/models.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:openapi/models.py"
+  },
+  {
+    "id": "callers_of_symbol-002",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.params`/Depends#"
+    },
+    "query_text": "Bug suspected in `Depends` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.params`/Depends#"
+  },
+  {
+    "id": "callers_of_symbol-003",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.routing`/APIRoute#"
+    },
+    "query_text": "Bug suspected in `APIRoute` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.routing`/APIRoute#"
+  },
+  {
+    "id": "callers_of_symbol-004",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:_compat/v2.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:_compat/v2.py"
+  },
+  {
+    "id": "callers_of_symbol-005",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi._compat.v2`/ModelField#"
+    },
+    "query_text": "Bug suspected in `ModelField` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi._compat.v2`/ModelField#"
+  },
+  {
+    "id": "callers_of_symbol-006",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:applications.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:applications.py"
+  },
+  {
+    "id": "callers_of_symbol-007",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:dependencies/utils.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:dependencies/utils.py"
+  },
+  {
+    "id": "callers_of_symbol-008",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.datastructures`/Default()."
+    },
+    "query_text": "Bug suspected in `Default` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.datastructures`/Default()."
+  },
+  {
+    "id": "callers_of_symbol-009",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.utils`/generate_unique_id()."
+    },
+    "query_text": "Bug suspected in `generate_unique_id` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.utils`/generate_unique_id()."
+  },
+  {
+    "id": "callers_of_symbol-010",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+    },
+    "query_text": "Bug suspected in `BaseModelWithConfig` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+  },
+  {
+    "id": "callers_of_symbol-011",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:params.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:params.py"
+  },
+  {
+    "id": "callers_of_symbol-012",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:exceptions.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:exceptions.py"
+  },
+  {
+    "id": "callers_of_symbol-013",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi._compat.shared`/lenient_issubclass()."
+    },
+    "query_text": "Bug suspected in `lenient_issubclass` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi._compat.shared`/lenient_issubclass()."
+  },
+  {
+    "id": "callers_of_symbol-014",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/Example#"
+    },
+    "query_text": "Bug suspected in `Example` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.openapi.models`/Example#"
+  },
+  {
+    "id": "callers_of_symbol-015",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:security/http.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:security/http.py"
+  },
+  {
+    "id": "callers_of_symbol-016",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:security/oauth2.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:security/oauth2.py"
+  },
+  {
+    "id": "callers_of_symbol-017",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:_compat/shared.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:_compat/shared.py"
+  },
+  {
+    "id": "callees_of_symbol-000",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.routing`/APIRoute#__init__()."
+    },
+    "query_text": "Bug downstream of `APIRoute#__init__` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.routing`/APIRoute#__init__()."
+  },
+  {
+    "id": "callees_of_symbol-001",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.routing`/get_request_handler().app()."
+    },
+    "query_text": "Bug downstream of `app` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.routing`/get_request_handler().app()."
+  },
+  {
+    "id": "callees_of_symbol-002",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.openapi.utils`/get_openapi_path()."
+    },
+    "query_text": "Bug downstream of `get_openapi_path` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.openapi.utils`/get_openapi_path()."
+  },
+  {
+    "id": "callees_of_symbol-003",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.dependencies.utils`/analyze_param()."
+    },
+    "query_text": "Bug downstream of `analyze_param` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.dependencies.utils`/analyze_param()."
+  },
+  {
+    "id": "callees_of_symbol-004",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.dependencies.utils`/solve_dependencies()."
+    },
+    "query_text": "Bug downstream of `solve_dependencies` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.dependencies.utils`/solve_dependencies()."
+  },
+  {
+    "id": "callees_of_symbol-005",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.dependencies.utils`/get_dependant()."
+    },
+    "query_text": "Bug downstream of `get_dependant` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.dependencies.utils`/get_dependant()."
+  },
+  {
+    "id": "callees_of_symbol-006",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.routing`/APIRouter#include_router()."
+    },
+    "query_text": "Bug downstream of `APIRouter#include_router` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.routing`/APIRouter#include_router()."
+  },
+  {
+    "id": "callees_of_symbol-007",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.openapi.utils`/_get_openapi_operation_parameters()."
+    },
+    "query_text": "Bug downstream of `_get_openapi_operation_parameters` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.openapi.utils`/_get_openapi_operation_parameters()."
+  },
+  {
+    "id": "callees_of_symbol-008",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.routing`/APIWebSocketRoute#__init__()."
+    },
+    "query_text": "Bug downstream of `APIWebSocketRoute#__init__` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.routing`/APIWebSocketRoute#__init__()."
+  },
+  {
+    "id": "callees_of_symbol-009",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.dependencies.utils`/_extract_form_body()."
+    },
+    "query_text": "Bug downstream of `_extract_form_body` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.dependencies.utils`/_extract_form_body()."
+  },
+  {
+    "id": "callees_of_symbol-010",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.openapi.utils`/get_openapi()."
+    },
+    "query_text": "Bug downstream of `get_openapi` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.openapi.utils`/get_openapi()."
+  },
+  {
+    "id": "callees_of_symbol-011",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.dependencies.utils`/request_body_to_args()."
+    },
+    "query_text": "Bug downstream of `request_body_to_args` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.dependencies.utils`/request_body_to_args()."
+  },
+  {
+    "id": "callees_of_symbol-012",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.applications`/FastAPI#__init__()."
+    },
+    "query_text": "Bug downstream of `FastAPI#__init__` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.applications`/FastAPI#__init__()."
+  },
+  {
+    "id": "callees_of_symbol-013",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.dependencies.utils`/request_params_to_args()."
+    },
+    "query_text": "Bug downstream of `request_params_to_args` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.dependencies.utils`/request_params_to_args()."
+  },
+  {
+    "id": "callees_of_symbol-014",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.routing`/serialize_response()."
+    },
+    "query_text": "Bug downstream of `serialize_response` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.routing`/serialize_response()."
+  },
+  {
+    "id": "callees_of_symbol-015",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.dependencies.utils`/_get_multidict_value()."
+    },
+    "query_text": "Bug downstream of `_get_multidict_value` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.dependencies.utils`/_get_multidict_value()."
+  },
+  {
+    "id": "callees_of_symbol-016",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi._compat.v2`/get_schema_from_model_field()."
+    },
+    "query_text": "Bug downstream of `get_schema_from_model_field` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi._compat.v2`/get_schema_from_model_field()."
+  },
+  {
+    "id": "callees_of_symbol-017",
+    "query": {
+      "op": "callees",
+      "sym_stable_id": "fastapi `fastapi.applications`/FastAPI#setup()."
+    },
+    "query_text": "Bug downstream of `FastAPI#setup` \u2014 enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.applications`/FastAPI#setup()."
+  },
+  {
+    "id": "override_detection-000",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+    },
+    "query_text": "Agent refactoring `BaseModelWithConfig` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+  },
+  {
+    "id": "override_detection-001",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/SecurityBase#"
+    },
+    "query_text": "Agent refactoring `SecurityBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.openapi.models`/SecurityBase#"
+  },
+  {
+    "id": "override_detection-002",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.params`/Param#"
+    },
+    "query_text": "Agent refactoring `Param` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.params`/Param#"
+  },
+  {
+    "id": "override_detection-003",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/OAuthFlow#"
+    },
+    "query_text": "Agent refactoring `OAuthFlow` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.openapi.models`/OAuthFlow#"
+  },
+  {
+    "id": "override_detection-004",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.base`/SecurityBase#"
+    },
+    "query_text": "Agent refactoring `SecurityBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.base`/SecurityBase#"
+  },
+  {
+    "id": "override_detection-005",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.http`/HTTPBase#"
+    },
+    "query_text": "Agent refactoring `HTTPBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.http`/HTTPBase#"
+  },
+  {
+    "id": "override_detection-006",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.api_key`/APIKeyBase#"
+    },
+    "query_text": "Agent refactoring `APIKeyBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.api_key`/APIKeyBase#"
+  },
+  {
+    "id": "override_detection-007",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.exceptions`/ValidationException#"
+    },
+    "query_text": "Agent refactoring `ValidationException` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.exceptions`/ValidationException#"
+  },
+  {
+    "id": "override_detection-008",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.oauth2`/OAuth2#"
+    },
+    "query_text": "Agent refactoring `OAuth2` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.oauth2`/OAuth2#"
+  },
+  {
+    "id": "override_detection-009",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.exceptions`/FastAPIError#"
+    },
+    "query_text": "Agent refactoring `FastAPIError` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.exceptions`/FastAPIError#"
+  },
+  {
+    "id": "override_detection-010",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+    },
+    "query_text": "Agent refactoring `OAuth2PasswordRequestForm` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+  },
+  {
+    "id": "override_detection-011",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/ParameterBase#"
+    },
+    "query_text": "Agent refactoring `ParameterBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.openapi.models`/ParameterBase#"
+  },
+  {
+    "id": "override_detection-012",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.params`/Body#"
+    },
+    "query_text": "Agent refactoring `Body` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.params`/Body#"
+  },
+  {
+    "id": "override_detection-013",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.params`/Form#"
+    },
+    "query_text": "Agent refactoring `Form` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.params`/Form#"
+  },
+  {
+    "id": "override_detection-014",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/HTTPBase#"
+    },
+    "query_text": "Agent refactoring `HTTPBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.openapi.models`/HTTPBase#"
+  },
+  {
+    "id": "override_detection-015",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.http`/HTTPBase#make_authenticate_headers()."
+    },
+    "query_text": "Agent refactoring `HTTPBase#make_authenticate_headers` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.http`/HTTPBase#make_authenticate_headers()."
+  },
+  {
+    "id": "override_detection-016",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.params`/Depends#"
+    },
+    "query_text": "Agent refactoring `Depends` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.params`/Depends#"
+  },
+  {
+    "id": "multi_hop_impact-000",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:routing.py"
+    },
+    "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:routing.py"
+  },
+  {
+    "id": "multi_hop_impact-001",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:openapi/models.py"
+    },
+    "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:openapi/models.py"
+  },
+  {
+    "id": "multi_hop_impact-002",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.params`/Depends#"
+    },
+    "query_text": "Multi-hop impact starting from `Depends` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi.params`/Depends#"
+  },
+  {
+    "id": "multi_hop_impact-003",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.routing`/APIRoute#"
+    },
+    "query_text": "Multi-hop impact starting from `APIRoute` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi.routing`/APIRoute#"
+  },
+  {
+    "id": "multi_hop_impact-004",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:_compat/v2.py"
+    },
+    "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:_compat/v2.py"
+  },
+  {
+    "id": "multi_hop_impact-005",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi._compat.v2`/ModelField#"
+    },
+    "query_text": "Multi-hop impact starting from `ModelField` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi._compat.v2`/ModelField#"
+  },
+  {
+    "id": "multi_hop_impact-006",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:applications.py"
+    },
+    "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:applications.py"
+  },
+  {
+    "id": "multi_hop_impact-007",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:dependencies/utils.py"
+    },
+    "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:dependencies/utils.py"
+  },
+  {
+    "id": "multi_hop_impact-008",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.datastructures`/Default()."
+    },
+    "query_text": "Multi-hop impact starting from `Default` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi.datastructures`/Default()."
+  },
+  {
+    "id": "multi_hop_impact-009",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.utils`/generate_unique_id()."
+    },
+    "query_text": "Multi-hop impact starting from `generate_unique_id` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi.utils`/generate_unique_id()."
+  },
+  {
+    "id": "multi_hop_impact-010",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+    },
+    "query_text": "Multi-hop impact starting from `BaseModelWithConfig` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+  },
+  {
+    "id": "multi_hop_impact-011",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:params.py"
+    },
+    "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:params.py"
+  },
+  {
+    "id": "multi_hop_impact-012",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:exceptions.py"
+    },
+    "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:exceptions.py"
+  },
+  {
+    "id": "multi_hop_impact-013",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi._compat.shared`/lenient_issubclass()."
+    },
+    "query_text": "Multi-hop impact starting from `lenient_issubclass` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi._compat.shared`/lenient_issubclass()."
+  },
+  {
+    "id": "multi_hop_impact-014",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/Example#"
+    },
+    "query_text": "Multi-hop impact starting from `Example` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi.openapi.models`/Example#"
+  },
+  {
+    "id": "multi_hop_impact-015",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:security/http.py"
+    },
+    "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:security/http.py"
+  },
+  {
+    "id": "multi_hop_impact-016",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:security/oauth2.py"
+    },
+    "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:security/oauth2.py"
+  },
+  {
+    "id": "multi_hop_impact-017",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:_compat/shared.py"
+    },
+    "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:_compat/shared.py"
+  },
+  {
+    "id": "exception_type_discovery-000",
+    "query": {
+      "bare_name": true,
+      "name": "WebSocketRequestValidationError",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `WebSocketRequestValidationError` type. Operation: lookup; bare name: true; name: WebSocketRequestValidationError"
+  },
+  {
+    "id": "exception_type_discovery-001",
+    "query": {
+      "bare_name": true,
+      "name": "WebSocketException",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `WebSocketException` type. Operation: lookup; bare name: true; name: WebSocketException"
+  },
+  {
+    "id": "exception_type_discovery-002",
+    "query": {
+      "bare_name": true,
+      "name": "DependencyScopeError",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `DependencyScopeError` type. Operation: lookup; bare name: true; name: DependencyScopeError"
+  },
+  {
+    "id": "exception_type_discovery-003",
+    "query": {
+      "bare_name": true,
+      "name": "FastAPIError",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `FastAPIError` type. Operation: lookup; bare name: true; name: FastAPIError"
+  },
+  {
+    "id": "exception_type_discovery-004",
+    "query": {
+      "bare_name": true,
+      "name": "RequestValidationError",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `RequestValidationError` type. Operation: lookup; bare name: true; name: RequestValidationError"
+  },
+  {
+    "id": "exception_type_discovery-005",
+    "query": {
+      "bare_name": true,
+      "name": "ResponseValidationError",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `ResponseValidationError` type. Operation: lookup; bare name: true; name: ResponseValidationError"
+  },
+  {
+    "id": "exception_type_discovery-006",
+    "query": {
+      "bare_name": true,
+      "name": "PydanticV1NotSupportedError",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `PydanticV1NotSupportedError` type. Operation: lookup; bare name: true; name: PydanticV1NotSupportedError"
+  },
+  {
+    "id": "exception_type_discovery-007",
+    "query": {
+      "bare_name": true,
+      "name": "ValidationException",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `ValidationException` type. Operation: lookup; bare name: true; name: ValidationException"
+  },
+  {
+    "id": "exception_type_discovery-008",
+    "query": {
+      "bare_name": true,
+      "name": "HTTPException",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `HTTPException` type. Operation: lookup; bare name: true; name: HTTPException"
+  },
+  {
+    "id": "class_field_invariants-000",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.params`/Query#"
+    },
+    "query_text": "Agent understanding invariants of `Query` \u2014 members. Operation: contained_by; sym stable id: fastapi `fastapi.params`/Query#"
+  },
+  {
+    "id": "class_field_invariants-001",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+    },
+    "query_text": "Agent understanding invariants of `OAuth2PasswordRequestForm` \u2014 members. Operation: contained_by; sym stable id: fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+  },
+  {
+    "id": "class_field_invariants-002",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.responses`/_OrjsonModule#"
+    },
+    "query_text": "Agent understanding invariants of `_OrjsonModule` \u2014 members. Operation: contained_by; sym stable id: fastapi `fastapi.responses`/_OrjsonModule#"
+  },
+  {
+    "id": "class_field_invariants-003",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.security.api_key`/APIKeyQuery#"
+    },
+    "query_text": "Agent understanding invariants of `APIKeyQuery` \u2014 members. Operation: contained_by; sym stable id: fastapi `fastapi.security.api_key`/APIKeyQuery#"
+  },
+  {
+    "id": "class_field_invariants-006",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.datastructures`/UploadFile#"
+    },
+    "query_text": "Agent understanding invariants of `UploadFile` \u2014 members. Operation: contained_by; sym stable id: fastapi `fastapi.datastructures`/UploadFile#"
+  },
+  {
+    "id": "class_field_invariants-008",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.responses`/UJSONResponse#"
+    },
+    "query_text": "Agent understanding invariants of `UJSONResponse` \u2014 members. Operation: contained_by; sym stable id: fastapi `fastapi.responses`/UJSONResponse#"
+  },
+  {
+    "id": "class_field_invariants-009",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.responses`/ORJSONResponse#"
+    },
+    "query_text": "Agent understanding invariants of `ORJSONResponse` \u2014 members. Operation: contained_by; sym stable id: fastapi `fastapi.responses`/ORJSONResponse#"
+  },
+  {
+    "id": "class_field_invariants-010",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.params`/Cookie#"
+    },
+    "query_text": "Agent understanding invariants of `Cookie` \u2014 members. Operation: contained_by; sym stable id: fastapi `fastapi.params`/Cookie#"
+  },
+  {
+    "id": "class_field_invariants-014",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.exceptions`/WebSocketRequestValidationError#"
+    },
+    "query_text": "Agent understanding invariants of `WebSocketRequestValidationError` \u2014 members. Operation: contained_by; sym stable id: fastapi `fastapi.exceptions`/WebSocketRequestValidationError#"
+  },
+  {
+    "id": "class_field_invariants-016",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.sse`/ServerSentEvent#"
+    },
+    "query_text": "Agent understanding invariants of `ServerSentEvent` \u2014 members. Operation: contained_by; sym stable id: fastapi `fastapi.sse`/ServerSentEvent#"
+  },
+  {
+    "id": "methods_of_class-000",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.params`/Query#"
+    },
+    "query_text": "Rename audit on `Query` \u2014 every method. Operation: contained_by; sym stable id: fastapi `fastapi.params`/Query#"
+  },
+  {
+    "id": "methods_of_class-001",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+    },
+    "query_text": "Rename audit on `OAuth2PasswordRequestForm` \u2014 every method. Operation: contained_by; sym stable id: fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+  },
+  {
+    "id": "methods_of_class-002",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.responses`/_OrjsonModule#"
+    },
+    "query_text": "Rename audit on `_OrjsonModule` \u2014 every method. Operation: contained_by; sym stable id: fastapi `fastapi.responses`/_OrjsonModule#"
+  },
+  {
+    "id": "methods_of_class-003",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.security.api_key`/APIKeyQuery#"
+    },
+    "query_text": "Rename audit on `APIKeyQuery` \u2014 every method. Operation: contained_by; sym stable id: fastapi `fastapi.security.api_key`/APIKeyQuery#"
+  },
+  {
+    "id": "methods_of_class-006",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.datastructures`/UploadFile#"
+    },
+    "query_text": "Rename audit on `UploadFile` \u2014 every method. Operation: contained_by; sym stable id: fastapi `fastapi.datastructures`/UploadFile#"
+  },
+  {
+    "id": "methods_of_class-008",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.responses`/UJSONResponse#"
+    },
+    "query_text": "Rename audit on `UJSONResponse` \u2014 every method. Operation: contained_by; sym stable id: fastapi `fastapi.responses`/UJSONResponse#"
+  },
+  {
+    "id": "methods_of_class-009",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.responses`/ORJSONResponse#"
+    },
+    "query_text": "Rename audit on `ORJSONResponse` \u2014 every method. Operation: contained_by; sym stable id: fastapi `fastapi.responses`/ORJSONResponse#"
+  },
+  {
+    "id": "methods_of_class-010",
+    "query": {
+      "op": "contained_by",
+      "sym_stable_id": "fastapi `fastapi.params`/Cookie#"
+    },
+    "query_text": "Rename audit on `Cookie` \u2014 every method. Operation: contained_by; sym stable id: fastapi `fastapi.params`/Cookie#"
+  },
+  {
+    "id": "call_site_enumeration-000",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:routing.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:routing.py"
+  },
+  {
+    "id": "call_site_enumeration-001",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:openapi/models.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:openapi/models.py"
+  },
+  {
+    "id": "call_site_enumeration-002",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.params`/Depends#"
+    },
+    "query_text": "Bug suspected in `Depends` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.params`/Depends#"
+  },
+  {
+    "id": "call_site_enumeration-003",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.routing`/APIRoute#"
+    },
+    "query_text": "Bug suspected in `APIRoute` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.routing`/APIRoute#"
+  },
+  {
+    "id": "call_site_enumeration-004",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:_compat/v2.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:_compat/v2.py"
+  },
+  {
+    "id": "call_site_enumeration-005",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi._compat.v2`/ModelField#"
+    },
+    "query_text": "Bug suspected in `ModelField` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi._compat.v2`/ModelField#"
+  },
+  {
+    "id": "call_site_enumeration-006",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:applications.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:applications.py"
+  },
+  {
+    "id": "call_site_enumeration-007",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "file:dependencies/utils.py"
+    },
+    "query_text": "Bug suspected in `py` \u2014 enumerate callers. Operation: callers; sym stable id: file:dependencies/utils.py"
+  },
+  {
+    "id": "call_site_enumeration-008",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.datastructures`/Default()."
+    },
+    "query_text": "Bug suspected in `Default` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.datastructures`/Default()."
+  },
+  {
+    "id": "call_site_enumeration-009",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.utils`/generate_unique_id()."
+    },
+    "query_text": "Bug suspected in `generate_unique_id` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.utils`/generate_unique_id()."
+  },
+  {
+    "id": "call_site_enumeration-010",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+    },
+    "query_text": "Bug suspected in `BaseModelWithConfig` \u2014 enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+  },
+  {
+    "id": "trait_implementors-000",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+    },
+    "query_text": "Agent refactoring `BaseModelWithConfig` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+  },
+  {
+    "id": "trait_implementors-001",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/SecurityBase#"
+    },
+    "query_text": "Agent refactoring `SecurityBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.openapi.models`/SecurityBase#"
+  },
+  {
+    "id": "trait_implementors-002",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.params`/Param#"
+    },
+    "query_text": "Agent refactoring `Param` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.params`/Param#"
+  },
+  {
+    "id": "trait_implementors-003",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/OAuthFlow#"
+    },
+    "query_text": "Agent refactoring `OAuthFlow` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.openapi.models`/OAuthFlow#"
+  },
+  {
+    "id": "trait_implementors-004",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.base`/SecurityBase#"
+    },
+    "query_text": "Agent refactoring `SecurityBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.base`/SecurityBase#"
+  },
+  {
+    "id": "trait_implementors-005",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.http`/HTTPBase#"
+    },
+    "query_text": "Agent refactoring `HTTPBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.http`/HTTPBase#"
+  },
+  {
+    "id": "trait_implementors-006",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.api_key`/APIKeyBase#"
+    },
+    "query_text": "Agent refactoring `APIKeyBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.api_key`/APIKeyBase#"
+  },
+  {
+    "id": "trait_implementors-007",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.exceptions`/ValidationException#"
+    },
+    "query_text": "Agent refactoring `ValidationException` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.exceptions`/ValidationException#"
+  },
+  {
+    "id": "trait_implementors-008",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.oauth2`/OAuth2#"
+    },
+    "query_text": "Agent refactoring `OAuth2` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.oauth2`/OAuth2#"
+  },
+  {
+    "id": "trait_implementors-009",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.exceptions`/FastAPIError#"
+    },
+    "query_text": "Agent refactoring `FastAPIError` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.exceptions`/FastAPIError#"
+  },
+  {
+    "id": "trait_implementors-010",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+    },
+    "query_text": "Agent refactoring `OAuth2PasswordRequestForm` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+  },
+  {
+    "id": "cross_module_callers-000",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.params`/Query#"
+    },
+    "query_text": "Cross-module callers of `Query`. Operation: callers; sym stable id: fastapi `fastapi.params`/Query#"
+  },
+  {
+    "id": "cross_module_callers-001",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.routing`/APIRouter#on_event()."
+    },
+    "query_text": "Cross-module callers of `APIRouter#on_event`. Operation: callers; sym stable id: fastapi `fastapi.routing`/APIRouter#on_event()."
+  },
+  {
+    "id": "cross_module_callers-002",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+    },
+    "query_text": "Cross-module callers of `get_swagger_ui_oauth2_redirect_html`. Operation: callers; sym stable id: fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+  },
+  {
+    "id": "cross_module_callers-003",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.routing`/APIRouter#get()."
+    },
+    "query_text": "Cross-module callers of `APIRouter#get`. Operation: callers; sym stable id: fastapi `fastapi.routing`/APIRouter#get()."
+  },
+  {
+    "id": "cross_module_callers-004",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields()."
+    },
+    "query_text": "Cross-module callers of `_should_embed_body_fields`. Operation: callers; sym stable id: fastapi `fastapi.dependencies.utils`/_should_embed_body_fields()."
+  },
+  {
+    "id": "cross_module_callers-005",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params()."
+    },
+    "query_text": "Cross-module callers of `_get_flat_fields_from_params`. Operation: callers; sym stable id: fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params()."
+  },
+  {
+    "id": "cross_module_callers-006",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi._compat.v2`/get_definitions()."
+    },
+    "query_text": "Cross-module callers of `get_definitions`. Operation: callers; sym stable id: fastapi `fastapi._compat.v2`/get_definitions()."
+  },
+  {
+    "id": "cross_module_callers-007",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi._compat.v2`/ModelField#serialize()."
+    },
+    "query_text": "Cross-module callers of `ModelField#serialize`. Operation: callers; sym stable id: fastapi `fastapi._compat.v2`/ModelField#serialize()."
+  },
+  {
+    "id": "cross_module_callers-008",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.concurrency`/contextmanager_in_threadpool()."
+    },
+    "query_text": "Cross-module callers of `contextmanager_in_threadpool`. Operation: callers; sym stable id: fastapi `fastapi.concurrency`/contextmanager_in_threadpool()."
+  },
+  {
+    "id": "cross_module_callers-009",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.routing`/APIRouter#include_router()."
+    },
+    "query_text": "Cross-module callers of `APIRouter#include_router`. Operation: callers; sym stable id: fastapi `fastapi.routing`/APIRouter#include_router()."
+  },
+  {
+    "id": "cross_module_callers-010",
+    "query": {
+      "op": "callers",
+      "sym_stable_id": "fastapi `fastapi.exceptions`/EndpointContext#"
+    },
+    "query_text": "Cross-module callers of `EndpointContext`. Operation: callers; sym stable id: fastapi `fastapi.exceptions`/EndpointContext#"
+  },
+  {
+    "id": "dead_export_detection-000",
+    "query": {
+      "kind": "function",
+      "op": "orphans"
+    },
+    "query_text": "Agent cleaning dead exports \u2014 symbol has no callers. Operation: orphans; kind: function"
+  },
+  {
+    "id": "dead_export_detection-001",
+    "query": {
+      "kind": "function",
+      "op": "orphans"
+    },
+    "query_text": "Agent cleaning dead exports \u2014 symbol has no callers. Operation: orphans; kind: function"
+  },
+  {
+    "id": "dead_export_detection-002",
+    "query": {
+      "kind": "function",
+      "op": "orphans"
+    },
+    "query_text": "Agent cleaning dead exports \u2014 symbol has no callers. Operation: orphans; kind: function"
+  },
+  {
+    "id": "dead_export_detection-003",
+    "query": {
+      "kind": "function",
+      "op": "orphans"
+    },
+    "query_text": "Agent cleaning dead exports \u2014 symbol has no callers. Operation: orphans; kind: function"
+  },
+  {
+    "id": "dead_export_detection-004",
+    "query": {
+      "kind": "function",
+      "op": "orphans"
+    },
+    "query_text": "Agent cleaning dead exports \u2014 symbol has no callers. Operation: orphans; kind: function"
+  },
+  {
+    "id": "dead_export_detection-005",
+    "query": {
+      "kind": "function",
+      "op": "orphans"
+    },
+    "query_text": "Agent cleaning dead exports \u2014 symbol has no callers. Operation: orphans; kind: function"
+  },
+  {
+    "id": "dead_export_detection-006",
+    "query": {
+      "kind": "function",
+      "op": "orphans"
+    },
+    "query_text": "Agent cleaning dead exports \u2014 symbol has no callers. Operation: orphans; kind: function"
+  },
+  {
+    "id": "dead_export_detection-007",
+    "query": {
+      "kind": "function",
+      "op": "orphans"
+    },
+    "query_text": "Agent cleaning dead exports \u2014 symbol has no callers. Operation: orphans; kind: function"
+  },
+  {
+    "id": "dead_export_detection-008",
+    "query": {
+      "kind": "function",
+      "op": "orphans"
+    },
+    "query_text": "Agent cleaning dead exports \u2014 symbol has no callers. Operation: orphans; kind: function"
+  },
+  {
+    "id": "dead_export_detection-009",
+    "query": {
+      "kind": "function",
+      "op": "orphans"
+    },
+    "query_text": "Agent cleaning dead exports \u2014 symbol has no callers. Operation: orphans; kind: function"
+  },
+  {
+    "id": "dead_export_detection-010",
+    "query": {
+      "kind": "function",
+      "op": "orphans"
+    },
+    "query_text": "Agent cleaning dead exports \u2014 symbol has no callers. Operation: orphans; kind: function"
+  },
+  {
+    "id": "existing_tests_in_file-000",
+    "query": {
+      "file_path": "testclient.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent writing a test \u2014 check existing in `testclient.py`. Operation: file_symbols; file path: testclient.py"
+  },
+  {
+    "id": "nearest_feature_template-000",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.params`/Query#",
+      "op": "lookup"
+    },
+    "query_text": "Agent scaffolding mirrored on `Query`. Operation: lookup; bare name: false; name: fastapi `fastapi.params`/Query#"
+  },
+  {
+    "id": "nearest_feature_template-001",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#",
+      "op": "lookup"
+    },
+    "query_text": "Agent scaffolding mirrored on `OAuth2PasswordRequestForm`. Operation: lookup; bare name: false; name: fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+  },
+  {
+    "id": "nearest_feature_template-002",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/_OrjsonModule#",
+      "op": "lookup"
+    },
+    "query_text": "Agent scaffolding mirrored on `_OrjsonModule`. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/_OrjsonModule#"
+  },
+  {
+    "id": "nearest_feature_template-003",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.security.api_key`/APIKeyQuery#",
+      "op": "lookup"
+    },
+    "query_text": "Agent scaffolding mirrored on `APIKeyQuery`. Operation: lookup; bare name: false; name: fastapi `fastapi.security.api_key`/APIKeyQuery#"
+  },
+  {
+    "id": "nearest_feature_template-004",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.exceptions`/EndpointContext#",
+      "op": "lookup"
+    },
+    "query_text": "Agent scaffolding mirrored on `EndpointContext`. Operation: lookup; bare name: false; name: fastapi `fastapi.exceptions`/EndpointContext#"
+  },
+  {
+    "id": "nearest_feature_template-005",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.models`/Discriminator#",
+      "op": "lookup"
+    },
+    "query_text": "Agent scaffolding mirrored on `Discriminator`. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.models`/Discriminator#"
+  },
+  {
+    "id": "nearest_feature_template-006",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.datastructures`/UploadFile#",
+      "op": "lookup"
+    },
+    "query_text": "Agent scaffolding mirrored on `UploadFile`. Operation: lookup; bare name: false; name: fastapi `fastapi.datastructures`/UploadFile#"
+  },
+  {
+    "id": "nearest_feature_template-007",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.dependencies.utils`/SolvedDependency#",
+      "op": "lookup"
+    },
+    "query_text": "Agent scaffolding mirrored on `SolvedDependency`. Operation: lookup; bare name: false; name: fastapi `fastapi.dependencies.utils`/SolvedDependency#"
+  },
+  {
+    "id": "nearest_feature_template-008",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/UJSONResponse#",
+      "op": "lookup"
+    },
+    "query_text": "Agent scaffolding mirrored on `UJSONResponse`. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/UJSONResponse#"
+  },
+  {
+    "id": "nearest_feature_template-009",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/ORJSONResponse#",
+      "op": "lookup"
+    },
+    "query_text": "Agent scaffolding mirrored on `ORJSONResponse`. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/ORJSONResponse#"
+  },
+  {
+    "id": "nearest_feature_template-010",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.params`/Cookie#",
+      "op": "lookup"
+    },
+    "query_text": "Agent scaffolding mirrored on `Cookie`. Operation: lookup; bare name: false; name: fastapi `fastapi.params`/Cookie#"
+  },
+  {
+    "id": "plugin_extension_point-000",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+    },
+    "query_text": "Agent refactoring `BaseModelWithConfig` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+  },
+  {
+    "id": "plugin_extension_point-001",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/SecurityBase#"
+    },
+    "query_text": "Agent refactoring `SecurityBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.openapi.models`/SecurityBase#"
+  },
+  {
+    "id": "plugin_extension_point-002",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.params`/Param#"
+    },
+    "query_text": "Agent refactoring `Param` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.params`/Param#"
+  },
+  {
+    "id": "plugin_extension_point-003",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.openapi.models`/OAuthFlow#"
+    },
+    "query_text": "Agent refactoring `OAuthFlow` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.openapi.models`/OAuthFlow#"
+  },
+  {
+    "id": "plugin_extension_point-004",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.base`/SecurityBase#"
+    },
+    "query_text": "Agent refactoring `SecurityBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.base`/SecurityBase#"
+  },
+  {
+    "id": "plugin_extension_point-005",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.http`/HTTPBase#"
+    },
+    "query_text": "Agent refactoring `HTTPBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.http`/HTTPBase#"
+  },
+  {
+    "id": "plugin_extension_point-006",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.api_key`/APIKeyBase#"
+    },
+    "query_text": "Agent refactoring `APIKeyBase` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.api_key`/APIKeyBase#"
+  },
+  {
+    "id": "plugin_extension_point-007",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.exceptions`/ValidationException#"
+    },
+    "query_text": "Agent refactoring `ValidationException` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.exceptions`/ValidationException#"
+  },
+  {
+    "id": "plugin_extension_point-008",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.oauth2`/OAuth2#"
+    },
+    "query_text": "Agent refactoring `OAuth2` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.oauth2`/OAuth2#"
+  },
+  {
+    "id": "plugin_extension_point-009",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.exceptions`/FastAPIError#"
+    },
+    "query_text": "Agent refactoring `FastAPIError` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.exceptions`/FastAPIError#"
+  },
+  {
+    "id": "plugin_extension_point-010",
+    "query": {
+      "op": "implementors",
+      "sym_stable_id": "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+    },
+    "query_text": "Agent refactoring `OAuth2PasswordRequestForm` \u2014 find every override. Operation: implementors; sym stable id: fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+  },
+  {
+    "id": "schema_partner_file-000",
+    "query": {
+      "file_path": "dependencies/models.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Schema partner file: `dependencies/models.py`. Operation: file_symbols; file path: dependencies/models.py"
+  },
+  {
+    "id": "schema_partner_file-001",
+    "query": {
+      "file_path": "openapi/models.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Schema partner file: `openapi/models.py`. Operation: file_symbols; file path: openapi/models.py"
+  },
+  {
+    "id": "public_api_surface-000",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.params`/Query#",
+      "op": "lookup"
+    },
+    "query_text": "Public API surface: `Query`. Operation: lookup; bare name: false; name: fastapi `fastapi.params`/Query#"
+  },
+  {
+    "id": "public_api_surface-001",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.applications`/FastAPI#options().",
+      "op": "lookup"
+    },
+    "query_text": "Public API surface: `FastAPI#options`. Operation: lookup; bare name: false; name: fastapi `fastapi.applications`/FastAPI#options()."
+  },
+  {
+    "id": "public_api_surface-002",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#on_event().",
+      "op": "lookup"
+    },
+    "query_text": "Public API surface: `APIRouter#on_event`. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#on_event()."
+  },
+  {
+    "id": "public_api_surface-003",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/get_model_fields().",
+      "op": "lookup"
+    },
+    "query_text": "Public API surface: `get_model_fields`. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/get_model_fields()."
+  },
+  {
+    "id": "public_api_surface-004",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html().",
+      "op": "lookup"
+    },
+    "query_text": "Public API surface: `get_swagger_ui_oauth2_redirect_html`. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+  },
+  {
+    "id": "public_api_surface-005",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#get().",
+      "op": "lookup"
+    },
+    "query_text": "Public API surface: `APIRouter#get`. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#get()."
+  },
+  {
+    "id": "public_api_surface-006",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#",
+      "op": "lookup"
+    },
+    "query_text": "Public API surface: `OAuth2PasswordRequestForm`. Operation: lookup; bare name: false; name: fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#"
+  },
+  {
+    "id": "public_api_surface-007",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/get_definitions().",
+      "op": "lookup"
+    },
+    "query_text": "Public API surface: `get_definitions`. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/get_definitions()."
+  },
+  {
+    "id": "public_api_surface-008",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.exceptions`/ResponseValidationError#__init__().",
+      "op": "lookup"
+    },
+    "query_text": "Public API surface: `ResponseValidationError#__init__`. Operation: lookup; bare name: false; name: fastapi `fastapi.exceptions`/ResponseValidationError#__init__()."
+  },
+  {
+    "id": "public_api_surface-009",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/ModelField#serialize().",
+      "op": "lookup"
+    },
+    "query_text": "Public API surface: `ModelField#serialize`. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/ModelField#serialize()."
+  },
+  {
+    "id": "public_api_surface-010",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.utils`/generate_operation_summary().",
+      "op": "lookup"
+    },
+    "query_text": "Public API surface: `generate_operation_summary`. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.utils`/generate_operation_summary()."
+  },
+  {
+    "id": "exact_symbol_exists-000",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.params`/Query#",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.params`/Query#"
+  },
+  {
+    "id": "exact_symbol_exists-001",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.applications`/FastAPI#options().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.applications`/FastAPI#options()."
+  },
+  {
+    "id": "exact_symbol_exists-002",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/_OrjsonModule#dumps().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/_OrjsonModule#dumps()."
+  },
+  {
+    "id": "exact_symbol_exists-003",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#on_event().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#on_event()."
+  },
+  {
+    "id": "exact_symbol_exists-004",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/get_model_fields().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/get_model_fields()."
+  },
+  {
+    "id": "exact_symbol_exists-005",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._producer().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._producer()."
+  },
+  {
+    "id": "exact_symbol_exists-006",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+  },
+  {
+    "id": "exact_symbol_exists-007",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#get().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#get()."
+  },
+  {
+    "id": "exact_symbol_absent-000",
+    "query": {
+      "bare_name": false,
+      "name": "fake::DoesNotExist#fabricated()",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: fabricated full id must return empty. Operation: lookup; bare name: false; name: fake::DoesNotExist#fabricated()"
+  },
+  {
+    "id": "exact_symbol_absent-001",
+    "query": {
+      "bare_name": false,
+      "name": "scip-python fake pkg 0.0.0 fake/Nothing#",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: fabricated full id must return empty. Operation: lookup; bare name: false; name: scip-python fake pkg 0.0.0 fake/Nothing#"
+  },
+  {
+    "id": "exact_symbol_absent-002",
+    "query": {
+      "bare_name": false,
+      "name": "does_not_exist_qualified_name",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: fabricated full id must return empty. Operation: lookup; bare name: false; name: does_not_exist_qualified_name"
+  },
+  {
+    "id": "exact_symbol_absent-003",
+    "query": {
+      "bare_name": false,
+      "name": "::fabricated::path::",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: fabricated full id must return empty. Operation: lookup; bare name: false; name: ::fabricated::path::"
+  },
+  {
+    "id": "exact_symbol_absent-004",
+    "query": {
+      "bare_name": false,
+      "name": "Nothing at all",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: fabricated full id must return empty. Operation: lookup; bare name: false; name: Nothing at all"
+  },
+  {
+    "id": "exact_symbol_absent-005",
+    "query": {
+      "bare_name": false,
+      "name": "fake::DoesNotExist#fabricated()",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: fabricated full id must return empty. Operation: lookup; bare name: false; name: fake::DoesNotExist#fabricated()"
+  },
+  {
+    "id": "exact_symbol_absent-006",
+    "query": {
+      "bare_name": false,
+      "name": "scip-python fake pkg 0.0.0 fake/Nothing#",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: fabricated full id must return empty. Operation: lookup; bare name: false; name: scip-python fake pkg 0.0.0 fake/Nothing#"
+  },
+  {
+    "id": "exact_symbol_absent-007",
+    "query": {
+      "bare_name": false,
+      "name": "does_not_exist_qualified_name",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: fabricated full id must return empty. Operation: lookup; bare name: false; name: does_not_exist_qualified_name"
+  },
+  {
+    "id": "fake_type_absent-000",
+    "query": {
+      "bare_name": true,
+      "name": "QuantumTeleportManager",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: invented class name `QuantumTeleportManager` must not resolve. Operation: lookup; bare name: true; name: QuantumTeleportManager"
+  },
+  {
+    "id": "fake_type_absent-001",
+    "query": {
+      "bare_name": true,
+      "name": "ZZZ_NotARealClass",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: invented class name `ZZZ_NotARealClass` must not resolve. Operation: lookup; bare name: true; name: ZZZ_NotARealClass"
+  },
+  {
+    "id": "fake_type_absent-002",
+    "query": {
+      "bare_name": true,
+      "name": "BugFixBot9000",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: invented class name `BugFixBot9000` must not resolve. Operation: lookup; bare name: true; name: BugFixBot9000"
+  },
+  {
+    "id": "fake_type_absent-003",
+    "query": {
+      "bare_name": true,
+      "name": "__hallucinated__",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: invented class name `__hallucinated__` must not resolve. Operation: lookup; bare name: true; name: __hallucinated__"
+  },
+  {
+    "id": "fake_type_absent-004",
+    "query": {
+      "bare_name": true,
+      "name": "OverrideAllTheThings",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: invented class name `OverrideAllTheThings` must not resolve. Operation: lookup; bare name: true; name: OverrideAllTheThings"
+  },
+  {
+    "id": "fake_type_absent-005",
+    "query": {
+      "bare_name": true,
+      "name": "QuantumTeleportManager",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: invented class name `QuantumTeleportManager` must not resolve. Operation: lookup; bare name: true; name: QuantumTeleportManager"
+  },
+  {
+    "id": "fake_type_absent-006",
+    "query": {
+      "bare_name": true,
+      "name": "ZZZ_NotARealClass",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: invented class name `ZZZ_NotARealClass` must not resolve. Operation: lookup; bare name: true; name: ZZZ_NotARealClass"
+  },
+  {
+    "id": "fake_type_absent-007",
+    "query": {
+      "bare_name": true,
+      "name": "BugFixBot9000",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: invented class name `BugFixBot9000` must not resolve. Operation: lookup; bare name: true; name: BugFixBot9000"
+  },
+  {
+    "id": "typo_detection-000",
+    "query": {
+      "bare_name": true,
+      "name": "FatsAPI#options",
+      "op": "lookup"
+    },
+    "query_text": "Typo `FatsAPI#options` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: FatsAPI#options"
+  },
+  {
+    "id": "typo_detection-001",
+    "query": {
+      "bare_name": true,
+      "name": "_OjrsonModule#dumps",
+      "op": "lookup"
+    },
+    "query_text": "Typo `_OjrsonModule#dumps` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: _OjrsonModule#dumps"
+  },
+  {
+    "id": "typo_detection-002",
+    "query": {
+      "bare_name": true,
+      "name": "APRIouter#on_event",
+      "op": "lookup"
+    },
+    "query_text": "Typo `APRIouter#on_event` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: APRIouter#on_event"
+  },
+  {
+    "id": "typo_detection-003",
+    "query": {
+      "bare_name": true,
+      "name": "ge_tmodel_fields",
+      "op": "lookup"
+    },
+    "query_text": "Typo `ge_tmodel_fields` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: ge_tmodel_fields"
+  },
+  {
+    "id": "typo_detection-004",
+    "query": {
+      "bare_name": true,
+      "name": "_porducer",
+      "op": "lookup"
+    },
+    "query_text": "Typo `_porducer` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: _porducer"
+  },
+  {
+    "id": "typo_detection-005",
+    "query": {
+      "bare_name": true,
+      "name": "ge_tswagger_ui_oauth2_redirect_html",
+      "op": "lookup"
+    },
+    "query_text": "Typo `ge_tswagger_ui_oauth2_redirect_html` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: ge_tswagger_ui_oauth2_redirect_html"
+  },
+  {
+    "id": "typo_detection-006",
+    "query": {
+      "bare_name": true,
+      "name": "APRIouter#get",
+      "op": "lookup"
+    },
+    "query_text": "Typo `APRIouter#get` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: APRIouter#get"
+  },
+  {
+    "id": "typo_detection-007",
+    "query": {
+      "bare_name": true,
+      "name": "OAtuh2PasswordRequestForm",
+      "op": "lookup"
+    },
+    "query_text": "Typo `OAtuh2PasswordRequestForm` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: OAtuh2PasswordRequestForm"
+  },
+  {
+    "id": "signature_arity_check-000",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.applications`/FastAPI#options().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `FastAPI#options` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.applications`/FastAPI#options()."
+  },
+  {
+    "id": "signature_arity_check-001",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/_OrjsonModule#dumps().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `_OrjsonModule#dumps` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/_OrjsonModule#dumps()."
+  },
+  {
+    "id": "signature_arity_check-002",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#on_event().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `APIRouter#on_event` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#on_event()."
+  },
+  {
+    "id": "signature_arity_check-003",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/get_model_fields().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `get_model_fields` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/get_model_fields()."
+  },
+  {
+    "id": "signature_arity_check-004",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._producer().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `_producer` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._producer()."
+  },
+  {
+    "id": "signature_arity_check-005",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `get_swagger_ui_oauth2_redirect_html` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+  },
+  {
+    "id": "signature_arity_check-006",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#get().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `APIRouter#get` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#get()."
+  },
+  {
+    "id": "signature_arity_check-007",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields().",
+      "op": "lookup"
+    },
+    "query_text": "Agent verifying signature of `_should_embed_body_fields` before calling it. Operation: lookup; bare name: false; name: fastapi `fastapi.dependencies.utils`/_should_embed_body_fields()."
+  },
+  {
+    "id": "naming_convention_query-000",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.params`/Query#",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.params`/Query#"
+  },
+  {
+    "id": "naming_convention_query-001",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.applications`/FastAPI#options().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.applications`/FastAPI#options()."
+  },
+  {
+    "id": "naming_convention_query-002",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/_OrjsonModule#dumps().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/_OrjsonModule#dumps()."
+  },
+  {
+    "id": "naming_convention_query-003",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#on_event().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#on_event()."
+  },
+  {
+    "id": "naming_convention_query-004",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/get_model_fields().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/get_model_fields()."
+  },
+  {
+    "id": "naming_convention_query-005",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._producer().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._producer()."
+  },
+  {
+    "id": "naming_convention_query-006",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+  },
+  {
+    "id": "naming_convention_query-007",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#get().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#get()."
+  },
+  {
+    "id": "disambiguate_by_type-000",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.params`/Query#__init__().",
+      "op": "lookup"
+    },
+    "query_text": "Disambiguate `Query#__init__` on enclosing type `Query`. Operation: lookup; bare name: false; name: fastapi `fastapi.params`/Query#__init__()."
+  },
+  {
+    "id": "disambiguate_by_type-001",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#__init__().",
+      "op": "lookup"
+    },
+    "query_text": "Disambiguate `OAuth2PasswordRequestForm#__init__` on enclosing type `OAuth2PasswordRequestForm`. Operation: lookup; bare name: false; name: fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#__init__()."
+  },
+  {
+    "id": "disambiguate_by_type-002",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/_OrjsonModule#dumps().",
+      "op": "lookup"
+    },
+    "query_text": "Disambiguate `_OrjsonModule#dumps` on enclosing type `_OrjsonModule`. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/_OrjsonModule#dumps()."
+  },
+  {
+    "id": "disambiguate_by_type-003",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.security.api_key`/APIKeyQuery#__init__().",
+      "op": "lookup"
+    },
+    "query_text": "Disambiguate `APIKeyQuery#__init__` on enclosing type `APIKeyQuery`. Operation: lookup; bare name: false; name: fastapi `fastapi.security.api_key`/APIKeyQuery#__init__()."
+  },
+  {
+    "id": "disambiguate_by_type-004",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.security.api_key`/APIKeyQuery#__call__().",
+      "op": "lookup"
+    },
+    "query_text": "Disambiguate `APIKeyQuery#__call__` on enclosing type `APIKeyQuery`. Operation: lookup; bare name: false; name: fastapi `fastapi.security.api_key`/APIKeyQuery#__call__()."
+  },
+  {
+    "id": "disambiguate_by_type-005",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.datastructures`/UploadFile#seek().",
+      "op": "lookup"
+    },
+    "query_text": "Disambiguate `UploadFile#seek` on enclosing type `UploadFile`. Operation: lookup; bare name: false; name: fastapi `fastapi.datastructures`/UploadFile#seek()."
+  },
+  {
+    "id": "disambiguate_by_type-006",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.datastructures`/UploadFile#close().",
+      "op": "lookup"
+    },
+    "query_text": "Disambiguate `UploadFile#close` on enclosing type `UploadFile`. Operation: lookup; bare name: false; name: fastapi `fastapi.datastructures`/UploadFile#close()."
+  },
+  {
+    "id": "disambiguate_by_type-007",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.datastructures`/UploadFile#_validate().",
+      "op": "lookup"
+    },
+    "query_text": "Disambiguate `UploadFile#_validate` on enclosing type `UploadFile`. Operation: lookup; bare name: false; name: fastapi `fastapi.datastructures`/UploadFile#_validate()."
+  },
+  {
+    "id": "disambiguate_by_module-000",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.params`/Query#",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.params`/Query#"
+  },
+  {
+    "id": "disambiguate_by_module-001",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.applications`/FastAPI#options().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.applications`/FastAPI#options()."
+  },
+  {
+    "id": "disambiguate_by_module-002",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.responses`/_OrjsonModule#dumps().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.responses`/_OrjsonModule#dumps()."
+  },
+  {
+    "id": "disambiguate_by_module-003",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#on_event().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#on_event()."
+  },
+  {
+    "id": "disambiguate_by_module-004",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi._compat.v2`/get_model_fields().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi._compat.v2`/get_model_fields()."
+  },
+  {
+    "id": "disambiguate_by_module-005",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._producer().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/get_request_handler().app()._sse_producer_cm()._producer()."
+  },
+  {
+    "id": "disambiguate_by_module-006",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+  },
+  {
+    "id": "disambiguate_by_module-007",
+    "query": {
+      "bare_name": false,
+      "name": "fastapi `fastapi.routing`/APIRouter#get().",
+      "op": "lookup"
+    },
+    "query_text": "Precision-layer: symbol exists, return the exact id. Operation: lookup; bare name: false; name: fastapi `fastapi.routing`/APIRouter#get()."
+  },
+  {
+    "id": "scope_restricted_lookup-001",
+    "query": {
+      "file_path": "__init__.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `__init__.py`. Operation: file_symbols; file path: __init__.py"
+  },
+  {
+    "id": "scope_restricted_lookup-002",
+    "query": {
+      "file_path": "__main__.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `__main__.py`. Operation: file_symbols; file path: __main__.py"
+  },
+  {
+    "id": "scope_restricted_lookup-003",
+    "query": {
+      "file_path": "applications.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `applications.py`. Operation: file_symbols; file path: applications.py"
+  },
+  {
+    "id": "scope_restricted_lookup-004",
+    "query": {
+      "file_path": "background.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `background.py`. Operation: file_symbols; file path: background.py"
+  },
+  {
+    "id": "scope_restricted_lookup-005",
+    "query": {
+      "file_path": "cli.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `cli.py`. Operation: file_symbols; file path: cli.py"
+  },
+  {
+    "id": "scope_restricted_lookup-006",
+    "query": {
+      "file_path": "concurrency.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `concurrency.py`. Operation: file_symbols; file path: concurrency.py"
+  },
+  {
+    "id": "scope_restricted_lookup-007",
+    "query": {
+      "file_path": "datastructures.py",
+      "op": "file_symbols"
+    },
+    "query_text": "Agent discovering siblings in `datastructures.py`. Operation: file_symbols; file path: datastructures.py"
+  },
+  {
+    "id": "fuzzy_match_ranking-000",
+    "query": {
+      "bare_name": true,
+      "name": "FatsAPI#options",
+      "op": "lookup"
+    },
+    "query_text": "Typo `FatsAPI#options` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: FatsAPI#options"
+  },
+  {
+    "id": "fuzzy_match_ranking-001",
+    "query": {
+      "bare_name": true,
+      "name": "_OjrsonModule#dumps",
+      "op": "lookup"
+    },
+    "query_text": "Typo `_OjrsonModule#dumps` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: _OjrsonModule#dumps"
+  },
+  {
+    "id": "fuzzy_match_ranking-002",
+    "query": {
+      "bare_name": true,
+      "name": "APRIouter#on_event",
+      "op": "lookup"
+    },
+    "query_text": "Typo `APRIouter#on_event` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: APRIouter#on_event"
+  },
+  {
+    "id": "fuzzy_match_ranking-003",
+    "query": {
+      "bare_name": true,
+      "name": "ge_tmodel_fields",
+      "op": "lookup"
+    },
+    "query_text": "Typo `ge_tmodel_fields` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: ge_tmodel_fields"
+  },
+  {
+    "id": "fuzzy_match_ranking-004",
+    "query": {
+      "bare_name": true,
+      "name": "_porducer",
+      "op": "lookup"
+    },
+    "query_text": "Typo `_porducer` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: _porducer"
+  },
+  {
+    "id": "fuzzy_match_ranking-005",
+    "query": {
+      "bare_name": true,
+      "name": "ge_tswagger_ui_oauth2_redirect_html",
+      "op": "lookup"
+    },
+    "query_text": "Typo `ge_tswagger_ui_oauth2_redirect_html` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: ge_tswagger_ui_oauth2_redirect_html"
+  },
+  {
+    "id": "fuzzy_match_ranking-006",
+    "query": {
+      "bare_name": true,
+      "name": "APRIouter#get",
+      "op": "lookup"
+    },
+    "query_text": "Typo `APRIouter#get` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: APRIouter#get"
+  },
+  {
+    "id": "fuzzy_match_ranking-007",
+    "query": {
+      "bare_name": true,
+      "name": "OAtuh2PasswordRequestForm",
+      "op": "lookup"
+    },
+    "query_text": "Typo `OAtuh2PasswordRequestForm` \u2014 should not resolve (adapter may return empty or fuzzy match). Operation: lookup; bare name: true; name: OAtuh2PasswordRequestForm"
+  },
+  {
+    "id": "exception_raisers-000",
+    "query": {
+      "bare_name": true,
+      "name": "WebSocketRequestValidationError",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `WebSocketRequestValidationError` type. Operation: lookup; bare name: true; name: WebSocketRequestValidationError"
+  },
+  {
+    "id": "exception_raisers-001",
+    "query": {
+      "bare_name": true,
+      "name": "WebSocketException",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `WebSocketException` type. Operation: lookup; bare name: true; name: WebSocketException"
+  },
+  {
+    "id": "exception_raisers-002",
+    "query": {
+      "bare_name": true,
+      "name": "DependencyScopeError",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `DependencyScopeError` type. Operation: lookup; bare name: true; name: DependencyScopeError"
+  },
+  {
+    "id": "exception_raisers-003",
+    "query": {
+      "bare_name": true,
+      "name": "FastAPIError",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `FastAPIError` type. Operation: lookup; bare name: true; name: FastAPIError"
+  },
+  {
+    "id": "exception_raisers-004",
+    "query": {
+      "bare_name": true,
+      "name": "RequestValidationError",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `RequestValidationError` type. Operation: lookup; bare name: true; name: RequestValidationError"
+  },
+  {
+    "id": "exception_raisers-005",
+    "query": {
+      "bare_name": true,
+      "name": "ResponseValidationError",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `ResponseValidationError` type. Operation: lookup; bare name: true; name: ResponseValidationError"
+  },
+  {
+    "id": "exception_raisers-006",
+    "query": {
+      "bare_name": true,
+      "name": "PydanticV1NotSupportedError",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `PydanticV1NotSupportedError` type. Operation: lookup; bare name: true; name: PydanticV1NotSupportedError"
+  },
+  {
+    "id": "exception_raisers-007",
+    "query": {
+      "bare_name": true,
+      "name": "ValidationException",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `ValidationException` type. Operation: lookup; bare name: true; name: ValidationException"
+  },
+  {
+    "id": "exception_raisers-008",
+    "query": {
+      "bare_name": true,
+      "name": "HTTPException",
+      "op": "lookup"
+    },
+    "query_text": "Agent triaging error \u2014 locate `HTTPException` type. Operation: lookup; bare name: true; name: HTTPException"
+  }
+]
