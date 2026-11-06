@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "files_sha256": {
+    ".gitattributes": "c873e01f7527b7f65495eec458c00e0ccd85995aab72c3406e5667f075f57648",
+    "development-runs.json": "abb4ea62e30d14dc2451686f98bc0efa5d892bba9267fa24cbd16a6f396d85e5",
+    "expected-summary.json": "be909e6da9e4aa2487de1b2efa91f774554fa8af6cca3296c10842b1974768e6",
+    "heldout-preparation.json": "dc4d575a56089127b951aa4a51645ba563b16e61729929493c88ef38e6407e86",
+    "licenses/django-LICENSE.txt": "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669",
+    "licenses/requests-LICENSE.txt": "c11460418c5164a489643eae3da311d0fb1d61931c71c64ff83090c1cad1184b",
+    "patches/django-with-codebase-memory.diff": "b0f3678f781368a248ec070220d11c96a4acf1d3bc3abfecf594aa561c7e7007",
+    "patches/django-with-imca.diff": "ffde793d92d7332ff7c14d77a99e4073641e183e65eef976e923d98e8416dfc7",
+    "patches/django-without-memory.diff": "5adf4eb4db4a77031940ff50be2512462bf44f257fc0243ba88803cd1e00edcb",
+    "patches/requests-with-codebase-memory.diff": "502e4dc4244bfd1aab1e220838850f312de37f6f006e3495ed5ca363ca597ac7",
+    "patches/requests-with-imca.diff": "953eca1df203b15d8f38c3fc850db6d6c9b8b3044ef405fa04d8ce95f2d5204e",
+    "prompts/django.txt": "7ab7f021a95df8fcaca8675ae9eeb67da464bf158b38952469ef5624d712bd51",
+    "prompts/requests.txt": "78c6a10a030a25b17eb2ace2926f21decef93ef2822011dbfd931719f64fc01f"
+  }
+}

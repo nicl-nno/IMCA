@@ -1,0 +1,34 @@
+diff --git a/requests/models.py b/requests/models.py
+index f82f56a..2d49061 100644
+--- a/requests/models.py
++++ b/requests/models.py
+@@ -307,7 +307,7 @@ class PreparedRequest(RequestEncodingMixin, RequestHooksMixin):
+         """Prepares the given HTTP method."""
+         self.method = method
+         if self.method is not None:
+-            self.method = self.method.upper()
++            self.method = to_native_string(self.method.upper())
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+diff --git a/test_requests.py b/test_requests.py
+index a593db3..7e6eff6 100755
+--- a/test_requests.py
++++ b/test_requests.py
+@@ -434,6 +434,16 @@ class RequestsTestCase(unittest.TestCase):
+         assert b'name="stuff"' in prep.body
+         assert b'name="b\'stuff\'"' not in prep.body
+ 
++    def test_unicode_method_name(self):
++        # Issue #2442: unicode method names should not infect the request
++        # with unicode and cause UnicodeDecodeError while sending.
++        r = requests.request(method=u'POST',
++                             url=httpbin('post'),
++                             data={'stuff': 'elixr'.encode('utf-8')},
++                             files={'file': ('test_requests.py',
++                                             open(__file__, 'rb'))})
++        assert r.status_code == 200
++
+     def test_custom_content_type(self):
+         r = requests.post(httpbin('post'),
+                           data={'stuff': json.dumps({'a': 123})},

@@ -1,0 +1,105 @@
+{
+  "scope": "development_saved_patch_validation",
+  "independent_development_tasks": 2,
+  "recorded_attempts": 6,
+  "saved_patches_tested": 5,
+  "saved_patches_passed": 5,
+  "saved_patches_failed": 0,
+  "missing_patch_after_interruption": 1,
+  "transport_interrupted_attempts": 2,
+  "complete_three_condition_tasks": 0,
+  "tasks": [
+    {
+      "task": "django__django-12193",
+      "test_count": 12,
+      "original_source_control": null,
+      "complete_three_condition_comparison": false,
+      "conditions": {
+        "without-memory": {
+          "saved_patch_passed": true,
+          "task_test_count": 12,
+          "runtime_outcome": "agent_finished",
+          "model_request_attempts": 17,
+          "active_agent_seconds": 519.875,
+          "memory_tool_calls": 0,
+          "observed_repair": null,
+          "original_failures_fixed": null,
+          "newly_failing_tests": null
+        },
+        "with-imca": {
+          "saved_patch_passed": true,
+          "task_test_count": 12,
+          "runtime_outcome": "provider_or_transport_failure",
+          "model_request_attempts": 12,
+          "active_agent_seconds": 454.625,
+          "memory_tool_calls": 2,
+          "observed_repair": null,
+          "original_failures_fixed": null,
+          "newly_failing_tests": null
+        },
+        "with-codebase-memory": {
+          "saved_patch_passed": true,
+          "task_test_count": 12,
+          "runtime_outcome": "request_limit",
+          "model_request_attempts": 20,
+          "active_agent_seconds": 628.703,
+          "memory_tool_calls": 4,
+          "observed_repair": null,
+          "original_failures_fixed": null,
+          "newly_failing_tests": null
+        }
+      }
+    },
+    {
+      "task": "psf__requests-1724",
+      "test_count": 85,
+      "original_source_control": {
+        "failing_tests": [
+          "test_requests.py::RequestsTestCase::test_unicode_method_name"
+        ],
+        "dataset_fail_to_pass_already_passing": 6,
+        "dataset_pass_to_pass_failing": 1
+      },
+      "complete_three_condition_comparison": false,
+      "conditions": {
+        "without-memory": {
+          "saved_patch_passed": null,
+          "task_test_count": null,
+          "runtime_outcome": "provider_or_transport_failure",
+          "model_request_attempts": 4,
+          "active_agent_seconds": 161.968,
+          "memory_tool_calls": 0,
+          "observed_repair": null,
+          "original_failures_fixed": null,
+          "newly_failing_tests": null
+        },
+        "with-imca": {
+          "saved_patch_passed": true,
+          "task_test_count": 85,
+          "runtime_outcome": "agent_finished",
+          "model_request_attempts": 12,
+          "active_agent_seconds": 406.157,
+          "memory_tool_calls": 3,
+          "observed_repair": true,
+          "original_failures_fixed": [
+            "test_requests.py::RequestsTestCase::test_unicode_method_name"
+          ],
+          "newly_failing_tests": []
+        },
+        "with-codebase-memory": {
+          "saved_patch_passed": true,
+          "task_test_count": 85,
+          "runtime_outcome": "agent_finished",
+          "model_request_attempts": 15,
+          "active_agent_seconds": 467.687,
+          "memory_tool_calls": 4,
+          "observed_repair": true,
+          "original_failures_fixed": [
+            "test_requests.py::RequestsTestCase::test_unicode_method_name"
+          ],
+          "newly_failing_tests": []
+        }
+      }
+    }
+  ]
+}

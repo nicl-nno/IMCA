@@ -1,0 +1,131 @@
+{
+  "scope": "Held-out source preparation, before repair attempts",
+  "planned_tasks": 5,
+  "held_out_model_calls": 0,
+  "source_records": {
+    "pytest_agent_connections": {
+      "path": "comparison/heldout-pytest-agent-1/checks/controller-d52f59978699/result.json",
+      "sha256": "91adf854d13d507a3ce6889c4ff4b8a21b81fec51192409c25ad51c46d0e0b7a"
+    },
+    "astropy_imca": {
+      "path": "comparison/heldout-remaining-1/cases/astropy__astropy-8872/container-runs/container-b5f87b3cc180/result.json",
+      "sha256": "2d4799b7bb0fad64a8f6bfc55e18dd756d15033569c951ef34d5da9215206c9d"
+    },
+    "astropy_native_response": {
+      "path": "comparison/heldout-remaining-1/cases/astropy__astropy-8872/native-runs/index-3998c6cdb3c2/index_repository.json",
+      "sha256": "64f76d726cd07e462edd3dc80b2d844c814b20fa24411aef433d81f45a0d93bf"
+    },
+    "sympy_timeout": {
+      "path": "comparison/heldout-remaining-1/cases/sympy__sympy-20438/container-runs/container-45120451c8e0/result.json",
+      "sha256": "6ee0087f8ae2e71a1c27f9aaf5fba267b782ba51f3669c3d333edfbd8e8bcadf"
+    },
+    "astropy_native_ready": {
+      "path": "comparison/heldout-remaining-1/cases/astropy__astropy-8872/native-runs/index-7af68021a5ec/result.json",
+      "sha256": "452b5d2cc4500f4553e7336e1e57c856208e371771f8fcfbfc38ddf5e0cfec10"
+    },
+    "scikit_learn_mode_proof": {
+      "path": "comparison/heldout-remaining-1/cases/scikit-learn__scikit-learn-10297/mode-only-image-proof.json",
+      "sha256": "d3d28f821702cc446f38f47aa904fc7826680debfbd46d52d6cdcbc2d7eb6bf9"
+    }
+  },
+  "tasks": [
+    {
+      "task": "pytest-dev__pytest-7236",
+      "source_files": 60,
+      "status": "indices_and_three_connections_checked"
+    },
+    {
+      "task": "sympy__sympy-20438",
+      "source_files": 1377,
+      "status": "scip_preparation_timeout",
+      "limit_seconds": 3600,
+      "automatic_retry": false
+    },
+    {
+      "task": "astropy__astropy-8872",
+      "source_files": 767,
+      "status": "source_and_indices_ready",
+      "imca_projected_files": 767,
+      "native_coverage": {
+        "physical_source_files_verified": 766,
+        "synthetic_metadata_entries": [
+          ".codebase-memory/.semantic-input/git-context-v1",
+          ".codebase-memory/.semantic-input/global-extension-config-v1",
+          ".codebase-memory/.semantic-input/project-extension-config-v1"
+        ],
+        "control_metadata_entries": [
+          ".cbmignore"
+        ],
+        "nodes": 15493,
+        "edges": 98855,
+        "node_labels": {
+          "Branch": 1,
+          "Class": 1410,
+          "Decorator": 19,
+          "EnvVar": 13,
+          "File": 766,
+          "Folder": 114,
+          "Function": 3981,
+          "Method": 6805,
+          "Module": 724,
+          "Process": 5,
+          "Project": 1,
+          "Route": 2,
+          "Variable": 1652
+        },
+        "edge_types": {
+          "CALLS": 19851,
+          "CALL_REFERENCE": 238,
+          "CONFIGURES": 19,
+          "CONTAINS_FILE": 766,
+          "CONTAINS_FOLDER": 113,
+          "DECORATES": 3028,
+          "DEFINES": 23248,
+          "DEFINES_METHOD": 6800,
+          "HAS_BRANCH": 1,
+          "HTTP_CALLS": 2,
+          "IMPORTS": 3818,
+          "INHERITS": 1021,
+          "OVERRIDE": 1318,
+          "RAISES": 280,
+          "SPAWNS": 9,
+          "TESTS": 8148,
+          "TESTS_FILE": 1,
+          "THROWS": 27,
+          "USAGE": 21479,
+          "WRITES": 8688
+        },
+        "common_input_files": 767,
+        "native_method_exclusions": [
+          {
+            "path": "astropy/samp/tests/web_profile_test_helpers.py",
+            "reason": "fast-pattern"
+          }
+        ],
+        "input_files_removed_for_comparison": 0
+      },
+      "native_pipeline_ready_receipt_pending": false
+    },
+    {
+      "task": "scikit-learn__scikit-learn-10297",
+      "source_files": 413,
+      "status": "image_mode_normalization_prepared",
+      "python_source_bytes_verified": 413,
+      "changed_regular_file_modes": 1084,
+      "normalization_executed": false
+    },
+    {
+      "task": "matplotlib__matplotlib-24026",
+      "source_files": 244,
+      "status": "source_ready_indices_pending"
+    }
+  ],
+  "coverage_accounting": {
+    "same_input_source_files": true,
+    "index_sets_required_to_be_identical": false,
+    "native_builtin_method_exclusions_are_recorded": true,
+    "unexpected_missing_files_remain_errors": true,
+    "method_variants_changed": false,
+    "source_files_removed_to_match_a_method": 0
+  }
+}
