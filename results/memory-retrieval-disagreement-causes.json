@@ -1,0 +1,2311 @@
+{
+  "scope": "Comparable unique-input disagreements from frozen LongMemCode retrieval results",
+  "disagreement_count": 50,
+  "imca_higher": {
+    "summary": {
+      "n": 41,
+      "operations": {
+        "lookup": 1,
+        "file_symbols": 4,
+        "callers": 21,
+        "callees": 12,
+        "implementors": 1,
+        "contained_by": 2
+      },
+      "anchor_types": {
+        "symbol": 30,
+        "file": 11
+      },
+      "imca_empty": 0,
+      "codebase_empty": 10,
+      "codebase_with_unmapped_native": 10,
+      "codebase_unmapped_native_occurrences": 21,
+      "mean_imca_expected_hits": 2.1951219512195124,
+      "mean_codebase_expected_hits": 0.6829268292682927,
+      "mean_expected_count": 4.512195121951219
+    },
+    "cases": [
+      {
+        "task_ids": [
+          "lookup_method_on_type-027"
+        ],
+        "operation": "lookup",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "bare_name": true,
+          "name": "FastAPI#redoc_html",
+          "op": "lookup"
+        },
+        "query_text": "Agent calling method `FastAPI#redoc_html` on its type. Operation: lookup; bare name: true; name: FastAPI#redoc_html",
+        "expected_count": 1,
+        "imca_score": 1.0,
+        "codebase_score": 0.0,
+        "imca_result_count": 1,
+        "codebase_result_count": 0,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": true,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#redoc_html()."
+        ],
+        "codebase_results": [],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#redoc_html()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "cross_module_sibling-003",
+          "scope_restricted_lookup-003"
+        ],
+        "operation": "file_symbols",
+        "direction": "imca_higher",
+        "anchor_type": "file",
+        "query": {
+          "file_path": "applications.py",
+          "op": "file_symbols"
+        },
+        "query_text": "Agent discovering siblings in `applications.py`. Operation: file_symbols; file path: applications.py",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#get().",
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#put().",
+          "fastapi `fastapi.applications`/FastAPI#decorator().",
+          "fastapi `fastapi.applications`/FastAPI#post()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.applications`/AppType.",
+          "fastapi `fastapi.applications`/FastAPI#",
+          "fastapi `fastapi.applications`/FastAPI#__call__().",
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#options().",
+            "fastapi `fastapi.applications`/FastAPI#trace().",
+            "fastapi `fastapi.applications`/FastAPI#middleware().",
+            "fastapi `fastapi.applications`/FastAPI#get().",
+            "fastapi `fastapi.applications`/FastAPI#redoc_html()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "cross_module_sibling-007",
+          "scope_restricted_lookup-007"
+        ],
+        "operation": "file_symbols",
+        "direction": "imca_higher",
+        "anchor_type": "file",
+        "query": {
+          "file_path": "datastructures.py",
+          "op": "file_symbols"
+        },
+        "query_text": "Agent discovering siblings in `datastructures.py`. Operation: file_symbols; file path: datastructures.py",
+        "expected_count": 5,
+        "imca_score": 0.8,
+        "codebase_score": 0.4,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 4,
+        "codebase_expected_hits": 2,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.datastructures`/UploadFile#",
+          "file:datastructures.py",
+          "fastapi `fastapi.datastructures`/Default().",
+          "fastapi `fastapi.datastructures`/DefaultPlaceholder#",
+          "fastapi `fastapi.datastructures`/UploadFile#seek()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.datastructures`/Default().",
+          "fastapi `fastapi.datastructures`/DefaultPlaceholder#",
+          "fastapi `fastapi.datastructures`/DefaultPlaceholder#__bool__().",
+          "fastapi `fastapi.datastructures`/DefaultPlaceholder#__eq__().",
+          "fastapi `fastapi.datastructures`/DefaultPlaceholder#__init__()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "file:datastructures.py",
+            "fastapi `fastapi.datastructures`/UploadFile#",
+            "fastapi `fastapi.datastructures`/UploadFile#seek().",
+            "fastapi `fastapi.datastructures`/DefaultPlaceholder#",
+            "fastapi `fastapi.datastructures`/DefaultPlaceholder#__init__()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "cross_module_sibling-008"
+        ],
+        "operation": "file_symbols",
+        "direction": "imca_higher",
+        "anchor_type": "file",
+        "query": {
+          "file_path": "encoders.py",
+          "op": "file_symbols"
+        },
+        "query_text": "Agent discovering siblings in `encoders.py`. Operation: file_symbols; file path: encoders.py",
+        "expected_count": 5,
+        "imca_score": 1.0,
+        "codebase_score": 0.6,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 5,
+        "codebase_expected_hits": 3,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 1,
+        "imca_results": [
+          "fastapi `fastapi.encoders`/jsonable_encoder().",
+          "file:encoders.py",
+          "fastapi `fastapi.encoders`/generate_encoders_by_class_tuples().",
+          "fastapi `fastapi.encoders`/isoformat().",
+          "fastapi `fastapi.encoders`/decimal_encoder()."
+        ],
+        "codebase_results": [
+          "unmapped-native:longmemcode-source.fastapi.encoders.ENCODERS_BY_TYPE",
+          "fastapi `fastapi.encoders`/decimal_encoder().",
+          "fastapi `fastapi.encoders`/encoders_by_class_tuples.",
+          "fastapi `fastapi.encoders`/generate_encoders_by_class_tuples().",
+          "fastapi `fastapi.encoders`/isoformat()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.encoders`/jsonable_encoder().",
+            "file:encoders.py",
+            "fastapi `fastapi.encoders`/generate_encoders_by_class_tuples().",
+            "fastapi `fastapi.encoders`/decimal_encoder().",
+            "fastapi `fastapi.encoders`/isoformat()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "cross_module_sibling-013"
+        ],
+        "operation": "file_symbols",
+        "direction": "imca_higher",
+        "anchor_type": "file",
+        "query": {
+          "file_path": "params.py",
+          "op": "file_symbols"
+        },
+        "query_text": "Agent discovering siblings in `params.py`. Operation: file_symbols; file path: params.py",
+        "expected_count": 5,
+        "imca_score": 0.6,
+        "codebase_score": 0.2,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 3,
+        "codebase_expected_hits": 1,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.params`/Form#__init__().",
+          "fastapi `fastapi.params`/Path#__init__().",
+          "fastapi `fastapi.params`/Header#__init__().",
+          "fastapi `fastapi.params`/ParamTypes#",
+          "fastapi `fastapi.params`/File#__init__()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.params`/Body#",
+          "fastapi `fastapi.params`/Body#__init__().",
+          "fastapi `fastapi.params`/Body#__repr__().",
+          "fastapi `fastapi.params`/Cookie#",
+          "fastapi `fastapi.params`/Cookie#__init__()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.params`/Query#",
+            "fastapi `fastapi.params`/Path#__init__().",
+            "fastapi `fastapi.params`/Header#__init__().",
+            "fastapi `fastapi.params`/Cookie#",
+            "fastapi `fastapi.params`/ParamTypes#"
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-002",
+          "call_site_enumeration-002"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.params`/Depends#"
+        },
+        "query_text": "Bug suspected in `Depends` — enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.params`/Depends#",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.routing`/APIRoute#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "fastapi `fastapi.routing`/APIRouter#get().",
+          "fastapi `fastapi.applications`/FastAPI#get()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.dependencies.utils`/analyze_param().",
+          "fastapi `fastapi.dependencies.utils`/get_param_sub_dependant().",
+          "fastapi `fastapi.dependencies.utils`/get_parameterless_sub_dependant().",
+          "fastapi `fastapi.dependencies.utils`/get_sub_dependant().",
+          "fastapi `fastapi.param_functions`/Depends()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#options().",
+            "fastapi `fastapi.routing`/APIRouter#get().",
+            "fastapi `fastapi.applications`/FastAPI#trace().",
+            "fastapi `fastapi.routing`/APIRouter#include_router().",
+            "fastapi `fastapi.applications`/FastAPI#get()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-003",
+          "call_site_enumeration-003"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.routing`/APIRoute#"
+        },
+        "query_text": "Bug suspected in `APIRoute` — enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.routing`/APIRoute#",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.routing`/APIRoute#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.routing`/APIRouter#get().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "fastapi `fastapi.routing`/APIRouter#put()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "fastapi `fastapi.applications`/FastAPI#api_route().",
+          "fastapi `fastapi.applications`/FastAPI#delete().",
+          "fastapi `fastapi.applications`/FastAPI#get()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#options().",
+            "fastapi `fastapi.routing`/APIRouter#get().",
+            "fastapi `fastapi.openapi.utils`/generate_operation_summary().",
+            "fastapi `fastapi.applications`/FastAPI#trace().",
+            "fastapi `fastapi.routing`/APIRouter#include_router()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-006",
+          "call_site_enumeration-006"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:applications.py"
+        },
+        "query_text": "Bug suspected in `py` — enumerate callers. Operation: callers; sym stable id: file:applications.py",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#get().",
+          "fastapi `fastapi.applications`/FastAPI#decorator().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "fastapi `fastapi.applications`/FastAPI#put()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.applications`/FastAPI#",
+          "fastapi `fastapi.applications`/FastAPI#__call__().",
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_websocket_route()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#options().",
+            "fastapi `fastapi.applications`/FastAPI#trace().",
+            "fastapi `fastapi.applications`/FastAPI#middleware().",
+            "fastapi `fastapi.applications`/FastAPI#get().",
+            "fastapi `fastapi.applications`/FastAPI#redoc_html()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-008",
+          "call_site_enumeration-008"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.datastructures`/Default()."
+        },
+        "query_text": "Bug suspected in `Default` — enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.datastructures`/Default().",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.2,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 1,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.routing`/APIRoute#__init__().",
+          "fastapi `fastapi.routing`/APIRouter#get().",
+          "fastapi `fastapi.applications`/FastAPI#get().",
+          "fastapi `fastapi.routing`/APIRouter#put()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "fastapi `fastapi.applications`/FastAPI#api_route().",
+          "fastapi `fastapi.applications`/FastAPI#delete().",
+          "fastapi `fastapi.applications`/FastAPI#get()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#options().",
+            "fastapi `fastapi.routing`/APIRouter#get().",
+            "fastapi `fastapi.applications`/FastAPI#trace().",
+            "fastapi `fastapi.routing`/APIRouter#include_router().",
+            "fastapi `fastapi.applications`/FastAPI#get()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-009",
+          "call_site_enumeration-009"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.utils`/generate_unique_id()."
+        },
+        "query_text": "Bug suspected in `generate_unique_id` — enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.utils`/generate_unique_id().",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 0,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": true,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.routing`/APIRoute#__init__().",
+          "fastapi `fastapi.routing`/APIRouter#get().",
+          "fastapi `fastapi.applications`/FastAPI#get().",
+          "fastapi `fastapi.routing`/APIRouter#put()."
+        ],
+        "codebase_results": [],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#options().",
+            "fastapi `fastapi.routing`/APIRouter#get().",
+            "fastapi `fastapi.applications`/FastAPI#trace().",
+            "fastapi `fastapi.routing`/APIRouter#include_router().",
+            "fastapi `fastapi.applications`/FastAPI#get()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-011"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:params.py"
+        },
+        "query_text": "Bug suspected in `py` — enumerate callers. Operation: callers; sym stable id: file:params.py",
+        "expected_count": 5,
+        "imca_score": 0.6,
+        "codebase_score": 0.2,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 3,
+        "codebase_expected_hits": 1,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.params`/Path#__init__().",
+          "fastapi `fastapi.params`/Header#__init__().",
+          "file:params.py",
+          "fastapi `fastapi.params`/ParamTypes#",
+          "fastapi `fastapi.params`/Query#__init__()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.params`/Body#",
+          "fastapi `fastapi.params`/Body#__init__().",
+          "fastapi `fastapi.params`/Body#__repr__().",
+          "fastapi `fastapi.params`/Cookie#",
+          "fastapi `fastapi.params`/Cookie#__init__()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.params`/Query#",
+            "fastapi `fastapi.params`/Path#__init__().",
+            "fastapi `fastapi.params`/Header#__init__().",
+            "fastapi `fastapi.params`/Cookie#",
+            "fastapi `fastapi.params`/ParamTypes#"
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-012"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:exceptions.py"
+        },
+        "query_text": "Bug suspected in `py` — enumerate callers. Operation: callers; sym stable id: file:exceptions.py",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.exceptions`/HTTPException#",
+          "fastapi `fastapi.exceptions`/ValidationException#",
+          "fastapi `fastapi.exceptions`/RequestValidationError#",
+          "fastapi `fastapi.exceptions`/FastAPIError#",
+          "fastapi `fastapi.exceptions`/WebSocketRequestValidationError#"
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.exceptions`/FastAPIError#",
+          "fastapi `fastapi.exceptions`/HTTPException#",
+          "fastapi `fastapi.exceptions`/HTTPException#__init__().",
+          "fastapi `fastapi.exceptions`/RequestValidationError#",
+          "fastapi `fastapi.exceptions`/RequestValidationError#__init__()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.exceptions`/ResponseValidationError#__init__().",
+            "fastapi `fastapi.exceptions`/EndpointContext#",
+            "fastapi `fastapi.exceptions`/WebSocketRequestValidationError#__init__().",
+            "fastapi `fastapi.exceptions`/WebSocketRequestValidationError#",
+            "fastapi `fastapi.exceptions`/WebSocketException#__init__()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-014"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.openapi.models`/Example#"
+        },
+        "query_text": "Bug suspected in `Example` — enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.openapi.models`/Example#",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 0,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": true,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.param_functions`/Form().",
+          "fastapi `fastapi.param_functions`/Body().",
+          "fastapi `fastapi.param_functions`/Header().",
+          "fastapi `fastapi.param_functions`/File().",
+          "fastapi `fastapi.param_functions`/Query()."
+        ],
+        "codebase_results": [],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.params`/Path#__init__().",
+            "fastapi `fastapi.param_functions`/Header().",
+            "fastapi `fastapi.params`/Header#__init__().",
+            "fastapi `fastapi.param_functions`/File().",
+            "fastapi `fastapi.param_functions`/Cookie()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-016"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:security/oauth2.py"
+        },
+        "query_text": "Bug suspected in `py` — enumerate callers. Operation: callers; sym stable id: file:security/oauth2.py",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.2,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 1,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestFormStrict#__init__().",
+          "file:security/oauth2.py",
+          "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#__init__().",
+          "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#__init__().",
+          "fastapi `fastapi.security.oauth2`/OAuth2PasswordBearer#__init__()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.security.oauth2`/OAuth2#",
+          "fastapi `fastapi.security.oauth2`/OAuth2#__call__().",
+          "fastapi `fastapi.security.oauth2`/OAuth2#__init__().",
+          "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#",
+          "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#__call__()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#",
+            "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#__init__().",
+            "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#",
+            "fastapi `fastapi.security.oauth2`/OAuth2#make_not_authenticated_error().",
+            "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestFormStrict#__init__()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callees_of_symbol-001"
+        ],
+        "operation": "callees",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callees",
+          "sym_stable_id": "fastapi `fastapi.routing`/get_request_handler().app()."
+        },
+        "query_text": "Bug downstream of `app` — enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.routing`/get_request_handler().app().",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 0,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": true,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.exceptions`/RequestValidationError#",
+          "fastapi `fastapi._compat`/_normalize_errors().",
+          "fastapi `fastapi.exceptions`/FastAPIError#",
+          "fastapi `fastapi.routing`/serialize_response().",
+          "fastapi `fastapi.routing`/run_endpoint_function()."
+        ],
+        "codebase_results": [],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.routing`/serialize_response().",
+            "fastapi `fastapi.dependencies.utils`/solve_dependencies().",
+            "fastapi `fastapi.dependencies.models`/Dependant#is_async_gen_callable().",
+            "fastapi `fastapi.routing`/run_endpoint_function().",
+            "fastapi `fastapi.routing`/get_request_handler().app()._sync_stream_jsonl()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callees_of_symbol-002"
+        ],
+        "operation": "callees",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callees",
+          "sym_stable_id": "fastapi `fastapi.openapi.utils`/get_openapi_path()."
+        },
+        "query_text": "Bug downstream of `get_openapi_path` — enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.openapi.utils`/get_openapi_path().",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 4,
+        "imca_results": [
+          "fastapi `fastapi.utils`/deep_dict_update().",
+          "fastapi `fastapi._compat`/get_schema_from_model_field().",
+          "fastapi `fastapi.utils`/is_body_allowed_for_status_code().",
+          "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+          "fastapi `fastapi.dependencies.utils`/get_flat_params()."
+        ],
+        "codebase_results": [
+          "unmapped-native:builtins.int",
+          "unmapped-native:builtins.list",
+          "unmapped-native:builtins.str",
+          "unmapped-native:builtins.str.upper",
+          "fastapi `fastapi._compat`/ModelField#default()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi._compat.v2`/get_schema_from_model_field().",
+            "fastapi `fastapi.utils`/deep_dict_update().",
+            "fastapi `fastapi.openapi.utils`/get_openapi_operation_request_body().",
+            "fastapi `fastapi.openapi.utils`/get_openapi_security_definitions().",
+            "fastapi `fastapi.openapi.utils`/_get_openapi_operation_parameters()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callees_of_symbol-005"
+        ],
+        "operation": "callees",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callees",
+          "sym_stable_id": "fastapi `fastapi.dependencies.utils`/get_dependant()."
+        },
+        "query_text": "Bug downstream of `get_dependant` — enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.dependencies.utils`/get_dependant().",
+        "expected_count": 5,
+        "imca_score": 0.6,
+        "codebase_score": 0.4,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 3,
+        "codebase_expected_hits": 2,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.utils`/get_path_param_names().",
+          "fastapi `fastapi.dependencies.models`/Dependant#",
+          "fastapi `fastapi.dependencies.utils`/get_param_sub_dependant().",
+          "fastapi `fastapi.dependencies.utils`/get_typed_signature().",
+          "fastapi `fastapi.dependencies.utils`/add_non_field_param_to_dependency()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi._compat`/ModelField#default().",
+          "fastapi `fastapi.dependencies.models`/Dependant#",
+          "fastapi `fastapi.dependencies.utils`/add_non_field_param_to_dependency().",
+          "fastapi `fastapi.dependencies.utils`/add_param_to_fields().",
+          "fastapi `fastapi.dependencies.utils`/analyze_param()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.utils`/get_path_param_names().",
+            "fastapi `fastapi.dependencies.models`/Dependant#is_async_gen_callable().",
+            "fastapi `fastapi.dependencies.utils`/get_typed_signature().",
+            "fastapi `fastapi.dependencies.utils`/add_param_to_fields().",
+            "fastapi `fastapi.dependencies.utils`/add_non_field_param_to_dependency()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callees_of_symbol-006"
+        ],
+        "operation": "callees",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callees",
+          "sym_stable_id": "fastapi `fastapi.routing`/APIRouter#include_router()."
+        },
+        "query_text": "Bug downstream of `APIRouter#include_router` — enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.routing`/APIRouter#include_router().",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 1,
+        "imca_results": [
+          "fastapi `fastapi.datastructures`/Default().",
+          "fastapi `fastapi.utils`/get_value_or_default().",
+          "fastapi `fastapi.exceptions`/FastAPIError#",
+          "fastapi `fastapi.routing`/_merge_lifespan_context().",
+          "fastapi `fastapi.routing`/APIRouter#add_api_route()."
+        ],
+        "codebase_results": [
+          "unmapped-native:builtins.list",
+          "fastapi `fastapi.datastructures`/Default().",
+          "fastapi `fastapi.exceptions`/FastAPIError#",
+          "fastapi `fastapi.params`/Depends#",
+          "fastapi `fastapi.routing`/APIRoute#"
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.routing`/_merge_lifespan_context().",
+            "fastapi `fastapi.routing`/APIRouter#add_api_websocket_route().",
+            "fastapi `fastapi.routing`/APIRouter#add_api_route().",
+            "fastapi `fastapi.utils`/generate_unique_id().",
+            "fastapi `fastapi.routing`/APIRouter#add_event_handler()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callees_of_symbol-007"
+        ],
+        "operation": "callees",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callees",
+          "sym_stable_id": "fastapi `fastapi.openapi.utils`/_get_openapi_operation_parameters()."
+        },
+        "query_text": "Bug downstream of `_get_openapi_operation_parameters` — enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.openapi.utils`/_get_openapi_operation_parameters().",
+        "expected_count": 5,
+        "imca_score": 0.6,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 3,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 2,
+        "imca_results": [
+          "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params().",
+          "fastapi `fastapi.encoders`/jsonable_encoder().",
+          "fastapi `fastapi._compat`/get_schema_from_model_field().",
+          "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+          "fastapi `fastapi._compat`/ModelField#"
+        ],
+        "codebase_results": [
+          "unmapped-native:builtins.len",
+          "unmapped-native:builtins.list.append",
+          "fastapi `fastapi._compat`/ModelField#alias().",
+          "fastapi `fastapi._compat`/ModelField#required().",
+          "fastapi `fastapi._compat`/ModelField#type_()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params().",
+            "fastapi `fastapi.encoders`/jsonable_encoder().",
+            "fastapi `fastapi._compat.v2`/get_schema_from_model_field().",
+            "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+            "fastapi `fastapi._compat.shared`/lenient_issubclass()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callees_of_symbol-008"
+        ],
+        "operation": "callees",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callees",
+          "sym_stable_id": "fastapi `fastapi.routing`/APIWebSocketRoute#__init__()."
+        },
+        "query_text": "Bug downstream of `APIWebSocketRoute#__init__` — enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.routing`/APIWebSocketRoute#__init__().",
+        "expected_count": 5,
+        "imca_score": 0.8,
+        "codebase_score": 0.6,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 4,
+        "codebase_expected_hits": 3,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 1,
+        "imca_results": [
+          "fastapi `fastapi.routing`/get_websocket_app().",
+          "fastapi `fastapi.dependencies.utils`/get_parameterless_sub_dependant().",
+          "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+          "fastapi `fastapi.dependencies.utils`/get_dependant().",
+          "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields()."
+        ],
+        "codebase_results": [
+          "unmapped-native:builtins.list",
+          "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields().",
+          "fastapi `fastapi.dependencies.utils`/get_dependant().",
+          "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+          "fastapi `fastapi.dependencies.utils`/get_parameterless_sub_dependant()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields().",
+            "fastapi `fastapi.routing`/websocket_session().",
+            "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+            "fastapi `fastapi.dependencies.utils`/get_dependant().",
+            "fastapi `fastapi.routing`/get_websocket_app()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callees_of_symbol-009"
+        ],
+        "operation": "callees",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callees",
+          "sym_stable_id": "fastapi `fastapi.dependencies.utils`/_extract_form_body()."
+        },
+        "query_text": "Bug downstream of `_extract_form_body` — enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.dependencies.utils`/_extract_form_body().",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 3,
+        "imca_results": [
+          "fastapi `fastapi._compat`/is_bytes_field().",
+          "fastapi `fastapi._compat`/is_bytes_sequence_field().",
+          "fastapi `fastapi._compat`/serialize_sequence_value().",
+          "fastapi `fastapi._compat`/value_is_sequence().",
+          "fastapi `fastapi.dependencies.utils`/_get_multidict_value()."
+        ],
+        "codebase_results": [
+          "unmapped-native:longmemcode-source.fastapi._compat.is_bytes_field",
+          "unmapped-native:longmemcode-source.fastapi._compat.is_bytes_sequence_field",
+          "unmapped-native:longmemcode-source.fastapi._compat.serialize_sequence_value",
+          "fastapi `fastapi._compat`/value_is_sequence().",
+          "fastapi `fastapi.datastructures`/UploadFile#read()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.dependencies.utils`/_get_multidict_value().",
+            "fastapi `fastapi._compat.shared`/is_bytes_or_nonable_bytes_annotation().",
+            "fastapi `fastapi._compat.shared`/is_bytes_sequence_annotation().",
+            "fastapi `fastapi._compat.shared`/value_is_sequence().",
+            "fastapi `fastapi._compat.v2`/serialize_sequence_value()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callees_of_symbol-010"
+        ],
+        "operation": "callees",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callees",
+          "sym_stable_id": "fastapi `fastapi.openapi.utils`/get_openapi()."
+        },
+        "query_text": "Bug downstream of `get_openapi` — enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.openapi.utils`/get_openapi().",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.2,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 1,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 4,
+        "imca_results": [
+          "fastapi `fastapi.openapi.utils`/get_openapi_path().",
+          "fastapi `fastapi._compat`/get_compat_model_name_map().",
+          "fastapi `fastapi._compat`/get_definitions().",
+          "fastapi `fastapi.encoders`/jsonable_encoder().",
+          "fastapi `fastapi.openapi.utils`/get_fields_from_routes()."
+        ],
+        "codebase_results": [
+          "unmapped-native:builtins.list",
+          "unmapped-native:longmemcode-source.fastapi._compat.GenerateJsonSchema",
+          "unmapped-native:longmemcode-source.fastapi._compat.get_compat_model_name_map",
+          "unmapped-native:longmemcode-source.fastapi._compat.get_definitions",
+          "fastapi `fastapi.encoders`/jsonable_encoder()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi._compat.v2`/get_definitions().",
+            "fastapi `fastapi.encoders`/jsonable_encoder().",
+            "fastapi `fastapi.openapi.utils`/get_fields_from_routes().",
+            "fastapi `fastapi._compat.v2`/get_model_name_map().",
+            "fastapi `fastapi._compat.v2`/get_flat_models_from_fields()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callees_of_symbol-011"
+        ],
+        "operation": "callees",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callees",
+          "sym_stable_id": "fastapi `fastapi.dependencies.utils`/request_body_to_args()."
+        },
+        "query_text": "Bug downstream of `request_body_to_args` — enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.dependencies.utils`/request_body_to_args().",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 2,
+        "imca_results": [
+          "fastapi `fastapi.dependencies.utils`/_validate_value_with_model_field().",
+          "fastapi `fastapi._compat`/get_missing_field_error().",
+          "fastapi `fastapi._compat`/get_cached_model_fields().",
+          "fastapi `fastapi.dependencies.utils`/_extract_form_body().",
+          "fastapi `fastapi._compat`/ModelField#"
+        ],
+        "codebase_results": [
+          "unmapped-native:builtins.len",
+          "fastapi `fastapi._compat`/ModelField#alias().",
+          "fastapi `fastapi._compat`/ModelField#type_().",
+          "fastapi `fastapi._compat`/get_cached_model_fields().",
+          "unmapped-native:longmemcode-source.fastapi._compat.get_missing_field_error"
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi._compat.v2`/get_cached_model_fields().",
+            "fastapi `fastapi.dependencies.utils`/_validate_value_with_model_field().",
+            "fastapi `fastapi._compat.shared`/lenient_issubclass().",
+            "fastapi `fastapi._compat.v2`/get_missing_field_error().",
+            "fastapi `fastapi.dependencies.utils`/_extract_form_body()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callees_of_symbol-012"
+        ],
+        "operation": "callees",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callees",
+          "sym_stable_id": "fastapi `fastapi.applications`/FastAPI#__init__()."
+        },
+        "query_text": "Bug downstream of `FastAPI#__init__` — enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.applications`/FastAPI#__init__().",
+        "expected_count": 5,
+        "imca_score": 0.8,
+        "codebase_score": 0.4,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 4,
+        "codebase_expected_hits": 2,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 2,
+        "imca_results": [
+          "fastapi `fastapi.datastructures`/Default().",
+          "fastapi `fastapi.routing`/APIRouter#",
+          "fastapi `fastapi.exception_handlers`/http_exception_handler().",
+          "fastapi `fastapi.exception_handlers`/request_validation_exception_handler().",
+          "fastapi `fastapi.exception_handlers`/websocket_request_validation_exception_handler()."
+        ],
+        "codebase_results": [
+          "unmapped-native:builtins.dict",
+          "unmapped-native:builtins.list",
+          "fastapi `fastapi.applications`/FastAPI#setup().",
+          "fastapi `fastapi.datastructures`/Default().",
+          "fastapi `fastapi.exception_handlers`/http_exception_handler()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.exception_handlers`/http_exception_handler().",
+            "fastapi `fastapi.utils`/generate_unique_id().",
+            "fastapi `fastapi.exception_handlers`/websocket_request_validation_exception_handler().",
+            "fastapi `fastapi.exception_handlers`/request_validation_exception_handler().",
+            "fastapi `fastapi.datastructures`/Default()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callees_of_symbol-013"
+        ],
+        "operation": "callees",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callees",
+          "sym_stable_id": "fastapi `fastapi.dependencies.utils`/request_params_to_args()."
+        },
+        "query_text": "Bug downstream of `request_params_to_args` — enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.dependencies.utils`/request_params_to_args().",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.2,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 1,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 1,
+        "imca_results": [
+          "fastapi `fastapi.dependencies.utils`/_validate_value_with_model_field().",
+          "fastapi `fastapi.dependencies.utils`/_get_multidict_value().",
+          "fastapi `fastapi._compat`/get_cached_model_fields().",
+          "fastapi `fastapi._compat`/ModelField#",
+          "fastapi `fastapi.params`/Param#"
+        ],
+        "codebase_results": [
+          "unmapped-native:builtins.len",
+          "fastapi `fastapi._compat`/ModelField#alias().",
+          "fastapi `fastapi._compat`/ModelField#type_().",
+          "fastapi `fastapi._compat`/get_cached_model_fields().",
+          "fastapi `fastapi.dependencies.utils`/_get_multidict_value()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.dependencies.utils`/_get_multidict_value().",
+            "fastapi `fastapi._compat.v2`/get_cached_model_fields().",
+            "fastapi `fastapi.dependencies.utils`/_validate_value_with_model_field().",
+            "fastapi `fastapi._compat.shared`/lenient_issubclass().",
+            "fastapi `fastapi.dependencies.utils`/get_validation_alias()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callees_of_symbol-017"
+        ],
+        "operation": "callees",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callees",
+          "sym_stable_id": "fastapi `fastapi.applications`/FastAPI#setup()."
+        },
+        "query_text": "Bug downstream of `FastAPI#setup` — enumerate callees. Operation: callees; sym stable id: fastapi `fastapi.applications`/FastAPI#setup().",
+        "expected_count": 4,
+        "imca_score": 1.0,
+        "codebase_score": 0.0,
+        "imca_result_count": 4,
+        "codebase_result_count": 0,
+        "imca_expected_hits": 4,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": true,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#openapi().",
+          "fastapi `fastapi.applications`/FastAPI#swagger_ui_html().",
+          "fastapi `fastapi.applications`/FastAPI#swagger_ui_redirect().",
+          "fastapi `fastapi.applications`/FastAPI#redoc_html()."
+        ],
+        "codebase_results": [],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#redoc_html().",
+            "fastapi `fastapi.applications`/FastAPI#openapi().",
+            "fastapi `fastapi.applications`/FastAPI#swagger_ui_html().",
+            "fastapi `fastapi.applications`/FastAPI#swagger_ui_redirect()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "override_detection-000",
+          "trait_implementors-000",
+          "plugin_extension_point-000"
+        ],
+        "operation": "implementors",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "implementors",
+          "sym_stable_id": "fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+        },
+        "query_text": "Agent refactoring `BaseModelWithConfig` — find every override. Operation: implementors; sym stable id: fastapi `fastapi.openapi.models`/BaseModelWithConfig#",
+        "expected_count": 5,
+        "imca_score": 0.6,
+        "codebase_score": 0.4,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 3,
+        "codebase_expected_hits": 2,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.openapi.models`/ParameterBase#",
+          "fastapi `fastapi.openapi.models`/Info#",
+          "fastapi `fastapi.openapi.models`/Contact#",
+          "fastapi `fastapi.openapi.models`/SecurityBase#",
+          "fastapi `fastapi.openapi.models`/License#"
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.openapi.models`/Components#",
+          "fastapi `fastapi.openapi.models`/Contact#",
+          "fastapi `fastapi.openapi.models`/Encoding#",
+          "fastapi `fastapi.openapi.models`/ExternalDocumentation#",
+          "fastapi `fastapi.openapi.models`/Info#"
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.openapi.models`/Contact#",
+            "fastapi `fastapi.openapi.models`/ParameterBase#",
+            "fastapi `fastapi.openapi.models`/Encoding#",
+            "fastapi `fastapi.openapi.models`/OAuthFlows#",
+            "fastapi `fastapi.openapi.models`/SecurityBase#"
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "multi_hop_impact-002"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.params`/Depends#"
+        },
+        "query_text": "Multi-hop impact starting from `Depends` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi.params`/Depends#",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.routing`/APIRoute#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "fastapi `fastapi.routing`/APIRouter#get().",
+          "fastapi `fastapi.applications`/FastAPI#get()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.dependencies.utils`/analyze_param().",
+          "fastapi `fastapi.dependencies.utils`/get_param_sub_dependant().",
+          "fastapi `fastapi.dependencies.utils`/get_parameterless_sub_dependant().",
+          "fastapi `fastapi.dependencies.utils`/get_sub_dependant().",
+          "fastapi `fastapi.param_functions`/Depends()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#options().",
+            "fastapi `fastapi.routing`/APIRouter#get().",
+            "fastapi `fastapi.applications`/FastAPI#trace().",
+            "fastapi `fastapi.routing`/APIRouter#include_router().",
+            "fastapi `fastapi.applications`/FastAPI#get()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "multi_hop_impact-003"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.routing`/APIRoute#"
+        },
+        "query_text": "Multi-hop impact starting from `APIRoute` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi.routing`/APIRoute#",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.routing`/APIRoute#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.routing`/APIRouter#get().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "fastapi `fastapi.routing`/APIRouter#put()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "fastapi `fastapi.applications`/FastAPI#api_route().",
+          "fastapi `fastapi.applications`/FastAPI#delete().",
+          "fastapi `fastapi.applications`/FastAPI#get()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#options().",
+            "fastapi `fastapi.routing`/APIRouter#get().",
+            "fastapi `fastapi.openapi.utils`/generate_operation_summary().",
+            "fastapi `fastapi.applications`/FastAPI#trace().",
+            "fastapi `fastapi.routing`/APIRouter#include_router()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "multi_hop_impact-006"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:applications.py"
+        },
+        "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:applications.py",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#decorator().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "file:applications.py",
+          "fastapi `fastapi.applications`/FastAPI#get()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.applications`/FastAPI#",
+          "fastapi `fastapi.applications`/FastAPI#__call__().",
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_websocket_route()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#options().",
+            "fastapi `fastapi.applications`/FastAPI#trace().",
+            "fastapi `fastapi.applications`/FastAPI#middleware().",
+            "fastapi `fastapi.applications`/FastAPI#get().",
+            "fastapi `fastapi.applications`/FastAPI#redoc_html()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "multi_hop_impact-008"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.datastructures`/Default()."
+        },
+        "query_text": "Multi-hop impact starting from `Default` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi.datastructures`/Default().",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.2,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 1,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.routing`/APIRoute#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "fastapi `fastapi.routing`/APIRouter#get().",
+          "fastapi `fastapi.applications`/FastAPI#get()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.applications`/FastAPI#add_api_route().",
+          "fastapi `fastapi.applications`/FastAPI#api_route().",
+          "fastapi `fastapi.applications`/FastAPI#delete().",
+          "fastapi `fastapi.applications`/FastAPI#get()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#options().",
+            "fastapi `fastapi.routing`/APIRouter#get().",
+            "fastapi `fastapi.applications`/FastAPI#trace().",
+            "fastapi `fastapi.routing`/APIRouter#include_router().",
+            "fastapi `fastapi.applications`/FastAPI#get()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "multi_hop_impact-009"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.utils`/generate_unique_id()."
+        },
+        "query_text": "Multi-hop impact starting from `generate_unique_id` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi.utils`/generate_unique_id().",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 0,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": true,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#__init__().",
+          "fastapi `fastapi.routing`/APIRoute#__init__().",
+          "fastapi `fastapi.routing`/APIRouter#get().",
+          "fastapi `fastapi.applications`/FastAPI#get().",
+          "fastapi `fastapi.routing`/APIRouter#put()."
+        ],
+        "codebase_results": [],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#options().",
+            "fastapi `fastapi.routing`/APIRouter#get().",
+            "fastapi `fastapi.applications`/FastAPI#trace().",
+            "fastapi `fastapi.routing`/APIRouter#include_router().",
+            "fastapi `fastapi.applications`/FastAPI#get()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "multi_hop_impact-011"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:params.py"
+        },
+        "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:params.py",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.2,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 1,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.params`/Path#__init__().",
+          "fastapi `fastapi.params`/Header#__init__().",
+          "file:params.py",
+          "fastapi `fastapi.params`/Query#__init__().",
+          "fastapi `fastapi.params`/Form#__init__()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.params`/Body#",
+          "fastapi `fastapi.params`/Body#__init__().",
+          "fastapi `fastapi.params`/Body#__repr__().",
+          "fastapi `fastapi.params`/Cookie#",
+          "fastapi `fastapi.params`/Cookie#__init__()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.params`/Query#",
+            "fastapi `fastapi.params`/Path#__init__().",
+            "fastapi `fastapi.params`/Header#__init__().",
+            "fastapi `fastapi.params`/Cookie#",
+            "fastapi `fastapi.params`/ParamTypes#"
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "multi_hop_impact-014"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.openapi.models`/Example#"
+        },
+        "query_text": "Multi-hop impact starting from `Example` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi.openapi.models`/Example#",
+        "expected_count": 5,
+        "imca_score": 0.6,
+        "codebase_score": 0.0,
+        "imca_result_count": 5,
+        "codebase_result_count": 0,
+        "imca_expected_hits": 3,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": true,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.param_functions`/Form().",
+          "fastapi `fastapi.param_functions`/Body().",
+          "fastapi `fastapi.param_functions`/Header().",
+          "fastapi `fastapi.params`/Path#__init__().",
+          "fastapi `fastapi.param_functions`/File()."
+        ],
+        "codebase_results": [],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.params`/Path#__init__().",
+            "fastapi `fastapi.param_functions`/Header().",
+            "fastapi `fastapi.params`/Header#__init__().",
+            "fastapi `fastapi.param_functions`/File().",
+            "fastapi `fastapi.param_functions`/Cookie()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "multi_hop_impact-016"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:security/oauth2.py"
+        },
+        "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:security/oauth2.py",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.2,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 1,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "file:security/oauth2.py",
+          "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestFormStrict#__init__().",
+          "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#__init__().",
+          "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#__init__().",
+          "fastapi `fastapi.security.oauth2`/OAuth2#"
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.security.oauth2`/OAuth2#",
+          "fastapi `fastapi.security.oauth2`/OAuth2#__call__().",
+          "fastapi `fastapi.security.oauth2`/OAuth2#__init__().",
+          "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#",
+          "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#__call__()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#",
+            "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestForm#__init__().",
+            "fastapi `fastapi.security.oauth2`/OAuth2AuthorizationCodeBearer#",
+            "fastapi `fastapi.security.oauth2`/OAuth2#make_not_authenticated_error().",
+            "fastapi `fastapi.security.oauth2`/OAuth2PasswordRequestFormStrict#__init__()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "class_field_invariants-006"
+        ],
+        "operation": "contained_by",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "contained_by",
+          "sym_stable_id": "fastapi `fastapi.datastructures`/UploadFile#"
+        },
+        "query_text": "Agent understanding invariants of `UploadFile` — members. Operation: contained_by; sym stable id: fastapi `fastapi.datastructures`/UploadFile#",
+        "expected_count": 5,
+        "imca_score": 0.8,
+        "codebase_score": 0.4,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 4,
+        "codebase_expected_hits": 2,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.datastructures`/UploadFile#write().",
+          "fastapi `fastapi.datastructures`/UploadFile#read().",
+          "fastapi `fastapi.datastructures`/UploadFile#seek().",
+          "fastapi `fastapi.datastructures`/UploadFile#close().",
+          "fastapi `fastapi.datastructures`/UploadFile#__get_validators__()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.datastructures`/UploadFile#__get_pydantic_core_schema__().",
+          "fastapi `fastapi.datastructures`/UploadFile#__get_pydantic_json_schema__().",
+          "fastapi `fastapi.datastructures`/UploadFile#__get_validators__().",
+          "fastapi `fastapi.datastructures`/UploadFile#_validate().",
+          "fastapi `fastapi.datastructures`/UploadFile#close()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.datastructures`/UploadFile#seek().",
+            "fastapi `fastapi.datastructures`/UploadFile#close().",
+            "fastapi `fastapi.datastructures`/UploadFile#_validate().",
+            "fastapi `fastapi.datastructures`/UploadFile#read().",
+            "fastapi `fastapi.datastructures`/UploadFile#write()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "methods_of_class-006"
+        ],
+        "operation": "contained_by",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "contained_by",
+          "sym_stable_id": "fastapi `fastapi.datastructures`/UploadFile#"
+        },
+        "query_text": "Rename audit on `UploadFile` — every method. Operation: contained_by; sym stable id: fastapi `fastapi.datastructures`/UploadFile#",
+        "expected_count": 6,
+        "imca_score": 0.6666666666666666,
+        "codebase_score": 0.5,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 4,
+        "codebase_expected_hits": 3,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.datastructures`/UploadFile#write().",
+          "fastapi `fastapi.datastructures`/UploadFile#read().",
+          "fastapi `fastapi.datastructures`/UploadFile#seek().",
+          "fastapi `fastapi.datastructures`/UploadFile#close().",
+          "fastapi `fastapi.datastructures`/UploadFile#__get_validators__()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.datastructures`/UploadFile#__get_pydantic_core_schema__().",
+          "fastapi `fastapi.datastructures`/UploadFile#__get_pydantic_json_schema__().",
+          "fastapi `fastapi.datastructures`/UploadFile#__get_validators__().",
+          "fastapi `fastapi.datastructures`/UploadFile#_validate().",
+          "fastapi `fastapi.datastructures`/UploadFile#close()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.datastructures`/UploadFile#seek().",
+            "fastapi `fastapi.datastructures`/UploadFile#close().",
+            "fastapi `fastapi.datastructures`/UploadFile#_validate().",
+            "fastapi `fastapi.datastructures`/UploadFile#read().",
+            "fastapi `fastapi.datastructures`/UploadFile#write().",
+            "fastapi `fastapi.datastructures`/UploadFile#__get_pydantic_core_schema__()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "cross_module_callers-001"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.routing`/APIRouter#on_event()."
+        },
+        "query_text": "Cross-module callers of `APIRouter#on_event`. Operation: callers; sym stable id: fastapi `fastapi.routing`/APIRouter#on_event().",
+        "expected_count": 1,
+        "imca_score": 1.0,
+        "codebase_score": 0.0,
+        "imca_result_count": 1,
+        "codebase_result_count": 0,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": true,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#on_event()."
+        ],
+        "codebase_results": [],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#on_event()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "cross_module_callers-002"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html()."
+        },
+        "query_text": "Cross-module callers of `get_swagger_ui_oauth2_redirect_html`. Operation: callers; sym stable id: fastapi `fastapi.openapi.docs`/get_swagger_ui_oauth2_redirect_html().",
+        "expected_count": 1,
+        "imca_score": 1.0,
+        "codebase_score": 0.0,
+        "imca_result_count": 2,
+        "codebase_result_count": 1,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "file:applications.py",
+          "fastapi `fastapi.applications`/FastAPI#swagger_ui_redirect()."
+        ],
+        "codebase_results": [
+          "file:applications.py"
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#swagger_ui_redirect()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "cross_module_callers-003"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.routing`/APIRouter#get()."
+        },
+        "query_text": "Cross-module callers of `APIRouter#get`. Operation: callers; sym stable id: fastapi `fastapi.routing`/APIRouter#get().",
+        "expected_count": 1,
+        "imca_score": 1.0,
+        "codebase_score": 0.0,
+        "imca_result_count": 1,
+        "codebase_result_count": 0,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": true,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#get()."
+        ],
+        "codebase_results": [],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#get()."
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "cross_module_callers-009"
+        ],
+        "operation": "callers",
+        "direction": "imca_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.routing`/APIRouter#include_router()."
+        },
+        "query_text": "Cross-module callers of `APIRouter#include_router`. Operation: callers; sym stable id: fastapi `fastapi.routing`/APIRouter#include_router().",
+        "expected_count": 1,
+        "imca_score": 1.0,
+        "codebase_score": 0.0,
+        "imca_result_count": 1,
+        "codebase_result_count": 0,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 0,
+        "imca_empty": false,
+        "codebase_empty": true,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "fastapi `fastapi.applications`/FastAPI#include_router()."
+        ],
+        "codebase_results": [],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.applications`/FastAPI#include_router()."
+          ]
+        }
+      }
+    ]
+  },
+  "codebase_higher": {
+    "summary": {
+      "n": 9,
+      "operations": {
+        "file_symbols": 1,
+        "callers": 8
+      },
+      "anchor_types": {
+        "file": 7,
+        "symbol": 2
+      },
+      "imca_empty": 0,
+      "codebase_empty": 0,
+      "codebase_with_unmapped_native": 3,
+      "codebase_unmapped_native_occurrences": 3,
+      "mean_imca_expected_hits": 1.0,
+      "mean_codebase_expected_hits": 2.2222222222222223,
+      "mean_expected_count": 5.0
+    },
+    "cases": [
+      {
+        "task_ids": [
+          "cross_module_sibling-029"
+        ],
+        "operation": "file_symbols",
+        "direction": "codebase_higher",
+        "anchor_type": "file",
+        "query": {
+          "file_path": "dependencies/utils.py",
+          "op": "file_symbols"
+        },
+        "query_text": "Agent discovering siblings in `dependencies/utils.py`. Operation: file_symbols; file path: dependencies/utils.py",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.4,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 2,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 1,
+        "imca_results": [
+          "fastapi `fastapi.dependencies.utils`/analyze_param().",
+          "file:dependencies/utils.py",
+          "fastapi `fastapi.dependencies.utils`/solve_dependencies().",
+          "fastapi `fastapi.dependencies.utils`/get_dependant().",
+          "fastapi `fastapi.dependencies.utils`/get_sub_dependant()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.dependencies.utils`/CacheKey.",
+          "unmapped-native:longmemcode-source.fastapi.dependencies.utils.ParamDetails",
+          "fastapi `fastapi.dependencies.utils`/SolvedDependency#",
+          "fastapi `fastapi.dependencies.utils`/_extract_form_body().",
+          "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields().",
+            "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params().",
+            "fastapi `fastapi.dependencies.utils`/get_typed_return_annotation().",
+            "fastapi `fastapi.dependencies.utils`/solve_dependencies().",
+            "fastapi `fastapi.dependencies.utils`/SolvedDependency#"
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-001",
+          "call_site_enumeration-001"
+        ],
+        "operation": "callers",
+        "direction": "codebase_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:openapi/models.py"
+        },
+        "query_text": "Bug suspected in `py` — enumerate callers. Operation: callers; sym stable id: file:openapi/models.py",
+        "expected_count": 5,
+        "imca_score": 0.0,
+        "codebase_score": 0.2,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 0,
+        "codebase_expected_hits": 1,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "file:openapi/models.py",
+          "fastapi `fastapi.openapi.models`/BaseModelWithConfig#",
+          "fastapi `fastapi.openapi.models`/Example#",
+          "fastapi `fastapi.openapi.models`/Schema#",
+          "fastapi `fastapi.openapi.models`/Operation#"
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.openapi.models`/APIKey#",
+          "fastapi `fastapi.openapi.models`/APIKeyIn#",
+          "fastapi `fastapi.openapi.models`/BaseModelWithConfig#",
+          "fastapi `fastapi.openapi.models`/Components#",
+          "fastapi `fastapi.openapi.models`/Contact#"
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.openapi.models`/EmailStr#__get_pydantic_core_schema__().",
+            "fastapi `fastapi.openapi.models`/Discriminator#",
+            "fastapi `fastapi.openapi.models`/Contact#",
+            "fastapi `fastapi.openapi.models`/ParameterBase#",
+            "fastapi `fastapi.openapi.models`/OAuthFlowClientCredentials#"
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-007",
+          "call_site_enumeration-007"
+        ],
+        "operation": "callers",
+        "direction": "codebase_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:dependencies/utils.py"
+        },
+        "query_text": "Bug suspected in `py` — enumerate callers. Operation: callers; sym stable id: file:dependencies/utils.py",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.4,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 2,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 1,
+        "imca_results": [
+          "file:dependencies/utils.py",
+          "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+          "fastapi `fastapi.dependencies.utils`/analyze_param().",
+          "fastapi `fastapi.dependencies.utils`/solve_dependencies().",
+          "fastapi `fastapi.dependencies.utils`/get_sub_dependant()."
+        ],
+        "codebase_results": [
+          "unmapped-native:longmemcode-source.fastapi.dependencies.utils.ParamDetails",
+          "fastapi `fastapi.dependencies.utils`/SolvedDependency#",
+          "fastapi `fastapi.dependencies.utils`/_extract_form_body().",
+          "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params().",
+          "fastapi `fastapi.dependencies.utils`/_get_multidict_value()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields().",
+            "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params().",
+            "fastapi `fastapi.dependencies.utils`/get_typed_return_annotation().",
+            "fastapi `fastapi.dependencies.utils`/solve_dependencies().",
+            "fastapi `fastapi.dependencies.utils`/SolvedDependency#"
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-010",
+          "call_site_enumeration-010"
+        ],
+        "operation": "callers",
+        "direction": "codebase_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+        },
+        "query_text": "Bug suspected in `BaseModelWithConfig` — enumerate callers. Operation: callers; sym stable id: fastapi `fastapi.openapi.models`/BaseModelWithConfig#",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.4,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 2,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "file:openapi/models.py",
+          "fastapi `fastapi.openapi.models`/Schema#",
+          "fastapi `fastapi.openapi.models`/Info#",
+          "fastapi `fastapi.openapi.models`/ParameterBase#",
+          "fastapi `fastapi.openapi.models`/Operation#"
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.openapi.models`/Components#",
+          "fastapi `fastapi.openapi.models`/Contact#",
+          "fastapi `fastapi.openapi.models`/Encoding#",
+          "fastapi `fastapi.openapi.models`/ExternalDocumentation#",
+          "fastapi `fastapi.openapi.models`/Info#"
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.openapi.models`/Contact#",
+            "fastapi `fastapi.openapi.models`/ParameterBase#",
+            "fastapi `fastapi.openapi.models`/Encoding#",
+            "fastapi `fastapi.openapi.models`/OAuthFlows#",
+            "fastapi `fastapi.openapi.models`/SecurityBase#"
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "callers_of_symbol-015"
+        ],
+        "operation": "callers",
+        "direction": "codebase_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:security/http.py"
+        },
+        "query_text": "Bug suspected in `py` — enumerate callers. Operation: callers; sym stable id: file:security/http.py",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.8,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 4,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "file:security/http.py",
+          "fastapi `fastapi.security.http`/HTTPBase#__init__().",
+          "fastapi `fastapi.security.http`/HTTPBasic#__call__().",
+          "fastapi `fastapi.security.http`/HTTPBase#__call__().",
+          "fastapi `fastapi.security.http`/HTTPBasic#__init__()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.security.http`/HTTPAuthorizationCredentials#",
+          "fastapi `fastapi.security.http`/HTTPBase#",
+          "fastapi `fastapi.security.http`/HTTPBase#__call__().",
+          "fastapi `fastapi.security.http`/HTTPBase#__init__().",
+          "fastapi `fastapi.security.http`/HTTPBasic#"
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.security.http`/HTTPBase#__init__().",
+            "fastapi `fastapi.security.http`/HTTPAuthorizationCredentials#",
+            "fastapi `fastapi.security.http`/HTTPBase#__call__().",
+            "fastapi `fastapi.security.http`/HTTPDigest#",
+            "fastapi `fastapi.security.http`/HTTPBase#"
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "multi_hop_impact-001"
+        ],
+        "operation": "callers",
+        "direction": "codebase_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:openapi/models.py"
+        },
+        "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:openapi/models.py",
+        "expected_count": 5,
+        "imca_score": 0.0,
+        "codebase_score": 0.2,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 0,
+        "codebase_expected_hits": 1,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "file:openapi/models.py",
+          "fastapi `fastapi.openapi.models`/BaseModelWithConfig#",
+          "fastapi `fastapi.openapi.models`/Example#",
+          "fastapi `fastapi.openapi.models`/Schema#",
+          "fastapi `fastapi.openapi.models`/Operation#"
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.openapi.models`/APIKey#",
+          "fastapi `fastapi.openapi.models`/APIKeyIn#",
+          "fastapi `fastapi.openapi.models`/BaseModelWithConfig#",
+          "fastapi `fastapi.openapi.models`/Components#",
+          "fastapi `fastapi.openapi.models`/Contact#"
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.openapi.models`/EmailStr#__get_pydantic_core_schema__().",
+            "fastapi `fastapi.openapi.models`/Discriminator#",
+            "fastapi `fastapi.openapi.models`/Contact#",
+            "fastapi `fastapi.openapi.models`/ParameterBase#",
+            "fastapi `fastapi.openapi.models`/OAuthFlowClientCredentials#"
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "multi_hop_impact-007"
+        ],
+        "operation": "callers",
+        "direction": "codebase_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:dependencies/utils.py"
+        },
+        "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:dependencies/utils.py",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.4,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 2,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 1,
+        "imca_results": [
+          "file:dependencies/utils.py",
+          "fastapi `fastapi.dependencies.utils`/get_flat_dependant().",
+          "fastapi `fastapi.dependencies.utils`/analyze_param().",
+          "fastapi `fastapi.dependencies.utils`/get_sub_dependant().",
+          "fastapi `fastapi.dependencies.utils`/solve_dependencies()."
+        ],
+        "codebase_results": [
+          "unmapped-native:longmemcode-source.fastapi.dependencies.utils.ParamDetails",
+          "fastapi `fastapi.dependencies.utils`/SolvedDependency#",
+          "fastapi `fastapi.dependencies.utils`/_extract_form_body().",
+          "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params().",
+          "fastapi `fastapi.dependencies.utils`/_get_multidict_value()."
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.dependencies.utils`/_should_embed_body_fields().",
+            "fastapi `fastapi.dependencies.utils`/_get_flat_fields_from_params().",
+            "fastapi `fastapi.dependencies.utils`/get_typed_return_annotation().",
+            "fastapi `fastapi.dependencies.utils`/solve_dependencies().",
+            "fastapi `fastapi.dependencies.utils`/SolvedDependency#"
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "multi_hop_impact-010"
+        ],
+        "operation": "callers",
+        "direction": "codebase_higher",
+        "anchor_type": "symbol",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "fastapi `fastapi.openapi.models`/BaseModelWithConfig#"
+        },
+        "query_text": "Multi-hop impact starting from `BaseModelWithConfig` (depth-1 approximation). Operation: callers; sym stable id: fastapi `fastapi.openapi.models`/BaseModelWithConfig#",
+        "expected_count": 5,
+        "imca_score": 0.2,
+        "codebase_score": 0.4,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 1,
+        "codebase_expected_hits": 2,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "file:openapi/models.py",
+          "fastapi `fastapi.openapi.models`/Schema#",
+          "fastapi `fastapi.openapi.models`/Info#",
+          "fastapi `fastapi.openapi.models`/ParameterBase#",
+          "fastapi `fastapi.openapi.models`/Operation#"
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.openapi.models`/Components#",
+          "fastapi `fastapi.openapi.models`/Contact#",
+          "fastapi `fastapi.openapi.models`/Encoding#",
+          "fastapi `fastapi.openapi.models`/ExternalDocumentation#",
+          "fastapi `fastapi.openapi.models`/Info#"
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.openapi.models`/Contact#",
+            "fastapi `fastapi.openapi.models`/ParameterBase#",
+            "fastapi `fastapi.openapi.models`/Encoding#",
+            "fastapi `fastapi.openapi.models`/OAuthFlows#",
+            "fastapi `fastapi.openapi.models`/SecurityBase#"
+          ]
+        }
+      },
+      {
+        "task_ids": [
+          "multi_hop_impact-015"
+        ],
+        "operation": "callers",
+        "direction": "codebase_higher",
+        "anchor_type": "file",
+        "query": {
+          "op": "callers",
+          "sym_stable_id": "file:security/http.py"
+        },
+        "query_text": "Multi-hop impact starting from `py` (depth-1 approximation). Operation: callers; sym stable id: file:security/http.py",
+        "expected_count": 5,
+        "imca_score": 0.4,
+        "codebase_score": 0.8,
+        "imca_result_count": 5,
+        "codebase_result_count": 5,
+        "imca_expected_hits": 2,
+        "codebase_expected_hits": 4,
+        "imca_empty": false,
+        "codebase_empty": false,
+        "codebase_unmapped_count": 0,
+        "imca_results": [
+          "file:security/http.py",
+          "fastapi `fastapi.security.http`/HTTPBase#__init__().",
+          "fastapi `fastapi.security.http`/HTTPBasic#__call__().",
+          "fastapi `fastapi.security.http`/HTTPBase#__call__().",
+          "fastapi `fastapi.security.http`/HTTPBasic#__init__()."
+        ],
+        "codebase_results": [
+          "fastapi `fastapi.security.http`/HTTPAuthorizationCredentials#",
+          "fastapi `fastapi.security.http`/HTTPBase#",
+          "fastapi `fastapi.security.http`/HTTPBase#__call__().",
+          "fastapi `fastapi.security.http`/HTTPBase#__init__().",
+          "fastapi `fastapi.security.http`/HTTPBasic#"
+        ],
+        "expected": {
+          "kind": "contains",
+          "required": [
+            "fastapi `fastapi.security.http`/HTTPBase#__init__().",
+            "fastapi `fastapi.security.http`/HTTPAuthorizationCredentials#",
+            "fastapi `fastapi.security.http`/HTTPBase#__call__().",
+            "fastapi `fastapi.security.http`/HTTPDigest#",
+            "fastapi `fastapi.security.http`/HTTPBase#"
+          ]
+        }
+      }
+    ]
+  }
+}
