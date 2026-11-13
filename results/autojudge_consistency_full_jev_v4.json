@@ -1,0 +1,5137 @@
+[
+  {
+    "trace_id": "halumem-memory-conflict-001__before_aware",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "before_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.6,
+        "conflicting": 0.01,
+        "underdetermined": 0.39
+      },
+      "conflict_type": {
+        "none": 0.95,
+        "true_conflict": 0.01,
+        "temporal_update": 0.04
+      },
+      "out_of_slice_evidence": {
+        "none": 0.99,
+        "relevant": 0.01,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.02,
+      "answer_inferable_yes": 0.09
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1193,
+        "output_tokens": 130,
+        "cost": 5.0106e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0106e-05,
+          "upstream_inference_prompt_cost": 5.0106e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 988,
+        "output_tokens": 43,
+        "cost": 4.1496e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1496e-05,
+          "upstream_inference_prompt_cost": 4.1496e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550283-yUGYwdEBXXboRRLpndoM",
+      "evidence": "gen-dec-1794550285-P4hwggLn93lXXbfOM4Fb"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__flat_bm25",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "true_conflict",
+      "out_of_slice_evidence": "harmful",
+      "reference_evidence_present": true,
+      "answer_inferable": false,
+      "support_type": "evidence_present_but_insufficient"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.34,
+        "conflicting": 0.61,
+        "underdetermined": 0.05
+      },
+      "conflict_type": {
+        "none": 0.04,
+        "true_conflict": 0.73,
+        "temporal_update": 0.23
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.44,
+        "harmful": 0.55
+      },
+      "reference_evidence_present_yes": 0.63,
+      "answer_inferable_yes": 0.47
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1229,
+        "output_tokens": 135,
+        "cost": 5.1618e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1618e-05,
+          "upstream_inference_prompt_cost": 5.1618e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1024,
+        "output_tokens": 43,
+        "cost": 4.3008e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3008e-05,
+          "upstream_inference_prompt_cost": 4.3008e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550287-sSU3Us5ClFEhjGZw4ivf",
+      "evidence": "gen-dec-1794550288-FF5sJZ0n4UPUOhL9cjbj"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__query_aware",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "query_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": false,
+      "support_type": "evidence_present_but_insufficient"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.7,
+        "conflicting": 0.12,
+        "underdetermined": 0.18
+      },
+      "conflict_type": {
+        "none": 0.44,
+        "true_conflict": 0.19,
+        "temporal_update": 0.37
+      },
+      "out_of_slice_evidence": {
+        "none": 0,
+        "relevant": 0.74,
+        "harmful": 0.26
+      },
+      "reference_evidence_present_yes": 0.61,
+      "answer_inferable_yes": 0.47
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1211,
+        "output_tokens": 132,
+        "cost": 5.0862e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0862e-05,
+          "upstream_inference_prompt_cost": 5.0862e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1006,
+        "output_tokens": 43,
+        "cost": 4.2252e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2252e-05,
+          "upstream_inference_prompt_cost": 4.2252e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550290-sQMQvkp7ihp5DhDwnbZF",
+      "evidence": "gen-dec-1794550292-QLwvGmWtwXKeqQnYt5d5"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__strict_temporal",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.63,
+        "conflicting": 0.01,
+        "underdetermined": 0.36
+      },
+      "conflict_type": {
+        "none": 0.96,
+        "true_conflict": 0.01,
+        "temporal_update": 0.03
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.03,
+      "answer_inferable_yes": 0.08
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1193,
+        "output_tokens": 130,
+        "cost": 5.0106e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0106e-05,
+          "upstream_inference_prompt_cost": 5.0106e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 988,
+        "output_tokens": 43,
+        "cost": 4.1496e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1496e-05,
+          "upstream_inference_prompt_cost": 4.1496e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550293-rFJCwVg3a9EHWKjINaxV",
+      "evidence": "gen-dec-1794550295-l9onKhbKHRROi7zZpK5S"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__transition_aware",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.64,
+        "conflicting": 0.01,
+        "underdetermined": 0.35
+      },
+      "conflict_type": {
+        "none": 0.67,
+        "true_conflict": 0.01,
+        "temporal_update": 0.32
+      },
+      "out_of_slice_evidence": {
+        "none": 0.04,
+        "relevant": 0.9,
+        "harmful": 0.06
+      },
+      "reference_evidence_present_yes": 0.02,
+      "answer_inferable_yes": 0.07
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1204,
+        "output_tokens": 132,
+        "cost": 5.0568e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0568e-05,
+          "upstream_inference_prompt_cost": 5.0568e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 999,
+        "output_tokens": 43,
+        "cost": 4.1958e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1958e-05,
+          "upstream_inference_prompt_cost": 4.1958e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550296-RieYPCPqo3lxJMulD4Bm",
+      "evidence": "gen-dec-1794550298-hPOApFrHRsEKqRYJoPS0"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-002__before_aware",
+    "case_id": "halumem-memory-conflict-002",
+    "retrieval_policy": "before_aware",
+    "query": "Did Martin experience a decrease in financial freedom after his salary increase on August 15, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.35,
+        "conflicting": 0,
+        "underdetermined": 0.65
+      },
+      "conflict_type": {
+        "none": 0.99,
+        "true_conflict": 0,
+        "temporal_update": 0.01
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.02,
+      "answer_inferable_yes": 0.05
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1202,
+        "output_tokens": 133,
+        "cost": 5.0484e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0484e-05,
+          "upstream_inference_prompt_cost": 5.0484e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 964,
+        "output_tokens": 43,
+        "cost": 4.0488e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.0488e-05,
+          "upstream_inference_prompt_cost": 4.0488e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550299-oyM0tr40d6Zbl7OCt7W6",
+      "evidence": "gen-dec-1794550301-NJxb4bQFFfU0aIF5I0M8"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-002__flat_bm25",
+    "case_id": "halumem-memory-conflict-002",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Martin experience a decrease in financial freedom after his salary increase on August 15, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.92,
+        "conflicting": 0.06,
+        "underdetermined": 0.02
+      },
+      "conflict_type": {
+        "none": 0.66,
+        "true_conflict": 0.02,
+        "temporal_update": 0.32
+      },
+      "out_of_slice_evidence": {
+        "none": 0.02,
+        "relevant": 0.71,
+        "harmful": 0.27
+      },
+      "reference_evidence_present_yes": 0.97,
+      "answer_inferable_yes": 0.73
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1223,
+        "output_tokens": 132,
+        "cost": 5.1366e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1366e-05,
+          "upstream_inference_prompt_cost": 5.1366e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 985,
+        "output_tokens": 43,
+        "cost": 4.137e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.137e-05,
+          "upstream_inference_prompt_cost": 4.137e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550303-js9DJiBmOxzGnTY26K13",
+      "evidence": "gen-dec-1794550304-jORaIOy3xnCjUd1mO4LI"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-002__query_aware",
+    "case_id": "halumem-memory-conflict-002",
+    "retrieval_policy": "query_aware",
+    "query": "Did Martin experience a decrease in financial freedom after his salary increase on August 15, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.85,
+        "conflicting": 0.06,
+        "underdetermined": 0.09
+      },
+      "conflict_type": {
+        "none": 0.73,
+        "true_conflict": 0.09,
+        "temporal_update": 0.18
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.82,
+        "harmful": 0.17
+      },
+      "reference_evidence_present_yes": 0.7,
+      "answer_inferable_yes": 0.6
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1215,
+        "output_tokens": 132,
+        "cost": 5.103e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.103e-05,
+          "upstream_inference_prompt_cost": 5.103e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 977,
+        "output_tokens": 43,
+        "cost": 4.1034e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1034e-05,
+          "upstream_inference_prompt_cost": 4.1034e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550306-zkNycQJRZr7uVJmrVWj8",
+      "evidence": "gen-dec-1794550307-OJ5WeYzO2XnX2bNkRnW2"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-002__strict_temporal",
+    "case_id": "halumem-memory-conflict-002",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Martin experience a decrease in financial freedom after his salary increase on August 15, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.35,
+        "conflicting": 0,
+        "underdetermined": 0.65
+      },
+      "conflict_type": {
+        "none": 0.99,
+        "true_conflict": 0,
+        "temporal_update": 0.01
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.02,
+      "answer_inferable_yes": 0.05
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1202,
+        "output_tokens": 133,
+        "cost": 5.0484e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0484e-05,
+          "upstream_inference_prompt_cost": 5.0484e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 964,
+        "output_tokens": 43,
+        "cost": 4.0488e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.0488e-05,
+          "upstream_inference_prompt_cost": 4.0488e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550309-Oj5wX8IyeOTZyUJR1ZqJ",
+      "evidence": "gen-dec-1794550311-SWtp7ohUPgVDaQPMunjE"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-002__transition_aware",
+    "case_id": "halumem-memory-conflict-002",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Martin experience a decrease in financial freedom after his salary increase on August 15, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.37,
+        "conflicting": 0,
+        "underdetermined": 0.63
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 0.34,
+        "relevant": 0.42,
+        "harmful": 0.24
+      },
+      "reference_evidence_present_yes": 0.01,
+      "answer_inferable_yes": 0.04
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1219,
+        "output_tokens": 135,
+        "cost": 5.1198e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1198e-05,
+          "upstream_inference_prompt_cost": 5.1198e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 981,
+        "output_tokens": 43,
+        "cost": 4.1202e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1202e-05,
+          "upstream_inference_prompt_cost": 4.1202e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550313-Vh4WuCJsy7TH0tkPJA89",
+      "evidence": "gen-dec-1794550314-ChZa0rr7SoyptGZr4xZ3"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-003__before_aware",
+    "case_id": "halumem-memory-conflict-003",
+    "retrieval_policy": "before_aware",
+    "query": "Did Johnson Joseph's fear of snakes increase after attending the seminar on Apr 09, 2026?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.28,
+        "conflicting": 0,
+        "underdetermined": 0.72
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.02,
+      "answer_inferable_yes": 0.05
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1190,
+        "output_tokens": 133,
+        "cost": 4.998e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.998e-05,
+          "upstream_inference_prompt_cost": 4.998e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 980,
+        "output_tokens": 43,
+        "cost": 4.116e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.116e-05,
+          "upstream_inference_prompt_cost": 4.116e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550316-R3ktZ8MM63ORIQZlDA68",
+      "evidence": "gen-dec-1794550318-meCZy3KG23x3oZL46r3p"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-003__flat_bm25",
+    "case_id": "halumem-memory-conflict-003",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Johnson Joseph's fear of snakes increase after attending the seminar on Apr 09, 2026?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.96,
+        "conflicting": 0.02,
+        "underdetermined": 0.02
+      },
+      "conflict_type": {
+        "none": 0.64,
+        "true_conflict": 0.01,
+        "temporal_update": 0.35
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.91,
+        "harmful": 0.08
+      },
+      "reference_evidence_present_yes": 0.97,
+      "answer_inferable_yes": 0.89
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1225,
+        "output_tokens": 132,
+        "cost": 5.145e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.145e-05,
+          "upstream_inference_prompt_cost": 5.145e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1015,
+        "output_tokens": 43,
+        "cost": 4.263e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.263e-05,
+          "upstream_inference_prompt_cost": 4.263e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550320-CiyY0QZTBNZFC9A8h2CS",
+      "evidence": "gen-dec-1794550321-qW3ZH8FKs6dhjkdgfYCN"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-003__query_aware",
+    "case_id": "halumem-memory-conflict-003",
+    "retrieval_policy": "query_aware",
+    "query": "Did Johnson Joseph's fear of snakes increase after attending the seminar on Apr 09, 2026?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.92,
+        "conflicting": 0.04,
+        "underdetermined": 0.04
+      },
+      "conflict_type": {
+        "none": 0.08,
+        "true_conflict": 0.03,
+        "temporal_update": 0.89
+      },
+      "out_of_slice_evidence": {
+        "none": 0,
+        "relevant": 0.92,
+        "harmful": 0.08
+      },
+      "reference_evidence_present_yes": 0.77,
+      "answer_inferable_yes": 0.57
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1214,
+        "output_tokens": 134,
+        "cost": 5.0988e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0988e-05,
+          "upstream_inference_prompt_cost": 5.0988e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1004,
+        "output_tokens": 43,
+        "cost": 4.2168e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2168e-05,
+          "upstream_inference_prompt_cost": 4.2168e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550323-GYze7tKncVoQROhp6qdV",
+      "evidence": "gen-dec-1794550325-nf2wlTdQ1RI7VzMTeOuk"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-003__strict_temporal",
+    "case_id": "halumem-memory-conflict-003",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Johnson Joseph's fear of snakes increase after attending the seminar on Apr 09, 2026?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.36,
+        "conflicting": 0,
+        "underdetermined": 0.64
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.02,
+      "answer_inferable_yes": 0.05
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1190,
+        "output_tokens": 133,
+        "cost": 4.998e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.998e-05,
+          "upstream_inference_prompt_cost": 4.998e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 980,
+        "output_tokens": 43,
+        "cost": 4.116e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.116e-05,
+          "upstream_inference_prompt_cost": 4.116e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550326-8T37CT6BzB4sqghH8Tzp",
+      "evidence": "gen-dec-1794550328-TZsHWsQzQklORD5AepJd"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-003__transition_aware",
+    "case_id": "halumem-memory-conflict-003",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Johnson Joseph's fear of snakes increase after attending the seminar on Apr 09, 2026?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.24,
+        "conflicting": 0,
+        "underdetermined": 0.76
+      },
+      "conflict_type": {
+        "none": 0.94,
+        "true_conflict": 0,
+        "temporal_update": 0.06
+      },
+      "out_of_slice_evidence": {
+        "none": 0.36,
+        "relevant": 0.4,
+        "harmful": 0.24
+      },
+      "reference_evidence_present_yes": 0.01,
+      "answer_inferable_yes": 0.05
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1203,
+        "output_tokens": 135,
+        "cost": 5.0526e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0526e-05,
+          "upstream_inference_prompt_cost": 5.0526e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 993,
+        "output_tokens": 43,
+        "cost": 4.1706e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1706e-05,
+          "upstream_inference_prompt_cost": 4.1706e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550330-PgaKMf4Ex03ytX66mk5j",
+      "evidence": "gen-dec-1794550332-SqbtHTD6kvC62ZvZxSt6"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-004__before_aware",
+    "case_id": "halumem-memory-conflict-004",
+    "retrieval_policy": "before_aware",
+    "query": "Did Johnson Joseph lose interest in strategy-based games after his layoff in August 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.58,
+        "conflicting": 0,
+        "underdetermined": 0.42
+      },
+      "conflict_type": {
+        "none": 0.99,
+        "true_conflict": 0,
+        "temporal_update": 0.01
+      },
+      "out_of_slice_evidence": {
+        "none": 0.99,
+        "relevant": 0.01,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.03,
+      "answer_inferable_yes": 0.12
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1237,
+        "output_tokens": 130,
+        "cost": 5.1954e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1954e-05,
+          "upstream_inference_prompt_cost": 5.1954e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 998,
+        "output_tokens": 43,
+        "cost": 4.1916e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1916e-05,
+          "upstream_inference_prompt_cost": 4.1916e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550333-gT8qUcr0Tam55FeUysKT",
+      "evidence": "gen-dec-1794550335-qPuCtbWx9JPHV5SPp7II"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-004__flat_bm25",
+    "case_id": "halumem-memory-conflict-004",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Johnson Joseph lose interest in strategy-based games after his layoff in August 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "true_conflict",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": false,
+      "support_type": "evidence_present_but_insufficient"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.34,
+        "conflicting": 0.39,
+        "underdetermined": 0.27
+      },
+      "conflict_type": {
+        "none": 0.12,
+        "true_conflict": 0.54,
+        "temporal_update": 0.34
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.71,
+        "harmful": 0.28
+      },
+      "reference_evidence_present_yes": 0.94,
+      "answer_inferable_yes": 0.29
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1268,
+        "output_tokens": 136,
+        "cost": 5.3256e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.3256e-05,
+          "upstream_inference_prompt_cost": 5.3256e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1029,
+        "output_tokens": 43,
+        "cost": 4.3218e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3218e-05,
+          "upstream_inference_prompt_cost": 4.3218e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550337-TbZLfT1WAX1auXrb98Zq",
+      "evidence": "gen-dec-1794550339-5K8R7zWWh6hsdpq4cwx6"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-004__query_aware",
+    "case_id": "halumem-memory-conflict-004",
+    "retrieval_policy": "query_aware",
+    "query": "Did Johnson Joseph lose interest in strategy-based games after his layoff in August 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.72,
+        "conflicting": 0.02,
+        "underdetermined": 0.26
+      },
+      "conflict_type": {
+        "none": 0.43,
+        "true_conflict": 0.01,
+        "temporal_update": 0.56
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.81,
+        "harmful": 0.18
+      },
+      "reference_evidence_present_yes": 0.84,
+      "answer_inferable_yes": 0.62
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1223,
+        "output_tokens": 134,
+        "cost": 5.1366e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1366e-05,
+          "upstream_inference_prompt_cost": 5.1366e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 984,
+        "output_tokens": 43,
+        "cost": 4.1328e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1328e-05,
+          "upstream_inference_prompt_cost": 4.1328e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550340-w2VIMDLcWO0F4jkba0Sr",
+      "evidence": "gen-dec-1794550342-1kEr3doYhsB0DvF6hVD8"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-004__strict_temporal",
+    "case_id": "halumem-memory-conflict-004",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Johnson Joseph lose interest in strategy-based games after his layoff in August 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.59,
+        "conflicting": 0,
+        "underdetermined": 0.41
+      },
+      "conflict_type": {
+        "none": 0.99,
+        "true_conflict": 0,
+        "temporal_update": 0.01
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.04,
+      "answer_inferable_yes": 0.11
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1237,
+        "output_tokens": 130,
+        "cost": 5.1954e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1954e-05,
+          "upstream_inference_prompt_cost": 5.1954e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 998,
+        "output_tokens": 43,
+        "cost": 4.1916e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1916e-05,
+          "upstream_inference_prompt_cost": 4.1916e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550344-fwtutwWJpjHu93CY5nio",
+      "evidence": "gen-dec-1794550346-u3WGRjQNfHnByfhTQjFQ"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-004__transition_aware",
+    "case_id": "halumem-memory-conflict-004",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Johnson Joseph lose interest in strategy-based games after his layoff in August 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.72,
+        "conflicting": 0.02,
+        "underdetermined": 0.26
+      },
+      "conflict_type": {
+        "none": 0.39,
+        "true_conflict": 0.01,
+        "temporal_update": 0.6
+      },
+      "out_of_slice_evidence": {
+        "none": 0.02,
+        "relevant": 0.78,
+        "harmful": 0.2
+      },
+      "reference_evidence_present_yes": 0.82,
+      "answer_inferable_yes": 0.72
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1223,
+        "output_tokens": 134,
+        "cost": 5.1366e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1366e-05,
+          "upstream_inference_prompt_cost": 5.1366e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 984,
+        "output_tokens": 43,
+        "cost": 4.1328e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1328e-05,
+          "upstream_inference_prompt_cost": 4.1328e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550347-4ZwTdhVyF4cOhs0QK9rI",
+      "evidence": "gen-dec-1794550349-lxxhOGUuEpGDvvsAvOnX"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-005__before_aware",
+    "case_id": "halumem-memory-conflict-005",
+    "retrieval_policy": "before_aware",
+    "query": "Did Donald Brown decide to stop participating in endurance events after the half-marathon on Sep 04, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.58,
+        "conflicting": 0.03,
+        "underdetermined": 0.39
+      },
+      "conflict_type": {
+        "none": 0.79,
+        "true_conflict": 0.03,
+        "temporal_update": 0.18
+      },
+      "out_of_slice_evidence": {
+        "none": 0.95,
+        "relevant": 0.04,
+        "harmful": 0.01
+      },
+      "reference_evidence_present_yes": 0.06,
+      "answer_inferable_yes": 0.18
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1249,
+        "output_tokens": 130,
+        "cost": 5.2458e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2458e-05,
+          "upstream_inference_prompt_cost": 5.2458e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1007,
+        "output_tokens": 43,
+        "cost": 4.2294e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2294e-05,
+          "upstream_inference_prompt_cost": 4.2294e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550351-zNX1A7iFnjDMoidUF6sW",
+      "evidence": "gen-dec-1794550353-vHuLU5eyu5DOMPu4x6ct"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-005__flat_bm25",
+    "case_id": "halumem-memory-conflict-005",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Donald Brown decide to stop participating in endurance events after the half-marathon on Sep 04, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.89,
+        "conflicting": 0.03,
+        "underdetermined": 0.08
+      },
+      "conflict_type": {
+        "none": 0.88,
+        "true_conflict": 0.03,
+        "temporal_update": 0.09
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.93,
+        "harmful": 0.06
+      },
+      "reference_evidence_present_yes": 0.98,
+      "answer_inferable_yes": 0.92
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1244,
+        "output_tokens": 132,
+        "cost": 5.2248e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2248e-05,
+          "upstream_inference_prompt_cost": 5.2248e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1002,
+        "output_tokens": 43,
+        "cost": 4.2084e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2084e-05,
+          "upstream_inference_prompt_cost": 4.2084e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550355-ZnnGz2VuX2ElYIlylzx4",
+      "evidence": "gen-dec-1794550357-PL4WF4PMGbQNu6w6NSVE"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-005__query_aware",
+    "case_id": "halumem-memory-conflict-005",
+    "retrieval_policy": "query_aware",
+    "query": "Did Donald Brown decide to stop participating in endurance events after the half-marathon on Sep 04, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.75,
+        "conflicting": 0.06,
+        "underdetermined": 0.19
+      },
+      "conflict_type": {
+        "none": 0.06,
+        "true_conflict": 0.03,
+        "temporal_update": 0.91
+      },
+      "out_of_slice_evidence": {
+        "none": 0,
+        "relevant": 0.94,
+        "harmful": 0.06
+      },
+      "reference_evidence_present_yes": 0.21,
+      "answer_inferable_yes": 0.28
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1257,
+        "output_tokens": 134,
+        "cost": 5.2794e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2794e-05,
+          "upstream_inference_prompt_cost": 5.2794e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1015,
+        "output_tokens": 43,
+        "cost": 4.263e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.263e-05,
+          "upstream_inference_prompt_cost": 4.263e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550359-nE7fEZm6ffpqd6DrD0mx",
+      "evidence": "gen-dec-1794550360-8VyFnAyYhND0zp6VrDmL"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-005__strict_temporal",
+    "case_id": "halumem-memory-conflict-005",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Donald Brown decide to stop participating in endurance events after the half-marathon on Sep 04, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.6,
+        "conflicting": 0.02,
+        "underdetermined": 0.38
+      },
+      "conflict_type": {
+        "none": 0.8,
+        "true_conflict": 0.02,
+        "temporal_update": 0.18
+      },
+      "out_of_slice_evidence": {
+        "none": 0.97,
+        "relevant": 0.02,
+        "harmful": 0.01
+      },
+      "reference_evidence_present_yes": 0.07,
+      "answer_inferable_yes": 0.18
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1249,
+        "output_tokens": 130,
+        "cost": 5.2458e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2458e-05,
+          "upstream_inference_prompt_cost": 5.2458e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1007,
+        "output_tokens": 43,
+        "cost": 4.2294e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2294e-05,
+          "upstream_inference_prompt_cost": 4.2294e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550362-8fALX1S6DymjN4Bykinq",
+      "evidence": "gen-dec-1794550364-0mcGIJz7bF1Vv3uOfm95"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-005__transition_aware",
+    "case_id": "halumem-memory-conflict-005",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Donald Brown decide to stop participating in endurance events after the half-marathon on Sep 04, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.74,
+        "conflicting": 0.07,
+        "underdetermined": 0.19
+      },
+      "conflict_type": {
+        "none": 0.07,
+        "true_conflict": 0.03,
+        "temporal_update": 0.9
+      },
+      "out_of_slice_evidence": {
+        "none": 0,
+        "relevant": 0.94,
+        "harmful": 0.06
+      },
+      "reference_evidence_present_yes": 0.22,
+      "answer_inferable_yes": 0.26
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1257,
+        "output_tokens": 134,
+        "cost": 5.2794e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2794e-05,
+          "upstream_inference_prompt_cost": 5.2794e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1015,
+        "output_tokens": 43,
+        "cost": 4.263e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.263e-05,
+          "upstream_inference_prompt_cost": 4.263e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550365-UwFtxKeZPhNSKDFc3hit",
+      "evidence": "gen-dec-1794550367-0kaur9xxdHR6v6GFI5Za"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-006__before_aware",
+    "case_id": "halumem-memory-conflict-006",
+    "retrieval_policy": "before_aware",
+    "query": "Did Sarah Garcia express skepticism about romance novels after the book club meeting on Jan 30, 2028?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.56,
+        "conflicting": 0.01,
+        "underdetermined": 0.43
+      },
+      "conflict_type": {
+        "none": 0.94,
+        "true_conflict": 0,
+        "temporal_update": 0.06
+      },
+      "out_of_slice_evidence": {
+        "none": 0.94,
+        "relevant": 0.03,
+        "harmful": 0.03
+      },
+      "reference_evidence_present_yes": 0.23,
+      "answer_inferable_yes": 0.22
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1233,
+        "output_tokens": 130,
+        "cost": 5.1786e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1786e-05,
+          "upstream_inference_prompt_cost": 5.1786e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1004,
+        "output_tokens": 43,
+        "cost": 4.2168e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2168e-05,
+          "upstream_inference_prompt_cost": 4.2168e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550369-OchhivOojoy5CGoto82j",
+      "evidence": "gen-dec-1794550371-Dx3ZJ829BX3URDlKFz3f"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-006__flat_bm25",
+    "case_id": "halumem-memory-conflict-006",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Sarah Garcia express skepticism about romance novels after the book club meeting on Jan 30, 2028?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": false,
+      "support_type": "evidence_present_but_insufficient"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.72,
+        "conflicting": 0.07,
+        "underdetermined": 0.21
+      },
+      "conflict_type": {
+        "none": 0.41,
+        "true_conflict": 0.04,
+        "temporal_update": 0.55
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.78,
+        "harmful": 0.21
+      },
+      "reference_evidence_present_yes": 0.62,
+      "answer_inferable_yes": 0.4
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1244,
+        "output_tokens": 134,
+        "cost": 5.2248e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2248e-05,
+          "upstream_inference_prompt_cost": 5.2248e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1015,
+        "output_tokens": 43,
+        "cost": 4.263e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.263e-05,
+          "upstream_inference_prompt_cost": 4.263e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550373-Gl5b9m09hIwJczZpEpZb",
+      "evidence": "gen-dec-1794550374-A8cGxIjrkqX4mmLPko5q"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-006__query_aware",
+    "case_id": "halumem-memory-conflict-006",
+    "retrieval_policy": "query_aware",
+    "query": "Did Sarah Garcia express skepticism about romance novels after the book club meeting on Jan 30, 2028?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": false,
+      "support_type": "evidence_present_but_insufficient"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.69,
+        "conflicting": 0.07,
+        "underdetermined": 0.24
+      },
+      "conflict_type": {
+        "none": 0.69,
+        "true_conflict": 0.03,
+        "temporal_update": 0.28
+      },
+      "out_of_slice_evidence": {
+        "none": 0,
+        "relevant": 0.76,
+        "harmful": 0.24
+      },
+      "reference_evidence_present_yes": 0.61,
+      "answer_inferable_yes": 0.32
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1221,
+        "output_tokens": 132,
+        "cost": 5.1282e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1282e-05,
+          "upstream_inference_prompt_cost": 5.1282e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 992,
+        "output_tokens": 43,
+        "cost": 4.1664e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1664e-05,
+          "upstream_inference_prompt_cost": 4.1664e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550376-8zwB9BAk3nm4e8ISfXua",
+      "evidence": "gen-dec-1794550378-jbbka617A48qSERknQjn"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-006__strict_temporal",
+    "case_id": "halumem-memory-conflict-006",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Sarah Garcia express skepticism about romance novels after the book club meeting on Jan 30, 2028?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.57,
+        "conflicting": 0.01,
+        "underdetermined": 0.42
+      },
+      "conflict_type": {
+        "none": 0.98,
+        "true_conflict": 0,
+        "temporal_update": 0.02
+      },
+      "out_of_slice_evidence": {
+        "none": 0.95,
+        "relevant": 0.03,
+        "harmful": 0.02
+      },
+      "reference_evidence_present_yes": 0.29,
+      "answer_inferable_yes": 0.26
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1233,
+        "output_tokens": 130,
+        "cost": 5.1786e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1786e-05,
+          "upstream_inference_prompt_cost": 5.1786e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1004,
+        "output_tokens": 43,
+        "cost": 4.2168e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2168e-05,
+          "upstream_inference_prompt_cost": 4.2168e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550380-wNaZWMX2e94uIo8F83xw",
+      "evidence": "gen-dec-1794550381-Jbx3y4HlYPlerBOOxBOY"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-006__transition_aware",
+    "case_id": "halumem-memory-conflict-006",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Sarah Garcia express skepticism about romance novels after the book club meeting on Jan 30, 2028?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.71,
+        "conflicting": 0.05,
+        "underdetermined": 0.24
+      },
+      "conflict_type": {
+        "none": 0.09,
+        "true_conflict": 0.02,
+        "temporal_update": 0.89
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.78,
+        "harmful": 0.21
+      },
+      "reference_evidence_present_yes": 0.3,
+      "answer_inferable_yes": 0.32
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1223,
+        "output_tokens": 134,
+        "cost": 5.1366e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1366e-05,
+          "upstream_inference_prompt_cost": 5.1366e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 994,
+        "output_tokens": 43,
+        "cost": 4.1748e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1748e-05,
+          "upstream_inference_prompt_cost": 4.1748e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550383-r3RWlXfvSdMTsVF4irKI",
+      "evidence": "gen-dec-1794550385-oUYSYVCaKbr56bydmbnP"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__before_aware",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "before_aware",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.62,
+        "conflicting": 0.04,
+        "underdetermined": 0.34
+      },
+      "conflict_type": {
+        "none": 0.94,
+        "true_conflict": 0.04,
+        "temporal_update": 0.02
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.18,
+      "answer_inferable_yes": 0.26
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1238,
+        "output_tokens": 130,
+        "cost": 5.1996e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1996e-05,
+          "upstream_inference_prompt_cost": 5.1996e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1028,
+        "output_tokens": 43,
+        "cost": 4.3176e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3176e-05,
+          "upstream_inference_prompt_cost": 4.3176e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550386-BRDU1dLKONIdaq3RgIDp",
+      "evidence": "gen-dec-1794550388-BX7LOoVCWb3IJXIgdxXg"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__flat_bm25",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.91,
+        "conflicting": 0.03,
+        "underdetermined": 0.06
+      },
+      "conflict_type": {
+        "none": 0.89,
+        "true_conflict": 0.03,
+        "temporal_update": 0.08
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.84,
+        "harmful": 0.15
+      },
+      "reference_evidence_present_yes": 0.77,
+      "answer_inferable_yes": 0.55
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1233,
+        "output_tokens": 132,
+        "cost": 5.1786e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1786e-05,
+          "upstream_inference_prompt_cost": 5.1786e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1023,
+        "output_tokens": 43,
+        "cost": 4.2966e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2966e-05,
+          "upstream_inference_prompt_cost": 4.2966e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550390-VXnjB8RtlNwOMd05AJZX",
+      "evidence": "gen-dec-1794550392-ofprjOqb3XwRwc53yycD"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__query_aware",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "query_aware",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.65,
+        "conflicting": 0.06,
+        "underdetermined": 0.29
+      },
+      "conflict_type": {
+        "none": 0.9,
+        "true_conflict": 0.07,
+        "temporal_update": 0.03
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.16,
+      "answer_inferable_yes": 0.2
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1238,
+        "output_tokens": 130,
+        "cost": 5.1996e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1996e-05,
+          "upstream_inference_prompt_cost": 5.1996e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1028,
+        "output_tokens": 43,
+        "cost": 4.3176e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3176e-05,
+          "upstream_inference_prompt_cost": 4.3176e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550394-335LShrIWuUF8fQUwQWe",
+      "evidence": "gen-dec-1794550395-AdeI8ScDRWVGcrl4TY7O"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__strict_temporal",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.63,
+        "conflicting": 0.06,
+        "underdetermined": 0.31
+      },
+      "conflict_type": {
+        "none": 0.88,
+        "true_conflict": 0.08,
+        "temporal_update": 0.04
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.18,
+      "answer_inferable_yes": 0.28
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1238,
+        "output_tokens": 130,
+        "cost": 5.1996e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1996e-05,
+          "upstream_inference_prompt_cost": 5.1996e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1028,
+        "output_tokens": 43,
+        "cost": 4.3176e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3176e-05,
+          "upstream_inference_prompt_cost": 4.3176e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550397-4Pg6l9Cukv2r3wjZQfoz",
+      "evidence": "gen-dec-1794550399-z3q2XQReses3mSjTJzSE"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__transition_aware",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.66,
+        "conflicting": 0.03,
+        "underdetermined": 0.31
+      },
+      "conflict_type": {
+        "none": 0.9,
+        "true_conflict": 0.06,
+        "temporal_update": 0.04
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.17,
+      "answer_inferable_yes": 0.23
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1238,
+        "output_tokens": 130,
+        "cost": 5.1996e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1996e-05,
+          "upstream_inference_prompt_cost": 5.1996e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1028,
+        "output_tokens": 43,
+        "cost": 4.3176e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3176e-05,
+          "upstream_inference_prompt_cost": 4.3176e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794550401-4aYyNC2ltbmNi1x14s1U",
+      "evidence": "gen-dec-1794550403-neyXhB7E5Nl0V1rB6t1F"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-008__before_aware",
+    "case_id": "halumem-memory-conflict-008",
+    "retrieval_policy": "before_aware",
+    "query": "Did Williams Donna have children in January 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.35,
+        "conflicting": 0,
+        "underdetermined": 0.65
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.01,
+      "answer_inferable_yes": 0.02
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 807,
+        "output_tokens": 133,
+        "cost": 3.3894e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.3894e-05,
+          "upstream_inference_prompt_cost": 3.3894e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 552,
+        "output_tokens": 43,
+        "cost": 2.3184e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.3184e-05,
+          "upstream_inference_prompt_cost": 2.3184e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551054-0h08yZpiz7sGhIEtCRnG",
+      "evidence": "gen-dec-1794551056-a97ZnLC8RsYRhI6Ck1cB"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-008__flat_bm25",
+    "case_id": "halumem-memory-conflict-008",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Williams Donna have children in January 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "harmful",
+      "reference_evidence_present": true,
+      "answer_inferable": false,
+      "support_type": "evidence_present_but_insufficient"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.58,
+        "conflicting": 0.01,
+        "underdetermined": 0.41
+      },
+      "conflict_type": {
+        "none": 0.93,
+        "true_conflict": 0,
+        "temporal_update": 0.07
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.36,
+        "harmful": 0.63
+      },
+      "reference_evidence_present_yes": 0.91,
+      "answer_inferable_yes": 0.19
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1140,
+        "output_tokens": 131,
+        "cost": 4.788e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.788e-05,
+          "upstream_inference_prompt_cost": 4.788e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 885,
+        "output_tokens": 43,
+        "cost": 3.717e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.717e-05,
+          "upstream_inference_prompt_cost": 3.717e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551058-Acey9cwvbtsL3joHnXi9",
+      "evidence": "gen-dec-1794551059-TcmMQ8UUAVzIdfnKU3mm"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-008__query_aware",
+    "case_id": "halumem-memory-conflict-008",
+    "retrieval_policy": "query_aware",
+    "query": "Did Williams Donna have children in January 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.34,
+        "conflicting": 0,
+        "underdetermined": 0.66
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.01,
+      "answer_inferable_yes": 0.02
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 807,
+        "output_tokens": 133,
+        "cost": 3.3894e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.3894e-05,
+          "upstream_inference_prompt_cost": 3.3894e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 552,
+        "output_tokens": 43,
+        "cost": 2.3184e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.3184e-05,
+          "upstream_inference_prompt_cost": 2.3184e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551061-E8eWQO5tMImzfgFWUfWx",
+      "evidence": "gen-dec-1794551063-wg0ka7qcew70EMSC5lrQ"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-008__strict_temporal",
+    "case_id": "halumem-memory-conflict-008",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Williams Donna have children in January 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.3,
+        "conflicting": 0,
+        "underdetermined": 0.7
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.01,
+      "answer_inferable_yes": 0.03
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 807,
+        "output_tokens": 133,
+        "cost": 3.3894e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.3894e-05,
+          "upstream_inference_prompt_cost": 3.3894e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 552,
+        "output_tokens": 43,
+        "cost": 2.3184e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.3184e-05,
+          "upstream_inference_prompt_cost": 2.3184e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551065-nG1GZvnEUjxCIqzb52G7",
+      "evidence": "gen-dec-1794551066-1AKBNvkYCWOxFm1qC0p0"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-008__transition_aware",
+    "case_id": "halumem-memory-conflict-008",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Williams Donna have children in January 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.26,
+        "conflicting": 0,
+        "underdetermined": 0.74
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.01,
+      "answer_inferable_yes": 0.02
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 807,
+        "output_tokens": 133,
+        "cost": 3.3894e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.3894e-05,
+          "upstream_inference_prompt_cost": 3.3894e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 552,
+        "output_tokens": 43,
+        "cost": 2.3184e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.3184e-05,
+          "upstream_inference_prompt_cost": 2.3184e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551068-b1ul7Cjo13N3iQz78Ubv",
+      "evidence": "gen-dec-1794551070-avgPGTGqy0LcW0LgaiWl"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__before_aware",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "before_aware",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.61,
+        "conflicting": 0.02,
+        "underdetermined": 0.37
+      },
+      "conflict_type": {
+        "none": 0.81,
+        "true_conflict": 0.01,
+        "temporal_update": 0.18
+      },
+      "out_of_slice_evidence": {
+        "none": 0.98,
+        "relevant": 0.02,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.41,
+      "answer_inferable_yes": 0.18
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1262,
+        "output_tokens": 130,
+        "cost": 5.3004e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.3004e-05,
+          "upstream_inference_prompt_cost": 5.3004e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1026,
+        "output_tokens": 43,
+        "cost": 4.3092e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3092e-05,
+          "upstream_inference_prompt_cost": 4.3092e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551071-B5lEDm6ahrRECB3zw4Sa",
+      "evidence": "gen-dec-1794551073-8AgQhOTtRIQD6TSIYKhY"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__flat_bm25",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.83,
+        "conflicting": 0.03,
+        "underdetermined": 0.14
+      },
+      "conflict_type": {
+        "none": 0.56,
+        "true_conflict": 0.01,
+        "temporal_update": 0.43
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.9,
+        "harmful": 0.09
+      },
+      "reference_evidence_present_yes": 0.93,
+      "answer_inferable_yes": 0.55
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1253,
+        "output_tokens": 132,
+        "cost": 5.2626e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2626e-05,
+          "upstream_inference_prompt_cost": 5.2626e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1017,
+        "output_tokens": 43,
+        "cost": 4.2714e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2714e-05,
+          "upstream_inference_prompt_cost": 4.2714e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551075-Hm5plihgW8yfygBbafND",
+      "evidence": "gen-dec-1794551077-PDWG40os29xlMFH4OVwU"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__query_aware",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "query_aware",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.85,
+        "conflicting": 0.03,
+        "underdetermined": 0.12
+      },
+      "conflict_type": {
+        "none": 0.54,
+        "true_conflict": 0.02,
+        "temporal_update": 0.44
+      },
+      "out_of_slice_evidence": {
+        "none": 0,
+        "relevant": 0.91,
+        "harmful": 0.09
+      },
+      "reference_evidence_present_yes": 0.95,
+      "answer_inferable_yes": 0.61
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1253,
+        "output_tokens": 132,
+        "cost": 5.2626e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2626e-05,
+          "upstream_inference_prompt_cost": 5.2626e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1017,
+        "output_tokens": 43,
+        "cost": 4.2714e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2714e-05,
+          "upstream_inference_prompt_cost": 4.2714e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551078-zc9jFHlStKJPHhI2OhAR",
+      "evidence": "gen-dec-1794551080-JXWiJD6mw7jEeSNt1oH2"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__strict_temporal",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.62,
+        "conflicting": 0.02,
+        "underdetermined": 0.36
+      },
+      "conflict_type": {
+        "none": 0.84,
+        "true_conflict": 0,
+        "temporal_update": 0.16
+      },
+      "out_of_slice_evidence": {
+        "none": 0.99,
+        "relevant": 0.01,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.47,
+      "answer_inferable_yes": 0.15
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1262,
+        "output_tokens": 130,
+        "cost": 5.3004e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.3004e-05,
+          "upstream_inference_prompt_cost": 5.3004e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1026,
+        "output_tokens": 43,
+        "cost": 4.3092e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3092e-05,
+          "upstream_inference_prompt_cost": 4.3092e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551082-YmCMiCsPjN0uVq8WRbqj",
+      "evidence": "gen-dec-1794551084-wqw4mrYDsvfMP99dnPqE"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__transition_aware",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.83,
+        "conflicting": 0.03,
+        "underdetermined": 0.14
+      },
+      "conflict_type": {
+        "none": 0.55,
+        "true_conflict": 0.02,
+        "temporal_update": 0.43
+      },
+      "out_of_slice_evidence": {
+        "none": 0,
+        "relevant": 0.9,
+        "harmful": 0.1
+      },
+      "reference_evidence_present_yes": 0.94,
+      "answer_inferable_yes": 0.57
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1253,
+        "output_tokens": 132,
+        "cost": 5.2626e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2626e-05,
+          "upstream_inference_prompt_cost": 5.2626e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1017,
+        "output_tokens": 43,
+        "cost": 4.2714e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2714e-05,
+          "upstream_inference_prompt_cost": 4.2714e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551085-xvUwQF73qqDIETGUI29P",
+      "evidence": "gen-dec-1794551087-h7RfSvSOrQFpIkHnkpC8"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__before_aware",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "before_aware",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "true_conflict",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": true,
+      "answer_inferable": false,
+      "support_type": "evidence_present_but_insufficient"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.19,
+        "conflicting": 0.78,
+        "underdetermined": 0.03
+      },
+      "conflict_type": {
+        "none": 0.02,
+        "true_conflict": 0.72,
+        "temporal_update": 0.26
+      },
+      "out_of_slice_evidence": {
+        "none": 0.98,
+        "relevant": 0.01,
+        "harmful": 0.01
+      },
+      "reference_evidence_present_yes": 0.54,
+      "answer_inferable_yes": 0.36
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1198,
+        "output_tokens": 134,
+        "cost": 5.0316e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0316e-05,
+          "upstream_inference_prompt_cost": 5.0316e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 951,
+        "output_tokens": 43,
+        "cost": 3.9942e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.9942e-05,
+          "upstream_inference_prompt_cost": 3.9942e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551089-rYq100mkxoCny4umCC9w",
+      "evidence": "gen-dec-1794551090-JBebWC4H0EOKhZmxDxeQ"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__flat_bm25",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "flat_bm25",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.45,
+        "conflicting": 0.51,
+        "underdetermined": 0.04
+      },
+      "conflict_type": {
+        "none": 0.03,
+        "true_conflict": 0.4,
+        "temporal_update": 0.57
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.86,
+        "harmful": 0.13
+      },
+      "reference_evidence_present_yes": 0.97,
+      "answer_inferable_yes": 0.65
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1218,
+        "output_tokens": 136,
+        "cost": 5.1156e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1156e-05,
+          "upstream_inference_prompt_cost": 5.1156e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 971,
+        "output_tokens": 43,
+        "cost": 4.0782e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.0782e-05,
+          "upstream_inference_prompt_cost": 4.0782e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551092-bIlfEXMye2sRW9lCinWr",
+      "evidence": "gen-dec-1794551094-T6bCPNaU8LV333IusLEc"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__query_aware",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "query_aware",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.55,
+        "conflicting": 0.42,
+        "underdetermined": 0.03
+      },
+      "conflict_type": {
+        "none": 0.02,
+        "true_conflict": 0.29,
+        "temporal_update": 0.69
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.8,
+        "harmful": 0.19
+      },
+      "reference_evidence_present_yes": 0.97,
+      "answer_inferable_yes": 0.73
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1218,
+        "output_tokens": 134,
+        "cost": 5.1156e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1156e-05,
+          "upstream_inference_prompt_cost": 5.1156e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 971,
+        "output_tokens": 43,
+        "cost": 4.0782e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.0782e-05,
+          "upstream_inference_prompt_cost": 4.0782e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551095-2VKlH4kpcafZdhOqhQvH",
+      "evidence": "gen-dec-1794551097-R45TN67iQKRsDETXWEWr"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__strict_temporal",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "strict_temporal",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "true_conflict",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": true,
+      "answer_inferable": false,
+      "support_type": "evidence_present_but_insufficient"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.23,
+        "conflicting": 0.72,
+        "underdetermined": 0.05
+      },
+      "conflict_type": {
+        "none": 0.03,
+        "true_conflict": 0.66,
+        "temporal_update": 0.31
+      },
+      "out_of_slice_evidence": {
+        "none": 0.99,
+        "relevant": 0.01,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.53,
+      "answer_inferable_yes": 0.38
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1198,
+        "output_tokens": 134,
+        "cost": 5.0316e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0316e-05,
+          "upstream_inference_prompt_cost": 5.0316e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 951,
+        "output_tokens": 43,
+        "cost": 3.9942e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.9942e-05,
+          "upstream_inference_prompt_cost": 3.9942e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551099-O9DEEXBwaqBzlTjVkI6c",
+      "evidence": "gen-dec-1794551101-zhbyfdR4fj6RNlPc7OkW"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__transition_aware",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "transition_aware",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.54,
+        "conflicting": 0.42,
+        "underdetermined": 0.04
+      },
+      "conflict_type": {
+        "none": 0.02,
+        "true_conflict": 0.35,
+        "temporal_update": 0.63
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.79,
+        "harmful": 0.2
+      },
+      "reference_evidence_present_yes": 0.97,
+      "answer_inferable_yes": 0.76
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1218,
+        "output_tokens": 134,
+        "cost": 5.1156e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.1156e-05,
+          "upstream_inference_prompt_cost": 5.1156e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 971,
+        "output_tokens": 43,
+        "cost": 4.0782e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.0782e-05,
+          "upstream_inference_prompt_cost": 4.0782e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551102-BO3AiMbqLBVV9USxZx9n",
+      "evidence": "gen-dec-1794551104-S79vJUPJCDb3GgnoBwFy"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-011__before_aware",
+    "case_id": "halumem-memory-conflict-011",
+    "retrieval_policy": "before_aware",
+    "query": "Did Donna establish EcoStrategic Consulting before March 01, 2038?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.76,
+        "conflicting": 0.19,
+        "underdetermined": 0.05
+      },
+      "conflict_type": {
+        "none": 0.28,
+        "true_conflict": 0.16,
+        "temporal_update": 0.56
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.81,
+        "harmful": 0.18
+      },
+      "reference_evidence_present_yes": 0.74,
+      "answer_inferable_yes": 0.65
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1243,
+        "output_tokens": 134,
+        "cost": 5.2206e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2206e-05,
+          "upstream_inference_prompt_cost": 5.2206e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1011,
+        "output_tokens": 43,
+        "cost": 4.2462e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2462e-05,
+          "upstream_inference_prompt_cost": 4.2462e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551106-3un8uBfFSBaVjRwSTPR9",
+      "evidence": "gen-dec-1794551108-MKTSQk1JRMItFfsNQLIC"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-011__flat_bm25",
+    "case_id": "halumem-memory-conflict-011",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Donna establish EcoStrategic Consulting before March 01, 2038?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.69,
+        "conflicting": 0.27,
+        "underdetermined": 0.04
+      },
+      "conflict_type": {
+        "none": 0.27,
+        "true_conflict": 0.17,
+        "temporal_update": 0.56
+      },
+      "out_of_slice_evidence": {
+        "none": 0,
+        "relevant": 0.92,
+        "harmful": 0.08
+      },
+      "reference_evidence_present_yes": 0.95,
+      "answer_inferable_yes": 0.88
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1230,
+        "output_tokens": 134,
+        "cost": 5.166e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.166e-05,
+          "upstream_inference_prompt_cost": 5.166e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 998,
+        "output_tokens": 43,
+        "cost": 4.1916e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1916e-05,
+          "upstream_inference_prompt_cost": 4.1916e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551110-rEbVNKZTa2g8ZK5BefIr",
+      "evidence": "gen-dec-1794551111-JfA424uDyUg1wzdpLOtA"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-011__query_aware",
+    "case_id": "halumem-memory-conflict-011",
+    "retrieval_policy": "query_aware",
+    "query": "Did Donna establish EcoStrategic Consulting before March 01, 2038?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.76,
+        "conflicting": 0.18,
+        "underdetermined": 0.06
+      },
+      "conflict_type": {
+        "none": 0.26,
+        "true_conflict": 0.14,
+        "temporal_update": 0.6
+      },
+      "out_of_slice_evidence": {
+        "none": 0,
+        "relevant": 0.82,
+        "harmful": 0.18
+      },
+      "reference_evidence_present_yes": 0.71,
+      "answer_inferable_yes": 0.7
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1243,
+        "output_tokens": 134,
+        "cost": 5.2206e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2206e-05,
+          "upstream_inference_prompt_cost": 5.2206e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1011,
+        "output_tokens": 43,
+        "cost": 4.2462e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2462e-05,
+          "upstream_inference_prompt_cost": 4.2462e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551113-2FI3rhZfIefcF40UB6Lg",
+      "evidence": "gen-dec-1794551115-8MALrLd7jCxLj6Cm3BX4"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-011__strict_temporal",
+    "case_id": "halumem-memory-conflict-011",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Donna establish EcoStrategic Consulting before March 01, 2038?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.91,
+        "conflicting": 0.04,
+        "underdetermined": 0.05
+      },
+      "conflict_type": {
+        "none": 0.25,
+        "true_conflict": 0.02,
+        "temporal_update": 0.73
+      },
+      "out_of_slice_evidence": {
+        "none": 0.95,
+        "relevant": 0.04,
+        "harmful": 0.01
+      },
+      "reference_evidence_present_yes": 0.08,
+      "answer_inferable_yes": 0.17
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1242,
+        "output_tokens": 132,
+        "cost": 5.2164e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2164e-05,
+          "upstream_inference_prompt_cost": 5.2164e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1010,
+        "output_tokens": 43,
+        "cost": 4.242e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.242e-05,
+          "upstream_inference_prompt_cost": 4.242e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551117-qrRaBlIXo1wTgN3o94iV",
+      "evidence": "gen-dec-1794551119-lQXE7zEZIT4iF2aARpp6"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-011__transition_aware",
+    "case_id": "halumem-memory-conflict-011",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Donna establish EcoStrategic Consulting before March 01, 2038?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.88,
+        "conflicting": 0.04,
+        "underdetermined": 0.08
+      },
+      "conflict_type": {
+        "none": 0.22,
+        "true_conflict": 0.01,
+        "temporal_update": 0.77
+      },
+      "out_of_slice_evidence": {
+        "none": 0.03,
+        "relevant": 0.78,
+        "harmful": 0.19
+      },
+      "reference_evidence_present_yes": 0.09,
+      "answer_inferable_yes": 0.17
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1230,
+        "output_tokens": 134,
+        "cost": 5.166e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.166e-05,
+          "upstream_inference_prompt_cost": 5.166e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 998,
+        "output_tokens": 43,
+        "cost": 4.1916e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.1916e-05,
+          "upstream_inference_prompt_cost": 4.1916e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551121-fAzQ7YmjBtuF042ziOWM",
+      "evidence": "gen-dec-1794551123-tlU8fuRzfBm7c2pQs3IJ"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-012__before_aware",
+    "case_id": "halumem-memory-conflict-012",
+    "retrieval_policy": "before_aware",
+    "query": "What is Taylor David's birth date, and is he 20 years old in January 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.23,
+        "conflicting": 0,
+        "underdetermined": 0.77
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.01,
+      "answer_inferable_yes": 0.01
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 818,
+        "output_tokens": 133,
+        "cost": 3.4356e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.4356e-05,
+          "upstream_inference_prompt_cost": 3.4356e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 592,
+        "output_tokens": 43,
+        "cost": 2.4864e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.4864e-05,
+          "upstream_inference_prompt_cost": 2.4864e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551124-Jh27l647cDPGnbEpVltH",
+      "evidence": "gen-dec-1794551126-pod09QQm86yP3yajXesL"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-012__flat_bm25",
+    "case_id": "halumem-memory-conflict-012",
+    "retrieval_policy": "flat_bm25",
+    "query": "What is Taylor David's birth date, and is he 20 years old in January 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": false,
+      "support_type": "evidence_present_but_insufficient"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.85,
+        "conflicting": 0.1,
+        "underdetermined": 0.05
+      },
+      "conflict_type": {
+        "none": 0.82,
+        "true_conflict": 0.05,
+        "temporal_update": 0.13
+      },
+      "out_of_slice_evidence": {
+        "none": 0,
+        "relevant": 0.73,
+        "harmful": 0.27
+      },
+      "reference_evidence_present_yes": 0.68,
+      "answer_inferable_yes": 0.28
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1160,
+        "output_tokens": 132,
+        "cost": 4.872e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.872e-05,
+          "upstream_inference_prompt_cost": 4.872e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 934,
+        "output_tokens": 43,
+        "cost": 3.9228e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.9228e-05,
+          "upstream_inference_prompt_cost": 3.9228e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551128-ciJZGGvzJKaZxYuPjevw",
+      "evidence": "gen-dec-1794551130-rQL0KAgKAKmNR12No4lb"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-012__query_aware",
+    "case_id": "halumem-memory-conflict-012",
+    "retrieval_policy": "query_aware",
+    "query": "What is Taylor David's birth date, and is he 20 years old in January 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.19,
+        "conflicting": 0,
+        "underdetermined": 0.81
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.01,
+      "answer_inferable_yes": 0.01
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 818,
+        "output_tokens": 133,
+        "cost": 3.4356e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.4356e-05,
+          "upstream_inference_prompt_cost": 3.4356e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 592,
+        "output_tokens": 43,
+        "cost": 2.4864e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.4864e-05,
+          "upstream_inference_prompt_cost": 2.4864e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551132-y1rHT5dPOiUMHrihbA6e",
+      "evidence": "gen-dec-1794551134-n7BwtgziFJY3VILIpgAN"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-012__strict_temporal",
+    "case_id": "halumem-memory-conflict-012",
+    "retrieval_policy": "strict_temporal",
+    "query": "What is Taylor David's birth date, and is he 20 years old in January 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.21,
+        "conflicting": 0,
+        "underdetermined": 0.79
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.01,
+      "answer_inferable_yes": 0.01
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 818,
+        "output_tokens": 133,
+        "cost": 3.4356e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.4356e-05,
+          "upstream_inference_prompt_cost": 3.4356e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 592,
+        "output_tokens": 43,
+        "cost": 2.4864e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.4864e-05,
+          "upstream_inference_prompt_cost": 2.4864e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551152-MSAXqXD5rUjo8yk95O8X",
+      "evidence": "gen-dec-1794551154-sn8H5T51mmgyxgak43e0"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-012__transition_aware",
+    "case_id": "halumem-memory-conflict-012",
+    "retrieval_policy": "transition_aware",
+    "query": "What is Taylor David's birth date, and is he 20 years old in January 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "underdetermined",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.21,
+        "conflicting": 0,
+        "underdetermined": 0.79
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.01,
+      "answer_inferable_yes": 0.01
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 818,
+        "output_tokens": 133,
+        "cost": 3.4356e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.4356e-05,
+          "upstream_inference_prompt_cost": 3.4356e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 592,
+        "output_tokens": 43,
+        "cost": 2.4864e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.4864e-05,
+          "upstream_inference_prompt_cost": 2.4864e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551156-ZWJsQfaKperXMJxjTmqb",
+      "evidence": "gen-dec-1794551157-WKjss9RmRGW5yEsxuLmh"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-013__before_aware",
+    "case_id": "halumem-memory-conflict-013",
+    "retrieval_policy": "before_aware",
+    "query": "Was Ananya Sharma's physical health status 'Good' when she launched her blog on Apr 18, 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": true,
+      "support_type": "indirect_inference"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.41,
+        "conflicting": 0.58,
+        "underdetermined": 0.01
+      },
+      "conflict_type": {
+        "none": 0.02,
+        "true_conflict": 0.45,
+        "temporal_update": 0.53
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.06,
+      "answer_inferable_yes": 0.7
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1212,
+        "output_tokens": 134,
+        "cost": 5.0904e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0904e-05,
+          "upstream_inference_prompt_cost": 5.0904e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 975,
+        "output_tokens": 43,
+        "cost": 4.095e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.095e-05,
+          "upstream_inference_prompt_cost": 4.095e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551159-b587SWM6EKzt6VSVBgko",
+      "evidence": "gen-dec-1794551161-7hwOhkB0rXjhlYvkJhn0"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-013__flat_bm25",
+    "case_id": "halumem-memory-conflict-013",
+    "retrieval_policy": "flat_bm25",
+    "query": "Was Ananya Sharma's physical health status 'Good' when she launched her blog on Apr 18, 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.95,
+        "conflicting": 0.04,
+        "underdetermined": 0.01
+      },
+      "conflict_type": {
+        "none": 0.17,
+        "true_conflict": 0.01,
+        "temporal_update": 0.82
+      },
+      "out_of_slice_evidence": {
+        "none": 0.06,
+        "relevant": 0.71,
+        "harmful": 0.23
+      },
+      "reference_evidence_present_yes": 0.89,
+      "answer_inferable_yes": 0.9
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1243,
+        "output_tokens": 134,
+        "cost": 5.2206e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2206e-05,
+          "upstream_inference_prompt_cost": 5.2206e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1006,
+        "output_tokens": 43,
+        "cost": 4.2252e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2252e-05,
+          "upstream_inference_prompt_cost": 4.2252e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551163-cw1bUq4tsFQQVtm5aFkw",
+      "evidence": "gen-dec-1794551165-UfvgFxVqEdwoSopNw9Cv"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-013__query_aware",
+    "case_id": "halumem-memory-conflict-013",
+    "retrieval_policy": "query_aware",
+    "query": "Was Ananya Sharma's physical health status 'Good' when she launched her blog on Apr 18, 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": true,
+      "support_type": "indirect_inference"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.35,
+        "conflicting": 0.64,
+        "underdetermined": 0.01
+      },
+      "conflict_type": {
+        "none": 0.02,
+        "true_conflict": 0.44,
+        "temporal_update": 0.54
+      },
+      "out_of_slice_evidence": {
+        "none": 0.99,
+        "relevant": 0,
+        "harmful": 0.01
+      },
+      "reference_evidence_present_yes": 0.08,
+      "answer_inferable_yes": 0.72
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1212,
+        "output_tokens": 134,
+        "cost": 5.0904e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0904e-05,
+          "upstream_inference_prompt_cost": 5.0904e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 975,
+        "output_tokens": 43,
+        "cost": 4.095e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.095e-05,
+          "upstream_inference_prompt_cost": 4.095e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551167-AVr76JB9igBXO2ewZMdD",
+      "evidence": "gen-dec-1794551168-4T1pUTLE27IgDKtUsu62"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-013__strict_temporal",
+    "case_id": "halumem-memory-conflict-013",
+    "retrieval_policy": "strict_temporal",
+    "query": "Was Ananya Sharma's physical health status 'Good' when she launched her blog on Apr 18, 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": true,
+      "support_type": "indirect_inference"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.36,
+        "conflicting": 0.63,
+        "underdetermined": 0.01
+      },
+      "conflict_type": {
+        "none": 0.02,
+        "true_conflict": 0.48,
+        "temporal_update": 0.5
+      },
+      "out_of_slice_evidence": {
+        "none": 0.98,
+        "relevant": 0,
+        "harmful": 0.02
+      },
+      "reference_evidence_present_yes": 0.06,
+      "answer_inferable_yes": 0.71
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1212,
+        "output_tokens": 134,
+        "cost": 5.0904e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0904e-05,
+          "upstream_inference_prompt_cost": 5.0904e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 975,
+        "output_tokens": 43,
+        "cost": 4.095e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.095e-05,
+          "upstream_inference_prompt_cost": 4.095e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551170-EMiw5iegUwsUXD3nue2H",
+      "evidence": "gen-dec-1794551172-ejsAK6sNkqTzy7VSwlRX"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-013__transition_aware",
+    "case_id": "halumem-memory-conflict-013",
+    "retrieval_policy": "transition_aware",
+    "query": "Was Ananya Sharma's physical health status 'Good' when she launched her blog on Apr 18, 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": true,
+      "support_type": "indirect_inference"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.4,
+        "conflicting": 0.59,
+        "underdetermined": 0.01
+      },
+      "conflict_type": {
+        "none": 0.02,
+        "true_conflict": 0.43,
+        "temporal_update": 0.55
+      },
+      "out_of_slice_evidence": {
+        "none": 0.99,
+        "relevant": 0,
+        "harmful": 0.01
+      },
+      "reference_evidence_present_yes": 0.06,
+      "answer_inferable_yes": 0.74
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1212,
+        "output_tokens": 134,
+        "cost": 5.0904e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.0904e-05,
+          "upstream_inference_prompt_cost": 5.0904e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 975,
+        "output_tokens": 43,
+        "cost": 4.095e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.095e-05,
+          "upstream_inference_prompt_cost": 4.095e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551174-rSJK4XR5OPQY4iJ49bbv",
+      "evidence": "gen-dec-1794551176-TWUg0zlPK995TZAjB6sf"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-014__before_aware",
+    "case_id": "halumem-memory-conflict-014",
+    "retrieval_policy": "before_aware",
+    "query": "Did Susan Thompson plan to manage her postmenopausal symptoms using medication after her layoff on Oct 22, 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.87,
+        "conflicting": 0.02,
+        "underdetermined": 0.11
+      },
+      "conflict_type": {
+        "none": 0.92,
+        "true_conflict": 0.07,
+        "temporal_update": 0.01
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.73,
+      "answer_inferable_yes": 0.89
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1259,
+        "output_tokens": 130,
+        "cost": 5.2878e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2878e-05,
+          "upstream_inference_prompt_cost": 5.2878e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1050,
+        "output_tokens": 43,
+        "cost": 4.41e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.41e-05,
+          "upstream_inference_prompt_cost": 4.41e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551177-bNedjrYOWQhM5SRzKGos",
+      "evidence": "gen-dec-1794551180-Uw8l7rfXzXMehxLNwOUt"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-014__flat_bm25",
+    "case_id": "halumem-memory-conflict-014",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Susan Thompson plan to manage her postmenopausal symptoms using medication after her layoff on Oct 22, 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": false,
+      "support_type": "evidence_present_but_insufficient"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.6,
+        "conflicting": 0.11,
+        "underdetermined": 0.29
+      },
+      "conflict_type": {
+        "none": 0.05,
+        "true_conflict": 0.04,
+        "temporal_update": 0.91
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.57,
+        "harmful": 0.42
+      },
+      "reference_evidence_present_yes": 0.91,
+      "answer_inferable_yes": 0.21
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1252,
+        "output_tokens": 134,
+        "cost": 5.2584e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2584e-05,
+          "upstream_inference_prompt_cost": 5.2584e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1043,
+        "output_tokens": 43,
+        "cost": 4.3806e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3806e-05,
+          "upstream_inference_prompt_cost": 4.3806e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551181-7aFq6qwxt02z3GL6GeM3",
+      "evidence": "gen-dec-1794551183-g2XaErYRsKYtpU13tOHe"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-014__query_aware",
+    "case_id": "halumem-memory-conflict-014",
+    "retrieval_policy": "query_aware",
+    "query": "Did Susan Thompson plan to manage her postmenopausal symptoms using medication after her layoff on Oct 22, 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.93,
+        "conflicting": 0.03,
+        "underdetermined": 0.04
+      },
+      "conflict_type": {
+        "none": 0.15,
+        "true_conflict": 0.02,
+        "temporal_update": 0.83
+      },
+      "out_of_slice_evidence": {
+        "none": 0.02,
+        "relevant": 0.65,
+        "harmful": 0.33
+      },
+      "reference_evidence_present_yes": 0.68,
+      "answer_inferable_yes": 0.86
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1260,
+        "output_tokens": 134,
+        "cost": 5.292e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.292e-05,
+          "upstream_inference_prompt_cost": 5.292e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1051,
+        "output_tokens": 43,
+        "cost": 4.4142e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.4142e-05,
+          "upstream_inference_prompt_cost": 4.4142e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551185-VcyrwTKeSO5cMdFbEv83",
+      "evidence": "gen-dec-1794551187-zzvOegL93JUcM3jsJu7x"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-014__strict_temporal",
+    "case_id": "halumem-memory-conflict-014",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Susan Thompson plan to manage her postmenopausal symptoms using medication after her layoff on Oct 22, 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.88,
+        "conflicting": 0.03,
+        "underdetermined": 0.09
+      },
+      "conflict_type": {
+        "none": 0.9,
+        "true_conflict": 0.09,
+        "temporal_update": 0.01
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.67,
+      "answer_inferable_yes": 0.88
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1259,
+        "output_tokens": 130,
+        "cost": 5.2878e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.2878e-05,
+          "upstream_inference_prompt_cost": 5.2878e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1050,
+        "output_tokens": 43,
+        "cost": 4.41e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.41e-05,
+          "upstream_inference_prompt_cost": 4.41e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551189-JCLQUNpsBXLldJrgiKUj",
+      "evidence": "gen-dec-1794551191-XDHlkM0wBQL22uPsdKGs"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-014__transition_aware",
+    "case_id": "halumem-memory-conflict-014",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Susan Thompson plan to manage her postmenopausal symptoms using medication after her layoff on Oct 22, 2025?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.9,
+        "conflicting": 0.02,
+        "underdetermined": 0.08
+      },
+      "conflict_type": {
+        "none": 0.95,
+        "true_conflict": 0.03,
+        "temporal_update": 0.02
+      },
+      "out_of_slice_evidence": {
+        "none": 0.2,
+        "relevant": 0.68,
+        "harmful": 0.12
+      },
+      "reference_evidence_present_yes": 0.69,
+      "answer_inferable_yes": 0.88
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1271,
+        "output_tokens": 132,
+        "cost": 5.3382e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.3382e-05,
+          "upstream_inference_prompt_cost": 5.3382e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1062,
+        "output_tokens": 43,
+        "cost": 4.4604e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.4604e-05,
+          "upstream_inference_prompt_cost": 4.4604e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551193-PYNt2Bcd0K6T85CV7TOL",
+      "evidence": "gen-dec-1794551194-9FW4p7paU0biimGNTFrZ"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-015__before_aware",
+    "case_id": "halumem-memory-conflict-015",
+    "retrieval_policy": "before_aware",
+    "query": "Did Susan Thompson find heavy metal ballads stressful during her music therapy session on Apr 25, 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.68,
+        "conflicting": 0,
+        "underdetermined": 0.32
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.05,
+      "answer_inferable_yes": 0.19
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1225,
+        "output_tokens": 130,
+        "cost": 5.145e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.145e-05,
+          "upstream_inference_prompt_cost": 5.145e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1038,
+        "output_tokens": 43,
+        "cost": 4.3596e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3596e-05,
+          "upstream_inference_prompt_cost": 4.3596e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551196-gefOV8LfA2pSRkqx3Snq",
+      "evidence": "gen-dec-1794551198-hub5lFn7euXo4ODrQ0ph"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-015__flat_bm25",
+    "case_id": "halumem-memory-conflict-015",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Susan Thompson find heavy metal ballads stressful during her music therapy session on Apr 25, 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.9,
+        "conflicting": 0.02,
+        "underdetermined": 0.08
+      },
+      "conflict_type": {
+        "none": 0.78,
+        "true_conflict": 0.02,
+        "temporal_update": 0.2
+      },
+      "out_of_slice_evidence": {
+        "none": 0.01,
+        "relevant": 0.91,
+        "harmful": 0.08
+      },
+      "reference_evidence_present_yes": 0.96,
+      "answer_inferable_yes": 0.73
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1225,
+        "output_tokens": 132,
+        "cost": 5.145e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.145e-05,
+          "upstream_inference_prompt_cost": 5.145e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1038,
+        "output_tokens": 43,
+        "cost": 4.3596e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3596e-05,
+          "upstream_inference_prompt_cost": 4.3596e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551200-YURuBJSIkxPGAGMz0KGs",
+      "evidence": "gen-dec-1794551202-pvtgB6zoYE6o4jIQjNaj"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-015__query_aware",
+    "case_id": "halumem-memory-conflict-015",
+    "retrieval_policy": "query_aware",
+    "query": "Did Susan Thompson find heavy metal ballads stressful during her music therapy session on Apr 25, 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.71,
+        "conflicting": 0,
+        "underdetermined": 0.29
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.05,
+      "answer_inferable_yes": 0.18
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1225,
+        "output_tokens": 130,
+        "cost": 5.145e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.145e-05,
+          "upstream_inference_prompt_cost": 5.145e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1038,
+        "output_tokens": 43,
+        "cost": 4.3596e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3596e-05,
+          "upstream_inference_prompt_cost": 4.3596e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551203-1dDnZJg0PZqOlVPQPxuY",
+      "evidence": "gen-dec-1794551206-P9Z1OfGzz9cvW47AGHur"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-015__strict_temporal",
+    "case_id": "halumem-memory-conflict-015",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Susan Thompson find heavy metal ballads stressful during her music therapy session on Apr 25, 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.72,
+        "conflicting": 0,
+        "underdetermined": 0.28
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.05,
+      "answer_inferable_yes": 0.21
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1225,
+        "output_tokens": 130,
+        "cost": 5.145e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.145e-05,
+          "upstream_inference_prompt_cost": 5.145e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1038,
+        "output_tokens": 43,
+        "cost": 4.3596e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3596e-05,
+          "upstream_inference_prompt_cost": 4.3596e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551207-0tTXWu6QbH2q8jP9GIwY",
+      "evidence": "gen-dec-1794551210-MEwStZDrJqgfCMKTFx7n"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-015__transition_aware",
+    "case_id": "halumem-memory-conflict-015",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Susan Thompson find heavy metal ballads stressful during her music therapy session on Apr 25, 2027?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.68,
+        "conflicting": 0,
+        "underdetermined": 0.32
+      },
+      "conflict_type": {
+        "none": 1,
+        "true_conflict": 0,
+        "temporal_update": 0
+      },
+      "out_of_slice_evidence": {
+        "none": 0.99,
+        "relevant": 0.01,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.04,
+      "answer_inferable_yes": 0.2
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1225,
+        "output_tokens": 130,
+        "cost": 5.145e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.145e-05,
+          "upstream_inference_prompt_cost": 5.145e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1038,
+        "output_tokens": 43,
+        "cost": 4.3596e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3596e-05,
+          "upstream_inference_prompt_cost": 4.3596e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551212-wZxrUBwDlcFT80NW8Yh1",
+      "evidence": "gen-dec-1794551214-eqebQdal6Zk6lvstl8mX"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-016__before_aware",
+    "case_id": "halumem-memory-conflict-016",
+    "retrieval_policy": "before_aware",
+    "query": "Did Susan Thompson express reluctance to explore new culinary options on August 7, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.56,
+        "conflicting": 0,
+        "underdetermined": 0.44
+      },
+      "conflict_type": {
+        "none": 0.77,
+        "true_conflict": 0.01,
+        "temporal_update": 0.22
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.06,
+      "answer_inferable_yes": 0.16
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1267,
+        "output_tokens": 130,
+        "cost": 5.3214e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.3214e-05,
+          "upstream_inference_prompt_cost": 5.3214e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1050,
+        "output_tokens": 43,
+        "cost": 4.41e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.41e-05,
+          "upstream_inference_prompt_cost": 4.41e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551216-0egK962ighBJJtrzo6rt",
+      "evidence": "gen-dec-1794551217-BBwOac9C2acDDADwRdsn"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-016__flat_bm25",
+    "case_id": "halumem-memory-conflict-016",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Susan Thompson express reluctance to explore new culinary options on August 7, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.91,
+        "conflicting": 0.04,
+        "underdetermined": 0.05
+      },
+      "conflict_type": {
+        "none": 0.87,
+        "true_conflict": 0.03,
+        "temporal_update": 0.1
+      },
+      "out_of_slice_evidence": {
+        "none": 0.02,
+        "relevant": 0.89,
+        "harmful": 0.09
+      },
+      "reference_evidence_present_yes": 0.95,
+      "answer_inferable_yes": 0.73
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1225,
+        "output_tokens": 132,
+        "cost": 5.145e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.145e-05,
+          "upstream_inference_prompt_cost": 5.145e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1008,
+        "output_tokens": 43,
+        "cost": 4.2336e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2336e-05,
+          "upstream_inference_prompt_cost": 4.2336e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551219-1hnvkokAWNQQ6ViYsDS6",
+      "evidence": "gen-dec-1794551221-53mHxhq0WTvTY8VzaUYy"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-016__query_aware",
+    "case_id": "halumem-memory-conflict-016",
+    "retrieval_policy": "query_aware",
+    "query": "Did Susan Thompson express reluctance to explore new culinary options on August 7, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.56,
+        "conflicting": 0,
+        "underdetermined": 0.44
+      },
+      "conflict_type": {
+        "none": 0.77,
+        "true_conflict": 0.01,
+        "temporal_update": 0.22
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.04,
+      "answer_inferable_yes": 0.16
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1267,
+        "output_tokens": 130,
+        "cost": 5.3214e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.3214e-05,
+          "upstream_inference_prompt_cost": 5.3214e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1050,
+        "output_tokens": 43,
+        "cost": 4.41e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.41e-05,
+          "upstream_inference_prompt_cost": 4.41e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551223-QPs1wUzqIuxpLa5cEiEU",
+      "evidence": "gen-dec-1794551225-gQHhtXOki6o3eG79rtVi"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-016__strict_temporal",
+    "case_id": "halumem-memory-conflict-016",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Susan Thompson express reluctance to explore new culinary options on August 7, 2031?",
+    "models": {
+      "consistency": "typesafe/jev-1.14-20261014",
+      "evidence": "typesafe/jev-1.14-20261014"
+    },
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.57,
+        "conflicting": 0.01,
+        "underdetermined": 0.42
+      },
+      "conflict_type": {
+        "none": 0.8,
+        "true_conflict": 0.01,
+        "temporal_update": 0.19
+      },
+      "out_of_slice_evidence": {
+        "none": 1,
+        "relevant": 0,
+        "harmful": 0
+      },
+      "reference_evidence_present_yes": 0.05,
+      "answer_inferable_yes": 0.18
+    },
+    "usage": {
+      "consistency": {
+        "input_tokens": 1267,
+        "output_tokens": 130,
+        "cost": 5.3214e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.3214e-05,
+          "upstream_inference_prompt_cost": 5.3214e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "evidence": {
+        "input_tokens": 1050,
+        "output_tokens": 43,
+        "cost": 4.41e-05,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.41e-05,
+          "upstream_inference_prompt_cost": 4.41e-05,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1794551227-6E1HAvfJFKEvLF6a9u7o",
+      "evidence": "gen-dec-1794551228-az0MojxbFJGHsPsLnR4U"
+    }
+  }
+]
