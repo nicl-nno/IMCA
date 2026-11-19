@@ -1,0 +1,952 @@
+[
+  {
+    "trace_id": "halumem-memory-conflict-001__before_aware",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "before_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.7744046122847552,
+        "conflicting": 0.029560752645656198,
+        "underdetermined": 0.19603463506958868
+      },
+      "conflict_type": {
+        "none": 0.8577244859673393,
+        "true_conflict": 0.024913806759003895,
+        "temporal_update": 0.11736170727365682
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9969000423565297,
+        "relevant": 0.0006708349876086798,
+        "harmful": 0.0024291226558616082
+      },
+      "reference_evidence_present_yes": 0.0007215909713871958,
+      "answer_inferable_yes": 0.023996620178363605
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795110012-pcT98NALetQRH1engVp9",
+      "evidence": "gen-dec-1795110016-Caqo2nZvxAVbjSfCt5zi"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__flat_bm25",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "true_conflict",
+      "out_of_slice_evidence": "harmful",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.035473357823980416,
+        "conflicting": 0.9263862616690164,
+        "underdetermined": 0.038140380507003246
+      },
+      "conflict_type": {
+        "none": 0.020690003067833,
+        "true_conflict": 0.9272956821841607,
+        "temporal_update": 0.05201431474800623
+      },
+      "out_of_slice_evidence": {
+        "none": 0.006106223353129474,
+        "relevant": 0.3310261583131459,
+        "harmful": 0.6628676183337247
+      },
+      "reference_evidence_present_yes": 0.36816030413844386,
+      "answer_inferable_yes": 0.1543634311693488
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795110021-kPpkBkjm8A05t0qjaHKS",
+      "evidence": "gen-dec-1795110026-6gmBBFCkIpIOpRGagoOs"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__query_aware",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "query_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.46507556094041447,
+        "conflicting": 0.3049123876155317,
+        "underdetermined": 0.23001205144405393
+      },
+      "conflict_type": {
+        "none": 0.23377445154292617,
+        "true_conflict": 0.1827214040901814,
+        "temporal_update": 0.5835041443668925
+      },
+      "out_of_slice_evidence": {
+        "none": 0.004449155725113602,
+        "relevant": 0.696083227190703,
+        "harmful": 0.29946761708418335
+      },
+      "reference_evidence_present_yes": 0.6295535570492549,
+      "answer_inferable_yes": 0.7136916391933417
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795110030-KCFsq9gHkWX4tbFBArlY",
+      "evidence": "gen-dec-1795110034-5w7RyGKnwvGgc1Pmtpfh"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__strict_temporal",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.7744046122847552,
+        "conflicting": 0.029560752645656198,
+        "underdetermined": 0.19603463506958868
+      },
+      "conflict_type": {
+        "none": 0.8577244859673393,
+        "true_conflict": 0.024913806759003895,
+        "temporal_update": 0.11736170727365682
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9969000423565297,
+        "relevant": 0.0006708349876086798,
+        "harmful": 0.0024291226558616082
+      },
+      "reference_evidence_present_yes": 0.000721539054455167,
+      "answer_inferable_yes": 0.023995570418224962
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795110039-aZSJj6MWS9In5Mw0B5Y0",
+      "evidence": "gen-dec-1795110043-XsGQVYDAQt9NW9x5idZz"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-001__transition_aware",
+    "case_id": "halumem-memory-conflict-001",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Martin officially begin his retirement on June 1, 2028?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.8122595962388619,
+        "conflicting": 0.0496305360034188,
+        "underdetermined": 0.13810986775771925
+      },
+      "conflict_type": {
+        "none": 0.3973392416755797,
+        "true_conflict": 0.03281260965272555,
+        "temporal_update": 0.5698481486716946
+      },
+      "out_of_slice_evidence": {
+        "none": 0.005537897346494891,
+        "relevant": 0.8068620462740709,
+        "harmful": 0.18760005637943433
+      },
+      "reference_evidence_present_yes": 0.0006489392107846724,
+      "answer_inferable_yes": 0.021596120622790836
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795110047-UUNLn6rzzgIK7CiFycWw",
+      "evidence": "gen-dec-1795110052-rtULKiTdET0MHfuyyF14"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__before_aware",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "before_aware",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": true,
+      "support_type": "indirect_inference"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.9189715279206396,
+        "conflicting": 0.0037156406014346014,
+        "underdetermined": 0.07731283147792563
+      },
+      "conflict_type": {
+        "none": 0.8952447380320503,
+        "true_conflict": 0.007940949508481513,
+        "temporal_update": 0.0968143124594683
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9978742501061442,
+        "relevant": 0.00069204225938823,
+        "harmful": 0.0014337076344675588
+      },
+      "reference_evidence_present_yes": 0.06362936884398056,
+      "answer_inferable_yes": 0.5135157552477738
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795110057-46jLrYHwoXRCoqunelJt",
+      "evidence": "gen-dec-1795110063-vluVEIW3LW2bnaRoUHKL"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__flat_bm25",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.8952101584943509,
+        "conflicting": 0.039664310056143535,
+        "underdetermined": 0.06512553144950554
+      },
+      "conflict_type": {
+        "none": 0.8838064942289515,
+        "true_conflict": 0.037496383645867014,
+        "temporal_update": 0.07869712212518142
+      },
+      "out_of_slice_evidence": {
+        "none": 0.028886904018176396,
+        "relevant": 0.9000424057525694,
+        "harmful": 0.07107069022925405
+      },
+      "reference_evidence_present_yes": 0.9927794492924801,
+      "answer_inferable_yes": 0.9860521352577708
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114654-HKKtsRSy1esuZjXiSLNQ",
+      "evidence": "gen-dec-1795114659-kYEt02gMUuPvi5SxSosB"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__query_aware",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "query_aware",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.9267005435442925,
+        "conflicting": 0.003889584585523706,
+        "underdetermined": 0.06940987187018387
+      },
+      "conflict_type": {
+        "none": 0.9027420218312946,
+        "true_conflict": 0.007645585331410782,
+        "temporal_update": 0.08961239283729452
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9982949074507959,
+        "relevant": 0.0006183671649411979,
+        "harmful": 0.00108672538426276
+      },
+      "reference_evidence_present_yes": 0.06166971054791012,
+      "answer_inferable_yes": 0.4723870657121811
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114663-0804vnu6zKLtxr9WZ4XT",
+      "evidence": "gen-dec-1795114667-vxRGg1pzbbUohqI25fQ9"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__strict_temporal",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": true,
+      "support_type": "indirect_inference"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.9189715279206396,
+        "conflicting": 0.0037156406014346014,
+        "underdetermined": 0.07731283147792563
+      },
+      "conflict_type": {
+        "none": 0.8952447380320503,
+        "true_conflict": 0.007940949508481513,
+        "temporal_update": 0.0968143124594683
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9978742501061442,
+        "relevant": 0.00069204225938823,
+        "harmful": 0.0014337076344675588
+      },
+      "reference_evidence_present_yes": 0.06362936884398056,
+      "answer_inferable_yes": 0.5135157552477738
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114671-K72U2mXGJSEoQRaAPpCy",
+      "evidence": "gen-dec-1795114675-qO2jV9je7fTK3KRR4UQ0"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-007__transition_aware",
+    "case_id": "halumem-memory-conflict-007",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Donna Gonzalez find her cat distracting during her late-night composing session on 2035-11-26?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.9067334538912776,
+        "conflicting": 0.004065129248895455,
+        "underdetermined": 0.08920141685982697
+      },
+      "conflict_type": {
+        "none": 0.901748585689717,
+        "true_conflict": 0.0073373642469731415,
+        "temporal_update": 0.09091405006330991
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9976954593911055,
+        "relevant": 0.0006909492730750636,
+        "harmful": 0.0016135913358194397
+      },
+      "reference_evidence_present_yes": 0.06166971054791012,
+      "answer_inferable_yes": 0.4723870657121811
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114679-nw9SLvsZwB9eB0NZAWga",
+      "evidence": "gen-dec-1795114683-6IHnfJB6TnaZpaihXWrj"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__before_aware",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "before_aware",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.6492391326963539,
+        "conflicting": 0.004993998596427345,
+        "underdetermined": 0.34576686870721884
+      },
+      "conflict_type": {
+        "none": 0.878488029625226,
+        "true_conflict": 0.006124032581939429,
+        "temporal_update": 0.11538793779283453
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9970287164636081,
+        "relevant": 0.0011854170199707232,
+        "harmful": 0.0017858665164211223
+      },
+      "reference_evidence_present_yes": 0.26102176520259934,
+      "answer_inferable_yes": 0.062320502168068566
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114687-OZILkAGYVHwQ6v3YkgdG",
+      "evidence": "gen-dec-1795114691-zLZV4hAmtdihCQHusWgI"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__flat_bm25",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.8542150645974438,
+        "conflicting": 0.03968778721637239,
+        "underdetermined": 0.10609714818618386
+      },
+      "conflict_type": {
+        "none": 0.6978643399774556,
+        "true_conflict": 0.03165689982685563,
+        "temporal_update": 0.2704787601956889
+      },
+      "out_of_slice_evidence": {
+        "none": 0.0026986691275774255,
+        "relevant": 0.94344612767764,
+        "harmful": 0.053855203194782535
+      },
+      "reference_evidence_present_yes": 0.9938489670842628,
+      "answer_inferable_yes": 0.864167004975238
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114695-c9GdpNlvZQtEdRnkNMNm",
+      "evidence": "gen-dec-1795114699-ksEpoR4DSwUeTXtLbZl6"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__query_aware",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "query_aware",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.8542150645974438,
+        "conflicting": 0.03968778721637239,
+        "underdetermined": 0.10609714818618386
+      },
+      "conflict_type": {
+        "none": 0.6978643399774556,
+        "true_conflict": 0.03165689982685563,
+        "temporal_update": 0.2704787601956889
+      },
+      "out_of_slice_evidence": {
+        "none": 0.0026986691275774255,
+        "relevant": 0.94344612767764,
+        "harmful": 0.053855203194782535
+      },
+      "reference_evidence_present_yes": 0.9952595202183814,
+      "answer_inferable_yes": 0.8470239653454278
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114703-Dz3iS5PYXkvT6gH0ePNT",
+      "evidence": "gen-dec-1795114708-HuXhLFUnBJzMRrvQPlhs"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__strict_temporal",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.6492391326963539,
+        "conflicting": 0.004993998596427345,
+        "underdetermined": 0.34576686870721884
+      },
+      "conflict_type": {
+        "none": 0.878488029625226,
+        "true_conflict": 0.006124032581939429,
+        "temporal_update": 0.11538793779283453
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9970287164636081,
+        "relevant": 0.0011854170199707232,
+        "harmful": 0.0017858665164211223
+      },
+      "reference_evidence_present_yes": 0.261571977161918,
+      "answer_inferable_yes": 0.06980390485539545
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114712-1IG5fkPONL1F919YIJVs",
+      "evidence": "gen-dec-1795114716-o98DzOkDW7yLUA5Ywsfh"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-009__transition_aware",
+    "case_id": "halumem-memory-conflict-009",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Donna's strategic shift to mobile device refurbishment begin in 2024?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.8532263744164824,
+        "conflicting": 0.04457937384165529,
+        "underdetermined": 0.10219425174186231
+      },
+      "conflict_type": {
+        "none": 0.712386703179214,
+        "true_conflict": 0.02881337161465694,
+        "temporal_update": 0.2587999252061291
+      },
+      "out_of_slice_evidence": {
+        "none": 0.002738005796738524,
+        "relevant": 0.9434974653660179,
+        "harmful": 0.053764528837243704
+      },
+      "reference_evidence_present_yes": 0.9938489670842628,
+      "answer_inferable_yes": 0.864167004975238
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114721-cM4xWW6NfUVxIgoYUQUu",
+      "evidence": "gen-dec-1795114725-vDW98KIS9Aae761vsLzF"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__before_aware",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "before_aware",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": true,
+      "support_type": "indirect_inference"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.23779445751406547,
+        "conflicting": 0.6097450108682444,
+        "underdetermined": 0.15246053161769013
+      },
+      "conflict_type": {
+        "none": 0.01678862043323015,
+        "true_conflict": 0.3633177078105696,
+        "temporal_update": 0.6198936717562001
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9932962280740586,
+        "relevant": 0.0023585495541696964,
+        "harmful": 0.0043452223717718045
+      },
+      "reference_evidence_present_yes": 0.11036633041716538,
+      "answer_inferable_yes": 0.55413331209491
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114745-0yjQ68rU3Ph33cbZZ3Eg",
+      "evidence": "gen-dec-1795114749-XM4l2x16HS3zzAZ9J6Oq"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__flat_bm25",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "flat_bm25",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.5468543670291873,
+        "conflicting": 0.3985080266354801,
+        "underdetermined": 0.05463760633533251
+      },
+      "conflict_type": {
+        "none": 0.028750783801764743,
+        "true_conflict": 0.2466328404818124,
+        "temporal_update": 0.7246163757164228
+      },
+      "out_of_slice_evidence": {
+        "none": 0.004104523301301932,
+        "relevant": 0.9208772098077388,
+        "harmful": 0.07501826689095921
+      },
+      "reference_evidence_present_yes": 0.9975011467397729,
+      "answer_inferable_yes": 0.9148258577932961
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114754-UntoSJ3XfdtGmQIDuGFn",
+      "evidence": "gen-dec-1795114758-eSJ2ERxe60mskgZMtzSj"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__query_aware",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "query_aware",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.7334042692612515,
+        "conflicting": 0.2029716474106155,
+        "underdetermined": 0.06362408332813305
+      },
+      "conflict_type": {
+        "none": 0.01713146685290431,
+        "true_conflict": 0.1379989287739157,
+        "temporal_update": 0.84486960437318
+      },
+      "out_of_slice_evidence": {
+        "none": 0.0029485200463522567,
+        "relevant": 0.9509506561559014,
+        "harmful": 0.046100823797746326
+      },
+      "reference_evidence_present_yes": 0.9954764643702201,
+      "answer_inferable_yes": 0.9768108427915092
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114762-6UJzqdVeft5KLfdH4M8R",
+      "evidence": "gen-dec-1795114766-oMwA1wamLI9oK92B6jTA"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__strict_temporal",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "strict_temporal",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "conflicting",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": true,
+      "support_type": "indirect_inference"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.22757900953789445,
+        "conflicting": 0.6268927543301899,
+        "underdetermined": 0.14552823613191565
+      },
+      "conflict_type": {
+        "none": 0.016776800433554406,
+        "true_conflict": 0.40942627530967524,
+        "temporal_update": 0.5737969242567703
+      },
+      "out_of_slice_evidence": {
+        "none": 0.993195148027283,
+        "relevant": 0.0022662539149920133,
+        "harmful": 0.00453859805772499
+      },
+      "reference_evidence_present_yes": 0.13426994068356746,
+      "answer_inferable_yes": 0.5719568992958247
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114770-apnH91FKoTdtVOucJ2Zh",
+      "evidence": "gen-dec-1795114774-WPVE3E3ef7duPNyGjMgU"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-010__transition_aware",
+    "case_id": "halumem-memory-conflict-010",
+    "retrieval_policy": "transition_aware",
+    "query": "Was Donna's health status still 'Below Average' on 2029-11-01?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.7334042692612515,
+        "conflicting": 0.2029716474106155,
+        "underdetermined": 0.06362408332813305
+      },
+      "conflict_type": {
+        "none": 0.01713146685290431,
+        "true_conflict": 0.1379989287739157,
+        "temporal_update": 0.84486960437318
+      },
+      "out_of_slice_evidence": {
+        "none": 0.0029485200463522567,
+        "relevant": 0.9509506561559014,
+        "harmful": 0.046100823797746326
+      },
+      "reference_evidence_present_yes": 0.9954764643702201,
+      "answer_inferable_yes": 0.9768108427915092
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114778-IEvmjOXxUJIiYFgCwEU8",
+      "evidence": "gen-dec-1795114782-wxV24z799tHtvXzyRrKU"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-027__before_aware",
+    "case_id": "halumem-memory-conflict-027",
+    "retrieval_policy": "before_aware",
+    "query": "Did Christopher Anderson launch mobility programs on Apr 05, 2027?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.4834989929440103,
+        "conflicting": 0.20406224373409415,
+        "underdetermined": 0.3124387633218955
+      },
+      "conflict_type": {
+        "none": 0.5896194453108335,
+        "true_conflict": 0.3513218443950758,
+        "temporal_update": 0.059058710294090606
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9929726311306888,
+        "relevant": 0.0017308840567579473,
+        "harmful": 0.005296484812553281
+      },
+      "reference_evidence_present_yes": 0.0006995531325399225,
+      "answer_inferable_yes": 0.1402617116093253
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114786-MVZzBIBPtqXoPFnjKri5",
+      "evidence": "gen-dec-1795114790-PHTKIACskDHz7KbKpjJs"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-027__flat_bm25",
+    "case_id": "halumem-memory-conflict-027",
+    "retrieval_policy": "flat_bm25",
+    "query": "Did Christopher Anderson launch mobility programs on Apr 05, 2027?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "temporal_update",
+      "out_of_slice_evidence": "relevant",
+      "reference_evidence_present": true,
+      "answer_inferable": true,
+      "support_type": "direct_or_reference_supported"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.7878947717271163,
+        "conflicting": 0.14962833944667342,
+        "underdetermined": 0.06247688882621029
+      },
+      "conflict_type": {
+        "none": 0.35693658580246806,
+        "true_conflict": 0.14530451908944036,
+        "temporal_update": 0.4977588951080914
+      },
+      "out_of_slice_evidence": {
+        "none": 0.002969029257097473,
+        "relevant": 0.8923897909415972,
+        "harmful": 0.10464117980130522
+      },
+      "reference_evidence_present_yes": 0.9974593094957381,
+      "answer_inferable_yes": 0.9478628687077897
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114794-3edhLLXPr2PRMXx3WfUv",
+      "evidence": "gen-dec-1795114798-ruFMveihZCYYGkeNqx6b"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-027__query_aware",
+    "case_id": "halumem-memory-conflict-027",
+    "retrieval_policy": "query_aware",
+    "query": "Did Christopher Anderson launch mobility programs on Apr 05, 2027?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.4834989929440103,
+        "conflicting": 0.20406224373409415,
+        "underdetermined": 0.3124387633218955
+      },
+      "conflict_type": {
+        "none": 0.5896194453108335,
+        "true_conflict": 0.3513218443950758,
+        "temporal_update": 0.059058710294090606
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9929726311306888,
+        "relevant": 0.0017308840567579473,
+        "harmful": 0.005296484812553281
+      },
+      "reference_evidence_present_yes": 0.0006995531325399225,
+      "answer_inferable_yes": 0.1402617116093253
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114802-4Zp7R91ukqwxIEqMbtd6",
+      "evidence": "gen-dec-1795114806-AVgLehRzLtaUIroaOA0x"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-027__strict_temporal",
+    "case_id": "halumem-memory-conflict-027",
+    "retrieval_policy": "strict_temporal",
+    "query": "Did Christopher Anderson launch mobility programs on Apr 05, 2027?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.4834989929440103,
+        "conflicting": 0.20406224373409415,
+        "underdetermined": 0.3124387633218955
+      },
+      "conflict_type": {
+        "none": 0.5896194453108335,
+        "true_conflict": 0.3513218443950758,
+        "temporal_update": 0.059058710294090606
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9929726311306888,
+        "relevant": 0.0017308840567579473,
+        "harmful": 0.005296484812553281
+      },
+      "reference_evidence_present_yes": 0.0008125532221166065,
+      "answer_inferable_yes": 0.13059349024560674
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114810-8RPq0eU6ngQCu6MneoMM",
+      "evidence": "gen-dec-1795114814-x12S0QIrid5rKrazZF7P"
+    }
+  },
+  {
+    "trace_id": "halumem-memory-conflict-027__transition_aware",
+    "case_id": "halumem-memory-conflict-027",
+    "retrieval_policy": "transition_aware",
+    "query": "Did Christopher Anderson launch mobility programs on Apr 05, 2027?",
+    "model": "perplexity/pplx-decider-v1.3:free",
+    "verdict": {
+      "consistency_status": "consistent",
+      "conflict_type": "none",
+      "out_of_slice_evidence": "none",
+      "reference_evidence_present": false,
+      "answer_inferable": false,
+      "support_type": "insufficient_context"
+    },
+    "probabilities": {
+      "consistency_status": {
+        "consistent": 0.4834989929440103,
+        "conflicting": 0.20406224373409415,
+        "underdetermined": 0.3124387633218955
+      },
+      "conflict_type": {
+        "none": 0.5896194453108335,
+        "true_conflict": 0.3513218443950758,
+        "temporal_update": 0.059058710294090606
+      },
+      "out_of_slice_evidence": {
+        "none": 0.9929726311306888,
+        "relevant": 0.0017308840567579473,
+        "harmful": 0.005296484812553281
+      },
+      "reference_evidence_present_yes": 0.0006995531325399225,
+      "answer_inferable_yes": 0.1402617116093253
+    },
+    "request_ids": {
+      "consistency": "gen-dec-1795114818-KvYeqJvobDlLX1ubqHCC",
+      "evidence": "gen-dec-1795114822-NDdPpPeNV59A18U5uDoy"
+    }
+  }
+]
