@@ -1,0 +1,5 @@
+.gitattributes text eol=lf
+*.json text eol=lf
+patches/*.diff -text -whitespace
+prompts/*.txt -text -whitespace
+licenses/*.txt -text -whitespace

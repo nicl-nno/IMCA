@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "files_sha256": {
+    ".gitattributes": "5ab132308aae8265f9a927d2c164b89e6e95eba2ebe0be00b7b6b1c8fd6115ed",
+    "expected-summary.json": "88b4604e3a7fb395c90a874aa1640c9ffe2ab6e9d837da9ccb83071cb59de377",
+    "licenses/astropy-LICENSE.txt": "03712f43fede530155b72e3d4497bedcf6ac1c4d81b9f6e4d95e0876fec912da",
+    "licenses/matplotlib-LICENSE.txt": "5a1a81ea301728c8bba2933da832c0cd62229daf20893a024ab3d53244468dbc",
+    "licenses/pytest-dev-LICENSE.txt": "7898b9b164d4f93fd9a562fd0f592935518b48c4745303964110eb7f7fe64faf",
+    "patches/astropy__astropy-8872-with-codebase-memory.diff": "159264421ca2c693b3bec6d94f4d1f87c30a26b8cad72906874db696254a5063",
+    "patches/astropy__astropy-8872-with-imca.diff": "ce327d225baa30786e87ec57680ac36f4749dfc42406a5454dfc48a01f5cc93f",
+    "patches/astropy__astropy-8872-without-memory.diff": "48f31675ca0cd7a377469dc37626a982d51171cf832f4ca3f2ff870c83cda3f4",
+    "patches/matplotlib__matplotlib-24026-with-codebase-memory.diff": "2ed3718aebc17bcb370004383d104ac048cb6e738dbc37afb885c5c771a6989d",
+    "patches/matplotlib__matplotlib-24026-with-imca.diff": "4cdd4ebe8fcb451f1bb99c79fd744011d5225d7a3bec468d03027a988aa60188",
+    "patches/matplotlib__matplotlib-24026-without-memory.diff": "91e90c742da556527e1df3255e0685753b9c871c2a1b70ea61ac52a1117125d4",
+    "patches/pytest-dev__pytest-7236-with-codebase-memory.diff": "ade5c6115c646f10026cd141fd143a4f968fa95f46056b51c68c9a66a588d70b",
+    "patches/pytest-dev__pytest-7236-with-imca.diff": "eba8d8b9598421e4a18f5adbdab11a1acc7af80973528dc4b48f6896dded76db",
+    "prompts/astropy__astropy-8872.txt": "349704d021a56ba2dd3baad3f9e7204bd418df0d85e4857aee464cb938486498",
+    "prompts/matplotlib__matplotlib-24026.txt": "b461ead065dfe33fd5aa704bfa10499856dbc12a148ad3cbe33fd01a54c2092c",
+    "prompts/pytest-dev__pytest-7236.txt": "d6324853c6ae9a8eaad08494707e8285bed66c9257113b0082ec905e6f004755",
+    "protocol.json": "f743947dc8dfb903294cd4ca55f9cbe29e1252330b481c758ae37f4e44f3ed5c",
+    "results.json": "bc1c7474a0f4577682e27d83494cb60650dc83043c2fbf7ab204b1e46e970ea1"
+  }
+}

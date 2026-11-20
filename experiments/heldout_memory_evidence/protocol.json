@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "benchmark": "SWE-bench Verified",
+  "benchmark_parquet_sha256": "a45b1fe4e2f0c8390b2b2938ac83e92ed5979000856808f3679c07812e9e6dcd",
+  "original_protocol_sha256": "0f276c8f1ec8d220b68725e488d8b10047c13e4e0837c1af7874983669deeec5",
+  "planned_task_ids": [
+    "matplotlib__matplotlib-24026",
+    "sympy__sympy-20438",
+    "pytest-dev__pytest-7236",
+    "scikit-learn__scikit-learn-10297",
+    "astropy__astropy-8872"
+  ],
+  "planned_tasks": [
+    {
+      "instance_id": "matplotlib__matplotlib-24026",
+      "repo": "matplotlib/matplotlib",
+      "base_commit": "14c96b510ebeba40f573e512299b1976f35b620e"
+    },
+    {
+      "instance_id": "sympy__sympy-20438",
+      "repo": "sympy/sympy",
+      "base_commit": "33b47e4bd60e2302e42616141e76285038b724d6"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7236",
+      "repo": "pytest-dev/pytest",
+      "base_commit": "c98bc4cd3d687fe9b392d8eecd905627191d4f06"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-10297",
+      "repo": "scikit-learn/scikit-learn",
+      "base_commit": "b90661d6a46aa3619d3eec94d5281f5888add501"
+    },
+    {
+      "instance_id": "astropy__astropy-8872",
+      "repo": "astropy/astropy",
+      "base_commit": "b750a0e6ee76fb6b8a099a4d16ec51977be46bf6"
+    }
+  ],
+  "conditions": [
+    "without-memory",
+    "with-imca",
+    "with-codebase-memory"
+  ],
+  "held_out_from_our_tuning_only": true,
+  "unseen_by_model_claim": false,
+  "selection_uses_outcomes": false,
+  "model": "zai-coding-plan/glm-5.3-flash",
+  "client": {
+    "npm_package_version": "1.3.5",
+    "sha256": {
+      "node_executable": "f8d22c62786c547dc76b15c744e86c0ac1fe9dc38f2e0610dbad4d2b223a4544",
+      "npm_wrapper": "3ab08cfdb3cf1213eaeae45f557fb3220e0999862d8dc90eb17ba4cacf97c57b",
+      "opencode-windows-x64": "27e94d74e1addab23f093989fd3a4760b1a94479664cedd70490f7b66f3fbeb2",
+      "opencode-windows-x64-baseline": "bd11023d0acaf23f7dd4eee881d74bd7be345787a850191f740b5cab80634734"
+    }
+  },
+  "per_attempt_limits": {
+    "model_forwards": 20,
+    "wall_seconds": 900,
+    "client_steps": 21,
+    "output_tokens": 8192,
+    "context_tokens": 32768,
+    "request_spacing_seconds": 30
+  },
+  "maximum_model_forward_attempts": 180,
+  "source_pins": {
+    "matplotlib__matplotlib-24026": {
+      "repo": "matplotlib/matplotlib",
+      "base_commit": "14c96b510ebeba40f573e512299b1976f35b620e",
+      "base_tree": "7599b4067af2e7749a51ffe92e0cb69f49ab1568",
+      "image": {
+        "repository": "swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-24026",
+        "platform_digest": "sha256:8fa7a329667ea2b146fdf2ab5746bd2a7d831e1eb4094bb2c56f7163e7cd304a",
+        "compressed_bytes": 3125281074,
+        "platform": "linux/amd64"
+      },
+      "project_python": [
+        3,
+        11,
+        11
+      ],
+      "import_root": "lib",
+      "common_input_python_files": 244,
+      "native_physical_python_files": 244,
+      "native_binary_sha256": "39f6a789cd858d7428561ac5afaefb9a47b018dcba0ad6fa41ae71a45e0ed656",
+      "imca_modules_sha256": {
+        "code_search.py": "43c2ddb1af69fcca5ebe2659a02aae94820e6ed1f283e5de6ae6f03c85fac25d",
+        "code_structural_memory.py": "8b5620969960dca8d0e3d7ea025ce0cc9f4f0bdaf1b95fef49512ae6a66d3b89"
+      },
+      "condition_order": [
+        "with-codebase-memory",
+        "with-imca",
+        "without-memory"
+      ]
+    },
+    "pytest-dev__pytest-7236": {
+      "repo": "pytest-dev/pytest",
+      "base_commit": "c98bc4cd3d687fe9b392d8eecd905627191d4f06",
+      "base_tree": "51f5b79952266b3ce362086f0c731ab84e638bc1",
+      "image": {
+        "repository": "swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7236",
+        "platform_digest": "sha256:edcc72fd067a1b88f55fc9676cd2fa8ad6f0e624a3ae7d92eae232b7f39efadf",
+        "compressed_bytes": 1026092991,
+        "platform": "linux/amd64"
+      },
+      "project_python": [
+        3,
+        9,
+        20
+      ],
+      "import_root": "src",
+      "common_input_python_files": 60,
+      "native_physical_python_files": 60,
+      "native_binary_sha256": "39f6a789cd858d7428561ac5afaefb9a47b018dcba0ad6fa41ae71a45e0ed656",
+      "imca_modules_sha256": {
+        "code_search.py": "43c2ddb1af69fcca5ebe2659a02aae94820e6ed1f283e5de6ae6f03c85fac25d",
+        "code_structural_memory.py": "8b5620969960dca8d0e3d7ea025ce0cc9f4f0bdaf1b95fef49512ae6a66d3b89"
+      },
+      "condition_order": [
+        "with-imca",
+        "without-memory",
+        "with-codebase-memory"
+      ]
+    },
+    "astropy__astropy-8872": {
+      "repo": "astropy/astropy",
+      "base_commit": "b750a0e6ee76fb6b8a099a4d16ec51977be46bf6",
+      "base_tree": "0e9d85da9c019e405e45a40983d36cb6c8348c07",
+      "image": {
+        "repository": "swebench/sweb.eval.x86_64.astropy_1776_astropy-8872",
+        "platform_digest": "sha256:0576032159a5cc54ea7baa75e08467c006463df512587865213885ec4fc6e75d",
+        "compressed_bytes": 1177284524,
+        "platform": "linux/amd64"
+      },
+      "project_python": [
+        3,
+        9,
+        20
+      ],
+      "import_root": "",
+      "common_input_python_files": 767,
+      "native_physical_python_files": 766,
+      "native_binary_sha256": "39f6a789cd858d7428561ac5afaefb9a47b018dcba0ad6fa41ae71a45e0ed656",
+      "imca_modules_sha256": {
+        "code_search.py": "43c2ddb1af69fcca5ebe2659a02aae94820e6ed1f283e5de6ae6f03c85fac25d",
+        "code_structural_memory.py": "8b5620969960dca8d0e3d7ea025ce0cc9f4f0bdaf1b95fef49512ae6a66d3b89"
+      },
+      "condition_order": [
+        "without-memory",
+        "with-codebase-memory",
+        "with-imca"
+      ]
+    }
+  },
+  "memory_variants": {
+    "with-imca": "Pinned structural retrieval with BM25 text fallback; dense_order=None",
+    "with-codebase-memory": "Pinned v0.12.1 native fast mode with graph and BM25 tools; semantic indexing disabled."
+  },
+  "task_container_limits": {
+    "cpus": 2,
+    "memory_bytes": 3221225472,
+    "pids": 128,
+    "external_network": false,
+    "host_mounts": false
+  },
+  "attempts_per_condition_per_task": 1,
+  "same_rendered_prompt_within_task": true,
+  "all_agent_processes_stopped_before_test_access": true,
+  "test_access_barrier": "No benchmark test patches or expected test lists before nine outputs are frozen, all agent processes stop, and all fifteen planned slots are accounted for including six unavailable preparation slots.",
+  "numpy_compatibility_fixture": {
+    "task": "astropy__astropy-8872",
+    "package": "numpy",
+    "version": "1.23.5",
+    "filename": "numpy-1.23.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "sha256": "33161613d2269025873025b33e879825ec7b1d831317e68f4f2f0f84ed14c719",
+    "bytes": 17083286,
+    "url": "https://files.pythonhosted.org/packages/4c/b9/038abd6fbd67b05b03cb1af590cfc02b7f1e5a37af7ac6a868f5093c29f5/numpy-1.23.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "reason": "The old Astropy source imports np.int, removed in NumPy 1.24.",
+    "scope": "Temporary task containers and their evaluation only; all conditions must use the same wheel.",
+    "source_files_changed": false,
+    "model_calls": 0
+  },
+  "evaluation": {
+    "package": "swebench",
+    "version": "4.1.0",
+    "project_environment_reinstalled": false,
+    "worktree_imports_match_agent": true,
+    "original_and_patched_source_use_identical_runtime_fixture": true,
+    "source_control": "Only a non-executable text marker is added; production and test source remain unchanged before applying benchmark tests.",
+    "official_test_patches_and_parsers_used": true,
+    "canonical_unmodified_harness_claim": false,
+    "test_counts_are_task_specific_and_not_independent_repairs": true
+  },
+  "licenses": {
+    "matplotlib__matplotlib-24026": {
+      "file": "licenses/matplotlib-LICENSE.txt",
+      "source_path": "LICENSE/LICENSE",
+      "git_blob": "ec51537db27dd4d9c9ed3cd39fd96485f3cfddea",
+      "source": "https://github.com/matplotlib/matplotlib/blob/14c96b510ebeba40f573e512299b1976f35b620e/LICENSE/LICENSE"
+    },
+    "pytest-dev__pytest-7236": {
+      "file": "licenses/pytest-dev-LICENSE.txt",
+      "source_path": "LICENSE",
+      "git_blob": "d14fb7ff4b34be8cfb361a3ce90a0e881475a97a",
+      "source": "https://github.com/pytest-dev/pytest/blob/c98bc4cd3d687fe9b392d8eecd905627191d4f06/LICENSE"
+    },
+    "astropy__astropy-8872": {
+      "file": "licenses/astropy-LICENSE.txt",
+      "source_path": "LICENSE.rst",
+      "git_blob": "1110225936f4e04989a86a0dd1c6a484352ec8e0",
+      "source": "https://github.com/astropy/astropy/blob/b750a0e6ee76fb6b8a099a4d16ec51977be46bf6/LICENSE.rst"
+    }
+  }
+}

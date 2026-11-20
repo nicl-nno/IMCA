@@ -1,0 +1,40 @@
+diff --git a/astropy/units/quantity.py b/astropy/units/quantity.py
+index ded609c..e6378f4 100644
+--- a/astropy/units/quantity.py
++++ b/astropy/units/quantity.py
+@@ -296,7 +296,7 @@ class Quantity(np.ndarray, metaclass=InheritDocstrings):
+                 if not copy:
+                     return value
+ 
+-                if not (np.can_cast(np.float32, value.dtype) or
++                if not (np.can_cast(np.float16, value.dtype) or
+                         value.dtype.fields):
+                     dtype = float
+ 
+@@ -377,7 +377,7 @@ class Quantity(np.ndarray, metaclass=InheritDocstrings):
+                             "Numpy numeric type.")
+ 
+         # by default, cast any integer, boolean, etc., to float
+-        if dtype is None and (not (np.can_cast(np.float32, value.dtype)
++        if dtype is None and (not (np.can_cast(np.float16, value.dtype)
+                                    or value.dtype.fields)
+                               or value.dtype.kind == 'O'):
+             value = value.astype(float)
+diff --git a/astropy/units/tests/test_quantity.py b/astropy/units/tests/test_quantity.py
+index be18e65..08950ed 100644
+--- a/astropy/units/tests/test_quantity.py
++++ b/astropy/units/tests/test_quantity.py
+@@ -150,6 +150,13 @@ class TestQuantityCreation:
+         q5 = u.Quantity(decimal.Decimal('10.25'), u.m, dtype=object)
+         assert q5.dtype == object
+ 
++        # but we should also preserve float16
++        a6 = np.array([1., 2.], dtype=np.float16)
++        q6 = u.Quantity(a6, u.yr)
++        assert q6.dtype == a6.dtype
++        q7 = np.float16(1.) * u.km
++        assert q7.dtype == np.float16
++
+     def test_copy(self):
+ 
+         # By default, a new quantity is constructed, but not if copy=False

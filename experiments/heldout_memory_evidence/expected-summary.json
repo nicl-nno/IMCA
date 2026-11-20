@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "benchmark": "SWE-bench Verified",
+  "planned_tasks": 5,
+  "evaluated_tasks": 3,
+  "preparation_unavailable_tasks": [
+    "sympy__sympy-20438",
+    "scikit-learn__scikit-learn-10297"
+  ],
+  "original_attempts": 9,
+  "model_forward_attempts": 151,
+  "nonempty_patches": 8,
+  "passing_nonempty_patches": 8,
+  "passing_artifacts": {
+    "without-memory": 2,
+    "with-imca": 3,
+    "with-codebase-memory": 3
+  },
+  "observed_repairs_from_saved_artifacts": {
+    "without-memory": 2,
+    "with-imca": 3,
+    "with-codebase-memory": 3
+  },
+  "tasks_with_three_uninterrupted_attempts": [
+    "matplotlib__matplotlib-24026",
+    "pytest-dev__pytest-7236"
+  ],
+  "uninterrupted_paired_passing_artifacts": {
+    "without-memory": 1,
+    "with-imca": 2,
+    "with-codebase-memory": 2
+  },
+  "uninterrupted_paired_observed_repairs": {
+    "without-memory": 1,
+    "with-imca": 2,
+    "with-codebase-memory": 2
+  },
+  "imca_only_saved_artifact_repairs": [],
+  "codebase_memory_only_saved_artifact_repairs": [],
+  "task_results": [
+    {
+      "task": "matplotlib__matplotlib-24026",
+      "status": "evaluated",
+      "source_control_passed": false,
+      "required_test_count": 2,
+      "preserved_test_count": 764,
+      "conditions": {
+        "without-memory": {
+          "artifact_outcome": "resolved",
+          "artifact_resolved": true,
+          "observed_repair": true,
+          "runtime_outcome": "request_limit",
+          "infrastructure_interruption": false,
+          "model_forward_attempts": 20
+        },
+        "with-imca": {
+          "artifact_outcome": "resolved",
+          "artifact_resolved": true,
+          "observed_repair": true,
+          "runtime_outcome": "request_limit",
+          "infrastructure_interruption": false,
+          "model_forward_attempts": 20
+        },
+        "with-codebase-memory": {
+          "artifact_outcome": "resolved",
+          "artifact_resolved": true,
+          "observed_repair": true,
+          "runtime_outcome": "agent_time_limit",
+          "infrastructure_interruption": false,
+          "model_forward_attempts": 20
+        }
+      }
+    },
+    {
+      "task": "sympy__sympy-20438",
+      "status": "preparation_unavailable",
+      "conditions": {
+        "without-memory": null,
+        "with-imca": null,
+        "with-codebase-memory": null
+      }
+    },
+    {
+      "task": "pytest-dev__pytest-7236",
+      "status": "evaluated",
+      "source_control_passed": false,
+      "required_test_count": 1,
+      "preserved_test_count": 51,
+      "conditions": {
+        "without-memory": {
+          "artifact_outcome": "empty_patch",
+          "artifact_resolved": false,
+          "observed_repair": false,
+          "runtime_outcome": "agent_finished",
+          "infrastructure_interruption": false,
+          "model_forward_attempts": 1
+        },
+        "with-imca": {
+          "artifact_outcome": "resolved",
+          "artifact_resolved": true,
+          "observed_repair": true,
+          "runtime_outcome": "agent_finished",
+          "infrastructure_interruption": false,
+          "model_forward_attempts": 17
+        },
+        "with-codebase-memory": {
+          "artifact_outcome": "resolved",
+          "artifact_resolved": true,
+          "observed_repair": true,
+          "runtime_outcome": "agent_finished",
+          "infrastructure_interruption": false,
+          "model_forward_attempts": 15
+        }
+      }
+    },
+    {
+      "task": "scikit-learn__scikit-learn-10297",
+      "status": "preparation_unavailable",
+      "conditions": {
+        "without-memory": null,
+        "with-imca": null,
+        "with-codebase-memory": null
+      }
+    },
+    {
+      "task": "astropy__astropy-8872",
+      "status": "evaluated",
+      "source_control_passed": false,
+      "required_test_count": 1,
+      "preserved_test_count": 80,
+      "conditions": {
+        "without-memory": {
+          "artifact_outcome": "resolved",
+          "artifact_resolved": true,
+          "observed_repair": true,
+          "runtime_outcome": "provider_failure",
+          "infrastructure_interruption": true,
+          "model_forward_attempts": 20
+        },
+        "with-imca": {
+          "artifact_outcome": "resolved",
+          "artifact_resolved": true,
+          "observed_repair": true,
+          "runtime_outcome": "request_limit",
+          "infrastructure_interruption": false,
+          "model_forward_attempts": 20
+        },
+        "with-codebase-memory": {
+          "artifact_outcome": "resolved",
+          "artifact_resolved": true,
+          "observed_repair": true,
+          "runtime_outcome": "agent_finished",
+          "infrastructure_interruption": false,
+          "model_forward_attempts": 18
+        }
+      }
+    }
+  ]
+}

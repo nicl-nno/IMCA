@@ -1,0 +1,62 @@
+diff --git a/changelog/7236.bugfix b/changelog/7236.bugfix
+new file mode 100644
+index 0000000..1263f7a
+--- /dev/null
++++ b/changelog/7236.bugfix
+@@ -0,0 +1 @@
++unittest: tearDown is no longer called for skipped tests when --pdb is given.
+diff --git a/src/_pytest/unittest.py b/src/_pytest/unittest.py
+index 773f545..34389dd 100644
+--- a/src/_pytest/unittest.py
++++ b/src/_pytest/unittest.py
+@@ -220,7 +220,7 @@ class TestCaseFunction(Function):
+             # arguably we could always postpone tearDown(), but this changes the moment where the
+             # TestCase instance interacts with the results object, so better to only do it
+             # when absolutely needed
+-            if self.config.getoption("usepdb"):
++            if self.config.getoption("usepdb") and not _is_skipped(self.obj):
+                 self._explicit_tearDown = self._testcase.tearDown
+                 setattr(self._testcase, "tearDown", lambda *args: None)
+ 
+@@ -301,3 +301,11 @@ def check_testcase_implements_trial_reporter(done=[]):
+ 
+     classImplements(TestCaseFunction, IReporter)
+     done.append(1)
++
++
++def _is_skipped(obj) -> bool:
++    """Return True if the given object has been marked with ``unittest.skip``."""
++    return bool(
++        getattr(obj, "__unittest_skip__", False)
++        or getattr(getattr(obj, "__self__", None), "__unittest_skip__", False)
++    )
+diff --git a/testing/test_unittest.py b/testing/test_unittest.py
+index 83f1b6b..ccec268 100644
+--- a/testing/test_unittest.py
++++ b/testing/test_unittest.py
+@@ -1208,3 +1208,25 @@ def test_asynctest_support(testdir):
+     testdir.copy_example("unittest/test_unittest_asynctest.py")
+     reprec = testdir.inline_run()
+     reprec.assertoutcome(failed=1, passed=2)
++
++
++def test_teardown_of_skipped_test_not_run_with_pdb(testdir):
++    # https://github.com/pytest-dev/pytest/issues/7236
++    testdir.makepyfile(
++        """
++        import unittest
++
++        class MyTestCase(unittest.TestCase):
++            def setUp(self):
++                xxx
++            @unittest.skip("hello")
++            def test_one(self):
++                pass
++            def tearDown(self):
++                xxx
++    """
++    )
++    result = testdir.runpytest_subprocess("--pdb")
++    result.stdout.fnmatch_lines(["*1 skipped*"])
++    result.stdout.no_fnmatch_line("*ERROR*")
++    result.stdout.no_fnmatch_line("*entering PDB*")
